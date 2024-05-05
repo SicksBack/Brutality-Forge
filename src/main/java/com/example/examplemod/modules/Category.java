@@ -1,0 +1,9 @@
+package com.example.examplemod.modules;
+
+// Enum with all the different categories possible.
+public enum Category {
+    COMBAT,
+    MOVEMENT,
+    PIT,
+    RENDER;
+}
