@@ -1,5 +1,6 @@
 package com.example.examplemod.modules;
 
+import com.example.examplemod.modules.modules.MOVEMENT.sprint;
 import com.example.examplemod.modules.modules.RENDER.testModule;
 
 import java.util.ArrayList;
@@ -11,6 +12,7 @@ public class ModuleManager {
     public ModuleManager() {
         this.modules = new ArrayList<Module>();
         this.modules.add(new testModule());
+        this.modules.add(new sprint());
     }
 
     // Returns the list of modules

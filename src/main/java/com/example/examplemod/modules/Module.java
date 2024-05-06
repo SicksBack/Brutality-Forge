@@ -1,5 +1,6 @@
 package com.example.examplemod.modules;
 
+import com.example.examplemod.notifications.NotificationManager;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
@@ -63,11 +64,15 @@ public class Module {
     // Registers the module onto the event bus
     public void onEnable() {
         MinecraftForge.EVENT_BUS.register(this);
+        System.out.println("Enabled: " + this.name);
+        NotificationManager.sendNotification("Enabled " + this.name);
     }
 
     // Unregisters the module from the event bus
     public void onDisable() {
         MinecraftForge.EVENT_BUS.unregister(this);
+        System.out.println("Disabled: " + this.name);
+        NotificationManager.sendNotification("Disabled " + this.name);
     }
 
     // Gets the module name

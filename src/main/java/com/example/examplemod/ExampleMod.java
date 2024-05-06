@@ -1,6 +1,7 @@
 package com.example.examplemod;
 
 import com.example.examplemod.modules.Module;
+import net.minecraft.client.Minecraft;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -16,7 +17,7 @@ public class ExampleMod
     public static final String MODID = "examplemod";
     public static final String VERSION = "0.1";
     public ModuleManager moduleManager;
-
+    public static Minecraft mc = Minecraft.getMinecraft();
 
     @EventHandler
     public void init(FMLInitializationEvent event)

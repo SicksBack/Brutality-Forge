@@ -6,7 +6,7 @@ import net.minecraft.client.settings.KeyBinding;
 import org.lwjgl.input.Keyboard;
 
 public class testModule extends Module {
-    private KeyBinding keyBindings;
+
     public testModule() {
         super("Test module", "Test module to show usage", Category.RENDER);
         // Set keybinding
@@ -15,6 +15,9 @@ public class testModule extends Module {
 
     public void onEnable() {
         super.onEnable();
-        System.out.println("Test module says -> Hello, World!");
+    }
+
+    public void onDisable() {
+        super.onDisable();
     }
 }
