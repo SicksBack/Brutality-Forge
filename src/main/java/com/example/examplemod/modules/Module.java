@@ -1,11 +1,14 @@
 package com.example.examplemod.modules;
 
+import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.client.registry.ClientRegistry;
+import org.lwjgl.input.Keyboard;
 
 public class Module {
     public String name;
     public String description;
-    private int key;
+    private KeyBinding key;
     private Category category;
     public boolean toggled;
 
@@ -13,7 +16,7 @@ public class Module {
     public Module(String name, String description, Category category) {
         this.name = name;
         this.description = description;
-        this.key = 0;
+        this.key = null;
         this.category = category;
         this.toggled = false;
     }
@@ -29,12 +32,16 @@ public class Module {
     }
 
     // Returns the key bind
-    public int getKey() {
+    public KeyBinding getKey() {
         return this.key;
     }
 
-    public void setKey(int key) {
-        this.key = key;
+    // TODO - Implement saving of this keybind on shutdown
+    public void setKey(int newKey) {
+        // Create a new keybinding
+        key = new KeyBinding(this.name, newKey, "Brutality Client");
+        // Register it so it will appear in the minecraft settings page
+        ClientRegistry.registerKeyBinding(key);
     }
 
     // Returns if the module is toggled or not

@@ -35,7 +35,7 @@ public class ExampleMod
             if (!ModuleManager.modules.isEmpty()) {
                 for (Module module : ModuleManager.modules) {
                     // Check if the module's key matches the pressed key
-                    if (module.getKey() == keyCode) {
+                    if (module.getKey().isPressed()) {
                         module.toggle();
                     }
                 }
