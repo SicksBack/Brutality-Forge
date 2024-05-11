@@ -1,6 +1,7 @@
 package org.brutality.modules;
 
 import org.brutality.modules.modules.move.SprintModule;
+import org.brutality.modules.modules.render.HUDModule;
 import org.brutality.modules.modules.render.TestModule;
 import lombok.Getter;
 
@@ -10,4 +11,5 @@ import java.util.ArrayList;
 public class ModuleManager extends ArrayList<Module> {
     private final SprintModule sprintModule = new SprintModule();
     private final TestModule testModule = new TestModule();
+    private final HUDModule hudModule = new HUDModule();
 }
