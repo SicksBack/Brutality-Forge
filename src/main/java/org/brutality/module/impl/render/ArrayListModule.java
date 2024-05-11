@@ -6,6 +6,7 @@ import org.brutality.module.Category;
 import org.brutality.module.Module;
 import org.lwjgl.input.Keyboard;
 
+import javax.swing.*;
 import java.util.stream.Collectors;
 
 public class ArrayListModule extends Module {

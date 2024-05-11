@@ -6,6 +6,7 @@ import lombok.Setter;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
+import org.brutality.settings.Setting;
 import org.brutality.utils.interfaces.MC;
 import org.brutality.utils.interfaces.MM;
 
@@ -59,4 +60,6 @@ public class Module implements MM, MC {
         System.out.println("Disabled: " + this.name);
         NotificationManager.sendNotification("Disabled " + this.name);
     }
+
+    public void updateSettings(Setting s) {}
 }
