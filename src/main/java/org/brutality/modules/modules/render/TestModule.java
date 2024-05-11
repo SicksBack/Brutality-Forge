@@ -1,13 +1,12 @@
-package com.example.examplemod.modules.modules.RENDER;
+package org.brutality.modules.modules.render;
 
-import com.example.examplemod.modules.Module;
-import com.example.examplemod.modules.Category;
-import net.minecraft.client.settings.KeyBinding;
+import org.brutality.modules.Module;
+import org.brutality.modules.Category;
 import org.lwjgl.input.Keyboard;
 
-public class testModule extends Module {
+public class TestModule extends Module {
 
-    public testModule() {
+    public TestModule() {
         super("Test module", "Test module to show usage", Category.RENDER);
         // Set keybinding
         this.setKey(Keyboard.KEY_B);

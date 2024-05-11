@@ -1,16 +1,21 @@
-package com.example.examplemod.modules;
+package org.brutality.modules;
 
-import com.example.examplemod.notifications.NotificationManager;
+import org.brutality.notifications.NotificationManager;
+import lombok.Getter;
+import lombok.Setter;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
-import org.lwjgl.input.Keyboard;
+import org.brutality.utils.interfaces.MC;
+import org.brutality.utils.interfaces.MM;
 
-public class Module {
-    public String name;
-    public String description;
+@Getter
+@Setter
+public class Module implements MM, MC {
+    public final String name;
+    public final String description;
     private KeyBinding key;
-    private Category category;
+    private final Category category;
     public boolean toggled;
 
     // Main constructor for the module - holds all the info about the module
@@ -20,34 +25,14 @@ public class Module {
         this.key = null;
         this.category = category;
         this.toggled = false;
+        mm.add(this);
     }
-
-    // Returns the description
-    public String getDescription() {
-        return this.description;
-    }
-
-    // Sets the description
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    // Returns the key bind
-    public KeyBinding getKey() {
-        return this.key;
-    }
-
     // TODO - Implement saving of this keybind on shutdown
     public void setKey(int newKey) {
         // Create a new keybinding
         key = new KeyBinding(this.name, newKey, "Brutality Client");
         // Register it so it will appear in the minecraft settings page
         ClientRegistry.registerKeyBinding(key);
-    }
-
-    // Returns if the module is toggled or not
-    public boolean isToggled() {
-        return this.toggled;
     }
 
     // Switches the toggle
@@ -73,15 +58,5 @@ public class Module {
         MinecraftForge.EVENT_BUS.unregister(this);
         System.out.println("Disabled: " + this.name);
         NotificationManager.sendNotification("Disabled " + this.name);
-    }
-
-    // Gets the module name
-    public String getName() {
-        return this.name;
-    }
-
-    // Gets the module category
-    public Category getCategory() {
-        return this.category;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.examplemod.modules;
+package org.brutality.modules;
 
 // Enum with all the different categories possible.
 public enum Category {
