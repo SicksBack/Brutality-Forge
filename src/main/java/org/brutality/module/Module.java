@@ -1,4 +1,4 @@
-package org.brutality.modules;
+package org.brutality.module;
 
 import org.brutality.notifications.NotificationManager;
 import lombok.Getter;

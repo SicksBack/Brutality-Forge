@@ -1,7 +1,7 @@
-package org.brutality.modules.modules.render;
+package org.brutality.module.impl.render;
 
-import org.brutality.modules.Module;
-import org.brutality.modules.Category;
+import org.brutality.module.Module;
+import org.brutality.module.Category;
 import org.lwjgl.input.Keyboard;
 
 public class TestModule extends Module {

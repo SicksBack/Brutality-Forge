@@ -1,7 +1,7 @@
-package org.brutality.modules.modules.move;
+package org.brutality.module.impl.move;
 
-import org.brutality.modules.Module;
-import org.brutality.modules.Category;
+import org.brutality.module.Module;
+import org.brutality.module.Category;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.lwjgl.input.Keyboard;
