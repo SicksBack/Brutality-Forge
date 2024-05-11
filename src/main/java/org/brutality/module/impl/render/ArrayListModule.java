@@ -17,7 +17,7 @@ public class ArrayListModule extends Module {
 
     @SubscribeEvent
     public void onRender2D(RenderGameOverlayEvent.Text event) {
-        int y = mc.fontRendererObj.FONT_HEIGHT + 15;
+        int y = mc.fontRendererObj.FONT_HEIGHT + 5;
         for (Module m : mm.stream().sorted((o1, o2) -> Integer.compare(mc.fontRendererObj.getStringWidth(o2.getName()), mc.fontRendererObj.getStringWidth(o1.getName()))).collect(Collectors.toList())) {
             if (m.isToggled()) {
                 mc.fontRendererObj.drawStringWithShadow(m.getName(), 5, y, -1);
