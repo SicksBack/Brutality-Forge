@@ -15,8 +15,6 @@ public class ArrayListModule extends Module {
 
     public ArrayListModule() {
         super("ArrayList", "Shows a list of toggled modules", Category.RENDER);
-
-        setKey(Keyboard.KEY_P);
     }
 
     @SubscribeEvent

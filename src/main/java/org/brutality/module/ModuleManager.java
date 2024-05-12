@@ -1,5 +1,6 @@
 package org.brutality.module;
 
+import org.brutality.api.EventBus;
 import org.brutality.module.impl.move.SprintModule;
 import org.brutality.module.impl.render.ArrayListModule;
 import org.brutality.module.impl.render.ClickGuiModule;
@@ -21,6 +22,8 @@ public class ModuleManager extends ArrayList<Module> {
         new HUDModule();
         new ArrayListModule();
         new ClickGuiModule();
+        EventBus.getInstance().register(this);
+
     }
 
     public void updateSettings(Setting setting) {
