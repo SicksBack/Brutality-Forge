@@ -21,17 +21,24 @@ public class BrutalityClient
     public SettingsManager settingsManager;
     public ClickGui clickGui;
 
-    @EventHandler
-    public void init(FMLInitializationEvent event)
-    {
-        INSTANCE = this;
+
+    static {
+
+        BrutalityClient.INSTANCE = new BrutalityClient();
+    }
+
+
+    public void initiate() {
         new FontManager().init();
         settingsManager = new SettingsManager();
         moduleManager = new ModuleManager();
         moduleManager.init();
         clickGui = new ClickGui();
         MinecraftForge.EVENT_BUS.register(this);
+
     }
+
+
 
     @SubscribeEvent
     public void onKeyPress(KeyInputEvent event) {
