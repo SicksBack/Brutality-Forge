@@ -12,7 +12,7 @@ import org.brutality.settings.SettingsManager;
 import org.brutality.ui.clickGui.ClickGui;
 import org.brutality.ui.font.FontManager;
 import org.lwjgl.input.Keyboard;
-
+// test commit
 @Mod(modid = "brutalityclient", version = "1.0 Beta")
 public class BrutalityClient
 {
