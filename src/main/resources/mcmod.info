@@ -1,14 +1,14 @@
 [
 {
-  "modid": "brutalityclient",
+  "modid": "Brutality-1.0",
   "name": "Brutality",
   "description": "Best Pit Client Ever Made",
   "version": "1.0 Beta",
   "mcversion": "1.8",
   "url": "",
   "updateUrl": "",
-  "authorList": ["Sick And Jb6"],
-  "credits": "Sick And Jb6",
+  "authorList": [""],
+  "credits": "",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
