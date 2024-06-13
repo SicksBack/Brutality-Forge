@@ -5,5 +5,6 @@ import org.brutality.module.Module;
 import org.brutality.module.impl.render.ClickGuiModule;
 import org.brutality.module.impl.Fight.VelocityModule;
 import org.brutality.module.Category;
+import org.brutality.ui.clickGui.ClickGui;
 
 public class VelocityModule {
