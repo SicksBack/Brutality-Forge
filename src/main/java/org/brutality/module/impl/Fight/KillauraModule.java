@@ -1,4 +1,4 @@
-package org.brutality.module.impl.move;
+package org.brutality.module.impl.Fight;
 
 import org.brutality.module.Module;
 import org.brutality.module.Category;
@@ -6,13 +6,12 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.lwjgl.input.Keyboard;
 
-// not tested, possibly detected
-public class RageSprintModule extends Module {
+public class KillauraModule extends Module {
 
-    public SprintModule() {SprintModule.java
-        super("RageSprint", "Makes the player sprint in all directions", Category.MOVEMENT);
+    public KillauraModule() {
+        super("Sprint", "Makes the player sprint (essentially toggle sprint)", Category.MOVEMENT);
         // Set keybinding
-        this.setKey(Keyboard.KEY_P);
+        this.setKey(Keyboard.KEY_O);
     }
 
     public void onDisable() {
@@ -23,5 +22,6 @@ public class RageSprintModule extends Module {
     @SubscribeEvent
     public void onTick(TickEvent.ClientTickEvent e) {
         mc.thePlayer.setSprinting(true);
-    }
-}
+        if (mc.thePlayer.moveForward <= 0.0f) {
+            mc.thePlayer.setSprinting(false);
+        }
