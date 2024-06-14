@@ -12,7 +12,7 @@ import org.brutality.settings.SettingsManager;
 import org.brutality.ui.clickGui.ClickGui;
 import org.brutality.ui.font.FontManager;
 import org.lwjgl.input.Keyboard;
-// test commit
+
 @Mod(modid = "brutalityclient", version = "1.0 Beta")
 public class BrutalityClient
 {
@@ -21,24 +21,17 @@ public class BrutalityClient
     public SettingsManager settingsManager;
     public ClickGui clickGui;
 
-
-    static {
-
-        BrutalityClient.INSTANCE = new BrutalityClient();
-    }
-
-
-    public void initiate() {
+    @EventHandler
+    public void init(FMLInitializationEvent event)
+    {
+        INSTANCE = this;
         new FontManager().init();
         settingsManager = new SettingsManager();
         moduleManager = new ModuleManager();
         moduleManager.init();
         clickGui = new ClickGui();
         MinecraftForge.EVENT_BUS.register(this);
-
     }
-
-
 
     @SubscribeEvent
     public void onKeyPress(KeyInputEvent event) {

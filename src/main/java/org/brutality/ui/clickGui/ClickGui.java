@@ -170,14 +170,14 @@ public class ClickGui extends GuiScreen implements MM, SM {
             } else if (setting instanceof NumberSetting) {
                 NumberSetting sliderValue = (NumberSetting) setting;
                 consolas18.drawString(setting.getName() + ": ", x + 120.0F, modY, new Color(200, 200, 200).getRGB());
-                RenderUtil.drawBorder(x + 120.0F + (float) consolas18.getStringWidth(setting.getName() + ": "), modY + 1f, x + 120.0F + (float) consolas18.getStringWidth(setting.getName() + ": ") + 120.0F, modY + 11.0F, 1.0F, new Color(34, 34, 34).getRGB(), true);
+                RenderUtil.drawBorder(x + 120.0F + (float) consolas18.getStringWidth(setting.getName() + ": "), modY - 2.0F, x + 120.0F + (float) consolas18.getStringWidth(setting.getName() + ": ") + 120.0F, modY + 8.0F, 1.0F, new Color(34, 34, 34).getRGB(), true);
                 float sliderX = x + 121.0F + (float) consolas18.getStringWidth(setting.getName() + ": ");
-                float sliderY = modY + 2.0F;
+                float sliderY = modY - 1.0F;
                 float sliderWidth = 118.0F;
                 float sliderHeight = 8.0F;
                 float length = (float)MathHelper.floor_double((sliderValue.getValue() - sliderValue.getMinValue()) / (sliderValue.getMaxValue() - sliderValue.getMinValue()) * sliderWidth);
                 RenderUtil.drawRect(sliderX, sliderY, length, sliderHeight, clickGuiModule.setting.getColor().getRGB());
-                small.drawTotalCenteredString(String.valueOf(sliderValue.getValue()), sliderX + sliderWidth / 2.0F, sliderY + sliderHeight / 2.0F, new Color(200, 200, 200).getRGB());
+                small.drawTotalCenteredString(String.valueOf(sliderValue.getValue()), sliderX + sliderWidth / 2.0F, sliderY + sliderHeight / 2.0F + 1.5F, new Color(200, 200, 200).getRGB());
                 if (GuiUtil.isHovered(mouseX, mouseY, sliderX, sliderY, sliderWidth, sliderHeight)) {
                     hoveredSetting = sliderValue;
                 }
