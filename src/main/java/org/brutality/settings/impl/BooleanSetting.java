@@ -6,7 +6,7 @@ import org.brutality.settings.Setting;
 
 @Getter
 public class BooleanSetting extends Setting {
-    private boolean enabled;
+    public boolean enabled;
 
     public BooleanSetting(String name, Module parent, boolean defaultValue) {
         super(name, parent);
