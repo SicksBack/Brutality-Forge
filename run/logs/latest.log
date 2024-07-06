@@ -1,0 +1,77 @@
+[15:42:05] [Client thread/INFO]: Setting user: Player300
+[15:42:14] [Client thread/INFO]: LWJGL Version: 2.9.4
+[15:42:18] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutality
+[15:42:19] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[15:42:19] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[15:42:19] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[15:42:19] [Thread-9/INFO]: OpenAL initialized.
+[15:42:19] [Sound Library Loader/INFO]: Sound engine started
+[15:42:26] [Client thread/INFO]: Created: 16x16 textures-atlas
+[15:42:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutality
+[15:42:32] [Client thread/INFO]: SoundSystem shutting down...
+[15:42:32] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[15:42:32] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[15:42:33] [Thread-13/INFO]: Initializing LWJGL OpenAL
+[15:42:33] [Thread-13/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[15:42:33] [Thread-13/INFO]: OpenAL initialized.
+[15:42:33] [Sound Library Loader/INFO]: Sound engine started
+[15:42:40] [Client thread/INFO]: Created: 512x512 textures-atlas
+[15:42:51] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
+[15:42:51] [Server thread/INFO]: Generating keypair
+[15:42:52] [Server thread/INFO]: Preparing start region for level 0
+[15:42:53] [Server thread/INFO]: Changing view distance to 8, from 10
+[15:42:58] [Server thread/INFO]: Player300[local:E:d4dfdc3b] logged in with entity id 247 at (292.5564220935711, 4.0, -518.5533999352087)
+[15:42:58] [Server thread/INFO]: Player300 joined the game
+[15:43:05] [Server thread/INFO]: Player300 has just earned the achievement [Taking Inventory]
+[15:43:05] [Client thread/INFO]: [CHAT] Player300 has just earned the achievement [Taking Inventory]
+[15:43:14] [Server thread/INFO]: Saving and pausing game...
+[15:43:14] [Server thread/INFO]: Saving chunks for level 'nigga'/Overworld
+[15:43:15] [Server thread/INFO]: Saving chunks for level 'nigga'/Nether
+[15:43:15] [Server thread/INFO]: Saving chunks for level 'nigga'/The End
+[15:43:26] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
+[15:43:26] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
+[15:43:26] [Server thread/INFO]: Saving and pausing game...
+[15:43:26] [Server thread/INFO]: Saving chunks for level 'nigga'/Overworld
+[15:43:26] [Server thread/INFO]: Saving chunks for level 'nigga'/Nether
+[15:43:26] [Server thread/INFO]: Saving chunks for level 'nigga'/The End
+[15:43:29] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled KillAura
+[15:43:29] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled KillAura
+[15:43:34] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
+[15:43:34] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
+[15:43:34] [Server thread/INFO]: Saving and pausing game...
+[15:43:34] [Server thread/INFO]: Saving chunks for level 'nigga'/Overworld
+[15:43:34] [Server thread/INFO]: Saving chunks for level 'nigga'/Nether
+[15:43:34] [Server thread/INFO]: Saving chunks for level 'nigga'/The End
+[15:43:39] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
+[15:43:39] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
+[15:43:39] [Server thread/INFO]: Saving and pausing game...
+[15:43:39] [Server thread/INFO]: Saving chunks for level 'nigga'/Overworld
+[15:43:39] [Server thread/INFO]: Saving chunks for level 'nigga'/Nether
+[15:43:39] [Server thread/INFO]: Saving chunks for level 'nigga'/The End
+[15:43:41] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled Sprint
+[15:43:49] [Server thread/INFO]: Saving and pausing game...
+[15:43:49] [Server thread/INFO]: Saving chunks for level 'nigga'/Overworld
+[15:43:49] [Server thread/INFO]: Saving chunks for level 'nigga'/Nether
+[15:43:49] [Server thread/INFO]: Saving chunks for level 'nigga'/The End
+[15:43:56] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
+[15:43:56] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
+[15:43:56] [Server thread/INFO]: Saving and pausing game...
+[15:43:56] [Server thread/INFO]: Saving chunks for level 'nigga'/Overworld
+[15:43:57] [Server thread/INFO]: Saving chunks for level 'nigga'/Nether
+[15:43:57] [Server thread/INFO]: Saving chunks for level 'nigga'/The End
+[15:44:01] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
+[15:44:01] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
+[15:44:01] [Server thread/INFO]: Saving and pausing game...
+[15:44:01] [Server thread/INFO]: Saving chunks for level 'nigga'/Overworld
+[15:44:01] [Server thread/INFO]: Saving chunks for level 'nigga'/Nether
+[15:44:01] [Server thread/INFO]: Saving chunks for level 'nigga'/The End
+[15:44:02] [Server thread/WARN]: Player Player300 tried to attack an invalid entity
+[15:44:02] [Server thread/INFO]: Player300 lost connection: TextComponent{text='Attempting to attack an invalid entity', siblings=[], style=Style{hasParent=false, color=null, bold=null, italic=null, underlined=null, obfuscated=null, clickEvent=null, hoverEvent=null, insertion=null}}
+[15:44:02] [Server thread/INFO]: Player300 left the game
+[15:44:02] [Server thread/INFO]: Stopping singleplayer server as player logged out
+[15:44:02] [Server thread/INFO]: Stopping server
+[15:44:02] [Server thread/INFO]: Saving players
+[15:44:02] [Server thread/INFO]: Saving worlds
+[15:44:02] [Server thread/INFO]: Saving chunks for level 'nigga'/Overworld
+[15:44:02] [Server thread/INFO]: Saving chunks for level 'nigga'/Nether
+[15:44:02] [Server thread/INFO]: Saving chunks for level 'nigga'/The End
