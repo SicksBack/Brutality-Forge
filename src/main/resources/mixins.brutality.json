@@ -1,0 +1,11 @@
+{
+  "required": true,
+  "package": "org.brutality.injection.mixins",
+  "refmap": "mixins.brutality.refmap.json",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinMinecraft",
+    "MixinGuiIngame"
+
+  ]
+}
