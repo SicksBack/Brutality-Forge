@@ -13,7 +13,6 @@ import java.util.stream.Collectors;
 public class ModuleManager extends ArrayList<Module> {
     public void init() {
         new SprintModule();
-        new TestModule();
         new HUDModule();
         new ArrayListModule();
         new ClickGuiModule();
