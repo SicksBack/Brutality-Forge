@@ -19,14 +19,6 @@ public class NumberSetting extends Setting {
         this.decimalPlaces = decimalPlaces;
     }
 
-    public NumberSetting(String name, Mode<?> parent, double value, double minValue, double maxValue, int decimalPlaces) {
-        super(name, parent);
-        this.value = value;
-        this.minValue = minValue;
-        this.maxValue = maxValue;
-        this.decimalPlaces = decimalPlaces;
-    }
-
     public void setValue(double value) {
         this.value = value;
         mm.updateSettings(this);

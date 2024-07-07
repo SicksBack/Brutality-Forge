@@ -2,6 +2,7 @@ package org.brutality.module;
 
 import org.brutality.module.impl.combat.KillauraModule;
 import org.brutality.module.impl.move.SprintModule;
+import org.brutality.module.impl.pit.PitSwap;
 import org.brutality.module.impl.render.*;
 import lombok.Getter;
 import org.brutality.settings.Setting;
@@ -18,6 +19,7 @@ public class ModuleManager extends ArrayList<Module> {
         new ClickGuiModule();
         new KillauraModule(); // Register the KillAura module
         new NameTagModule();
+        new PitSwap();
     }
 
     public void updateSettings(Setting setting) {
