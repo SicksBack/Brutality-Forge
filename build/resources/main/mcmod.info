@@ -1,0 +1,16 @@
+[
+{
+  "modid": "brutalityclient",
+  "name": "Brutality",
+  "description": "Best Pit Client Ever Made",
+  "version": "1.0 Beta",
+  "mcversion": "1.8",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["opp is rnning?"],
+  "credits": "the opp sho",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
