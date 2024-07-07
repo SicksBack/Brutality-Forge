@@ -1,6 +1,0 @@
-"refmap": "mixins.brutality.refmap.json",
-"compatibilityLevel": "JAVA_8",
-"mixins": [
-"MixinMinecraft"
-"MixinMinecraft",
-"MixinGuiIngame"
