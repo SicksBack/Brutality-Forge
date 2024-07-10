@@ -1,4 +1,4 @@
 package org.brutality.module.impl.render;
 
-public class NameTagModule {
+public class NameTag {
 }

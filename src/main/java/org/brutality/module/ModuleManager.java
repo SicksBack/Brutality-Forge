@@ -1,27 +1,53 @@
 package org.brutality.module;
 
+import net.minecraft.world.World;
+import org.brutality.module.impl.World.*;
 import org.brutality.module.impl.combat.*;
 import org.brutality.module.impl.move.*;
 import org.brutality.module.impl.pit.*;
+import org.brutality.module.impl.player.*;
 import org.brutality.module.impl.render.*;
 import lombok.Getter;
 import org.brutality.settings.Setting;
+import org.brutality.settings.impl.ButtonSetting;
 
+import javax.naming.Name;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
 @Getter
 public class ModuleManager extends ArrayList<Module> {
+    public static ButtonSetting reach;
+
     public void init() {
         new SprintModule();
         new HUDModule();
         new ArrayListModule();
         new ClickGuiModule();
-        new KillauraModule(); // Register the KillAura module
-        new NameTagModule();
+        new KillAura(); // Register the KillAura module
         new PitSwap();
         new KeepSprint();
         new Velocity();
+        new NoSlow();
+        new TelebowTimer();
+        new Freecam();
+        new Scaffold();
+        new Speed();
+        new LongJump();
+        new Fly();
+        new AntiBot();
+        new Blink();
+        new FakeLag();
+        new FastPlace();
+        new Chams();
+        new NameTag();
+        new KOS();
+        new Friends();
+        new VenomedTimer();
+        new WhoGotDogged();
+        new AutoAura();
+        new AutoEgg();
+        new AutoSteak();
     }
 
     public void updateSettings(Setting setting) {
