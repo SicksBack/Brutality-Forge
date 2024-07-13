@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 98 files
+Processing 99 files
 processing org\brutality\BrutalityClient.java
 processing org\brutality\command\Command.java
 processing org\brutality\command\CommandManager.java
@@ -11,7 +11,6 @@ processing org\brutality\commands\CommandManager.java
 processing org\brutality\commands\impl\BindCommand.java
 processing org\brutality\events\Event.java
 processing org\brutality\events\EventListener.java
-processing org\brutality\events\EventManager.java
 processing org\brutality\events\EventRenderGUI.java
 processing org\brutality\events\EventTarget.java
 processing org\brutality\events\JumpEvent.java
@@ -29,6 +28,7 @@ processing org\brutality\events\SlowDownEvent.java
 processing org\brutality\events\listeners\EventChat.java
 processing org\brutality\events\listeners\EventKey.java
 processing org\brutality\events\listeners\EventMotion.java
+processing org\brutality\events\listeners\EventPacketReceive.java
 processing org\brutality\events\listeners\EventPacketSend.java
 processing org\brutality\events\listeners\EventUpdate.java
 processing org\brutality\events\network\EventSendPacket.java
@@ -47,6 +47,7 @@ processing org\brutality\module\impl\pit\AutoAura.java
 processing org\brutality\module\impl\pit\AutoEgg.java
 processing org\brutality\module\impl\pit\AutoSteak.java
 processing org\brutality\module\impl\pit\PitSwap.java
+processing org\brutality\module\impl\pit\SogeSwap.java
 processing org\brutality\module\impl\pit\TelebowTimer.java
 processing org\brutality\module\impl\pit\VenomedTimer.java
 processing org\brutality\module\impl\pit\WhoGotDogged.java

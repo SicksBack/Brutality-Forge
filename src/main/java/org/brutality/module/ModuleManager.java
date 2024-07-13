@@ -47,6 +47,8 @@ public class ModuleManager extends ArrayList<Module> {
         new AutoAura();
         new AutoEgg();
         new AutoSteak();
+        new SogeSwap();
+        new AutoSpawn();
     }
 
     public void updateSettings(Setting setting) {

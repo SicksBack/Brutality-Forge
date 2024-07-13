@@ -1,69 +1,48 @@
 Symbol range map extraction starting
-Processing 98 files
+Processing 99 files
 processing org\brutality\BrutalityClient.java
 @|org\brutality\BrutalityClient.java|8|21|org.brutality|package|org.brutality|(file)
 Class Start: org.brutality.BrutalityClient
-   @|org\brutality\BrutalityClient.java|939|954|BrutalityClient|class|org.brutality.BrutalityClient
-   @|org\brutality\BrutalityClient.java|955|963|INSTANCE|field|org.brutality.BrutalityClient|INSTANCE|
-   @|org\brutality\BrutalityClient.java|976|989|ModuleManager|class|org.brutality.module.ModuleManager
-   @|org\brutality\BrutalityClient.java|990|1003|moduleManager|field|org.brutality.BrutalityClient|moduleManager|
-   @|org\brutality\BrutalityClient.java|1016|1031|SettingsManager|class|org.brutality.settings.SettingsManager
-   @|org\brutality\BrutalityClient.java|1032|1047|settingsManager|field|org.brutality.BrutalityClient|settingsManager|
-   @|org\brutality\BrutalityClient.java|1060|1068|ClickGui|class|org.brutality.ui.clickGui.ClickGui
-   @|org\brutality\BrutalityClient.java|1069|1077|clickGui|field|org.brutality.BrutalityClient|clickGui|
-   @|org\brutality\BrutalityClient.java|1090|1104|CommandManager|class|org.brutality.commands.CommandManager
-   @|org\brutality\BrutalityClient.java|1105|1119|commandManager|field|org.brutality.BrutalityClient|commandManager|
+   @|org\brutality\BrutalityClient.java|829|844|BrutalityClient|class|org.brutality.BrutalityClient
+   @|org\brutality\BrutalityClient.java|845|853|INSTANCE|field|org.brutality.BrutalityClient|INSTANCE|
+   @|org\brutality\BrutalityClient.java|866|879|ModuleManager|class|org.brutality.module.ModuleManager
+   @|org\brutality\BrutalityClient.java|880|893|moduleManager|field|org.brutality.BrutalityClient|moduleManager|
+   @|org\brutality\BrutalityClient.java|906|921|SettingsManager|class|org.brutality.settings.SettingsManager
+   @|org\brutality\BrutalityClient.java|922|937|settingsManager|field|org.brutality.BrutalityClient|settingsManager|
+   @|org\brutality\BrutalityClient.java|950|958|ClickGui|class|org.brutality.ui.clickGui.ClickGui
+   @|org\brutality\BrutalityClient.java|959|967|clickGui|field|org.brutality.BrutalityClient|clickGui|
    Method Start: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
-      @|org\brutality\BrutalityClient.java|1156|1160|init|method|org.brutality.BrutalityClient|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
-      @|org\brutality\BrutalityClient.java|1161|1183|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent
-      @|org\brutality\BrutalityClient.java|1184|1189|event|param|org.brutality.BrutalityClient|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
-      @|org\brutality\BrutalityClient.java|1201|1209|INSTANCE|field|org.brutality.BrutalityClient|INSTANCE
-      @|org\brutality\BrutalityClient.java|1230|1241|FontManager|class|org.brutality.ui.font.FontManager
-      @|org\brutality\BrutalityClient.java|1244|1248|init|method|org.brutality.ui.font.FontManager|init|()V
-      @|org\brutality\BrutalityClient.java|1260|1275|settingsManager|field|org.brutality.BrutalityClient|settingsManager
-      @|org\brutality\BrutalityClient.java|1282|1297|SettingsManager|class|org.brutality.settings.SettingsManager
-      @|org\brutality\BrutalityClient.java|1309|1322|moduleManager|field|org.brutality.BrutalityClient|moduleManager
-      @|org\brutality\BrutalityClient.java|1329|1342|ModuleManager|class|org.brutality.module.ModuleManager
-      @|org\brutality\BrutalityClient.java|1354|1367|moduleManager|field|org.brutality.BrutalityClient|moduleManager
-      @|org\brutality\BrutalityClient.java|1368|1372|init|method|org.brutality.module.ModuleManager|init|()V
-      @|org\brutality\BrutalityClient.java|1384|1392|clickGui|field|org.brutality.BrutalityClient|clickGui
-      @|org\brutality\BrutalityClient.java|1399|1407|ClickGui|class|org.brutality.ui.clickGui.ClickGui
-      @|org\brutality\BrutalityClient.java|1419|1433|commandManager|field|org.brutality.BrutalityClient|commandManager
-      @|org\brutality\BrutalityClient.java|1440|1454|CommandManager|class|org.brutality.commands.CommandManager
-      @|org\brutality\BrutalityClient.java|1466|1480|commandManager|field|org.brutality.BrutalityClient|commandManager
-      @|org\brutality\BrutalityClient.java|1481|1485|init|method|org.brutality.commands.CommandManager|init|()V
-      @|org\brutality\BrutalityClient.java|1497|1511|MinecraftForge|class|net.minecraftforge.common.MinecraftForge
-      @|org\brutality\BrutalityClient.java|1512|1521|EVENT_BUS|field|net.minecraftforge.common.MinecraftForge|EVENT_BUS
-      @|org\brutality\BrutalityClient.java|1522|1530|register|method|net.minecraftforge.fml.common.eventhandler.EventBus|register|(Ljava/lang/Object;)V
+      @|org\brutality\BrutalityClient.java|1004|1008|init|method|org.brutality.BrutalityClient|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+      @|org\brutality\BrutalityClient.java|1009|1031|FMLInitializationEvent|class|net.minecraftforge.fml.common.event.FMLInitializationEvent
+      @|org\brutality\BrutalityClient.java|1032|1037|event|param|org.brutality.BrutalityClient|init|(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V|event|0
+      @|org\brutality\BrutalityClient.java|1053|1061|INSTANCE|field|org.brutality.BrutalityClient|INSTANCE
+      @|org\brutality\BrutalityClient.java|1082|1093|FontManager|class|org.brutality.ui.font.FontManager
+      @|org\brutality\BrutalityClient.java|1096|1100|init|method|org.brutality.ui.font.FontManager|init|()V
+      @|org\brutality\BrutalityClient.java|1112|1127|settingsManager|field|org.brutality.BrutalityClient|settingsManager
+      @|org\brutality\BrutalityClient.java|1134|1149|SettingsManager|class|org.brutality.settings.SettingsManager
+      @|org\brutality\BrutalityClient.java|1161|1174|moduleManager|field|org.brutality.BrutalityClient|moduleManager
+      @|org\brutality\BrutalityClient.java|1181|1194|ModuleManager|class|org.brutality.module.ModuleManager
+      @|org\brutality\BrutalityClient.java|1206|1219|moduleManager|field|org.brutality.BrutalityClient|moduleManager
+      @|org\brutality\BrutalityClient.java|1220|1224|init|method|org.brutality.module.ModuleManager|init|()V
+      @|org\brutality\BrutalityClient.java|1236|1244|clickGui|field|org.brutality.BrutalityClient|clickGui
+      @|org\brutality\BrutalityClient.java|1251|1259|ClickGui|class|org.brutality.ui.clickGui.ClickGui
+      @|org\brutality\BrutalityClient.java|1271|1285|MinecraftForge|class|net.minecraftforge.common.MinecraftForge
+      @|org\brutality\BrutalityClient.java|1286|1295|EVENT_BUS|field|net.minecraftforge.common.MinecraftForge|EVENT_BUS
+      @|org\brutality\BrutalityClient.java|1296|1304|register|method|net.minecraftforge.fml.common.eventhandler.EventBus|register|(Ljava/lang/Object;)V
    Method End: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
    Method Start: onKeyPress(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
-      @|org\brutality\BrutalityClient.java|1581|1591|onKeyPress|method|org.brutality.BrutalityClient|onKeyPress|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
-      @|org\brutality\BrutalityClient.java|1592|1605|KeyInputEvent|class|net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent
-      @|org\brutality\BrutalityClient.java|1606|1611|event|param|org.brutality.BrutalityClient|onKeyPress|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V|event|0
-      @|org\brutality\BrutalityClient.java|1627|1635|Keyboard|class|org.lwjgl.input.Keyboard
-      @|org\brutality\BrutalityClient.java|1636|1652|getEventKeyState|method|org.lwjgl.input.Keyboard|getEventKeyState|()Z
-      @|org\brutality\BrutalityClient.java|1675|1681|Module|class|org.brutality.module.Module
-      @|org\brutality\BrutalityClient.java|1691|1704|moduleManager|field|org.brutality.BrutalityClient|moduleManager
-      @|org\brutality\BrutalityClient.java|1724|1734|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|org\brutality\BrutalityClient.java|1355|1365|onKeyPress|method|org.brutality.BrutalityClient|onKeyPress|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+      @|org\brutality\BrutalityClient.java|1366|1379|KeyInputEvent|class|net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent
+      @|org\brutality\BrutalityClient.java|1380|1385|event|param|org.brutality.BrutalityClient|onKeyPress|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V|event|0
+      @|org\brutality\BrutalityClient.java|1401|1409|Keyboard|class|org.lwjgl.input.Keyboard
+      @|org\brutality\BrutalityClient.java|1410|1426|getEventKeyState|method|org.lwjgl.input.Keyboard|getEventKeyState|()Z
+      @|org\brutality\BrutalityClient.java|1449|1455|Module|class|org.brutality.module.Module
+      @|org\brutality\BrutalityClient.java|1465|1478|moduleManager|field|org.brutality.BrutalityClient|moduleManager
+      @|org\brutality\BrutalityClient.java|1498|1508|KeyBinding|class|net.minecraft.client.settings.KeyBinding
       ERROR SimpleName: getKey null
-      @|org\brutality\BrutalityClient.java|1825|1834|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
-      @|org\brutality\BrutalityClient.java|1867|1873|toggle|method|org.brutality.module.Module|toggle|()V
+      @|org\brutality\BrutalityClient.java|1599|1608|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      @|org\brutality\BrutalityClient.java|1641|1647|toggle|method|org.brutality.module.Module|toggle|()V
    Method End: onKeyPress(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
-   Method Start: onChat(Lnet/minecraftforge/client/event/ClientChatReceivedEvent;)V
-      @|org\brutality\BrutalityClient.java|1962|1968|onChat|method|org.brutality.BrutalityClient|onChat|(Lnet/minecraftforge/client/event/ClientChatReceivedEvent;)V
-      @|org\brutality\BrutalityClient.java|1969|1992|ClientChatReceivedEvent|class|net.minecraftforge.client.event.ClientChatReceivedEvent
-      @|org\brutality\BrutalityClient.java|1993|1998|event|param|org.brutality.BrutalityClient|onChat|(Lnet/minecraftforge/client/event/ClientChatReceivedEvent;)V|event|0
-      @|org\brutality\BrutalityClient.java|2010|2016|String|class|java.lang.String
-      @|org\brutality\BrutalityClient.java|2027|2032|event|param|org.brutality.BrutalityClient|onChat|(Lnet/minecraftforge/client/event/ClientChatReceivedEvent;)V|event|0
-      @|org\brutality\BrutalityClient.java|2033|2040|message|field|net.minecraftforge.client.event.ClientChatReceivedEvent|message
-      @|org\brutality\BrutalityClient.java|2041|2059|getUnformattedText|method|net.minecraft.util.IChatComponent|getUnformattedText|()Ljava/lang/String;
-      @|org\brutality\BrutalityClient.java|2083|2093|startsWith|method|java.lang.String|startsWith|(Ljava/lang/String;)Z
-      @|org\brutality\BrutalityClient.java|2114|2119|event|param|org.brutality.BrutalityClient|onChat|(Lnet/minecraftforge/client/event/ClientChatReceivedEvent;)V|event|0
-      @|org\brutality\BrutalityClient.java|2120|2131|setCanceled|method|net.minecraftforge.fml.common.eventhandler.Event|setCanceled|(Z)V
-      @|org\brutality\BrutalityClient.java|2151|2165|commandManager|field|org.brutality.BrutalityClient|commandManager
-      @|org\brutality\BrutalityClient.java|2166|2179|handleCommand|method|org.brutality.commands.CommandManager|handleCommand|(Ljava/lang/String;)V
-      @|org\brutality\BrutalityClient.java|2188|2197|substring|method|java.lang.String|substring|(I)Ljava/lang/String;
-   Method End: onChat(Lnet/minecraftforge/client/event/ClientChatReceivedEvent;)V
 Class End  : org.brutality.BrutalityClient
 endProcessing org\brutality\BrutalityClient.java
 
@@ -323,184 +302,24 @@ endProcessing org\brutality\command\impl\KOSCommand.java
 processing org\brutality\commands\BindManager.java
 @|org\brutality\commands\BindManager.java|8|30|org.brutality.commands|package|org.brutality.commands|(file)
 Class Start: org.brutality.commands.BindManager
-   @|org\brutality\commands\BindManager.java|207|214|Integer|class|java.lang.Integer
-   @|org\brutality\commands\BindManager.java|216|222|Module|class|org.brutality.module.Module
-   @|org\brutality\commands\BindManager.java|203|206|Map|class|java.util.Map
-   @|org\brutality\commands\BindManager.java|224|235|keyBindings|field|org.brutality.commands.BindManager|keyBindings|
-   @|org\brutality\commands\BindManager.java|242|249|HashMap|class|java.util.HashMap
-   Method Start: setBind(ILorg/brutality/module/Module;)V
-      @|org\brutality\commands\BindManager.java|279|286|setBind|method|org.brutality.commands.BindManager|setBind|(ILorg/brutality/module/Module;)V
-      @|org\brutality\commands\BindManager.java|291|294|key|param|org.brutality.commands.BindManager|setBind|(ILorg/brutality/module/Module;)V|key|0
-      @|org\brutality\commands\BindManager.java|296|302|Module|class|org.brutality.module.Module
-      @|org\brutality\commands\BindManager.java|303|309|module|param|org.brutality.commands.BindManager|setBind|(ILorg/brutality/module/Module;)V|module|1
-      @|org\brutality\commands\BindManager.java|321|332|keyBindings|field|org.brutality.commands.BindManager|keyBindings
-      @|org\brutality\commands\BindManager.java|333|336|put|method|java.util.Map|put|(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-      @|org\brutality\commands\BindManager.java|337|340|key|param|org.brutality.commands.BindManager|setBind|(ILorg/brutality/module/Module;)V|key|0
-      @|org\brutality\commands\BindManager.java|342|348|module|param|org.brutality.commands.BindManager|setBind|(ILorg/brutality/module/Module;)V|module|1
-   Method End: setBind(ILorg/brutality/module/Module;)V
-   Method Start: removeBind(I)V
-      @|org\brutality\commands\BindManager.java|381|391|removeBind|method|org.brutality.commands.BindManager|removeBind|(I)V
-      @|org\brutality\commands\BindManager.java|396|399|key|param|org.brutality.commands.BindManager|removeBind|(I)V|key|0
-      @|org\brutality\commands\BindManager.java|411|422|keyBindings|field|org.brutality.commands.BindManager|keyBindings
-      @|org\brutality\commands\BindManager.java|423|429|remove|method|java.util.Map|remove|(Ljava/lang/Object;)Ljava/lang/Object;
-      @|org\brutality\commands\BindManager.java|430|433|key|param|org.brutality.commands.BindManager|removeBind|(I)V|key|0
-   Method End: removeBind(I)V
-   Method Start: onKeyPress(I)V
-      @|org\brutality\commands\BindManager.java|466|476|onKeyPress|method|org.brutality.commands.BindManager|onKeyPress|(I)V
-      @|org\brutality\commands\BindManager.java|481|484|key|param|org.brutality.commands.BindManager|onKeyPress|(I)V|key|0
-      @|org\brutality\commands\BindManager.java|496|502|Module|class|org.brutality.module.Module
-      @|org\brutality\commands\BindManager.java|512|523|keyBindings|field|org.brutality.commands.BindManager|keyBindings
-      @|org\brutality\commands\BindManager.java|524|527|get|method|java.util.Map|get|(Ljava/lang/Object;)Ljava/lang/Object;
-      @|org\brutality\commands\BindManager.java|528|531|key|param|org.brutality.commands.BindManager|onKeyPress|(I)V|key|0
-      @|org\brutality\commands\BindManager.java|583|589|toggle|method|org.brutality.module.Module|toggle|()V
-   Method End: onKeyPress(I)V
 Class End  : org.brutality.commands.BindManager
 endProcessing org\brutality\commands\BindManager.java
 
 processing org\brutality\commands\Command.java
 @|org\brutality\commands\Command.java|8|30|org.brutality.commands|package|org.brutality.commands|(file)
 Class Start: org.brutality.commands.Command
-   @|org\brutality\commands\Command.java|83|89|String|class|java.lang.String
-   @|org\brutality\commands\Command.java|90|94|name|field|org.brutality.commands.Command|name|
-   @|org\brutality\commands\Command.java|114|120|String|class|java.lang.String
-   @|org\brutality\commands\Command.java|121|132|description|field|org.brutality.commands.Command|description|
-   @|org\brutality\commands\Command.java|152|158|String|class|java.lang.String
-   @|org\brutality\commands\Command.java|159|164|usage|field|org.brutality.commands.Command|usage|
-   Method Start: Command(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-      @|org\brutality\commands\Command.java|178|185|Command|method|org.brutality.commands.Command|Command|(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-      @|org\brutality\commands\Command.java|186|192|String|class|java.lang.String
-      @|org\brutality\commands\Command.java|193|197|name|param|org.brutality.commands.Command|Command|(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V|name|0
-      @|org\brutality\commands\Command.java|199|205|String|class|java.lang.String
-      @|org\brutality\commands\Command.java|206|217|description|param|org.brutality.commands.Command|Command|(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V|description|1
-      @|org\brutality\commands\Command.java|219|225|String|class|java.lang.String
-      @|org\brutality\commands\Command.java|226|231|usage|param|org.brutality.commands.Command|Command|(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V|usage|2
-      @|org\brutality\commands\Command.java|248|252|name|field|org.brutality.commands.Command|name
-      @|org\brutality\commands\Command.java|255|259|name|param|org.brutality.commands.Command|Command|(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V|name|0
-      @|org\brutality\commands\Command.java|274|285|description|field|org.brutality.commands.Command|description
-      @|org\brutality\commands\Command.java|288|299|description|param|org.brutality.commands.Command|Command|(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V|description|1
-      @|org\brutality\commands\Command.java|314|319|usage|field|org.brutality.commands.Command|usage
-      @|org\brutality\commands\Command.java|322|327|usage|param|org.brutality.commands.Command|Command|(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V|usage|2
-   Method End: Command(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
-   Method Start: getName()Ljava/lang/String;
-      @|org\brutality\commands\Command.java|354|361|getName|method|org.brutality.commands.Command|getName|()Ljava/lang/String;
-      @|org\brutality\commands\Command.java|347|353|String|class|java.lang.String
-      @|org\brutality\commands\Command.java|381|385|name|field|org.brutality.commands.Command|name
-   Method End: getName()Ljava/lang/String;
-   Method Start: getDescription()Ljava/lang/String;
-      @|org\brutality\commands\Command.java|412|426|getDescription|method|org.brutality.commands.Command|getDescription|()Ljava/lang/String;
-      @|org\brutality\commands\Command.java|405|411|String|class|java.lang.String
-      @|org\brutality\commands\Command.java|446|457|description|field|org.brutality.commands.Command|description
-   Method End: getDescription()Ljava/lang/String;
-   Method Start: getUsage()Ljava/lang/String;
-      @|org\brutality\commands\Command.java|484|492|getUsage|method|org.brutality.commands.Command|getUsage|()Ljava/lang/String;
-      @|org\brutality\commands\Command.java|477|483|String|class|java.lang.String
-      @|org\brutality\commands\Command.java|512|517|usage|field|org.brutality.commands.Command|usage
-   Method End: getUsage()Ljava/lang/String;
-   Method Start: execute([Ljava/lang/String;)V
-      @|org\brutality\commands\Command.java|551|558|execute|method|org.brutality.commands.Command|execute|([Ljava/lang/String;)V
-      @|org\brutality\commands\Command.java|559|565|String|class|java.lang.String
-      @|org\brutality\commands\Command.java|568|572|args|param|org.brutality.commands.Command|execute|([Ljava/lang/String;)V|args|0
-   Method End: execute([Ljava/lang/String;)V
 Class End  : org.brutality.commands.Command
 endProcessing org\brutality\commands\Command.java
 
 processing org\brutality\commands\CommandManager.java
 @|org\brutality\commands\CommandManager.java|8|30|org.brutality.commands|package|org.brutality.commands|(file)
 Class Start: org.brutality.commands.CommandManager
-   @|org\brutality\commands\CommandManager.java|211|218|Command|class|org.brutality.commands.Command
-   @|org\brutality\commands\CommandManager.java|206|210|List|class|java.util.List
-   @|org\brutality\commands\CommandManager.java|220|228|commands|field|org.brutality.commands.CommandManager|commands|
-   @|org\brutality\commands\CommandManager.java|235|244|ArrayList|class|java.util.ArrayList
-   Method Start: init()V
-      @|org\brutality\commands\CommandManager.java|267|271|init|method|org.brutality.commands.CommandManager|init|()V
-      @|org\brutality\commands\CommandManager.java|284|292|commands|field|org.brutality.commands.CommandManager|commands
-      @|org\brutality\commands\CommandManager.java|293|296|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\commands\CommandManager.java|301|312|BindCommand|class|org.brutality.commands.impl.BindCommand
-   Method End: init()V
-   Method Start: getCommands()Ljava/util/List;
-      @|org\brutality\commands\CommandManager.java|379|390|getCommands|method|org.brutality.commands.CommandManager|getCommands|()Ljava/util/List;
-      @|org\brutality\commands\CommandManager.java|370|377|Command|class|org.brutality.commands.Command
-      @|org\brutality\commands\CommandManager.java|365|369|List|class|java.util.List
-      @|org\brutality\commands\CommandManager.java|410|418|commands|field|org.brutality.commands.CommandManager|commands
-   Method End: getCommands()Ljava/util/List;
-   Method Start: handleCommand(Ljava/lang/String;)V
-      @|org\brutality\commands\CommandManager.java|443|456|handleCommand|method|org.brutality.commands.CommandManager|handleCommand|(Ljava/lang/String;)V
-      @|org\brutality\commands\CommandManager.java|457|463|String|class|java.lang.String
-      @|org\brutality\commands\CommandManager.java|464|469|input|param|org.brutality.commands.CommandManager|handleCommand|(Ljava/lang/String;)V|input|0
-      @|org\brutality\commands\CommandManager.java|481|487|String|class|java.lang.String
-      @|org\brutality\commands\CommandManager.java|497|502|input|param|org.brutality.commands.CommandManager|handleCommand|(Ljava/lang/String;)V|input|0
-      @|org\brutality\commands\CommandManager.java|503|508|split|method|java.lang.String|split|(Ljava/lang/String;)[Ljava/lang/String;
-      Field: Array Length, skipping
-      @|org\brutality\commands\CommandManager.java|563|570|Command|class|org.brutality.commands.Command
-      @|org\brutality\commands\CommandManager.java|581|589|commands|field|org.brutality.commands.CommandManager|commands
-      @|org\brutality\commands\CommandManager.java|621|628|getName|method|org.brutality.commands.Command|getName|()Ljava/lang/String;
-      @|org\brutality\commands\CommandManager.java|631|647|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
-      @|org\brutality\commands\CommandManager.java|688|695|execute|method|org.brutality.commands.Command|execute|([Ljava/lang/String;)V
-      @|org\brutality\commands\CommandManager.java|696|702|Arrays|class|java.util.Arrays
-      @|org\brutality\commands\CommandManager.java|703|714|copyOfRange|method|java.util.Arrays|copyOfRange|([Ljava/lang/Object;II)[Ljava/lang/Object;
-      Field: Array Length, skipping
-   Method End: handleCommand(Ljava/lang/String;)V
 Class End  : org.brutality.commands.CommandManager
 endProcessing org\brutality\commands\CommandManager.java
 
 processing org\brutality\commands\impl\BindCommand.java
 @|org\brutality\commands\impl\BindCommand.java|8|35|org.brutality.commands.impl|package|org.brutality.commands.impl|(file)
 Class Start: org.brutality.commands.impl.BindCommand
-   Method Start: BindCommand()V
-      @|org\brutality\commands\impl\BindCommand.java|413|424|BindCommand|method|org.brutality.commands.impl.BindCommand|BindCommand|()V
-   Method End: BindCommand()V
-   Method Start: execute([Ljava/lang/String;)V
-      @|org\brutality\commands\impl\BindCommand.java|540|547|execute|method|org.brutality.commands.Command|execute|([Ljava/lang/String;)V
-      @|org\brutality\commands\impl\BindCommand.java|548|554|String|class|java.lang.String
-      @|org\brutality\commands\impl\BindCommand.java|557|561|args|param|org.brutality.commands.impl.BindCommand|execute|([Ljava/lang/String;)V|args|0
-      @|org\brutality\commands\impl\BindCommand.java|577|581|args|param|org.brutality.commands.impl.BindCommand|execute|([Ljava/lang/String;)V|args|0
-      Field: Array Length, skipping
-      @|org\brutality\commands\impl\BindCommand.java|609|624|sendChatMessage|method|org.brutality.commands.impl.BindCommand|sendChatMessage|(Ljava/lang/String;)V
-      @|org\brutality\commands\impl\BindCommand.java|625|643|EnumChatFormatting|class|net.minecraft.util.EnumChatFormatting
-      @|org\brutality\commands\impl\BindCommand.java|644|647|RED|field|net.minecraft.util.EnumChatFormatting|RED
-      @|org\brutality\commands\impl\BindCommand.java|662|670|getUsage|method|org.brutality.commands.Command|getUsage|()Ljava/lang/String;
-      @|org\brutality\commands\impl\BindCommand.java|714|720|String|class|java.lang.String
-      @|org\brutality\commands\impl\BindCommand.java|734|738|args|param|org.brutality.commands.impl.BindCommand|execute|([Ljava/lang/String;)V|args|0
-      @|org\brutality\commands\impl\BindCommand.java|751|757|String|class|java.lang.String
-      @|org\brutality\commands\impl\BindCommand.java|768|772|args|param|org.brutality.commands.impl.BindCommand|execute|([Ljava/lang/String;)V|args|0
-      @|org\brutality\commands\impl\BindCommand.java|776|787|toUpperCase|method|java.lang.String|toUpperCase|()Ljava/lang/String;
-      @|org\brutality\commands\impl\BindCommand.java|799|805|Module|class|org.brutality.module.Module
-      @|org\brutality\commands\impl\BindCommand.java|815|828|ModuleManager|class|org.brutality.module.ModuleManager
-      @|org\brutality\commands\impl\BindCommand.java|829|840|getInstance|method|org.brutality.module.ModuleManager|getInstance|()Lorg/brutality/module/ModuleManager;
-      @|org\brutality\commands\impl\BindCommand.java|843|858|getModuleByName|method|org.brutality.module.ModuleManager|getModuleByName|(Ljava/lang/String;)Lorg/brutality/module/Module;
-      @|org\brutality\commands\impl\BindCommand.java|915|930|sendChatMessage|method|org.brutality.commands.impl.BindCommand|sendChatMessage|(Ljava/lang/String;)V
-      @|org\brutality\commands\impl\BindCommand.java|931|949|EnumChatFormatting|class|net.minecraft.util.EnumChatFormatting
-      @|org\brutality\commands\impl\BindCommand.java|950|953|RED|field|net.minecraft.util.EnumChatFormatting|RED
-      @|org\brutality\commands\impl\BindCommand.java|1041|1049|Keyboard|class|org.lwjgl.input.Keyboard
-      @|org\brutality\commands\impl\BindCommand.java|1050|1061|getKeyIndex|method|org.lwjgl.input.Keyboard|getKeyIndex|(Ljava/lang/String;)I
-      @|org\brutality\commands\impl\BindCommand.java|1091|1099|Keyboard|class|org.lwjgl.input.Keyboard
-      @|org\brutality\commands\impl\BindCommand.java|1100|1108|KEY_NONE|field|org.lwjgl.input.Keyboard|KEY_NONE
-      @|org\brutality\commands\impl\BindCommand.java|1124|1139|sendChatMessage|method|org.brutality.commands.impl.BindCommand|sendChatMessage|(Ljava/lang/String;)V
-      @|org\brutality\commands\impl\BindCommand.java|1140|1158|EnumChatFormatting|class|net.minecraft.util.EnumChatFormatting
-      @|org\brutality\commands\impl\BindCommand.java|1159|1162|RED|field|net.minecraft.util.EnumChatFormatting|RED
-      @|org\brutality\commands\impl\BindCommand.java|1239|1245|setKey|method|org.brutality.module.Module|setKey|(I)V
-      @|org\brutality\commands\impl\BindCommand.java|1261|1276|sendChatMessage|method|org.brutality.commands.impl.BindCommand|sendChatMessage|(Ljava/lang/String;)V
-      @|org\brutality\commands\impl\BindCommand.java|1277|1295|EnumChatFormatting|class|net.minecraft.util.EnumChatFormatting
-      @|org\brutality\commands\impl\BindCommand.java|1296|1301|BLACK|field|net.minecraft.util.EnumChatFormatting|BLACK
-      @|org\brutality\commands\impl\BindCommand.java|1310|1328|EnumChatFormatting|class|net.minecraft.util.EnumChatFormatting
-      @|org\brutality\commands\impl\BindCommand.java|1329|1337|DARK_RED|field|net.minecraft.util.EnumChatFormatting|DARK_RED
-      @|org\brutality\commands\impl\BindCommand.java|1346|1364|EnumChatFormatting|class|net.minecraft.util.EnumChatFormatting
-      @|org\brutality\commands\impl\BindCommand.java|1365|1370|BLACK|field|net.minecraft.util.EnumChatFormatting|BLACK
-      @|org\brutality\commands\impl\BindCommand.java|1398|1416|EnumChatFormatting|class|net.minecraft.util.EnumChatFormatting
-      @|org\brutality\commands\impl\BindCommand.java|1417|1429|LIGHT_PURPLE|field|net.minecraft.util.EnumChatFormatting|LIGHT_PURPLE
-      ERROR SimpleName: getName null
-   Method End: execute([Ljava/lang/String;)V
-   Method Start: sendChatMessage(Ljava/lang/String;)V
-      @|org\brutality\commands\impl\BindCommand.java|1510|1525|sendChatMessage|method|org.brutality.commands.impl.BindCommand|sendChatMessage|(Ljava/lang/String;)V
-      @|org\brutality\commands\impl\BindCommand.java|1526|1532|String|class|java.lang.String
-      @|org\brutality\commands\impl\BindCommand.java|1533|1540|message|param|org.brutality.commands.impl.BindCommand|sendChatMessage|(Ljava/lang/String;)V|message|0
-      @|org\brutality\commands\impl\BindCommand.java|1552|1561|Minecraft|class|net.minecraft.client.Minecraft
-      @|org\brutality\commands\impl\BindCommand.java|1562|1574|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
-      @|org\brutality\commands\impl\BindCommand.java|1577|1586|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\commands\impl\BindCommand.java|1587|1601|addChatMessage|method|net.minecraft.command.ICommandSender|addChatMessage|(Lnet/minecraft/util/IChatComponent;)V
-      @|org\brutality\commands\impl\BindCommand.java|1606|1623|ChatComponentText|class|net.minecraft.util.ChatComponentText
-      @|org\brutality\commands\impl\BindCommand.java|1624|1631|message|param|org.brutality.commands.impl.BindCommand|sendChatMessage|(Ljava/lang/String;)V|message|0
-   Method End: sendChatMessage(Ljava/lang/String;)V
 Class End  : org.brutality.commands.impl.BindCommand
 endProcessing org\brutality\commands\impl\BindCommand.java
 
@@ -530,59 +349,6 @@ Class Start: org.brutality.events.EventListener
    Method End: onEvent(Lorg/brutality/events/Event;)V
 Class End  : org.brutality.events.EventListener
 endProcessing org\brutality\events\EventListener.java
-
-processing org\brutality\events\EventManager.java
-@|org\brutality\events\EventManager.java|8|28|org.brutality.events|package|org.brutality.events|(file)
-Class Start: org.brutality.events.EventManager
-   @|org\brutality\events\EventManager.java|204|209|Event|class|org.brutality.events.Event
-   @|org\brutality\events\EventManager.java|188|193|Class|class|java.lang.Class
-   @|org\brutality\events\EventManager.java|217|230|EventListener|class|org.brutality.events.EventListener
-   @|org\brutality\events\EventManager.java|212|216|List|class|java.util.List
-   @|org\brutality\events\EventManager.java|184|187|Map|class|java.util.Map
-   @|org\brutality\events\EventManager.java|236|245|listeners|field|org.brutality.events.EventManager|listeners|
-   @|org\brutality\events\EventManager.java|252|259|HashMap|class|java.util.HashMap
-   Method Start: register(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V
-      @|org\brutality\events\EventManager.java|307|315|register|method|org.brutality.events.EventManager|register|(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V
-      @|org\brutality\events\EventManager.java|316|321|Class|class|java.lang.Class
-      @|org\brutality\events\EventManager.java|325|335|eventClass|param|org.brutality.events.EventManager|register|(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V|eventClass|0
-      @|org\brutality\events\EventManager.java|337|350|EventListener|class|org.brutality.events.EventListener
-      @|org\brutality\events\EventManager.java|354|362|listener|param|org.brutality.events.EventManager|register|(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V|listener|1
-      @|org\brutality\events\EventManager.java|374|383|listeners|field|org.brutality.events.EventManager|listeners
-      @|org\brutality\events\EventManager.java|384|399|computeIfAbsent|method|java.util.Map|computeIfAbsent|(Ljava/lang/Object;Ljava/util/function/Function;)Ljava/lang/Object;
-      @|org\brutality\events\EventManager.java|400|410|eventClass|param|org.brutality.events.EventManager|register|(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V|eventClass|0
-      @|org\brutality\events\EventManager.java|436|439|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\events\EventManager.java|440|448|listener|param|org.brutality.events.EventManager|register|(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V|listener|1
-   Method End: register(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V
-   Method Start: unregister(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V
-      @|org\brutality\events\EventManager.java|499|509|unregister|method|org.brutality.events.EventManager|unregister|(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V
-      @|org\brutality\events\EventManager.java|510|515|Class|class|java.lang.Class
-      @|org\brutality\events\EventManager.java|519|529|eventClass|param|org.brutality.events.EventManager|unregister|(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V|eventClass|0
-      @|org\brutality\events\EventManager.java|531|544|EventListener|class|org.brutality.events.EventListener
-      @|org\brutality\events\EventManager.java|548|556|listener|param|org.brutality.events.EventManager|unregister|(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V|listener|1
-      @|org\brutality\events\EventManager.java|568|572|List|class|java.util.List
-      @|org\brutality\events\EventManager.java|573|586|EventListener|class|org.brutality.events.EventListener
-      @|org\brutality\events\EventManager.java|608|617|listeners|field|org.brutality.events.EventManager|listeners
-      @|org\brutality\events\EventManager.java|618|621|get|method|java.util.Map|get|(Ljava/lang/Object;)Ljava/lang/Object;
-      @|org\brutality\events\EventManager.java|622|632|eventClass|param|org.brutality.events.EventManager|unregister|(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V|eventClass|0
-      @|org\brutality\events\EventManager.java|700|706|remove|method|java.util.Collection|remove|(Ljava/lang/Object;)Z
-      @|org\brutality\events\EventManager.java|707|715|listener|param|org.brutality.events.EventManager|unregister|(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V|listener|1
-   Method End: unregister(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V
-   Method Start: dispatch(Lorg/brutality/events/Event;)V
-      @|org\brutality\events\EventManager.java|811|819|dispatch|method|org.brutality.events.EventManager|dispatch|(Lorg/brutality/events/Event;)V
-      @|org\brutality\events\EventManager.java|822|827|event|param|org.brutality.events.EventManager|dispatch|(Lorg/brutality/events/Event;)V|event|0
-      @|org\brutality\events\EventManager.java|839|843|List|class|java.util.List
-      @|org\brutality\events\EventManager.java|844|857|EventListener|class|org.brutality.events.EventListener
-      @|org\brutality\events\EventManager.java|879|888|listeners|field|org.brutality.events.EventManager|listeners
-      @|org\brutality\events\EventManager.java|889|892|get|method|java.util.Map|get|(Ljava/lang/Object;)Ljava/lang/Object;
-      @|org\brutality\events\EventManager.java|893|898|event|param|org.brutality.events.EventManager|dispatch|(Lorg/brutality/events/Event;)V|event|0
-      @|org\brutality\events\EventManager.java|899|907|getClass|method|java.lang.Object|getClass|()Ljava/lang/Class;
-      @|org\brutality\events\EventManager.java|967|980|EventListener|class|org.brutality.events.EventListener
-      @|org\brutality\events\EventManager.java|1031|1044|EventListener|class|org.brutality.events.EventListener
-      @|org\brutality\events\EventManager.java|1059|1066|onEvent|method|org.brutality.events.EventListener|onEvent|(Lorg/brutality/events/Event;)V
-      @|org\brutality\events\EventManager.java|1067|1072|event|param|org.brutality.events.EventManager|dispatch|(Lorg/brutality/events/Event;)V|event|0
-   Method End: dispatch(Lorg/brutality/events/Event;)V
-Class End  : org.brutality.events.EventManager
-endProcessing org\brutality\events\EventManager.java
 
 processing org\brutality\events\EventRenderGUI.java
 @|org\brutality\events\EventRenderGUI.java|8|28|org.brutality.events|package|org.brutality.events|(file)
@@ -1004,6 +770,26 @@ Class Start: org.brutality.events.listeners.EventMotion
 Class End  : org.brutality.events.listeners.EventMotion
 endProcessing org\brutality\events\listeners\EventMotion.java
 
+processing org\brutality\events\listeners\EventPacketReceive.java
+@|org\brutality\events\listeners\EventPacketReceive.java|8|38|org.brutality.events.listeners|package|org.brutality.events.listeners|(file)
+Class Start: org.brutality.events.listeners.EventPacketReceive
+   @|org\brutality\events\listeners\EventPacketReceive.java|174|180|Packet|class|net.minecraft.network.Packet
+   @|org\brutality\events\listeners\EventPacketReceive.java|184|190|packet|field|org.brutality.events.listeners.EventPacketReceive|packet|
+   Method Start: EventPacketReceive(Lnet/minecraft/network/Packet;)V
+      @|org\brutality\events\listeners\EventPacketReceive.java|204|222|EventPacketReceive|method|org.brutality.events.listeners.EventPacketReceive|EventPacketReceive|(Lnet/minecraft/network/Packet;)V
+      @|org\brutality\events\listeners\EventPacketReceive.java|223|229|Packet|class|net.minecraft.network.Packet
+      @|org\brutality\events\listeners\EventPacketReceive.java|233|239|packet|param|org.brutality.events.listeners.EventPacketReceive|EventPacketReceive|(Lnet/minecraft/network/Packet;)V|packet|0
+      @|org\brutality\events\listeners\EventPacketReceive.java|256|262|packet|field|org.brutality.events.listeners.EventPacketReceive|packet
+      @|org\brutality\events\listeners\EventPacketReceive.java|265|271|packet|param|org.brutality.events.listeners.EventPacketReceive|EventPacketReceive|(Lnet/minecraft/network/Packet;)V|packet|0
+   Method End: EventPacketReceive(Lnet/minecraft/network/Packet;)V
+   Method Start: getPacket()Lnet/minecraft/network/Packet;
+      @|org\brutality\events\listeners\EventPacketReceive.java|301|310|getPacket|method|org.brutality.events.listeners.EventPacketReceive|getPacket|()Lnet/minecraft/network/Packet;
+      @|org\brutality\events\listeners\EventPacketReceive.java|291|297|Packet|class|net.minecraft.network.Packet
+      @|org\brutality\events\listeners\EventPacketReceive.java|330|336|packet|field|org.brutality.events.listeners.EventPacketReceive|packet
+   Method End: getPacket()Lnet/minecraft/network/Packet;
+Class End  : org.brutality.events.listeners.EventPacketReceive
+endProcessing org\brutality\events\listeners\EventPacketReceive.java
+
 processing org\brutality\events\listeners\EventPacketSend.java
 @|org\brutality\events\listeners\EventPacketSend.java|8|38|org.brutality.events.listeners|package|org.brutality.events.listeners|(file)
 Class Start: org.brutality.events.listeners.EventPacketSend
@@ -1149,81 +935,68 @@ endProcessing org\brutality\module\Module.java
 processing org\brutality\module\ModuleManager.java
 @|org\brutality\module\ModuleManager.java|8|28|org.brutality.module|package|org.brutality.module|(file)
 Class Start: org.brutality.module.ModuleManager
-   @|org\brutality\module\ModuleManager.java|560|573|ModuleManager|class|org.brutality.module.ModuleManager
-   @|org\brutality\module\ModuleManager.java|574|582|instance|field|org.brutality.module.ModuleManager|instance|
-   Method Start: ModuleManager()V
-      @|org\brutality\module\ModuleManager.java|596|609|ModuleManager|method|org.brutality.module.ModuleManager|ModuleManager|()V
-      @|org\brutality\module\ModuleManager.java|622|630|instance|field|org.brutality.module.ModuleManager|instance
-   Method End: ModuleManager()V
-   Method Start: getInstance()Lorg/brutality/module/ModuleManager;
-      @|org\brutality\module\ModuleManager.java|678|689|getInstance|method|org.brutality.module.ModuleManager|getInstance|()Lorg/brutality/module/ModuleManager;
-      @|org\brutality\module\ModuleManager.java|664|677|ModuleManager|class|org.brutality.module.ModuleManager
-      @|org\brutality\module\ModuleManager.java|709|717|instance|field|org.brutality.module.ModuleManager|instance
-   Method End: getInstance()Lorg/brutality/module/ModuleManager;
+   @|org\brutality\module\ModuleManager.java|601|614|ButtonSetting|class|org.brutality.settings.impl.ButtonSetting
+   @|org\brutality\module\ModuleManager.java|615|620|reach|field|org.brutality.module.ModuleManager|reach|
    Method Start: init()V
-      @|org\brutality\module\ModuleManager.java|742|746|init|method|org.brutality.module.ModuleManager|init|()V
-      @|org\brutality\module\ModuleManager.java|759|762|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\module\ModuleManager.java|767|776|HUDModule|class|org.brutality.module.impl.render.HUDModule
-      @|org\brutality\module\ModuleManager.java|789|792|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\module\ModuleManager.java|797|812|ArrayListModule|class|org.brutality.module.impl.render.ArrayListModule
-      @|org\brutality\module\ModuleManager.java|825|828|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\module\ModuleManager.java|833|847|ClickGuiModule|class|org.brutality.module.impl.render.ClickGuiModule
-      @|org\brutality\module\ModuleManager.java|860|863|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\module\ModuleManager.java|868|875|PitSwap|class|org.brutality.module.impl.pit.PitSwap
-      @|org\brutality\module\ModuleManager.java|888|891|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\module\ModuleManager.java|896|906|KeepSprint|class|org.brutality.module.impl.move.KeepSprint
-      @|org\brutality\module\ModuleManager.java|919|922|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\module\ModuleManager.java|927|935|Velocity|class|org.brutality.module.impl.combat.Velocity
-      @|org\brutality\module\ModuleManager.java|948|951|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\module\ModuleManager.java|956|968|VenomedTimer|class|org.brutality.module.impl.pit.VenomedTimer
-      @|org\brutality\module\ModuleManager.java|981|984|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\module\ModuleManager.java|989|1001|WhoGotDogged|class|org.brutality.module.impl.pit.WhoGotDogged
-      @|org\brutality\module\ModuleManager.java|1014|1017|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\module\ModuleManager.java|1022|1030|AutoAura|class|org.brutality.module.impl.pit.AutoAura
-      @|org\brutality\module\ModuleManager.java|1043|1046|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\module\ModuleManager.java|1051|1058|AutoEgg|class|org.brutality.module.impl.pit.AutoEgg
-      @|org\brutality\module\ModuleManager.java|1071|1074|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\module\ModuleManager.java|1079|1088|AutoSteak|class|org.brutality.module.impl.pit.AutoSteak
+      @|org\brutality\module\ModuleManager.java|639|643|init|method|org.brutality.module.ModuleManager|init|()V
+      @|org\brutality\module\ModuleManager.java|660|669|HUDModule|class|org.brutality.module.impl.render.HUDModule
+      @|org\brutality\module\ModuleManager.java|685|700|ArrayListModule|class|org.brutality.module.impl.render.ArrayListModule
+      @|org\brutality\module\ModuleManager.java|716|730|ClickGuiModule|class|org.brutality.module.impl.render.ClickGuiModule
+      @|org\brutality\module\ModuleManager.java|746|754|KillAura|class|org.brutality.module.impl.combat.KillAura
+      @|org\brutality\module\ModuleManager.java|802|809|PitSwap|class|org.brutality.module.impl.pit.PitSwap
+      @|org\brutality\module\ModuleManager.java|825|835|KeepSprint|class|org.brutality.module.impl.move.KeepSprint
+      @|org\brutality\module\ModuleManager.java|851|859|Velocity|class|org.brutality.module.impl.combat.Velocity
+      @|org\brutality\module\ModuleManager.java|875|881|NoSlow|class|org.brutality.module.impl.move.NoSlow
+      @|org\brutality\module\ModuleManager.java|897|909|TelebowTimer|class|org.brutality.module.impl.pit.TelebowTimer
+      @|org\brutality\module\ModuleManager.java|925|932|Freecam|class|org.brutality.module.impl.player.Freecam
+      @|org\brutality\module\ModuleManager.java|948|956|Scaffold|class|org.brutality.module.impl.player.Scaffold
+      @|org\brutality\module\ModuleManager.java|972|977|Speed|class|org.brutality.module.impl.move.Speed
+      @|org\brutality\module\ModuleManager.java|993|1001|LongJump|class|org.brutality.module.impl.move.LongJump
+      @|org\brutality\module\ModuleManager.java|1017|1020|Fly|class|org.brutality.module.impl.move.Fly
+      @|org\brutality\module\ModuleManager.java|1036|1043|AntiBot|class|org.brutality.module.impl.World.AntiBot
+      @|org\brutality\module\ModuleManager.java|1059|1064|Blink|class|org.brutality.module.impl.player.Blink
+      @|org\brutality\module\ModuleManager.java|1080|1087|FakeLag|class|org.brutality.module.impl.player.FakeLag
+      @|org\brutality\module\ModuleManager.java|1103|1112|FastPlace|class|org.brutality.module.impl.player.FastPlace
+      @|org\brutality\module\ModuleManager.java|1128|1133|Chams|class|org.brutality.module.impl.render.Chams
+      @|org\brutality\module\ModuleManager.java|1149|1156|NameTag|class|org.brutality.module.impl.render.NameTag
+      @|org\brutality\module\ModuleManager.java|1172|1175|KOS|class|org.brutality.module.impl.player.KOS
+      @|org\brutality\module\ModuleManager.java|1191|1198|Friends|class|org.brutality.module.impl.player.Friends
+      @|org\brutality\module\ModuleManager.java|1214|1226|VenomedTimer|class|org.brutality.module.impl.pit.VenomedTimer
+      @|org\brutality\module\ModuleManager.java|1242|1254|WhoGotDogged|class|org.brutality.module.impl.pit.WhoGotDogged
+      @|org\brutality\module\ModuleManager.java|1270|1278|AutoAura|class|org.brutality.module.impl.pit.AutoAura
+      @|org\brutality\module\ModuleManager.java|1294|1301|AutoEgg|class|org.brutality.module.impl.pit.AutoEgg
+      @|org\brutality\module\ModuleManager.java|1317|1326|AutoSteak|class|org.brutality.module.impl.pit.AutoSteak
+      @|org\brutality\module\ModuleManager.java|1342|1350|SogeSwap|class|org.brutality.module.impl.pit.SogeSwap
    Method End: init()V
    Method Start: updateSettings(Lorg/brutality/settings/Setting;)V
-      @|org\brutality\module\ModuleManager.java|1116|1130|updateSettings|method|org.brutality.module.ModuleManager|updateSettings|(Lorg/brutality/settings/Setting;)V
-      @|org\brutality\module\ModuleManager.java|1131|1138|Setting|class|org.brutality.settings.Setting
-      @|org\brutality\module\ModuleManager.java|1139|1146|setting|param|org.brutality.module.ModuleManager|updateSettings|(Lorg/brutality/settings/Setting;)V|setting|0
-      @|org\brutality\module\ModuleManager.java|1158|1165|forEach|method|java.lang.Iterable|forEach|(Ljava/util/function/Consumer;)V
+      @|org\brutality\module\ModuleManager.java|1377|1391|updateSettings|method|org.brutality.module.ModuleManager|updateSettings|(Lorg/brutality/settings/Setting;)V
+      @|org\brutality\module\ModuleManager.java|1392|1399|Setting|class|org.brutality.settings.Setting
+      @|org\brutality\module\ModuleManager.java|1400|1407|setting|param|org.brutality.module.ModuleManager|updateSettings|(Lorg/brutality/settings/Setting;)V|setting|0
+      @|org\brutality\module\ModuleManager.java|1419|1426|forEach|method|java.lang.Iterable|forEach|(Ljava/util/function/Consumer;)V
    Method End: updateSettings(Lorg/brutality/settings/Setting;)V
-   Method Start: getModuleByName(Ljava/lang/String;)Lorg/brutality/module/Module;
-      @|org\brutality\module\ModuleManager.java|1234|1249|getModuleByName|method|org.brutality.module.ModuleManager|getModuleByName|(Ljava/lang/String;)Lorg/brutality/module/Module;
-      @|org\brutality\module\ModuleManager.java|1227|1233|Module|class|org.brutality.module.Module
-      @|org\brutality\module\ModuleManager.java|1250|1256|String|class|java.lang.String
-      @|org\brutality\module\ModuleManager.java|1257|1261|name|param|org.brutality.module.ModuleManager|getModuleByName|(Ljava/lang/String;)Lorg/brutality/module/Module;|name|0
-      @|org\brutality\module\ModuleManager.java|1280|1286|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|1289|1295|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|1347|1356|findFirst|method|java.util.stream.Stream|findFirst|()Ljava/util/Optional;
-      @|org\brutality\module\ModuleManager.java|1359|1365|orElse|method|java.util.Optional|orElse|(Ljava/lang/Object;)Ljava/lang/Object;
-   Method End: getModuleByName(Ljava/lang/String;)Lorg/brutality/module/Module;
    Method Start: getModuleByClass(Ljava/lang/Class;)Lorg/brutality/module/Module;
-      @|org\brutality\module\ModuleManager.java|1412|1428|getModuleByClass|method|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;
-      @|org\brutality\module\ModuleManager.java|1429|1434|Class|class|java.lang.Class
-      @|org\brutality\module\ModuleManager.java|1438|1443|clazz|param|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;|clazz|0
-      @|org\brutality\module\ModuleManager.java|1455|1461|Module|class|org.brutality.module.Module
-      @|org\brutality\module\ModuleManager.java|1471|1477|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|1480|1486|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|1520|1529|findFirst|method|java.util.stream.Stream|findFirst|()Ljava/util/Optional;
-      @|org\brutality\module\ModuleManager.java|1532|1538|orElse|method|java.util.Optional|orElse|(Ljava/lang/Object;)Ljava/lang/Object;
-      @|org\brutality\module\ModuleManager.java|1585|1590|clazz|param|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;|clazz|0
-      @|org\brutality\module\ModuleManager.java|1591|1595|cast|method|java.lang.Class|cast|(Ljava/lang/Object;)Ljava/lang/Object;
+      @|org\brutality\module\ModuleManager.java|1509|1525|getModuleByClass|method|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;
+      @|org\brutality\module\ModuleManager.java|1526|1531|Class|class|java.lang.Class
+      @|org\brutality\module\ModuleManager.java|1535|1540|clazz|param|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;|clazz|0
+      @|org\brutality\module\ModuleManager.java|1552|1558|Module|class|org.brutality.module.Module
+      @|org\brutality\module\ModuleManager.java|1568|1574|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
+      @|org\brutality\module\ModuleManager.java|1577|1583|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      @|org\brutality\module\ModuleManager.java|1617|1626|findFirst|method|java.util.stream.Stream|findFirst|()Ljava/util/Optional;
+      @|org\brutality\module\ModuleManager.java|1629|1635|orElse|method|java.util.Optional|orElse|(Ljava/lang/Object;)Ljava/lang/Object;
+      @|org\brutality\module\ModuleManager.java|1682|1687|clazz|param|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;|clazz|0
+      @|org\brutality\module\ModuleManager.java|1688|1692|cast|method|java.lang.Class|cast|(Ljava/lang/Object;)Ljava/lang/Object;
    Method End: getModuleByClass(Ljava/lang/Class;)Lorg/brutality/module/Module;
    Method Start: getModulesByCategory(Lorg/brutality/module/Category;)Ljava/util/ArrayList;
-      @|org\brutality\module\ModuleManager.java|1641|1661|getModulesByCategory|method|org.brutality.module.ModuleManager|getModulesByCategory|(Lorg/brutality/module/Category;)Ljava/util/ArrayList;
-      @|org\brutality\module\ModuleManager.java|1633|1639|Module|class|org.brutality.module.Module
-      @|org\brutality\module\ModuleManager.java|1623|1632|ArrayList|class|java.util.ArrayList
-      @|org\brutality\module\ModuleManager.java|1662|1670|Category|class|org.brutality.module.Category
-      @|org\brutality\module\ModuleManager.java|1671|1679|category|param|org.brutality.module.ModuleManager|getModulesByCategory|(Lorg/brutality/module/Category;)Ljava/util/ArrayList;|category|0
-      @|org\brutality\module\ModuleManager.java|1698|1704|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|1707|1713|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|1763|1770|collect|method|java.util.stream.Stream|collect|(Ljava/util/stream/Collector;)Ljava/lang/Object;
-      @|org\brutality\module\ModuleManager.java|1771|1781|Collectors|class|java.util.stream.Collectors
-      @|org\brutality\module\ModuleManager.java|1782|1794|toCollection|method|java.util.stream.Collectors|toCollection|(Ljava/util/function/Supplier;)Ljava/util/stream/Collector;
+      @|org\brutality\module\ModuleManager.java|1738|1758|getModulesByCategory|method|org.brutality.module.ModuleManager|getModulesByCategory|(Lorg/brutality/module/Category;)Ljava/util/ArrayList;
+      @|org\brutality\module\ModuleManager.java|1730|1736|Module|class|org.brutality.module.Module
+      @|org\brutality\module\ModuleManager.java|1720|1729|ArrayList|class|java.util.ArrayList
+      @|org\brutality\module\ModuleManager.java|1759|1767|Category|class|org.brutality.module.Category
+      @|org\brutality\module\ModuleManager.java|1768|1776|category|param|org.brutality.module.ModuleManager|getModulesByCategory|(Lorg/brutality/module/Category;)Ljava/util/ArrayList;|category|0
+      @|org\brutality\module\ModuleManager.java|1795|1801|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
+      @|org\brutality\module\ModuleManager.java|1804|1810|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      @|org\brutality\module\ModuleManager.java|1860|1867|collect|method|java.util.stream.Stream|collect|(Ljava/util/stream/Collector;)Ljava/lang/Object;
+      @|org\brutality\module\ModuleManager.java|1868|1878|Collectors|class|java.util.stream.Collectors
+      @|org\brutality\module\ModuleManager.java|1879|1891|toCollection|method|java.util.stream.Collectors|toCollection|(Ljava/util/function/Supplier;)Ljava/util/stream/Collector;
    Method End: getModulesByCategory(Lorg/brutality/module/Category;)Ljava/util/ArrayList;
 Class End  : org.brutality.module.ModuleManager
 endProcessing org\brutality\module\ModuleManager.java
@@ -1600,25 +1373,25 @@ Class Start: org.brutality.module.impl.pit.AutoAura
    @|org\brutality\module\impl\pit\AutoAura.java|405|418|NumberSetting|class|org.brutality.settings.impl.NumberSetting
    @|org\brutality\module\impl\pit\AutoAura.java|419|424|delay|field|org.brutality.module.impl.pit.AutoAura|delay|
    @|org\brutality\module\impl\pit\AutoAura.java|431|444|NumberSetting|class|org.brutality.settings.impl.NumberSetting
-   @|org\brutality\module\impl\pit\AutoAura.java|494|499|Timer|class|org.brutality.utils.Timer
-   @|org\brutality\module\impl\pit\AutoAura.java|500|505|timer|field|org.brutality.module.impl.pit.AutoAura|timer|
-   @|org\brutality\module\impl\pit\AutoAura.java|512|517|Timer|class|org.brutality.utils.Timer
-   @|org\brutality\module\impl\pit\AutoAura.java|533|538|Timer|class|org.brutality.utils.Timer
-   @|org\brutality\module\impl\pit\AutoAura.java|539|549|resettimer|field|org.brutality.module.impl.pit.AutoAura|resettimer|
-   @|org\brutality\module\impl\pit\AutoAura.java|556|561|Timer|class|org.brutality.utils.Timer
-   @|org\brutality\module\impl\pit\AutoAura.java|581|592|currentSlot|field|org.brutality.module.impl.pit.AutoAura|currentSlot|
-   @|org\brutality\module\impl\pit\AutoAura.java|618|625|useAura|field|org.brutality.module.impl.pit.AutoAura|useAura|
-   @|org\brutality\module\impl\pit\AutoAura.java|651|659|auraSlot|field|org.brutality.module.impl.pit.AutoAura|auraSlot|
+   @|org\brutality\module\impl\pit\AutoAura.java|495|500|Timer|class|org.brutality.utils.Timer
+   @|org\brutality\module\impl\pit\AutoAura.java|501|506|timer|field|org.brutality.module.impl.pit.AutoAura|timer|
+   @|org\brutality\module\impl\pit\AutoAura.java|513|518|Timer|class|org.brutality.utils.Timer
+   @|org\brutality\module\impl\pit\AutoAura.java|534|539|Timer|class|org.brutality.utils.Timer
+   @|org\brutality\module\impl\pit\AutoAura.java|540|550|resettimer|field|org.brutality.module.impl.pit.AutoAura|resettimer|
+   @|org\brutality\module\impl\pit\AutoAura.java|557|562|Timer|class|org.brutality.utils.Timer
+   @|org\brutality\module\impl\pit\AutoAura.java|582|593|currentSlot|field|org.brutality.module.impl.pit.AutoAura|currentSlot|
+   @|org\brutality\module\impl\pit\AutoAura.java|619|626|useAura|field|org.brutality.module.impl.pit.AutoAura|useAura|
+   @|org\brutality\module\impl\pit\AutoAura.java|652|660|auraSlot|field|org.brutality.module.impl.pit.AutoAura|auraSlot|
    Method Start: AutoAura()V
-      @|org\brutality\module\impl\pit\AutoAura.java|673|681|AutoAura|method|org.brutality.module.impl.pit.AutoAura|AutoAura|()V
-      @|org\brutality\module\impl\pit\AutoAura.java|752|760|Category|class|org.brutality.module.Category
-      @|org\brutality\module\impl\pit\AutoAura.java|761|764|PIT|field|org.brutality.module.Category|PIT
-      @|org\brutality\module\impl\pit\AutoAura.java|780|791|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
-      @|org\brutality\module\impl\pit\AutoAura.java|792|797|delay|field|org.brutality.module.impl.pit.AutoAura|delay
+      @|org\brutality\module\impl\pit\AutoAura.java|674|682|AutoAura|method|org.brutality.module.impl.pit.AutoAura|AutoAura|()V
+      @|org\brutality\module\impl\pit\AutoAura.java|753|761|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\pit\AutoAura.java|762|765|PIT|field|org.brutality.module.Category|PIT
+      @|org\brutality\module\impl\pit\AutoAura.java|781|792|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
+      @|org\brutality\module\impl\pit\AutoAura.java|793|798|delay|field|org.brutality.module.impl.pit.AutoAura|delay
    Method End: AutoAura()V
    Method Start: onDisable()V
-      @|org\brutality\module\impl\pit\AutoAura.java|823|832|onDisable|method|org.brutality.module.Module|onDisable|()V
-      @|org\brutality\module\impl\pit\AutoAura.java|850|857|useAura|field|org.brutality.module.impl.pit.AutoAura|useAura
+      @|org\brutality\module\impl\pit\AutoAura.java|824|833|onDisable|method|org.brutality.module.Module|onDisable|()V
+      @|org\brutality\module\impl\pit\AutoAura.java|851|858|useAura|field|org.brutality.module.impl.pit.AutoAura|useAura
    Method End: onDisable()V
    Method Start: onEvent(Lorg/brutality/events/Event;)V
       @|org\brutality\module\impl\pit\AutoAura.java|891|898|onEvent|method|org.brutality.module.impl.pit.AutoAura|onEvent|(Lorg/brutality/events/Event;)V
@@ -1700,99 +1473,99 @@ Class Start: org.brutality.module.impl.pit.AutoEgg
    @|org\brutality\module\impl\pit\AutoEgg.java|493|506|NumberSetting|class|org.brutality.settings.impl.NumberSetting
    @|org\brutality\module\impl\pit\AutoEgg.java|507|512|delay|field|org.brutality.module.impl.pit.AutoEgg|delay|
    @|org\brutality\module\impl\pit\AutoEgg.java|519|532|NumberSetting|class|org.brutality.settings.impl.NumberSetting
-   @|org\brutality\module\impl\pit\AutoEgg.java|584|589|Timer|class|org.brutality.utils.Timer
-   @|org\brutality\module\impl\pit\AutoEgg.java|590|595|timer|field|org.brutality.module.impl.pit.AutoEgg|timer|
-   @|org\brutality\module\impl\pit\AutoEgg.java|602|607|Timer|class|org.brutality.utils.Timer
-   @|org\brutality\module\impl\pit\AutoEgg.java|623|628|Timer|class|org.brutality.utils.Timer
-   @|org\brutality\module\impl\pit\AutoEgg.java|629|639|resettimer|field|org.brutality.module.impl.pit.AutoEgg|resettimer|
-   @|org\brutality\module\impl\pit\AutoEgg.java|646|651|Timer|class|org.brutality.utils.Timer
-   @|org\brutality\module\impl\pit\AutoEgg.java|671|682|currentSlot|field|org.brutality.module.impl.pit.AutoEgg|currentSlot|
-   @|org\brutality\module\impl\pit\AutoEgg.java|708|722|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg|
-   @|org\brutality\module\impl\pit\AutoEgg.java|748|755|eggSlot|field|org.brutality.module.impl.pit.AutoEgg|eggSlot|
+   @|org\brutality\module\impl\pit\AutoEgg.java|583|588|Timer|class|org.brutality.utils.Timer
+   @|org\brutality\module\impl\pit\AutoEgg.java|589|594|timer|field|org.brutality.module.impl.pit.AutoEgg|timer|
+   @|org\brutality\module\impl\pit\AutoEgg.java|601|606|Timer|class|org.brutality.utils.Timer
+   @|org\brutality\module\impl\pit\AutoEgg.java|622|627|Timer|class|org.brutality.utils.Timer
+   @|org\brutality\module\impl\pit\AutoEgg.java|628|638|resettimer|field|org.brutality.module.impl.pit.AutoEgg|resettimer|
+   @|org\brutality\module\impl\pit\AutoEgg.java|645|650|Timer|class|org.brutality.utils.Timer
+   @|org\brutality\module\impl\pit\AutoEgg.java|670|681|currentSlot|field|org.brutality.module.impl.pit.AutoEgg|currentSlot|
+   @|org\brutality\module\impl\pit\AutoEgg.java|707|721|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg|
+   @|org\brutality\module\impl\pit\AutoEgg.java|747|754|eggSlot|field|org.brutality.module.impl.pit.AutoEgg|eggSlot|
    Method Start: AutoEgg()V
-      @|org\brutality\module\impl\pit\AutoEgg.java|769|776|AutoEgg|method|org.brutality.module.impl.pit.AutoEgg|AutoEgg|()V
-      @|org\brutality\module\impl\pit\AutoEgg.java|851|859|Category|class|org.brutality.module.Category
-      @|org\brutality\module\impl\pit\AutoEgg.java|860|863|PIT|field|org.brutality.module.Category|PIT
-      @|org\brutality\module\impl\pit\AutoEgg.java|879|890|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
-      @|org\brutality\module\impl\pit\AutoEgg.java|891|897|health|field|org.brutality.module.impl.pit.AutoEgg|health
-      @|org\brutality\module\impl\pit\AutoEgg.java|899|904|delay|field|org.brutality.module.impl.pit.AutoEgg|delay
+      @|org\brutality\module\impl\pit\AutoEgg.java|768|775|AutoEgg|method|org.brutality.module.impl.pit.AutoEgg|AutoEgg|()V
+      @|org\brutality\module\impl\pit\AutoEgg.java|850|858|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\pit\AutoEgg.java|859|862|PIT|field|org.brutality.module.Category|PIT
+      @|org\brutality\module\impl\pit\AutoEgg.java|878|889|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
+      @|org\brutality\module\impl\pit\AutoEgg.java|890|896|health|field|org.brutality.module.impl.pit.AutoEgg|health
+      @|org\brutality\module\impl\pit\AutoEgg.java|898|903|delay|field|org.brutality.module.impl.pit.AutoEgg|delay
    Method End: AutoEgg()V
    Method Start: onDisable()V
-      @|org\brutality\module\impl\pit\AutoEgg.java|930|939|onDisable|method|org.brutality.module.Module|onDisable|()V
-      @|org\brutality\module\impl\pit\AutoEgg.java|957|971|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg
+      @|org\brutality\module\impl\pit\AutoEgg.java|929|938|onDisable|method|org.brutality.module.Module|onDisable|()V
+      @|org\brutality\module\impl\pit\AutoEgg.java|956|970|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg
    Method End: onDisable()V
    Method Start: onEvent(Lorg/brutality/events/Event;)V
-      @|org\brutality\module\impl\pit\AutoEgg.java|1005|1012|onEvent|method|org.brutality.module.impl.pit.AutoEgg|onEvent|(Lorg/brutality/events/Event;)V
-      @|org\brutality\module\impl\pit\AutoEgg.java|1013|1018|Event|class|org.brutality.events.Event
-      @|org\brutality\module\impl\pit\AutoEgg.java|1019|1020|e|param|org.brutality.module.impl.pit.AutoEgg|onEvent|(Lorg/brutality/events/Event;)V|e|0
-      @|org\brutality\module\impl\pit\AutoEgg.java|1036|1037|e|param|org.brutality.module.impl.pit.AutoEgg|onEvent|(Lorg/brutality/events/Event;)V|e|0
-      @|org\brutality\module\impl\pit\AutoEgg.java|1049|1060|EventUpdate|class|org.brutality.events.listeners.EventUpdate
-      @|org\brutality\module\impl\pit\AutoEgg.java|1085|1087|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoEgg.java|1088|1101|currentScreen|field|net.minecraft.client.Minecraft|currentScreen
-      @|org\brutality\module\impl\pit\AutoEgg.java|1173|1175|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoEgg.java|1176|1185|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoEgg.java|1186|1195|getHealth|method|net.minecraft.entity.EntityLivingBase|getHealth|()F
-      @|org\brutality\module\impl\pit\AutoEgg.java|1214|1220|health|field|org.brutality.module.impl.pit.AutoEgg|health
+      @|org\brutality\module\impl\pit\AutoEgg.java|1003|1010|onEvent|method|org.brutality.module.impl.pit.AutoEgg|onEvent|(Lorg/brutality/events/Event;)V
+      @|org\brutality\module\impl\pit\AutoEgg.java|1011|1016|Event|class|org.brutality.events.Event
+      @|org\brutality\module\impl\pit\AutoEgg.java|1017|1018|e|param|org.brutality.module.impl.pit.AutoEgg|onEvent|(Lorg/brutality/events/Event;)V|e|0
+      @|org\brutality\module\impl\pit\AutoEgg.java|1034|1035|e|param|org.brutality.module.impl.pit.AutoEgg|onEvent|(Lorg/brutality/events/Event;)V|e|0
+      @|org\brutality\module\impl\pit\AutoEgg.java|1047|1058|EventUpdate|class|org.brutality.events.listeners.EventUpdate
+      @|org\brutality\module\impl\pit\AutoEgg.java|1083|1085|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoEgg.java|1086|1099|currentScreen|field|net.minecraft.client.Minecraft|currentScreen
+      @|org\brutality\module\impl\pit\AutoEgg.java|1171|1173|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoEgg.java|1174|1183|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoEgg.java|1184|1193|getHealth|method|net.minecraft.entity.EntityLivingBase|getHealth|()F
+      @|org\brutality\module\impl\pit\AutoEgg.java|1212|1218|health|field|org.brutality.module.impl.pit.AutoEgg|health
       ERROR SimpleName: getValue null
-      @|org\brutality\module\impl\pit\AutoEgg.java|1261|1275|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg
-      @|org\brutality\module\impl\pit\AutoEgg.java|1284|1289|timer|field|org.brutality.module.impl.pit.AutoEgg|timer
-      @|org\brutality\module\impl\pit\AutoEgg.java|1290|1304|hasTimeElapsed|method|org.brutality.utils.Timer|hasTimeElapsed|(JZ)Z
-      @|org\brutality\module\impl\pit\AutoEgg.java|1317|1322|delay|field|org.brutality.module.impl.pit.AutoEgg|delay
+      @|org\brutality\module\impl\pit\AutoEgg.java|1259|1273|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg
+      @|org\brutality\module\impl\pit\AutoEgg.java|1282|1287|timer|field|org.brutality.module.impl.pit.AutoEgg|timer
+      @|org\brutality\module\impl\pit\AutoEgg.java|1288|1302|hasTimeElapsed|method|org.brutality.utils.Timer|hasTimeElapsed|(JZ)Z
+      @|org\brutality\module\impl\pit\AutoEgg.java|1315|1320|delay|field|org.brutality.module.impl.pit.AutoEgg|delay
       ERROR SimpleName: getValue null
-      @|org\brutality\module\impl\pit\AutoEgg.java|1369|1376|eggSlot|field|org.brutality.module.impl.pit.AutoEgg|eggSlot
-      @|org\brutality\module\impl\pit\AutoEgg.java|1384|1395|findEggSlot|method|org.brutality.module.impl.pit.AutoEgg|findEggSlot|()I
-      @|org\brutality\module\impl\pit\AutoEgg.java|1428|1435|eggSlot|field|org.brutality.module.impl.pit.AutoEgg|eggSlot
-      @|org\brutality\module\impl\pit\AutoEgg.java|1474|1485|currentSlot|field|org.brutality.module.impl.pit.AutoEgg|currentSlot
-      @|org\brutality\module\impl\pit\AutoEgg.java|1493|1495|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoEgg.java|1496|1505|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoEgg.java|1506|1515|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
-      @|org\brutality\module\impl\pit\AutoEgg.java|1516|1527|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
-      @|org\brutality\module\impl\pit\AutoEgg.java|1558|1560|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoEgg.java|1561|1570|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoEgg.java|1571|1580|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
-      @|org\brutality\module\impl\pit\AutoEgg.java|1581|1592|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
-      @|org\brutality\module\impl\pit\AutoEgg.java|1600|1607|eggSlot|field|org.brutality.module.impl.pit.AutoEgg|eggSlot
-      @|org\brutality\module\impl\pit\AutoEgg.java|1638|1652|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg
-      @|org\brutality\module\impl\pit\AutoEgg.java|1715|1729|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg
-      @|org\brutality\module\impl\pit\AutoEgg.java|1738|1740|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoEgg.java|1741|1750|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoEgg.java|1751|1760|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
-      @|org\brutality\module\impl\pit\AutoEgg.java|1761|1772|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
-      @|org\brutality\module\impl\pit\AutoEgg.java|1781|1788|eggSlot|field|org.brutality.module.impl.pit.AutoEgg|eggSlot
-      @|org\brutality\module\impl\pit\AutoEgg.java|1812|1821|ItemStack|class|net.minecraft.item.ItemStack
-      @|org\brutality\module\impl\pit\AutoEgg.java|1839|1841|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoEgg.java|1842|1851|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoEgg.java|1852|1861|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
-      @|org\brutality\module\impl\pit\AutoEgg.java|1862|1876|getStackInSlot|method|net.minecraft.inventory.IInventory|getStackInSlot|(I)Lnet/minecraft/item/ItemStack;
-      @|org\brutality\module\impl\pit\AutoEgg.java|1882|1889|eggSlot|field|org.brutality.module.impl.pit.AutoEgg|eggSlot
-      @|org\brutality\module\impl\pit\AutoEgg.java|1947|1956|stackSize|field|net.minecraft.item.ItemStack|stackSize
-      @|org\brutality\module\impl\pit\AutoEgg.java|1993|1995|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoEgg.java|1996|2012|playerController|field|net.minecraft.client.Minecraft|playerController
-      @|org\brutality\module\impl\pit\AutoEgg.java|2013|2024|sendUseItem|method|net.minecraft.client.multiplayer.PlayerControllerMP|sendUseItem|(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;)Z
-      @|org\brutality\module\impl\pit\AutoEgg.java|2030|2032|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoEgg.java|2033|2042|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoEgg.java|2049|2051|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoEgg.java|2052|2060|theWorld|field|net.minecraft.client.Minecraft|theWorld
-      @|org\brutality\module\impl\pit\AutoEgg.java|2103|2105|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoEgg.java|2106|2115|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoEgg.java|2116|2125|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
-      @|org\brutality\module\impl\pit\AutoEgg.java|2126|2137|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
-      @|org\brutality\module\impl\pit\AutoEgg.java|2145|2156|currentSlot|field|org.brutality.module.impl.pit.AutoEgg|currentSlot
-      @|org\brutality\module\impl\pit\AutoEgg.java|2187|2201|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg
-      @|org\brutality\module\impl\pit\AutoEgg.java|2286|2296|resettimer|field|org.brutality.module.impl.pit.AutoEgg|resettimer
-      @|org\brutality\module\impl\pit\AutoEgg.java|2297|2311|hasTimeElapsed|method|org.brutality.utils.Timer|hasTimeElapsed|(JZ)Z
-      @|org\brutality\module\impl\pit\AutoEgg.java|2349|2363|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg
+      @|org\brutality\module\impl\pit\AutoEgg.java|1367|1374|eggSlot|field|org.brutality.module.impl.pit.AutoEgg|eggSlot
+      @|org\brutality\module\impl\pit\AutoEgg.java|1382|1393|findEggSlot|method|org.brutality.module.impl.pit.AutoEgg|findEggSlot|()I
+      @|org\brutality\module\impl\pit\AutoEgg.java|1426|1433|eggSlot|field|org.brutality.module.impl.pit.AutoEgg|eggSlot
+      @|org\brutality\module\impl\pit\AutoEgg.java|1472|1483|currentSlot|field|org.brutality.module.impl.pit.AutoEgg|currentSlot
+      @|org\brutality\module\impl\pit\AutoEgg.java|1491|1493|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoEgg.java|1494|1503|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoEgg.java|1504|1513|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\AutoEgg.java|1514|1525|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
+      @|org\brutality\module\impl\pit\AutoEgg.java|1556|1558|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoEgg.java|1559|1568|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoEgg.java|1569|1578|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\AutoEgg.java|1579|1590|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
+      @|org\brutality\module\impl\pit\AutoEgg.java|1598|1605|eggSlot|field|org.brutality.module.impl.pit.AutoEgg|eggSlot
+      @|org\brutality\module\impl\pit\AutoEgg.java|1636|1650|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg
+      @|org\brutality\module\impl\pit\AutoEgg.java|1713|1727|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg
+      @|org\brutality\module\impl\pit\AutoEgg.java|1736|1738|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoEgg.java|1739|1748|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoEgg.java|1749|1758|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\AutoEgg.java|1759|1770|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
+      @|org\brutality\module\impl\pit\AutoEgg.java|1779|1786|eggSlot|field|org.brutality.module.impl.pit.AutoEgg|eggSlot
+      @|org\brutality\module\impl\pit\AutoEgg.java|1810|1819|ItemStack|class|net.minecraft.item.ItemStack
+      @|org\brutality\module\impl\pit\AutoEgg.java|1837|1839|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoEgg.java|1840|1849|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoEgg.java|1850|1859|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\AutoEgg.java|1860|1874|getStackInSlot|method|net.minecraft.inventory.IInventory|getStackInSlot|(I)Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\pit\AutoEgg.java|1880|1887|eggSlot|field|org.brutality.module.impl.pit.AutoEgg|eggSlot
+      @|org\brutality\module\impl\pit\AutoEgg.java|1945|1954|stackSize|field|net.minecraft.item.ItemStack|stackSize
+      @|org\brutality\module\impl\pit\AutoEgg.java|1991|1993|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoEgg.java|1994|2010|playerController|field|net.minecraft.client.Minecraft|playerController
+      @|org\brutality\module\impl\pit\AutoEgg.java|2011|2022|sendUseItem|method|net.minecraft.client.multiplayer.PlayerControllerMP|sendUseItem|(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;)Z
+      @|org\brutality\module\impl\pit\AutoEgg.java|2028|2030|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoEgg.java|2031|2040|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoEgg.java|2047|2049|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoEgg.java|2050|2058|theWorld|field|net.minecraft.client.Minecraft|theWorld
+      @|org\brutality\module\impl\pit\AutoEgg.java|2101|2103|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoEgg.java|2104|2113|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoEgg.java|2114|2123|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\AutoEgg.java|2124|2135|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
+      @|org\brutality\module\impl\pit\AutoEgg.java|2143|2154|currentSlot|field|org.brutality.module.impl.pit.AutoEgg|currentSlot
+      @|org\brutality\module\impl\pit\AutoEgg.java|2185|2199|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg
+      @|org\brutality\module\impl\pit\AutoEgg.java|2284|2294|resettimer|field|org.brutality.module.impl.pit.AutoEgg|resettimer
+      @|org\brutality\module\impl\pit\AutoEgg.java|2295|2309|hasTimeElapsed|method|org.brutality.utils.Timer|hasTimeElapsed|(JZ)Z
+      @|org\brutality\module\impl\pit\AutoEgg.java|2347|2361|useFirstAidEgg|field|org.brutality.module.impl.pit.AutoEgg|useFirstAidEgg
    Method End: onEvent(Lorg/brutality/events/Event;)V
    Method Start: findEggSlot()I
-      @|org\brutality\module\impl\pit\AutoEgg.java|2420|2431|findEggSlot|method|org.brutality.module.impl.pit.AutoEgg|findEggSlot|()I
-      @|org\brutality\module\impl\pit\AutoEgg.java|2486|2495|ItemStack|class|net.minecraft.item.ItemStack
-      @|org\brutality\module\impl\pit\AutoEgg.java|2513|2515|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoEgg.java|2516|2525|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoEgg.java|2526|2535|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
-      @|org\brutality\module\impl\pit\AutoEgg.java|2536|2549|mainInventory|field|net.minecraft.entity.player.InventoryPlayer|mainInventory
-      @|org\brutality\module\impl\pit\AutoEgg.java|2601|2608|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
-      @|org\brutality\module\impl\pit\AutoEgg.java|2614|2619|Items|class|net.minecraft.init.Items
-      @|org\brutality\module\impl\pit\AutoEgg.java|2620|2623|egg|field|net.minecraft.init.Items|egg
+      @|org\brutality\module\impl\pit\AutoEgg.java|2418|2429|findEggSlot|method|org.brutality.module.impl.pit.AutoEgg|findEggSlot|()I
+      @|org\brutality\module\impl\pit\AutoEgg.java|2484|2493|ItemStack|class|net.minecraft.item.ItemStack
+      @|org\brutality\module\impl\pit\AutoEgg.java|2511|2513|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoEgg.java|2514|2523|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoEgg.java|2524|2533|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\AutoEgg.java|2534|2547|mainInventory|field|net.minecraft.entity.player.InventoryPlayer|mainInventory
+      @|org\brutality\module\impl\pit\AutoEgg.java|2599|2606|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
+      @|org\brutality\module\impl\pit\AutoEgg.java|2612|2617|Items|class|net.minecraft.init.Items
+      @|org\brutality\module\impl\pit\AutoEgg.java|2618|2621|egg|field|net.minecraft.init.Items|egg
    Method End: findEggSlot()I
 Class End  : org.brutality.module.impl.pit.AutoEgg
 endProcessing org\brutality\module\impl\pit\AutoEgg.java
@@ -1803,93 +1576,93 @@ Class Start: org.brutality.module.impl.pit.AutoSteak
    @|org\brutality\module\impl\pit\AutoSteak.java|406|419|NumberSetting|class|org.brutality.settings.impl.NumberSetting
    @|org\brutality\module\impl\pit\AutoSteak.java|420|425|delay|field|org.brutality.module.impl.pit.AutoSteak|delay|
    @|org\brutality\module\impl\pit\AutoSteak.java|432|445|NumberSetting|class|org.brutality.settings.impl.NumberSetting
-   @|org\brutality\module\impl\pit\AutoSteak.java|497|502|Timer|class|org.brutality.utils.Timer
-   @|org\brutality\module\impl\pit\AutoSteak.java|503|508|timer|field|org.brutality.module.impl.pit.AutoSteak|timer|
-   @|org\brutality\module\impl\pit\AutoSteak.java|515|520|Timer|class|org.brutality.utils.Timer
-   @|org\brutality\module\impl\pit\AutoSteak.java|536|541|Timer|class|org.brutality.utils.Timer
-   @|org\brutality\module\impl\pit\AutoSteak.java|542|552|resettimer|field|org.brutality.module.impl.pit.AutoSteak|resettimer|
-   @|org\brutality\module\impl\pit\AutoSteak.java|559|564|Timer|class|org.brutality.utils.Timer
-   @|org\brutality\module\impl\pit\AutoSteak.java|584|595|currentSlot|field|org.brutality.module.impl.pit.AutoSteak|currentSlot|
-   @|org\brutality\module\impl\pit\AutoSteak.java|621|629|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak|
-   @|org\brutality\module\impl\pit\AutoSteak.java|655|664|steakSlot|field|org.brutality.module.impl.pit.AutoSteak|steakSlot|
+   @|org\brutality\module\impl\pit\AutoSteak.java|496|501|Timer|class|org.brutality.utils.Timer
+   @|org\brutality\module\impl\pit\AutoSteak.java|502|507|timer|field|org.brutality.module.impl.pit.AutoSteak|timer|
+   @|org\brutality\module\impl\pit\AutoSteak.java|514|519|Timer|class|org.brutality.utils.Timer
+   @|org\brutality\module\impl\pit\AutoSteak.java|535|540|Timer|class|org.brutality.utils.Timer
+   @|org\brutality\module\impl\pit\AutoSteak.java|541|551|resettimer|field|org.brutality.module.impl.pit.AutoSteak|resettimer|
+   @|org\brutality\module\impl\pit\AutoSteak.java|558|563|Timer|class|org.brutality.utils.Timer
+   @|org\brutality\module\impl\pit\AutoSteak.java|583|594|currentSlot|field|org.brutality.module.impl.pit.AutoSteak|currentSlot|
+   @|org\brutality\module\impl\pit\AutoSteak.java|620|628|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak|
+   @|org\brutality\module\impl\pit\AutoSteak.java|654|663|steakSlot|field|org.brutality.module.impl.pit.AutoSteak|steakSlot|
    Method Start: AutoSteak()V
-      @|org\brutality\module\impl\pit\AutoSteak.java|678|687|AutoSteak|method|org.brutality.module.impl.pit.AutoSteak|AutoSteak|()V
-      @|org\brutality\module\impl\pit\AutoSteak.java|761|769|Category|class|org.brutality.module.Category
-      @|org\brutality\module\impl\pit\AutoSteak.java|770|773|PIT|field|org.brutality.module.Category|PIT
-      @|org\brutality\module\impl\pit\AutoSteak.java|789|800|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
-      @|org\brutality\module\impl\pit\AutoSteak.java|801|806|delay|field|org.brutality.module.impl.pit.AutoSteak|delay
+      @|org\brutality\module\impl\pit\AutoSteak.java|677|686|AutoSteak|method|org.brutality.module.impl.pit.AutoSteak|AutoSteak|()V
+      @|org\brutality\module\impl\pit\AutoSteak.java|760|768|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\pit\AutoSteak.java|769|772|PIT|field|org.brutality.module.Category|PIT
+      @|org\brutality\module\impl\pit\AutoSteak.java|788|799|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
+      @|org\brutality\module\impl\pit\AutoSteak.java|800|805|delay|field|org.brutality.module.impl.pit.AutoSteak|delay
    Method End: AutoSteak()V
    Method Start: onDisable()V
-      @|org\brutality\module\impl\pit\AutoSteak.java|832|841|onDisable|method|org.brutality.module.Module|onDisable|()V
-      @|org\brutality\module\impl\pit\AutoSteak.java|859|867|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak
+      @|org\brutality\module\impl\pit\AutoSteak.java|831|840|onDisable|method|org.brutality.module.Module|onDisable|()V
+      @|org\brutality\module\impl\pit\AutoSteak.java|858|866|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak
    Method End: onDisable()V
    Method Start: onEvent(Lorg/brutality/events/Event;)V
-      @|org\brutality\module\impl\pit\AutoSteak.java|901|908|onEvent|method|org.brutality.module.impl.pit.AutoSteak|onEvent|(Lorg/brutality/events/Event;)V
-      @|org\brutality\module\impl\pit\AutoSteak.java|909|914|Event|class|org.brutality.events.Event
-      @|org\brutality\module\impl\pit\AutoSteak.java|915|916|e|param|org.brutality.module.impl.pit.AutoSteak|onEvent|(Lorg/brutality/events/Event;)V|e|0
-      @|org\brutality\module\impl\pit\AutoSteak.java|932|933|e|param|org.brutality.module.impl.pit.AutoSteak|onEvent|(Lorg/brutality/events/Event;)V|e|0
-      @|org\brutality\module\impl\pit\AutoSteak.java|945|956|EventUpdate|class|org.brutality.events.listeners.EventUpdate
-      @|org\brutality\module\impl\pit\AutoSteak.java|981|983|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoSteak.java|984|997|currentScreen|field|net.minecraft.client.Minecraft|currentScreen
-      @|org\brutality\module\impl\pit\AutoSteak.java|1069|1077|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak
-      @|org\brutality\module\impl\pit\AutoSteak.java|1086|1091|timer|field|org.brutality.module.impl.pit.AutoSteak|timer
-      @|org\brutality\module\impl\pit\AutoSteak.java|1092|1106|hasTimeElapsed|method|org.brutality.utils.Timer|hasTimeElapsed|(JZ)Z
-      @|org\brutality\module\impl\pit\AutoSteak.java|1119|1124|delay|field|org.brutality.module.impl.pit.AutoSteak|delay
+      @|org\brutality\module\impl\pit\AutoSteak.java|899|906|onEvent|method|org.brutality.module.impl.pit.AutoSteak|onEvent|(Lorg/brutality/events/Event;)V
+      @|org\brutality\module\impl\pit\AutoSteak.java|907|912|Event|class|org.brutality.events.Event
+      @|org\brutality\module\impl\pit\AutoSteak.java|913|914|e|param|org.brutality.module.impl.pit.AutoSteak|onEvent|(Lorg/brutality/events/Event;)V|e|0
+      @|org\brutality\module\impl\pit\AutoSteak.java|930|931|e|param|org.brutality.module.impl.pit.AutoSteak|onEvent|(Lorg/brutality/events/Event;)V|e|0
+      @|org\brutality\module\impl\pit\AutoSteak.java|943|954|EventUpdate|class|org.brutality.events.listeners.EventUpdate
+      @|org\brutality\module\impl\pit\AutoSteak.java|979|981|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoSteak.java|982|995|currentScreen|field|net.minecraft.client.Minecraft|currentScreen
+      @|org\brutality\module\impl\pit\AutoSteak.java|1067|1075|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak
+      @|org\brutality\module\impl\pit\AutoSteak.java|1084|1089|timer|field|org.brutality.module.impl.pit.AutoSteak|timer
+      @|org\brutality\module\impl\pit\AutoSteak.java|1090|1104|hasTimeElapsed|method|org.brutality.utils.Timer|hasTimeElapsed|(JZ)Z
+      @|org\brutality\module\impl\pit\AutoSteak.java|1117|1122|delay|field|org.brutality.module.impl.pit.AutoSteak|delay
       ERROR SimpleName: getValue null
-      @|org\brutality\module\impl\pit\AutoSteak.java|1167|1176|steakSlot|field|org.brutality.module.impl.pit.AutoSteak|steakSlot
-      @|org\brutality\module\impl\pit\AutoSteak.java|1184|1197|findSteakSlot|method|org.brutality.module.impl.pit.AutoSteak|findSteakSlot|()I
-      @|org\brutality\module\impl\pit\AutoSteak.java|1226|1235|steakSlot|field|org.brutality.module.impl.pit.AutoSteak|steakSlot
-      @|org\brutality\module\impl\pit\AutoSteak.java|1270|1281|currentSlot|field|org.brutality.module.impl.pit.AutoSteak|currentSlot
-      @|org\brutality\module\impl\pit\AutoSteak.java|1289|1291|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoSteak.java|1292|1301|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoSteak.java|1302|1311|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
-      @|org\brutality\module\impl\pit\AutoSteak.java|1312|1323|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
-      @|org\brutality\module\impl\pit\AutoSteak.java|1350|1352|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoSteak.java|1353|1362|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoSteak.java|1363|1372|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
-      @|org\brutality\module\impl\pit\AutoSteak.java|1373|1384|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
-      @|org\brutality\module\impl\pit\AutoSteak.java|1392|1401|steakSlot|field|org.brutality.module.impl.pit.AutoSteak|steakSlot
-      @|org\brutality\module\impl\pit\AutoSteak.java|1428|1436|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak
-      @|org\brutality\module\impl\pit\AutoSteak.java|1491|1499|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak
-      @|org\brutality\module\impl\pit\AutoSteak.java|1508|1510|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoSteak.java|1511|1520|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoSteak.java|1521|1530|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
-      @|org\brutality\module\impl\pit\AutoSteak.java|1531|1542|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
-      @|org\brutality\module\impl\pit\AutoSteak.java|1551|1560|steakSlot|field|org.brutality.module.impl.pit.AutoSteak|steakSlot
-      @|org\brutality\module\impl\pit\AutoSteak.java|1580|1589|ItemStack|class|net.minecraft.item.ItemStack
-      @|org\brutality\module\impl\pit\AutoSteak.java|1607|1609|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoSteak.java|1610|1619|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoSteak.java|1620|1629|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
-      @|org\brutality\module\impl\pit\AutoSteak.java|1630|1644|getStackInSlot|method|net.minecraft.inventory.IInventory|getStackInSlot|(I)Lnet/minecraft/item/ItemStack;
-      @|org\brutality\module\impl\pit\AutoSteak.java|1650|1659|steakSlot|field|org.brutality.module.impl.pit.AutoSteak|steakSlot
-      @|org\brutality\module\impl\pit\AutoSteak.java|1713|1722|stackSize|field|net.minecraft.item.ItemStack|stackSize
-      @|org\brutality\module\impl\pit\AutoSteak.java|1755|1757|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoSteak.java|1758|1774|playerController|field|net.minecraft.client.Minecraft|playerController
-      @|org\brutality\module\impl\pit\AutoSteak.java|1775|1786|sendUseItem|method|net.minecraft.client.multiplayer.PlayerControllerMP|sendUseItem|(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;)Z
-      @|org\brutality\module\impl\pit\AutoSteak.java|1792|1794|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoSteak.java|1795|1804|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoSteak.java|1811|1813|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoSteak.java|1814|1822|theWorld|field|net.minecraft.client.Minecraft|theWorld
-      @|org\brutality\module\impl\pit\AutoSteak.java|1861|1863|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoSteak.java|1864|1873|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoSteak.java|1874|1883|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
-      @|org\brutality\module\impl\pit\AutoSteak.java|1884|1895|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
-      @|org\brutality\module\impl\pit\AutoSteak.java|1903|1914|currentSlot|field|org.brutality.module.impl.pit.AutoSteak|currentSlot
-      @|org\brutality\module\impl\pit\AutoSteak.java|1941|1949|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak
-      @|org\brutality\module\impl\pit\AutoSteak.java|2012|2022|resettimer|field|org.brutality.module.impl.pit.AutoSteak|resettimer
-      @|org\brutality\module\impl\pit\AutoSteak.java|2023|2037|hasTimeElapsed|method|org.brutality.utils.Timer|hasTimeElapsed|(JZ)Z
-      @|org\brutality\module\impl\pit\AutoSteak.java|2075|2083|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak
+      @|org\brutality\module\impl\pit\AutoSteak.java|1165|1174|steakSlot|field|org.brutality.module.impl.pit.AutoSteak|steakSlot
+      @|org\brutality\module\impl\pit\AutoSteak.java|1182|1195|findSteakSlot|method|org.brutality.module.impl.pit.AutoSteak|findSteakSlot|()I
+      @|org\brutality\module\impl\pit\AutoSteak.java|1224|1233|steakSlot|field|org.brutality.module.impl.pit.AutoSteak|steakSlot
+      @|org\brutality\module\impl\pit\AutoSteak.java|1268|1279|currentSlot|field|org.brutality.module.impl.pit.AutoSteak|currentSlot
+      @|org\brutality\module\impl\pit\AutoSteak.java|1287|1289|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoSteak.java|1290|1299|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoSteak.java|1300|1309|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\AutoSteak.java|1310|1321|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
+      @|org\brutality\module\impl\pit\AutoSteak.java|1348|1350|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoSteak.java|1351|1360|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoSteak.java|1361|1370|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\AutoSteak.java|1371|1382|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
+      @|org\brutality\module\impl\pit\AutoSteak.java|1390|1399|steakSlot|field|org.brutality.module.impl.pit.AutoSteak|steakSlot
+      @|org\brutality\module\impl\pit\AutoSteak.java|1426|1434|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak
+      @|org\brutality\module\impl\pit\AutoSteak.java|1489|1497|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak
+      @|org\brutality\module\impl\pit\AutoSteak.java|1506|1508|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoSteak.java|1509|1518|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoSteak.java|1519|1528|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\AutoSteak.java|1529|1540|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
+      @|org\brutality\module\impl\pit\AutoSteak.java|1549|1558|steakSlot|field|org.brutality.module.impl.pit.AutoSteak|steakSlot
+      @|org\brutality\module\impl\pit\AutoSteak.java|1578|1587|ItemStack|class|net.minecraft.item.ItemStack
+      @|org\brutality\module\impl\pit\AutoSteak.java|1605|1607|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoSteak.java|1608|1617|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoSteak.java|1618|1627|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\AutoSteak.java|1628|1642|getStackInSlot|method|net.minecraft.inventory.IInventory|getStackInSlot|(I)Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\pit\AutoSteak.java|1648|1657|steakSlot|field|org.brutality.module.impl.pit.AutoSteak|steakSlot
+      @|org\brutality\module\impl\pit\AutoSteak.java|1711|1720|stackSize|field|net.minecraft.item.ItemStack|stackSize
+      @|org\brutality\module\impl\pit\AutoSteak.java|1753|1755|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoSteak.java|1756|1772|playerController|field|net.minecraft.client.Minecraft|playerController
+      @|org\brutality\module\impl\pit\AutoSteak.java|1773|1784|sendUseItem|method|net.minecraft.client.multiplayer.PlayerControllerMP|sendUseItem|(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/world/World;Lnet/minecraft/item/ItemStack;)Z
+      @|org\brutality\module\impl\pit\AutoSteak.java|1790|1792|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoSteak.java|1793|1802|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoSteak.java|1809|1811|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoSteak.java|1812|1820|theWorld|field|net.minecraft.client.Minecraft|theWorld
+      @|org\brutality\module\impl\pit\AutoSteak.java|1859|1861|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoSteak.java|1862|1871|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoSteak.java|1872|1881|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\AutoSteak.java|1882|1893|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
+      @|org\brutality\module\impl\pit\AutoSteak.java|1901|1912|currentSlot|field|org.brutality.module.impl.pit.AutoSteak|currentSlot
+      @|org\brutality\module\impl\pit\AutoSteak.java|1939|1947|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak
+      @|org\brutality\module\impl\pit\AutoSteak.java|2010|2020|resettimer|field|org.brutality.module.impl.pit.AutoSteak|resettimer
+      @|org\brutality\module\impl\pit\AutoSteak.java|2021|2035|hasTimeElapsed|method|org.brutality.utils.Timer|hasTimeElapsed|(JZ)Z
+      @|org\brutality\module\impl\pit\AutoSteak.java|2073|2081|useSteak|field|org.brutality.module.impl.pit.AutoSteak|useSteak
    Method End: onEvent(Lorg/brutality/events/Event;)V
    Method Start: findSteakSlot()I
-      @|org\brutality\module\impl\pit\AutoSteak.java|2140|2153|findSteakSlot|method|org.brutality.module.impl.pit.AutoSteak|findSteakSlot|()I
-      @|org\brutality\module\impl\pit\AutoSteak.java|2208|2217|ItemStack|class|net.minecraft.item.ItemStack
-      @|org\brutality\module\impl\pit\AutoSteak.java|2235|2237|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\AutoSteak.java|2238|2247|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\AutoSteak.java|2248|2257|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
-      @|org\brutality\module\impl\pit\AutoSteak.java|2258|2271|mainInventory|field|net.minecraft.entity.player.InventoryPlayer|mainInventory
-      @|org\brutality\module\impl\pit\AutoSteak.java|2323|2330|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
-      @|org\brutality\module\impl\pit\AutoSteak.java|2336|2341|Items|class|net.minecraft.init.Items
-      @|org\brutality\module\impl\pit\AutoSteak.java|2342|2353|cooked_beef|field|net.minecraft.init.Items|cooked_beef
+      @|org\brutality\module\impl\pit\AutoSteak.java|2138|2151|findSteakSlot|method|org.brutality.module.impl.pit.AutoSteak|findSteakSlot|()I
+      @|org\brutality\module\impl\pit\AutoSteak.java|2206|2215|ItemStack|class|net.minecraft.item.ItemStack
+      @|org\brutality\module\impl\pit\AutoSteak.java|2233|2235|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\AutoSteak.java|2236|2245|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\AutoSteak.java|2246|2255|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\AutoSteak.java|2256|2269|mainInventory|field|net.minecraft.entity.player.InventoryPlayer|mainInventory
+      @|org\brutality\module\impl\pit\AutoSteak.java|2321|2328|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
+      @|org\brutality\module\impl\pit\AutoSteak.java|2334|2339|Items|class|net.minecraft.init.Items
+      @|org\brutality\module\impl\pit\AutoSteak.java|2340|2351|cooked_beef|field|net.minecraft.init.Items|cooked_beef
    Method End: findSteakSlot()I
 Class End  : org.brutality.module.impl.pit.AutoSteak
 endProcessing org\brutality\module\impl\pit\AutoSteak.java
@@ -2055,6 +1828,167 @@ Class Start: org.brutality.module.impl.pit.PitSwap
 Class End  : org.brutality.module.impl.pit.PitSwap
 endProcessing org\brutality\module\impl\pit\PitSwap.java
 
+processing org\brutality\module\impl\pit\SogeSwap.java
+@|org\brutality\module\impl\pit\SogeSwap.java|8|37|org.brutality.module.impl.pit|package|org.brutality.module.impl.pit|(file)
+Class Start: org.brutality.module.impl.pit.SogeSwap
+   @|org\brutality\module\impl\pit\SogeSwap.java|523|536|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\pit\SogeSwap.java|537|549|delaySetting|field|org.brutality.module.impl.pit.SogeSwap|delaySetting|
+   @|org\brutality\module\impl\pit\SogeSwap.java|569|583|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
+   @|org\brutality\module\impl\pit\SogeSwap.java|584|597|holdLeftClick|field|org.brutality.module.impl.pit.SogeSwap|holdLeftClick|
+   @|org\brutality\module\impl\pit\SogeSwap.java|616|627|lastSlotSet|field|org.brutality.module.impl.pit.SogeSwap|lastSlotSet|
+   @|org\brutality\module\impl\pit\SogeSwap.java|646|654|lastSwap|field|org.brutality.module.impl.pit.SogeSwap|lastSwap|
+   @|org\brutality\module\impl\pit\SogeSwap.java|672|681|swordSlot|field|org.brutality.module.impl.pit.SogeSwap|swordSlot|
+   @|org\brutality\module\impl\pit\SogeSwap.java|699|715|tierIIISwordSlot|field|org.brutality.module.impl.pit.SogeSwap|tierIIISwordSlot|
+   @|org\brutality\module\impl\pit\SogeSwap.java|737|743|toggle|field|org.brutality.module.impl.pit.SogeSwap|toggle|
+   Method Start: SogeSwap()V
+      @|org\brutality\module\impl\pit\SogeSwap.java|764|772|SogeSwap|method|org.brutality.module.impl.pit.SogeSwap|SogeSwap|()V
+      @|org\brutality\module\impl\pit\SogeSwap.java|859|867|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\pit\SogeSwap.java|868|871|PIT|field|org.brutality.module.Category|PIT
+      @|org\brutality\module\impl\pit\SogeSwap.java|887|899|delaySetting|field|org.brutality.module.impl.pit.SogeSwap|delaySetting
+      @|org\brutality\module\impl\pit\SogeSwap.java|906|919|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+      @|org\brutality\module\impl\pit\SogeSwap.java|964|977|holdLeftClick|field|org.brutality.module.impl.pit.SogeSwap|holdLeftClick
+      @|org\brutality\module\impl\pit\SogeSwap.java|984|998|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
+      @|org\brutality\module\impl\pit\SogeSwap.java|1039|1050|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
+      @|org\brutality\module\impl\pit\SogeSwap.java|1051|1063|delaySetting|field|org.brutality.module.impl.pit.SogeSwap|delaySetting
+      @|org\brutality\module\impl\pit\SogeSwap.java|1065|1078|holdLeftClick|field|org.brutality.module.impl.pit.SogeSwap|holdLeftClick
+   Method End: SogeSwap()V
+   Method Start: onEnable()V
+      @|org\brutality\module\impl\pit\SogeSwap.java|1118|1126|onEnable|method|org.brutality.module.Module|onEnable|()V
+      @|org\brutality\module\impl\pit\SogeSwap.java|1145|1153|onEnable|method|org.brutality.module.Module|onEnable|()V
+      @|org\brutality\module\impl\pit\SogeSwap.java|1170|1181|lastSlotSet|field|org.brutality.module.impl.pit.SogeSwap|lastSlotSet
+      @|org\brutality\module\impl\pit\SogeSwap.java|1200|1208|lastSwap|field|org.brutality.module.impl.pit.SogeSwap|lastSwap
+   Method End: onEnable()V
+   Method Start: setSlots(Lnet/minecraftforge/fml/common/gameevent/TickEvent$ClientTickEvent;)V
+      @|org\brutality\module\impl\pit\SogeSwap.java|1257|1265|setSlots|method|org.brutality.module.impl.pit.SogeSwap|setSlots|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$ClientTickEvent;)V
+      @|org\brutality\module\impl\pit\SogeSwap.java|1266|1291|TickEvent.ClientTickEvent|class|net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent
+      @|org\brutality\module\impl\pit\SogeSwap.java|1292|1293|e|param|org.brutality.module.impl.pit.SogeSwap|setSlots|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$ClientTickEvent;)V|e|0
+      @|org\brutality\module\impl\pit\SogeSwap.java|1309|1318|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|1319|1331|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|1334|1343|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|1355|1364|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|1365|1377|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|1380|1388|theWorld|field|net.minecraft.client.Minecraft|theWorld
+      @|org\brutality\module\impl\pit\SogeSwap.java|1400|1406|System|class|java.lang.System
+      @|org\brutality\module\impl\pit\SogeSwap.java|1407|1424|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+      @|org\brutality\module\impl\pit\SogeSwap.java|1434|1445|lastSlotSet|field|org.brutality.module.impl.pit.SogeSwap|lastSlotSet
+      @|org\brutality\module\impl\pit\SogeSwap.java|1463|1469|toggle|field|org.brutality.module.impl.pit.SogeSwap|toggle
+      @|org\brutality\module\impl\pit\SogeSwap.java|1558|1567|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|1568|1580|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|1583|1592|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|1593|1602|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\SogeSwap.java|1603|1617|getStackInSlot|method|net.minecraft.inventory.IInventory|getStackInSlot|(I)Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\pit\SogeSwap.java|1656|1665|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|1666|1678|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|1681|1690|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|1691|1700|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\SogeSwap.java|1701|1715|getStackInSlot|method|net.minecraft.inventory.IInventory|getStackInSlot|(I)Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\pit\SogeSwap.java|1719|1733|getDisplayName|method|net.minecraft.item.ItemStack|getDisplayName|()Ljava/lang/String;
+      @|org\brutality\module\impl\pit\SogeSwap.java|1736|1744|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|org\brutality\module\impl\pit\SogeSwap.java|1786|1795|swordSlot|field|org.brutality.module.impl.pit.SogeSwap|swordSlot
+      @|org\brutality\module\impl\pit\SogeSwap.java|1831|1840|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|1841|1853|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|1856|1865|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|1866|1875|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\SogeSwap.java|1876|1890|getStackInSlot|method|net.minecraft.inventory.IInventory|getStackInSlot|(I)Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\pit\SogeSwap.java|1894|1908|getDisplayName|method|net.minecraft.item.ItemStack|getDisplayName|()Ljava/lang/String;
+      @|org\brutality\module\impl\pit\SogeSwap.java|1911|1919|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|org\brutality\module\impl\pit\SogeSwap.java|1962|1978|tierIIISwordSlot|field|org.brutality.module.impl.pit.SogeSwap|tierIIISwordSlot
+      @|org\brutality\module\impl\pit\SogeSwap.java|2021|2032|lastSlotSet|field|org.brutality.module.impl.pit.SogeSwap|lastSlotSet
+      @|org\brutality\module\impl\pit\SogeSwap.java|2035|2041|System|class|java.lang.System
+      @|org\brutality\module\impl\pit\SogeSwap.java|2042|2059|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+   Method End: setSlots(Lnet/minecraftforge/fml/common/gameevent/TickEvent$ClientTickEvent;)V
+   Method Start: swap(Lnet/minecraftforge/fml/common/gameevent/TickEvent$RenderTickEvent;)V
+      @|org\brutality\module\impl\pit\SogeSwap.java|2106|2110|swap|method|org.brutality.module.impl.pit.SogeSwap|swap|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$RenderTickEvent;)V
+      @|org\brutality\module\impl\pit\SogeSwap.java|2111|2136|TickEvent.RenderTickEvent|class|net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent
+      @|org\brutality\module\impl\pit\SogeSwap.java|2137|2138|e|param|org.brutality.module.impl.pit.SogeSwap|swap|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$RenderTickEvent;)V|e|0
+      @|org\brutality\module\impl\pit\SogeSwap.java|2154|2163|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|2164|2176|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|2179|2188|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|2200|2209|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|2210|2222|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|2225|2233|theWorld|field|net.minecraft.client.Minecraft|theWorld
+      @|org\brutality\module\impl\pit\SogeSwap.java|2245|2251|System|class|java.lang.System
+      @|org\brutality\module\impl\pit\SogeSwap.java|2252|2269|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+      @|org\brutality\module\impl\pit\SogeSwap.java|2279|2287|lastSwap|field|org.brutality.module.impl.pit.SogeSwap|lastSwap
+      @|org\brutality\module\impl\pit\SogeSwap.java|2295|2307|delaySetting|field|org.brutality.module.impl.pit.SogeSwap|delaySetting
+      ERROR SimpleName: getValue null
+      @|org\brutality\module\impl\pit\SogeSwap.java|2328|2334|toggle|field|org.brutality.module.impl.pit.SogeSwap|toggle
+      @|org\brutality\module\impl\pit\SogeSwap.java|2381|2394|holdLeftClick|field|org.brutality.module.impl.pit.SogeSwap|holdLeftClick
+      ERROR SimpleName: isEnabled null
+      @|org\brutality\module\impl\pit\SogeSwap.java|2427|2432|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\SogeSwap.java|2433|2445|isButtonDown|method|org.lwjgl.input.Mouse|isButtonDown|(I)Z
+      @|org\brutality\module\impl\pit\SogeSwap.java|2452|2461|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|2462|2474|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|2477|2490|currentScreen|field|net.minecraft.client.Minecraft|currentScreen
+      @|org\brutality\module\impl\pit\SogeSwap.java|2502|2514|GuiContainer|class|net.minecraft.client.gui.inventory.GuiContainer
+      @|org\brutality\module\impl\pit\SogeSwap.java|2518|2527|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|2528|2540|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|2543|2552|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|2553|2564|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\pit\SogeSwap.java|2639|2648|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|2649|2661|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|2664|2673|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|2674|2685|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\pit\SogeSwap.java|2716|2725|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|2726|2738|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|2741|2750|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|2751|2762|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\pit\SogeSwap.java|2765|2779|getDisplayName|method|net.minecraft.item.ItemStack|getDisplayName|()Ljava/lang/String;
+      @|org\brutality\module\impl\pit\SogeSwap.java|2782|2790|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|org\brutality\module\impl\pit\SogeSwap.java|2836|2845|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|2846|2858|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|2861|2870|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|2871|2882|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\pit\SogeSwap.java|2885|2899|getDisplayName|method|net.minecraft.item.ItemStack|getDisplayName|()Ljava/lang/String;
+      @|org\brutality\module\impl\pit\SogeSwap.java|2902|2910|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|org\brutality\module\impl\pit\SogeSwap.java|2944|2958|handleAutoSwap|method|org.brutality.module.impl.pit.SogeSwap|handleAutoSwap|()V
+      @|org\brutality\module\impl\pit\SogeSwap.java|2985|2993|lastSwap|field|org.brutality.module.impl.pit.SogeSwap|lastSwap
+      @|org\brutality\module\impl\pit\SogeSwap.java|2996|3002|System|class|java.lang.System
+      @|org\brutality\module\impl\pit\SogeSwap.java|3003|3020|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+   Method End: swap(Lnet/minecraftforge/fml/common/gameevent/TickEvent$RenderTickEvent;)V
+   Method Start: handleAutoSwap()V
+      @|org\brutality\module\impl\pit\SogeSwap.java|3048|3062|handleAutoSwap|method|org.brutality.module.impl.pit.SogeSwap|handleAutoSwap|()V
+      @|org\brutality\module\impl\pit\SogeSwap.java|3114|3123|swordSlot|field|org.brutality.module.impl.pit.SogeSwap|swordSlot
+      @|org\brutality\module\impl\pit\SogeSwap.java|3188|3204|tierIIISwordSlot|field|org.brutality.module.impl.pit.SogeSwap|tierIIISwordSlot
+      @|org\brutality\module\impl\pit\SogeSwap.java|3301|3310|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|3311|3323|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|3326|3335|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|3336|3347|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\pit\SogeSwap.java|3361|3370|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|3371|3383|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|3386|3395|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|3396|3407|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\pit\SogeSwap.java|3410|3424|getDisplayName|method|net.minecraft.item.ItemStack|getDisplayName|()Ljava/lang/String;
+      @|org\brutality\module\impl\pit\SogeSwap.java|3427|3435|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|org\brutality\module\impl\pit\SogeSwap.java|3472|3481|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|3482|3494|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|3497|3506|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|3507|3516|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\SogeSwap.java|3517|3528|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
+      @|org\brutality\module\impl\pit\SogeSwap.java|3536|3552|tierIIISwordSlot|field|org.brutality.module.impl.pit.SogeSwap|tierIIISwordSlot
+      @|org\brutality\module\impl\pit\SogeSwap.java|3577|3586|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|3587|3599|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|3602|3611|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|3612|3623|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\pit\SogeSwap.java|3637|3646|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|3647|3659|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|3662|3671|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|3672|3683|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\pit\SogeSwap.java|3686|3700|getDisplayName|method|net.minecraft.item.ItemStack|getDisplayName|()Ljava/lang/String;
+      @|org\brutality\module\impl\pit\SogeSwap.java|3703|3711|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|org\brutality\module\impl\pit\SogeSwap.java|3749|3758|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SogeSwap.java|3759|3771|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SogeSwap.java|3774|3783|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\SogeSwap.java|3784|3793|inventory|field|net.minecraft.entity.player.EntityPlayer|inventory
+      @|org\brutality\module\impl\pit\SogeSwap.java|3794|3805|currentItem|field|net.minecraft.entity.player.InventoryPlayer|currentItem
+      @|org\brutality\module\impl\pit\SogeSwap.java|3813|3822|swordSlot|field|org.brutality.module.impl.pit.SogeSwap|swordSlot
+      @|org\brutality\module\impl\pit\SogeSwap.java|3855|3863|lastSwap|field|org.brutality.module.impl.pit.SogeSwap|lastSwap
+      @|org\brutality\module\impl\pit\SogeSwap.java|3866|3872|System|class|java.lang.System
+      @|org\brutality\module\impl\pit\SogeSwap.java|3873|3890|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+   Method End: handleAutoSwap()V
+Class End  : org.brutality.module.impl.pit.SogeSwap
+endProcessing org\brutality\module\impl\pit\SogeSwap.java
+
 processing org\brutality\module\impl\pit\TelebowTimer.java
 @|org\brutality\module\impl\pit\TelebowTimer.java|8|37|org.brutality.module.impl.pit|package|org.brutality.module.impl.pit|(file)
 Class Start: org.brutality.module.impl.pit.TelebowTimer
@@ -2100,95 +2034,6 @@ endProcessing org\brutality\module\impl\pit\VenomedTimer.java
 processing org\brutality\module\impl\pit\WhoGotDogged.java
 @|org\brutality\module\impl\pit\WhoGotDogged.java|8|37|org.brutality.module.impl.pit|package|org.brutality.module.impl.pit|(file)
 Class Start: org.brutality.module.impl.pit.WhoGotDogged
-   @|org\brutality\module\impl\pit\WhoGotDogged.java|670|676|String|class|java.lang.String
-   @|org\brutality\module\impl\pit\WhoGotDogged.java|660|669|ArrayList|class|java.util.ArrayList
-   @|org\brutality\module\impl\pit\WhoGotDogged.java|678|682|prev|field|org.brutality.module.impl.pit.WhoGotDogged|prev|
-   @|org\brutality\module\impl\pit\WhoGotDogged.java|689|698|ArrayList|class|java.util.ArrayList
-   @|org\brutality\module\impl\pit\WhoGotDogged.java|716|726|TimeHelper|class|org.brutality.utils.TimeHelper
-   @|org\brutality\module\impl\pit\WhoGotDogged.java|727|738|banCooldown|field|org.brutality.module.impl.pit.WhoGotDogged|banCooldown|
-   @|org\brutality\module\impl\pit\WhoGotDogged.java|745|755|TimeHelper|class|org.brutality.utils.TimeHelper
-   @|org\brutality\module\impl\pit\WhoGotDogged.java|771|784|NumberSetting|class|org.brutality.settings.impl.NumberSetting
-   @|org\brutality\module\impl\pit\WhoGotDogged.java|785|789|yPos|field|org.brutality.module.impl.pit.WhoGotDogged|yPos|
-   @|org\brutality\module\impl\pit\WhoGotDogged.java|796|809|NumberSetting|class|org.brutality.settings.impl.NumberSetting
-   @|org\brutality\module\impl\pit\WhoGotDogged.java|859|872|NumberSetting|class|org.brutality.settings.impl.NumberSetting
-   @|org\brutality\module\impl\pit\WhoGotDogged.java|873|877|xPos|field|org.brutality.module.impl.pit.WhoGotDogged|xPos|
-   @|org\brutality\module\impl\pit\WhoGotDogged.java|884|897|NumberSetting|class|org.brutality.settings.impl.NumberSetting
-   Method Start: WhoGotDogged()V
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|948|960|WhoGotDogged|method|org.brutality.module.impl.pit.WhoGotDogged|WhoGotDogged|()V
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1040|1048|Category|class|org.brutality.module.Category
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1049|1052|PIT|field|org.brutality.module.Category|PIT
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1063|1074|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1075|1079|yPos|field|org.brutality.module.impl.pit.WhoGotDogged|yPos
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1081|1085|xPos|field|org.brutality.module.impl.pit.WhoGotDogged|xPos
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1097|1109|EventManager|class|org.brutality.events.EventManager
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1110|1118|register|method|org.brutality.events.EventManager|register|(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1119|1130|EventUpdate|class|org.brutality.events.listeners.EventUpdate
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1142|1155|EventListener|class|org.brutality.events.EventListener
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1156|1167|EventUpdate|class|org.brutality.events.listeners.EventUpdate
-      Anon Class Start: org.brutality.module.impl.pit.WhoGotDogged$1
-         Method Start: onEvent(Lorg/brutality/events/listeners/EventUpdate;)V
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1219|1226|onEvent|method|org.brutality.events.EventListener|onEvent|(Lorg/brutality/events/Event;)V
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1227|1238|EventUpdate|class|org.brutality.events.listeners.EventUpdate
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1239|1244|event|param|org.brutality.module.impl.pit.WhoGotDogged$1|onEvent|(Lorg/brutality/events/listeners/EventUpdate;)V|event|0
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1268|1270|mc|field|org.brutality.utils.interfaces.MC|mc
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1271|1280|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1354|1367|getDifference|method|org.brutality.module.impl.pit.WhoGotDogged|getDifference|()V
-         Method End: onEvent(Lorg/brutality/events/listeners/EventUpdate;)V
-      Anon Class End: org.brutality.module.impl.pit.WhoGotDogged$1
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1406|1418|EventManager|class|org.brutality.events.EventManager
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1419|1427|register|method|org.brutality.events.EventManager|register|(Ljava/lang/Class;Lorg/brutality/events/EventListener;)V
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1428|1437|EventChat|class|org.brutality.events.listeners.EventChat
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1449|1462|EventListener|class|org.brutality.events.EventListener
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1463|1472|EventChat|class|org.brutality.events.listeners.EventChat
-      Anon Class Start: org.brutality.module.impl.pit.WhoGotDogged$2
-         Method Start: onEvent(Lorg/brutality/events/listeners/EventChat;)V
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1524|1531|onEvent|method|org.brutality.events.EventListener|onEvent|(Lorg/brutality/events/Event;)V
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1532|1541|EventChat|class|org.brutality.events.listeners.EventChat
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1542|1547|event|param|org.brutality.module.impl.pit.WhoGotDogged$2|onEvent|(Lorg/brutality/events/listeners/EventChat;)V|event|0
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1567|1573|String|class|java.lang.String
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1580|1585|event|param|org.brutality.module.impl.pit.WhoGotDogged$2|onEvent|(Lorg/brutality/events/listeners/EventChat;)V|event|0
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1586|1596|getMessage|method|org.brutality.events.listeners.EventChat|getMessage|()Ljava/lang/String;
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1624|1632|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1701|1712|banCooldown|field|org.brutality.module.impl.pit.WhoGotDogged|banCooldown
-            @|org\brutality\module\impl\pit\WhoGotDogged.java|1713|1718|reset|method|org.brutality.utils.TimeHelper|reset|()V
-         Method End: onEvent(Lorg/brutality/events/listeners/EventChat;)V
-      Anon Class End: org.brutality.module.impl.pit.WhoGotDogged$2
-   Method End: WhoGotDogged()V
-   Method Start: getDifference()V
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1790|1803|getDifference|method|org.brutality.module.impl.pit.WhoGotDogged|getDifference|()V
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1816|1826|Collection|class|java.util.Collection
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1827|1844|NetworkPlayerInfo|class|net.minecraft.client.network.NetworkPlayerInfo
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1863|1865|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1866|1879|getNetHandler|method|net.minecraft.client.Minecraft|getNetHandler|()Lnet/minecraft/client/network/NetHandlerPlayClient;
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1882|1898|getPlayerInfoMap|method|net.minecraft.client.network.NetHandlerPlayClient|getPlayerInfoMap|()Ljava/util/Collection;
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1915|1919|prev|field|org.brutality.module.impl.pit.WhoGotDogged|prev
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1920|1927|isEmpty|method|java.util.Collection|isEmpty|()Z
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1950|1956|String|class|java.lang.String
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|1970|1974|prev|field|org.brutality.module.impl.pit.WhoGotDogged|prev
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2029|2035|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2038|2046|anyMatch|method|java.util.stream.Stream|anyMatch|(Ljava/util/function/Predicate;)Z
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2143|2154|banCooldown|field|org.brutality.module.impl.pit.WhoGotDogged|banCooldown
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2155|2165|hasReached|method|org.brutality.utils.TimeHelper|hasReached|(J)Z
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2196|2205|logToChat|method|org.brutality.module.impl.pit.WhoGotDogged|logToChat|(Ljava/lang/String;)V
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2269|2273|prev|field|org.brutality.module.impl.pit.WhoGotDogged|prev
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2274|2279|clear|method|java.util.Collection|clear|()V
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2296|2313|NetworkPlayerInfo|class|net.minecraft.client.network.NetworkPlayerInfo
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2351|2355|prev|field|org.brutality.module.impl.pit.WhoGotDogged|prev
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2356|2359|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2365|2379|getGameProfile|method|net.minecraft.client.network.NetworkPlayerInfo|getGameProfile|()Lcom/mojang/authlib/GameProfile;
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2382|2389|getName|method|com.mojang.authlib.GameProfile|getName|()Ljava/lang/String;
-   Method End: getDifference()V
-   Method Start: logToChat(Ljava/lang/String;)V
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2428|2437|logToChat|method|org.brutality.module.impl.pit.WhoGotDogged|logToChat|(Ljava/lang/String;)V
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2438|2444|String|class|java.lang.String
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2445|2455|playerName|param|org.brutality.module.impl.pit.WhoGotDogged|logToChat|(Ljava/lang/String;)V|playerName|0
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2467|2473|String|class|java.lang.String
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2501|2511|playerName|param|org.brutality.module.impl.pit.WhoGotDogged|logToChat|(Ljava/lang/String;)V|playerName|0
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2521|2523|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2524|2533|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2534|2548|addChatMessage|method|net.minecraft.command.ICommandSender|addChatMessage|(Lnet/minecraft/util/IChatComponent;)V
-      @|org\brutality\module\impl\pit\WhoGotDogged.java|2553|2570|ChatComponentText|class|net.minecraft.util.ChatComponentText
-   Method End: logToChat(Ljava/lang/String;)V
 Class End  : org.brutality.module.impl.pit.WhoGotDogged
 endProcessing org\brutality\module\impl\pit\WhoGotDogged.java
 
@@ -5305,13 +5150,15 @@ processing org\brutality\utils\Colors.java
 @|org\brutality\utils\Colors.java|8|27|org.brutality.utils|package|org.brutality.utils|(file)
 Class Start: org.brutality.utils.Colors
    @|org\brutality\utils\Colors.java|76|82|String|class|java.lang.String
-   @|org\brutality\utils\Colors.java|83|88|black|field|org.brutality.utils.Colors|black|
-   @|org\brutality\utils\Colors.java|126|132|String|class|java.lang.String
-   @|org\brutality\utils\Colors.java|133|141|dark_red|field|org.brutality.utils.Colors|dark_red|
-   @|org\brutality\utils\Colors.java|179|185|String|class|java.lang.String
-   @|org\brutality\utils\Colors.java|186|195|dark_pink|field|org.brutality.utils.Colors|dark_pink|
-   @|org\brutality\utils\Colors.java|233|239|String|class|java.lang.String
-   @|org\brutality\utils\Colors.java|240|252|light_purple|field|org.brutality.utils.Colors|light_purple|
+   @|org\brutality\utils\Colors.java|83|87|aqua|field|org.brutality.utils.Colors|aqua|
+   @|org\brutality\utils\Colors.java|125|131|String|class|java.lang.String
+   @|org\brutality\utils\Colors.java|132|136|gray|field|org.brutality.utils.Colors|gray|
+   @|org\brutality\utils\Colors.java|174|180|String|class|java.lang.String
+   @|org\brutality\utils\Colors.java|181|193|light_purple|field|org.brutality.utils.Colors|light_purple|
+   @|org\brutality\utils\Colors.java|231|237|String|class|java.lang.String
+   @|org\brutality\utils\Colors.java|238|249|dark_purple|field|org.brutality.utils.Colors|dark_purple|
+   @|org\brutality\utils\Colors.java|287|293|String|class|java.lang.String
+   @|org\brutality\utils\Colors.java|294|303|dark_pink|field|org.brutality.utils.Colors|dark_pink|
 Class End  : org.brutality.utils.Colors
 endProcessing org\brutality\utils\Colors.java
 
