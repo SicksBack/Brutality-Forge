@@ -10,7 +10,7 @@ import org.brutality.settings.impl.NumberSetting;
 import org.brutality.utils.Timer;
 
 public class AutoSteak extends Module {
-    public NumberSetting delay = new NumberSetting("Delay", this, 100.0, 50.0, 100.0, 1);
+    public NumberSetting delay = new NumberSetting("Delay", this, 100.0, 0.0, 100.0, 1);
     private Timer timer = new Timer();
     private Timer resettimer = new Timer();
     private int currentSlot = 0;
@@ -25,7 +25,6 @@ public class AutoSteak extends Module {
     public void onDisable() {
         this.useSteak = false;
     }
-
 
     public void onEvent(Event e) {
         if (e instanceof EventUpdate) {

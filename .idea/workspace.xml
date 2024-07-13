@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b08d3aa7-97e8-4ba8-b3a7-9b1cdbc7f2d3" name="Default Changelist" comment="removed sprintmodule since it crashes for some reason upon disconnecting a server">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/commands/impl/BindCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/events/EventManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/ModuleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/WhoGotDogged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/WhoGotDogged.java" afterDir="false" />
+    <list default="true" id="b08d3aa7-97e8-4ba8-b3a7-9b1cdbc7f2d3" name="Default Changelist" comment="fixed errors">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/SogeSwap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/fileContent/annotation-processors.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/AutoAura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/AutoAura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/AutoEgg.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/AutoEgg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/AutoSteak.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/AutoSteak.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +323,21 @@
       <option name="project" value="LOCAL" />
       <updated>1720636221091</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="removed sprintmodule since it crashes for some reason upon disconnecting a server">
+      <created>1720905798723</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1720905798723</updated>
+    </task>
+    <task id="LOCAL-00011" summary="fixed errors">
+      <created>1720905831200</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1720905831200</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -342,6 +362,7 @@
     <MESSAGE value="made PitSwap with options such as delay and hold left click" />
     <MESSAGE value="made pit modules and added modules that will be done l8r" />
     <MESSAGE value="removed sprintmodule since it crashes for some reason upon disconnecting a server" />
-    <option name="LAST_COMMIT_MESSAGE" value="removed sprintmodule since it crashes for some reason upon disconnecting a server" />
+    <MESSAGE value="fixed errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed errors" />
   </component>
 </project>

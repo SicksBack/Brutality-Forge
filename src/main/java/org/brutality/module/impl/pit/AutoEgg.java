@@ -11,7 +11,7 @@ import org.brutality.utils.Timer;
 
 public class AutoEgg extends Module {
     public NumberSetting health = new NumberSetting("Health", this, 10.0, 1.0, 10.0, 1);
-    public NumberSetting delay = new NumberSetting("Delay", this, 100.0, 50.0, 100.0, 1);
+    public NumberSetting delay = new NumberSetting("Delay", this, 100.0, 0.0, 100.0, 1);
     private Timer timer = new Timer();
     private Timer resettimer = new Timer();
     private int currentSlot = 0;
@@ -26,7 +26,6 @@ public class AutoEgg extends Module {
     public void onDisable() {
         this.useFirstAidEgg = false;
     }
-
 
     public void onEvent(Event e) {
         if (e instanceof EventUpdate) {
