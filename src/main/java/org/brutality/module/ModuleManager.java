@@ -20,7 +20,6 @@ public class ModuleManager extends ArrayList<Module> {
     public static ButtonSetting reach;
 
     public void init() {
-        new SprintModule();
         new HUDModule();
         new ArrayListModule();
         new ClickGuiModule();
