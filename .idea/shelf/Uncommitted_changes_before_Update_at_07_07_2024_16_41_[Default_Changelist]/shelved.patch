@@ -1,0 +1,26 @@
+Index: src/main/java/org/brutality/module/ModuleManager.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package org.brutality.module;\r\n\r\nimport org.brutality.api.EventBus;\r\nimport org.brutality.module.impl.move.SprintModule;\r\nimport org.brutality.module.impl.render.ArrayListModule;\r\nimport org.brutality.module.impl.render.ClickGuiModule;\r\nimport org.brutality.module.impl.render.HUDModule;\r\nimport org.brutality.module.impl.render.TestModule;\r\nimport lombok.Getter;\r\nimport org.brutality.settings.Setting;\r\nimport org.brutality.settings.impl.SimpleModeSetting;\r\nimport org.brutality.utils.exceptions.NotImplementedException;\r\n\r\nimport java.util.ArrayList;\r\nimport java.util.stream.Collectors;\r\n\r\n@Getter\r\npublic class ModuleManager extends ArrayList<Module> {\r\n    public void init() {\r\n        new SprintModule();\r\n        new TestModule();\r\n        new HUDModule();\r\n        new ArrayListModule();\r\n        new ClickGuiModule();\r\n        EventBus.getInstance().register(this);\r\n\r\n    }\r\n\r\n    public void updateSettings(Setting setting) {\r\n        forEach(module -> module.updateSettings(setting));\r\n    }\r\n\r\n    public <V extends Module> V getModuleByClass(Class<V> clazz) {\r\n        Module module = stream().filter(m -> m.getClass().equals(clazz)).findFirst().orElse(null);\r\n        return module == null ? null : clazz.cast(module);\r\n    }\r\n\r\n    public ArrayList<Module> getModulesByCategory(Category category) {\r\n        return stream().filter(module -> module.getCategory().equals(category)).collect(Collectors.toCollection(ArrayList::new));\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/org/brutality/module/ModuleManager.java b/src/main/java/org/brutality/module/ModuleManager.java
+--- a/src/main/java/org/brutality/module/ModuleManager.java	(revision 5b4544fb8355e5f40a7b17f6f0b232c03153d294)
++++ b/src/main/java/org/brutality/module/ModuleManager.java	(date 1720365620218)
+@@ -1,6 +1,7 @@
+ package org.brutality.module;
+ 
+ import org.brutality.api.EventBus;
++import org.brutality.module.impl.combat.KillauraModule;
+ import org.brutality.module.impl.move.SprintModule;
+ import org.brutality.module.impl.render.ArrayListModule;
+ import org.brutality.module.impl.render.ClickGuiModule;
+@@ -22,6 +23,7 @@
+         new HUDModule();
+         new ArrayListModule();
+         new ClickGuiModule();
++        new KillauraModule();
+         EventBus.getInstance().register(this);
+ 
+     }
