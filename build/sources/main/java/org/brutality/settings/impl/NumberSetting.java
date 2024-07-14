@@ -20,7 +20,20 @@ public class NumberSetting extends Setting {
     }
 
     public void setValue(double value) {
-        this.value = value;
+        if (decimalPlaces == 0) {
+            this.value = Math.round(value); // Ensure no decimals
+        } else {
+            this.value = value;
+        }
         mm.updateSettings(this);
+    }
+
+    @Override
+    public String toString() {
+        if (decimalPlaces == 0) {
+            return String.format("%.0f", value); // Format without decimals
+        } else {
+            return String.format("%." + decimalPlaces + "f", value); // Format with specified decimal places
+        }
     }
 }

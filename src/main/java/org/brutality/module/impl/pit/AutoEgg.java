@@ -10,8 +10,9 @@ import org.brutality.settings.impl.NumberSetting;
 import org.brutality.utils.Timer;
 
 public class AutoEgg extends Module {
-    public NumberSetting health = new NumberSetting("Health", this, 10.0, 1.0, 10.0, 1);
-    public NumberSetting delay = new NumberSetting("Delay", this, 100.0, 0.0, 100.0, 1);
+
+    private final NumberSetting healthSetting;
+    private final NumberSetting delaySetting;
     private Timer timer = new Timer();
     private Timer resettimer = new Timer();
     private int currentSlot = 0;
@@ -19,21 +20,25 @@ public class AutoEgg extends Module {
     private int eggSlot;
 
     public AutoEgg() {
-        super("AutoEgg", "probably dogs just swap normally hol shit", Category.PIT);
-        this.addSettings(health, delay);
+        super("AutoEgg", "Automatically uses first-aid egg based on health", Category.PIT);
+        this.healthSetting = new NumberSetting("Health", this, 10, 1, 10, 0);
+        this.delaySetting = new NumberSetting("Delay", this, 50, 1, 100, 0);
+        addSettings(healthSetting, delaySetting);
     }
+
 
     public void onDisable() {
         this.useFirstAidEgg = false;
     }
+
 
     public void onEvent(Event e) {
         if (e instanceof EventUpdate) {
             if (this.mc.currentScreen != null) {
                 return;
             }
-            if ((this.mc.thePlayer.getHealth() / 2.0f) <= this.health.getValue()) {
-                if (!this.useFirstAidEgg && this.timer.hasTimeElapsed((long) this.delay.getValue(), true)) {
+            if ((this.mc.thePlayer.getHealth() / 2.0f) <= this.healthSetting.getValue()) {
+                if (!this.useFirstAidEgg && this.timer.hasTimeElapsed((long) this.delaySetting.getValue(), true)) {
                     this.eggSlot = this.findEggSlot();
                     if (this.eggSlot != -1) {
                         this.currentSlot = this.mc.thePlayer.inventory.currentItem;
@@ -58,7 +63,7 @@ public class AutoEgg extends Module {
     private int findEggSlot() {
         for (int i = 0; i < 9; i++) {
             ItemStack itemStack = this.mc.thePlayer.inventory.mainInventory[i];
-            if (itemStack != null && itemStack.getItem() == Items.egg) {  // Assuming "First-Aid Egg" uses the same item ID as an egg
+            if (itemStack != null && itemStack.getItem() == Items.egg) { // Assuming "First-Aid Egg" uses the same item ID as an egg
                 return i;
             }
         }

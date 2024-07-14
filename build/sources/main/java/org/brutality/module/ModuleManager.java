@@ -1,5 +1,6 @@
 package org.brutality.module;
 
+import net.minecraft.inventory.Slot;
 import net.minecraft.world.World;
 import org.brutality.module.impl.World.*;
 import org.brutality.module.impl.combat.*;
@@ -49,6 +50,10 @@ public class ModuleManager extends ArrayList<Module> {
         new AutoSteak();
         new SogeSwap();
         new AutoSpawn();
+        new CakeAura();
+        new SlotSwap();
+        new AutoClicker();
+        new Health();
     }
 
     public void updateSettings(Setting setting) {

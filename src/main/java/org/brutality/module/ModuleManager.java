@@ -1,5 +1,6 @@
 package org.brutality.module;
 
+import net.minecraft.inventory.Slot;
 import net.minecraft.world.World;
 import org.brutality.module.impl.World.*;
 import org.brutality.module.impl.combat.*;
@@ -7,6 +8,7 @@ import org.brutality.module.impl.move.*;
 import org.brutality.module.impl.pit.*;
 import org.brutality.module.impl.player.*;
 import org.brutality.module.impl.render.*;
+import org.brutality.module.impl.harrys.*;
 import lombok.Getter;
 import org.brutality.settings.Setting;
 import org.brutality.settings.impl.ButtonSetting;
@@ -49,6 +51,11 @@ public class ModuleManager extends ArrayList<Module> {
         new AutoSteak();
         new SogeSwap();
         new AutoSpawn();
+        new CakeAura();
+        new SlotSwap();
+        new AutoClicker();
+        new Health();
+        new ChestESP();
     }
 
     public void updateSettings(Setting setting) {

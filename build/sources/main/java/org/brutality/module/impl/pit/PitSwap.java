@@ -14,6 +14,7 @@ public class PitSwap extends Module {
 
     private final NumberSetting delaySetting;
     private final BooleanSetting holdLeftClick;
+    private final BooleanSetting useDiamondAxe;
     private long lastSlotSet;
     private long lastSwap;
     private int swordSlot;
@@ -22,9 +23,10 @@ public class PitSwap extends Module {
 
     public PitSwap() {
         super("PitSwap", "Automatically swaps between sword and spade", Category.PIT);
-        this.delaySetting = new NumberSetting("Delay", this, 50, 1, 100, 1);
+        this.delaySetting = new NumberSetting("Delay", this, 50, 1, 100, 0);
         this.holdLeftClick = new BooleanSetting("Hold Left Click", this, true);
-        addSettings(delaySetting, holdLeftClick);
+        this.useDiamondAxe = new BooleanSetting("Use Diamond Axe", this, false);
+        addSettings(delaySetting, holdLeftClick, useDiamondAxe);
     }
 
     @Override
@@ -41,10 +43,17 @@ public class PitSwap extends Module {
         }
         for (int i = 0; i <= 9; ++i) {
             if (Minecraft.getMinecraft().thePlayer.inventory.getStackInSlot(i) == null) continue;
-            if (Minecraft.getMinecraft().thePlayer.inventory.getStackInSlot(i).getDisplayName().contains("Diamond Sword")) {
-                this.swordSlot = i;
+            String itemName = Minecraft.getMinecraft().thePlayer.inventory.getStackInSlot(i).getDisplayName();
+            if (useDiamondAxe.isEnabled()) {
+                if (itemName.contains("Diamond Axe")) {
+                    this.swordSlot = i;
+                }
+            } else {
+                if (itemName.contains("Diamond Sword")) {
+                    this.swordSlot = i;
+                }
             }
-            if (Minecraft.getMinecraft().thePlayer.inventory.getStackInSlot(i).getDisplayName().contains("Combat Spade")) {
+            if (itemName.contains("Combat Spade")) {
                 this.spadeSlot = i;
             }
         }
@@ -63,10 +72,12 @@ public class PitSwap extends Module {
             }
         }
 
-        if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null &&
-                (Minecraft.getMinecraft().thePlayer.getHeldItem().getDisplayName().contains("Combat Spade") ||
-                        Minecraft.getMinecraft().thePlayer.getHeldItem().getDisplayName().contains("Diamond Sword"))) {
-            handleAutoSwap();
+        if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null) {
+            String heldItemName = Minecraft.getMinecraft().thePlayer.getHeldItem().getDisplayName();
+            if ((useDiamondAxe.isEnabled() && (heldItemName.contains("Diamond Axe") || heldItemName.contains("Combat Spade"))) ||
+                    (!useDiamondAxe.isEnabled() && (heldItemName.contains("Diamond Sword") || heldItemName.contains("Combat Spade")))) {
+                handleAutoSwap();
+            }
         }
         this.lastSwap = System.currentTimeMillis();
     }
@@ -80,10 +91,21 @@ public class PitSwap extends Module {
             ++presentItems;
         }
         if (presentItems >= 2) {
-            if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Minecraft.getMinecraft().thePlayer.getHeldItem().getDisplayName().contains("Diamond Sword")) {
-                Minecraft.getMinecraft().thePlayer.inventory.currentItem = this.spadeSlot;
-            } else if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Minecraft.getMinecraft().thePlayer.getHeldItem().getDisplayName().contains("Combat Spade")) {
-                Minecraft.getMinecraft().thePlayer.inventory.currentItem = this.swordSlot;
+            if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null) {
+                String heldItemName = Minecraft.getMinecraft().thePlayer.getHeldItem().getDisplayName();
+                if (useDiamondAxe.isEnabled()) {
+                    if (heldItemName.contains("Diamond Axe")) {
+                        Minecraft.getMinecraft().thePlayer.inventory.currentItem = this.spadeSlot;
+                    } else if (heldItemName.contains("Combat Spade")) {
+                        Minecraft.getMinecraft().thePlayer.inventory.currentItem = this.swordSlot;
+                    }
+                } else {
+                    if (heldItemName.contains("Diamond Sword")) {
+                        Minecraft.getMinecraft().thePlayer.inventory.currentItem = this.spadeSlot;
+                    } else if (heldItemName.contains("Combat Spade")) {
+                        Minecraft.getMinecraft().thePlayer.inventory.currentItem = this.swordSlot;
+                    }
+                }
             }
             this.lastSwap = System.currentTimeMillis();
         }

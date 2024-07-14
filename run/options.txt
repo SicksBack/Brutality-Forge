@@ -90,7 +90,6 @@ key_key.hotbar.6:7
 key_key.hotbar.7:44
 key_key.hotbar.8:46
 key_key.hotbar.9:47
-key_Sprint:0
 key_HUD:0
 key_ArrayList:0
 key_ClickGui:54

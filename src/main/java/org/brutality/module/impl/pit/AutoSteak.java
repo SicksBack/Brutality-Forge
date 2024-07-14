@@ -10,7 +10,8 @@ import org.brutality.settings.impl.NumberSetting;
 import org.brutality.utils.Timer;
 
 public class AutoSteak extends Module {
-    public NumberSetting delay = new NumberSetting("Delay", this, 100.0, 0.0, 100.0, 1);
+
+    private final NumberSetting delaySetting;
     private Timer timer = new Timer();
     private Timer resettimer = new Timer();
     private int currentSlot = 0;
@@ -18,20 +19,23 @@ public class AutoSteak extends Module {
     private int steakSlot;
 
     public AutoSteak() {
-        super("AutoSteak", "me personally i love steak - Sick 2024", Category.PIT);
-        this.addSettings(delay);
+        super("AutoSteak", "Automatically uses steak item", Category.PIT);
+        this.delaySetting = new NumberSetting("Delay", this, 50, 1, 100, 0);
+        addSettings(delaySetting);
     }
+
 
     public void onDisable() {
         this.useSteak = false;
     }
+
 
     public void onEvent(Event e) {
         if (e instanceof EventUpdate) {
             if (this.mc.currentScreen != null) {
                 return;
             }
-            if (!this.useSteak && this.timer.hasTimeElapsed((long) this.delay.getValue(), true)) {
+            if (!this.useSteak && this.timer.hasTimeElapsed((long) this.delaySetting.getValue(), true)) {
                 this.steakSlot = this.findSteakSlot();
                 if (this.steakSlot != -1) {
                     this.currentSlot = this.mc.thePlayer.inventory.currentItem;
@@ -55,7 +59,7 @@ public class AutoSteak extends Module {
     private int findSteakSlot() {
         for (int i = 0; i < 9; i++) {
             ItemStack itemStack = this.mc.thePlayer.inventory.mainInventory[i];
-            if (itemStack != null && itemStack.getItem() == Items.cooked_beef) {  // Assuming "AAA-Rated Steak" uses the same item ID as cooked beef
+            if (itemStack != null && itemStack.getItem() == Items.cooked_beef) { // Assuming "AAA-Rated Steak" uses the same item ID as cooked beef
                 return i;
             }
         }

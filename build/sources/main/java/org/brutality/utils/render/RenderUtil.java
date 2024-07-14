@@ -3,14 +3,112 @@ package org.brutality.utils.render;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.GlStateManager;
-import net.minecraft.util.MathHelper;
 import org.brutality.utils.interfaces.MC;
 import org.lwjgl.opengl.GL11;
 
-import javax.swing.text.html.parser.Entity;
 import java.awt.*;
 
 public class RenderUtil implements MC {
+
+    public static void drawBox(double x1, double y1, double z1, double x2, double y2, double z2, float red, float green, float blue, float alpha) {
+        GL11.glPushMatrix();
+        GL11.glEnable(GL11.GL_BLEND);
+        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+        GL11.glDisable(GL11.GL_TEXTURE_2D);
+        GL11.glEnable(GL11.GL_LINE_SMOOTH);
+        GL11.glDisable(GL11.GL_DEPTH_TEST);
+        GL11.glDepthMask(false);
+
+        GL11.glColor4f(red, green, blue, alpha);
+        GL11.glBegin(GL11.GL_QUADS);
+
+        // Bottom face
+        GL11.glVertex3d(x1, y1, z1);
+        GL11.glVertex3d(x2, y1, z1);
+        GL11.glVertex3d(x2, y1, z2);
+        GL11.glVertex3d(x1, y1, z2);
+
+        // Top face
+        GL11.glVertex3d(x1, y2, z1);
+        GL11.glVertex3d(x2, y2, z1);
+        GL11.glVertex3d(x2, y2, z2);
+        GL11.glVertex3d(x1, y2, z2);
+
+        // Front face
+        GL11.glVertex3d(x1, y1, z1);
+        GL11.glVertex3d(x2, y1, z1);
+        GL11.glVertex3d(x2, y2, z1);
+        GL11.glVertex3d(x1, y2, z1);
+
+        // Back face
+        GL11.glVertex3d(x1, y1, z2);
+        GL11.glVertex3d(x2, y1, z2);
+        GL11.glVertex3d(x2, y2, z2);
+        GL11.glVertex3d(x1, y2, z2);
+
+        // Left face
+        GL11.glVertex3d(x1, y1, z1);
+        GL11.glVertex3d(x1, y1, z2);
+        GL11.glVertex3d(x1, y2, z2);
+        GL11.glVertex3d(x1, y2, z1);
+
+        // Right face
+        GL11.glVertex3d(x2, y1, z1);
+        GL11.glVertex3d(x2, y1, z2);
+        GL11.glVertex3d(x2, y2, z2);
+        GL11.glVertex3d(x2, y2, z1);
+
+        GL11.glEnd();
+
+        GL11.glEnable(GL11.GL_DEPTH_TEST);
+        GL11.glDepthMask(true);
+        GL11.glDisable(GL11.GL_LINE_SMOOTH);
+        GL11.glEnable(GL11.GL_TEXTURE_2D);
+        GL11.glDisable(GL11.GL_BLEND);
+        GL11.glPopMatrix();
+    }
+
+    public static void drawBoxOutline(double x1, double y1, double z1, double x2, double y2, double z2) {
+        // Bottom edges
+        GL11.glVertex3d(x1, y1, z1);
+        GL11.glVertex3d(x2, y1, z1);
+
+        GL11.glVertex3d(x2, y1, z1);
+        GL11.glVertex3d(x2, y1, z2);
+
+        GL11.glVertex3d(x2, y1, z2);
+        GL11.glVertex3d(x1, y1, z2);
+
+        GL11.glVertex3d(x1, y1, z2);
+        GL11.glVertex3d(x1, y1, z1);
+
+        // Top edges
+        GL11.glVertex3d(x1, y2, z1);
+        GL11.glVertex3d(x2, y2, z1);
+
+        GL11.glVertex3d(x2, y2, z1);
+        GL11.glVertex3d(x2, y2, z2);
+
+        GL11.glVertex3d(x2, y2, z2);
+        GL11.glVertex3d(x1, y2, z2);
+
+        GL11.glVertex3d(x1, y2, z2);
+        GL11.glVertex3d(x1, y2, z1);
+
+        // Vertical edges
+        GL11.glVertex3d(x1, y1, z1);
+        GL11.glVertex3d(x1, y2, z1);
+
+        GL11.glVertex3d(x2, y1, z1);
+        GL11.glVertex3d(x2, y2, z1);
+
+        GL11.glVertex3d(x2, y1, z2);
+        GL11.glVertex3d(x2, y2, z2);
+
+        GL11.glVertex3d(x1, y1, z2);
+        GL11.glVertex3d(x1, y2, z2);
+    }
+
     public static void drawColoredCircle(double x, double y, double radius, float brightness) {
         GL11.glPushMatrix();
         GL11.glLineWidth(3.5F);
@@ -117,16 +215,10 @@ public class RenderUtil implements MC {
         Gui.drawRect(x, y, x + width, y + height, color);
     }
 
-    /**
-     * This is just so i dont have to do some whack casting
-     */
     public static void drawRect(float x, float y, float width, float height, int color) {
         Gui.drawRect((int) x, (int) y, (int) (x + width), (int) (y + height), color);
     }
 
-    /**
-     * This is just so i dont have to do some whack casting
-     */
     public static void drawAbsoluteRect(float x, float y, float x2, float y2, int color) {
         Gui.drawRect((int) x, (int) y, (int) x2, (int) y2, color);
     }

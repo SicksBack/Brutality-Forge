@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 99 files
+Processing 104 files
 processing org\brutality\BrutalityClient.java
 processing org\brutality\command\Command.java
 processing org\brutality\command\CommandManager.java
@@ -30,12 +30,14 @@ processing org\brutality\events\listeners\EventKey.java
 processing org\brutality\events\listeners\EventMotion.java
 processing org\brutality\events\listeners\EventPacketReceive.java
 processing org\brutality\events\listeners\EventPacketSend.java
+processing org\brutality\events\listeners\EventRenderWorld.java
 processing org\brutality\events\listeners\EventUpdate.java
 processing org\brutality\events\network\EventSendPacket.java
 processing org\brutality\module\Category.java
 processing org\brutality\module\Module.java
 processing org\brutality\module\ModuleManager.java
 processing org\brutality\module\impl\World\AntiBot.java
+processing org\brutality\module\impl\combat\AutoClicker.java
 processing org\brutality\module\impl\combat\KillAura.java
 processing org\brutality\module\impl\combat\Velocity.java
 processing org\brutality\module\impl\move\Fly.java
@@ -45,8 +47,11 @@ processing org\brutality\module\impl\move\NoSlow.java
 processing org\brutality\module\impl\move\Speed.java
 processing org\brutality\module\impl\pit\AutoAura.java
 processing org\brutality\module\impl\pit\AutoEgg.java
+processing org\brutality\module\impl\pit\AutoSpawn.java
 processing org\brutality\module\impl\pit\AutoSteak.java
+processing org\brutality\module\impl\pit\CakeAura.java
 processing org\brutality\module\impl\pit\PitSwap.java
+processing org\brutality\module\impl\pit\SlotSwap.java
 processing org\brutality\module\impl\pit\SogeSwap.java
 processing org\brutality\module\impl\pit\TelebowTimer.java
 processing org\brutality\module\impl\pit\VenomedTimer.java

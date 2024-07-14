@@ -10,7 +10,8 @@ import org.brutality.settings.impl.NumberSetting;
 import org.brutality.utils.Timer;
 
 public class AutoAura extends Module {
-    public NumberSetting delay = new NumberSetting("Delay", this, 100.0, 0.0, 100.0, 1);
+
+    private final NumberSetting delaySetting;
     private Timer timer = new Timer();
     private Timer resettimer = new Timer();
     private int currentSlot = 0;
@@ -18,20 +19,23 @@ public class AutoAura extends Module {
     private int auraSlot;
 
     public AutoAura() {
-        super("AutoAura", "so uh u go in mid and u fuck baddies", Category.PIT);
-        this.addSettings(delay);
+        super("AutoAura", "Automatically uses aura item", Category.PIT);
+        this.delaySetting = new NumberSetting("Delay", this, 50, 1, 100, 0);
+        addSettings(delaySetting);
     }
+
 
     public void onDisable() {
         this.useAura = false;
     }
+
 
     public void onEvent(Event e) {
         if (e instanceof EventUpdate) {
             if (this.mc.currentScreen != null) {
                 return;
             }
-            if (!this.useAura && this.timer.hasTimeElapsed((long) this.delay.getValue(), true)) {
+            if (!this.useAura && this.timer.hasTimeElapsed((long) this.delaySetting.getValue(), true)) {
                 this.auraSlot = this.findAuraSlot();
                 if (this.auraSlot != -1) {
                     this.currentSlot = this.mc.thePlayer.inventory.currentItem;
@@ -55,7 +59,7 @@ public class AutoAura extends Module {
     private int findAuraSlot() {
         for (int i = 0; i < 9; i++) {
             ItemStack itemStack = this.mc.thePlayer.inventory.mainInventory[i];
-            if (itemStack != null && itemStack.getItem() == Items.slime_ball) {  // Assuming "Aura of Protection" uses the same item ID as slime ball
+            if (itemStack != null && itemStack.getItem() == Items.slime_ball) { // Assuming "Aura Item" uses the same item ID as slime ball
                 return i;
             }
         }
