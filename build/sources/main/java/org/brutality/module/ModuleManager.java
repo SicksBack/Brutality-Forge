@@ -62,6 +62,8 @@ public class ModuleManager extends ArrayList<Module> {
         new VenomedNotifications();
         new DarkList();
         new NoHurtCam();
+        new BountyList();
+        new Events();
     }
 
     public void updateSettings(Setting setting) {
@@ -75,5 +77,9 @@ public class ModuleManager extends ArrayList<Module> {
 
     public ArrayList<Module> getModulesByCategory(Category category) {
         return stream().filter(module -> module.getCategory().equals(category)).collect(Collectors.toCollection(ArrayList::new));
+    }
+
+    public ArrayList<Module> getModules() {
+        return new ArrayList<>(this);
     }
 }

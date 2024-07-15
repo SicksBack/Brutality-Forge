@@ -2,66 +2,85 @@ package org.brutality.module.impl.pit;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
-import net.minecraft.item.ItemBow;
+import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.entity.player.ArrowLooseEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.brutality.module.Category;
 import org.brutality.module.Module;
-import org.brutality.utils.RenderingTelebow;
-
-import java.util.HashMap;
-import java.util.Map;
-import java.util.concurrent.TimeUnit;
+import org.brutality.settings.impl.NumberSetting;
+import org.brutality.utils.TimerUtils;
+import org.lwjgl.input.Mouse;
 
 public class TelebowTimer extends Module {
-
-    private final Map<String, Long> telebowTimers = new HashMap<>();
-    private final RenderingTelebow renderingTelebow = new RenderingTelebow();
+    private final NumberSetting yPos = new NumberSetting("Y Pos", this, 50.0, 0.0, 1200.0, 1);
+    private final NumberSetting xPos = new NumberSetting("X Pos", this, 5.0, 0.0, 1200.0, 1);
+    private long cooldownEndTime = 0;
+    private TimerUtils timer = new TimerUtils();
+    private boolean dragging = false;
+    private int dragX = 0;
+    private int dragY = 0;
 
     public TelebowTimer() {
-        super("TelebowTimer", "Tracks the cooldown of Telebow enchantments", Category.PIT);
+        super("TelebowTimer", "Displays Telebow cooldown.", Category.PIT);
     }
 
     @SubscribeEvent
     public void onArrowLoose(ArrowLooseEvent event) {
         EntityPlayerSP player = Minecraft.getMinecraft().thePlayer;
-        if (event.entityPlayer == player && player.isSneaking()) {
-            ItemStack itemStack = event.bow;
-            if (itemStack != null && itemStack.getItem() instanceof ItemBow) {
-                if (itemStack.hasDisplayName() && itemStack.getDisplayName().contains("Telebow")) {
-                    int duration = getTelebowDuration(itemStack);
-                    if (duration > 0) {
-                        telebowTimers.put(player.getName(), System.currentTimeMillis() + TimeUnit.SECONDS.toMillis(duration));
-                    }
+        ItemStack itemStack = player.getHeldItem();
+        if (itemStack != null && itemStack.hasDisplayName() && System.currentTimeMillis() > cooldownEndTime) {
+            NBTTagCompound tagCompound = itemStack.getTagCompound();
+            if (tagCompound != null && tagCompound.toString().contains("telebow")) {
+                if (tagCompound.toString().contains("telebow:3")) {
+                    cooldownEndTime = System.currentTimeMillis() + 21 * 1000; // Telebow III
+                } else if (tagCompound.toString().contains("telebow:2")) {
+                    cooldownEndTime = System.currentTimeMillis() + 46 * 1000; // Telebow II
+                } else {
+                    cooldownEndTime = System.currentTimeMillis() + 91 * 1000; // Telebow
                 }
+                timer.reset();
             }
         }
     }
 
-    private int getTelebowDuration(ItemStack itemStack) {
-        String displayName = itemStack.getDisplayName();
-        if (displayName.contains("Telebow I")) return 90;
-        if (displayName.contains("Telebow II")) return 45;
-        if (displayName.contains("Telebow III")) return 20;
-        return 0;
+    @SubscribeEvent
+    public void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
+        Minecraft mc = Minecraft.getMinecraft();
+        float posX = (float) this.xPos.getValue();
+        float posY = (float) this.yPos.getValue();
+
+        if (mc.currentScreen != null && mc.currentScreen instanceof GuiScreen) {
+            if (dragging) {
+                this.xPos.setValue(Mouse.getX() / 2 - dragX);
+                this.yPos.setValue((mc.displayHeight - Mouse.getY()) / 2 - dragY);
+            }
+
+            if (Mouse.isButtonDown(0)) {
+                if (!dragging && isMouseOverText(Mouse.getX() / 2, (mc.displayHeight - Mouse.getY()) / 2, mc)) {
+                    dragging = true;
+                    dragX = Mouse.getX() / 2 - (int) posX;
+                    dragY = (mc.displayHeight - Mouse.getY()) / 2 - (int) posY;
+                }
+            } else {
+                dragging = false;
+            }
+        }
+
+        if (cooldownEndTime > System.currentTimeMillis()) {
+            long timeLeft = (cooldownEndTime - System.currentTimeMillis()) / 1000;
+            String text = "Telebow: " + timeLeft;
+            mc.fontRendererObj.drawStringWithShadow("Telebow: ", posX, posY, 0xFFFFFF);
+            mc.fontRendererObj.drawStringWithShadow(String.valueOf(timeLeft), posX + mc.fontRendererObj.getStringWidth("Telebow: "), posY, 0xFF55FF);
+        }
     }
 
-    @SubscribeEvent
-    public void onRenderGameOverlay(TickEvent.RenderTickEvent event) {
-        Minecraft mc = Minecraft.getMinecraft();
-        long currentTime = System.currentTimeMillis();
-
-        telebowTimers.entrySet().removeIf(entry -> currentTime >= entry.getValue());
-
-        int y = 10;
-        for (Map.Entry<String, Long> entry : telebowTimers.entrySet()) {
-            String playerName = entry.getKey();
-            long remainingTime = entry.getValue() - currentTime;
-            String text = String.format("%s: %ds", playerName, TimeUnit.MILLISECONDS.toSeconds(remainingTime));
-            renderingTelebow.renderTimer(text, 10, y, 0xFF55FF);
-            y += 10;
-        }
+    private boolean isMouseOverText(int mouseX, int mouseY, Minecraft mc) {
+        int textWidth = mc.fontRendererObj.getStringWidth("Telebow: " + (cooldownEndTime - System.currentTimeMillis()) / 1000);
+        int textHeight = mc.fontRendererObj.FONT_HEIGHT;
+        return mouseX >= this.xPos.getValue() && mouseX <= this.xPos.getValue() + textWidth
+                && mouseY >= this.yPos.getValue() && mouseY <= this.yPos.getValue() + textHeight;
     }
 }

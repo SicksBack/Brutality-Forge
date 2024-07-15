@@ -28,7 +28,7 @@ public class VenomedNotifications extends Module {
     private int dragY = 0;
 
     public VenomedNotifications() {
-        super("VenomedNotifications", "Displays players who are venomed.", Category.PIT);
+        super("VenomedNotifications", "barely works dont use tbh", Category.PIT);
     }
 
     @SubscribeEvent

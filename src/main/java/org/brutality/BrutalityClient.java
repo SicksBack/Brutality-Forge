@@ -35,10 +35,18 @@ public class BrutalityClient
         MinecraftForge.EVENT_BUS.register(this);
     }
 
+    public static BrutalityClient getInstance() {
+        return INSTANCE;
+    }
+
+    public ModuleManager getModuleManager() {
+        return this.moduleManager;
+    }
+
     @SubscribeEvent
     public void onKeyPress(KeyInputEvent event) {
         if (Keyboard.getEventKeyState()) {
-            for (Module module : moduleManager) {
+            for (Module module : moduleManager.getModules()) {
                 KeyBinding key = module.getKey();
                 if (key == null) continue;
                 if (key.isPressed()) {

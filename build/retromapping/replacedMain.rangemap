@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 118 files
+Processing 122 files
 processing org\brutality\BrutalityClient.java
 @|org\brutality\BrutalityClient.java|8|21|org.brutality|package|org.brutality|(file)
 Class Start: org.brutality.BrutalityClient
@@ -30,18 +30,29 @@ Class Start: org.brutality.BrutalityClient
       @|org\brutality\BrutalityClient.java|1286|1295|EVENT_BUS|field|net.minecraftforge.common.MinecraftForge|EVENT_BUS
       @|org\brutality\BrutalityClient.java|1296|1304|register|method|net.minecraftforge.fml.common.eventhandler.EventBus|register|(Ljava/lang/Object;)V
    Method End: init(Lnet/minecraftforge/fml/common/event/FMLInitializationEvent;)V
+   Method Start: getInstance()Lorg/brutality/BrutalityClient;
+      @|org\brutality\BrutalityClient.java|1353|1364|getInstance|method|org.brutality.BrutalityClient|getInstance|()Lorg/brutality/BrutalityClient;
+      @|org\brutality\BrutalityClient.java|1337|1352|BrutalityClient|class|org.brutality.BrutalityClient
+      @|org\brutality\BrutalityClient.java|1384|1392|INSTANCE|field|org.brutality.BrutalityClient|INSTANCE
+   Method End: getInstance()Lorg/brutality/BrutalityClient;
+   Method Start: getModuleManager()Lorg/brutality/module/ModuleManager;
+      @|org\brutality\BrutalityClient.java|1426|1442|getModuleManager|method|org.brutality.BrutalityClient|getModuleManager|()Lorg/brutality/module/ModuleManager;
+      @|org\brutality\BrutalityClient.java|1412|1425|ModuleManager|class|org.brutality.module.ModuleManager
+      @|org\brutality\BrutalityClient.java|1467|1480|moduleManager|field|org.brutality.BrutalityClient|moduleManager
+   Method End: getModuleManager()Lorg/brutality/module/ModuleManager;
    Method Start: onKeyPress(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
-      @|org\brutality\BrutalityClient.java|1355|1365|onKeyPress|method|org.brutality.BrutalityClient|onKeyPress|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
-      @|org\brutality\BrutalityClient.java|1366|1379|KeyInputEvent|class|net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent
-      @|org\brutality\BrutalityClient.java|1380|1385|event|param|org.brutality.BrutalityClient|onKeyPress|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V|event|0
-      @|org\brutality\BrutalityClient.java|1401|1409|Keyboard|class|org.lwjgl.input.Keyboard
-      @|org\brutality\BrutalityClient.java|1410|1426|getEventKeyState|method|org.lwjgl.input.Keyboard|getEventKeyState|()Z
-      @|org\brutality\BrutalityClient.java|1449|1455|Module|class|org.brutality.module.Module
-      @|org\brutality\BrutalityClient.java|1465|1478|moduleManager|field|org.brutality.BrutalityClient|moduleManager
-      @|org\brutality\BrutalityClient.java|1498|1508|KeyBinding|class|net.minecraft.client.settings.KeyBinding
+      @|org\brutality\BrutalityClient.java|1525|1535|onKeyPress|method|org.brutality.BrutalityClient|onKeyPress|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
+      @|org\brutality\BrutalityClient.java|1536|1549|KeyInputEvent|class|net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent
+      @|org\brutality\BrutalityClient.java|1550|1555|event|param|org.brutality.BrutalityClient|onKeyPress|(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V|event|0
+      @|org\brutality\BrutalityClient.java|1571|1579|Keyboard|class|org.lwjgl.input.Keyboard
+      @|org\brutality\BrutalityClient.java|1580|1596|getEventKeyState|method|org.lwjgl.input.Keyboard|getEventKeyState|()Z
+      @|org\brutality\BrutalityClient.java|1619|1625|Module|class|org.brutality.module.Module
+      @|org\brutality\BrutalityClient.java|1635|1648|moduleManager|field|org.brutality.BrutalityClient|moduleManager
+      @|org\brutality\BrutalityClient.java|1649|1659|getModules|method|org.brutality.module.ModuleManager|getModules|()Ljava/util/ArrayList;
+      @|org\brutality\BrutalityClient.java|1681|1691|KeyBinding|class|net.minecraft.client.settings.KeyBinding
       ERROR SimpleName: getKey null
-      @|org\brutality\BrutalityClient.java|1599|1608|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
-      @|org\brutality\BrutalityClient.java|1641|1647|toggle|method|org.brutality.module.Module|toggle|()V
+      @|org\brutality\BrutalityClient.java|1782|1791|isPressed|method|net.minecraft.client.settings.KeyBinding|isPressed|()Z
+      @|org\brutality\BrutalityClient.java|1824|1830|toggle|method|org.brutality.module.Module|toggle|()V
    Method End: onKeyPress(Lnet/minecraftforge/fml/common/gameevent/InputEvent$KeyInputEvent;)V
 Class End  : org.brutality.BrutalityClient
 endProcessing org\brutality\BrutalityClient.java
@@ -1098,43 +1109,51 @@ Class Start: org.brutality.module.ModuleManager
       @|org\brutality\module\ModuleManager.java|1519|1530|AutoClicker|class|org.brutality.module.impl.combat.AutoClicker
       @|org\brutality\module\ModuleManager.java|1546|1552|Health|class|org.brutality.module.impl.render.Health
       @|org\brutality\module\ModuleManager.java|1568|1576|ChestESP|class|org.brutality.module.impl.render.ChestESP
-      @|org\brutality\module\ModuleManager.java|1592|1600|SewerESP|class|org.brutality.module.impl.render.SewerESP
+      @|org\brutality\module\ModuleManager.java|1592|1600|SewerESP|class|org.brutality.module.impl.pit.SewerESP
       @|org\brutality\module\ModuleManager.java|1616|1630|MeteorDetector|class|org.brutality.module.impl.harrys.MeteorDetector
       @|org\brutality\module\ModuleManager.java|1646|1652|Sprint|class|org.brutality.module.impl.move.Sprint
       @|org\brutality\module\ModuleManager.java|1668|1688|VenomedNotifications|class|org.brutality.module.impl.pit.VenomedNotifications
       @|org\brutality\module\ModuleManager.java|1704|1712|DarkList|class|org.brutality.module.impl.pit.DarkList
       @|org\brutality\module\ModuleManager.java|1728|1737|NoHurtCam|class|org.brutality.module.impl.player.NoHurtCam
+      @|org\brutality\module\ModuleManager.java|1753|1763|BountyList|class|org.brutality.module.impl.pit.BountyList
+      @|org\brutality\module\ModuleManager.java|1779|1785|Events|class|org.brutality.module.impl.pit.Events
    Method End: init()V
    Method Start: updateSettings(Lorg/brutality/settings/Setting;)V
-      @|org\brutality\module\ModuleManager.java|1764|1778|updateSettings|method|org.brutality.module.ModuleManager|updateSettings|(Lorg/brutality/settings/Setting;)V
-      @|org\brutality\module\ModuleManager.java|1779|1786|Setting|class|org.brutality.settings.Setting
-      @|org\brutality\module\ModuleManager.java|1787|1794|setting|param|org.brutality.module.ModuleManager|updateSettings|(Lorg/brutality/settings/Setting;)V|setting|0
-      @|org\brutality\module\ModuleManager.java|1806|1813|forEach|method|java.lang.Iterable|forEach|(Ljava/util/function/Consumer;)V
+      @|org\brutality\module\ModuleManager.java|1812|1826|updateSettings|method|org.brutality.module.ModuleManager|updateSettings|(Lorg/brutality/settings/Setting;)V
+      @|org\brutality\module\ModuleManager.java|1827|1834|Setting|class|org.brutality.settings.Setting
+      @|org\brutality\module\ModuleManager.java|1835|1842|setting|param|org.brutality.module.ModuleManager|updateSettings|(Lorg/brutality/settings/Setting;)V|setting|0
+      @|org\brutality\module\ModuleManager.java|1854|1861|forEach|method|java.lang.Iterable|forEach|(Ljava/util/function/Consumer;)V
    Method End: updateSettings(Lorg/brutality/settings/Setting;)V
    Method Start: getModuleByClass(Ljava/lang/Class;)Lorg/brutality/module/Module;
-      @|org\brutality\module\ModuleManager.java|1896|1912|getModuleByClass|method|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;
-      @|org\brutality\module\ModuleManager.java|1913|1918|Class|class|java.lang.Class
-      @|org\brutality\module\ModuleManager.java|1922|1927|clazz|param|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;|clazz|0
-      @|org\brutality\module\ModuleManager.java|1939|1945|Module|class|org.brutality.module.Module
-      @|org\brutality\module\ModuleManager.java|1955|1961|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|1964|1970|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|2004|2013|findFirst|method|java.util.stream.Stream|findFirst|()Ljava/util/Optional;
-      @|org\brutality\module\ModuleManager.java|2016|2022|orElse|method|java.util.Optional|orElse|(Ljava/lang/Object;)Ljava/lang/Object;
-      @|org\brutality\module\ModuleManager.java|2069|2074|clazz|param|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;|clazz|0
-      @|org\brutality\module\ModuleManager.java|2075|2079|cast|method|java.lang.Class|cast|(Ljava/lang/Object;)Ljava/lang/Object;
+      @|org\brutality\module\ModuleManager.java|1944|1960|getModuleByClass|method|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;
+      @|org\brutality\module\ModuleManager.java|1961|1966|Class|class|java.lang.Class
+      @|org\brutality\module\ModuleManager.java|1970|1975|clazz|param|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;|clazz|0
+      @|org\brutality\module\ModuleManager.java|1987|1993|Module|class|org.brutality.module.Module
+      @|org\brutality\module\ModuleManager.java|2003|2009|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
+      @|org\brutality\module\ModuleManager.java|2012|2018|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      @|org\brutality\module\ModuleManager.java|2052|2061|findFirst|method|java.util.stream.Stream|findFirst|()Ljava/util/Optional;
+      @|org\brutality\module\ModuleManager.java|2064|2070|orElse|method|java.util.Optional|orElse|(Ljava/lang/Object;)Ljava/lang/Object;
+      @|org\brutality\module\ModuleManager.java|2117|2122|clazz|param|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;|clazz|0
+      @|org\brutality\module\ModuleManager.java|2123|2127|cast|method|java.lang.Class|cast|(Ljava/lang/Object;)Ljava/lang/Object;
    Method End: getModuleByClass(Ljava/lang/Class;)Lorg/brutality/module/Module;
    Method Start: getModulesByCategory(Lorg/brutality/module/Category;)Ljava/util/ArrayList;
-      @|org\brutality\module\ModuleManager.java|2125|2145|getModulesByCategory|method|org.brutality.module.ModuleManager|getModulesByCategory|(Lorg/brutality/module/Category;)Ljava/util/ArrayList;
-      @|org\brutality\module\ModuleManager.java|2117|2123|Module|class|org.brutality.module.Module
-      @|org\brutality\module\ModuleManager.java|2107|2116|ArrayList|class|java.util.ArrayList
-      @|org\brutality\module\ModuleManager.java|2146|2154|Category|class|org.brutality.module.Category
-      @|org\brutality\module\ModuleManager.java|2155|2163|category|param|org.brutality.module.ModuleManager|getModulesByCategory|(Lorg/brutality/module/Category;)Ljava/util/ArrayList;|category|0
-      @|org\brutality\module\ModuleManager.java|2182|2188|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|2191|2197|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|2247|2254|collect|method|java.util.stream.Stream|collect|(Ljava/util/stream/Collector;)Ljava/lang/Object;
-      @|org\brutality\module\ModuleManager.java|2255|2265|Collectors|class|java.util.stream.Collectors
-      @|org\brutality\module\ModuleManager.java|2266|2278|toCollection|method|java.util.stream.Collectors|toCollection|(Ljava/util/function/Supplier;)Ljava/util/stream/Collector;
+      @|org\brutality\module\ModuleManager.java|2173|2193|getModulesByCategory|method|org.brutality.module.ModuleManager|getModulesByCategory|(Lorg/brutality/module/Category;)Ljava/util/ArrayList;
+      @|org\brutality\module\ModuleManager.java|2165|2171|Module|class|org.brutality.module.Module
+      @|org\brutality\module\ModuleManager.java|2155|2164|ArrayList|class|java.util.ArrayList
+      @|org\brutality\module\ModuleManager.java|2194|2202|Category|class|org.brutality.module.Category
+      @|org\brutality\module\ModuleManager.java|2203|2211|category|param|org.brutality.module.ModuleManager|getModulesByCategory|(Lorg/brutality/module/Category;)Ljava/util/ArrayList;|category|0
+      @|org\brutality\module\ModuleManager.java|2230|2236|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
+      @|org\brutality\module\ModuleManager.java|2239|2245|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      @|org\brutality\module\ModuleManager.java|2295|2302|collect|method|java.util.stream.Stream|collect|(Ljava/util/stream/Collector;)Ljava/lang/Object;
+      @|org\brutality\module\ModuleManager.java|2303|2313|Collectors|class|java.util.stream.Collectors
+      @|org\brutality\module\ModuleManager.java|2314|2326|toCollection|method|java.util.stream.Collectors|toCollection|(Ljava/util/function/Supplier;)Ljava/util/stream/Collector;
    Method End: getModulesByCategory(Lorg/brutality/module/Category;)Ljava/util/ArrayList;
+   Method Start: getModules()Ljava/util/ArrayList;
+      @|org\brutality\module\ModuleManager.java|2381|2391|getModules|method|org.brutality.module.ModuleManager|getModules|()Ljava/util/ArrayList;
+      @|org\brutality\module\ModuleManager.java|2373|2379|Module|class|org.brutality.module.Module
+      @|org\brutality\module\ModuleManager.java|2363|2372|ArrayList|class|java.util.ArrayList
+      @|org\brutality\module\ModuleManager.java|2415|2424|ArrayList|class|java.util.ArrayList
+   Method End: getModules()Ljava/util/ArrayList;
 Class End  : org.brutality.module.ModuleManager
 endProcessing org\brutality\module\ModuleManager.java
 
@@ -2505,6 +2524,166 @@ Class Start: org.brutality.module.impl.pit.AutoSteak
 Class End  : org.brutality.module.impl.pit.AutoSteak
 endProcessing org\brutality\module\impl\pit\AutoSteak.java
 
+processing org\brutality\module\impl\pit\BountyList.java
+@|org\brutality\module\impl\pit\BountyList.java|8|37|org.brutality.module.impl.pit|package|org.brutality.module.impl.pit|(file)
+Class Start: org.brutality.module.impl.pit.BountyList
+   @|org\brutality\module\impl\pit\BountyList.java|618|631|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\pit\BountyList.java|632|643|xPosSetting|field|org.brutality.module.impl.pit.BountyList|xPosSetting|
+   @|org\brutality\module\impl\pit\BountyList.java|650|663|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\pit\BountyList.java|720|733|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\pit\BountyList.java|734|745|yPosSetting|field|org.brutality.module.impl.pit.BountyList|yPosSetting|
+   @|org\brutality\module\impl\pit\BountyList.java|752|765|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\pit\BountyList.java|821|825|posX|field|org.brutality.module.impl.pit.BountyList|posX|
+   @|org\brutality\module\impl\pit\BountyList.java|848|852|posY|field|org.brutality.module.impl.pit.BountyList|posY|
+   @|org\brutality\module\impl\pit\BountyList.java|879|887|dragging|field|org.brutality.module.impl.pit.BountyList|dragging|
+   @|org\brutality\module\impl\pit\BountyList.java|913|918|dragX|field|org.brutality.module.impl.pit.BountyList|dragX|
+   @|org\brutality\module\impl\pit\BountyList.java|940|945|dragY|field|org.brutality.module.impl.pit.BountyList|dragY|
+   @|org\brutality\module\impl\pit\BountyList.java|974|980|String|class|java.lang.String
+   @|org\brutality\module\impl\pit\BountyList.java|982|988|String|class|java.lang.String
+   @|org\brutality\module\impl\pit\BountyList.java|970|973|Map|class|java.util.Map
+   @|org\brutality\module\impl\pit\BountyList.java|990|1003|bountyPlayers|field|org.brutality.module.impl.pit.BountyList|bountyPlayers|
+   @|org\brutality\module\impl\pit\BountyList.java|1010|1017|HashMap|class|java.util.HashMap
+   Method Start: BountyList()V
+      @|org\brutality\module\impl\pit\BountyList.java|1035|1045|BountyList|method|org.brutality.module.impl.pit.BountyList|BountyList|()V
+      @|org\brutality\module\impl\pit\BountyList.java|1121|1129|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\pit\BountyList.java|1130|1133|PIT|field|org.brutality.module.Category|PIT
+      @|org\brutality\module\impl\pit\BountyList.java|1149|1160|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
+      @|org\brutality\module\impl\pit\BountyList.java|1161|1172|xPosSetting|field|org.brutality.module.impl.pit.BountyList|xPosSetting
+      @|org\brutality\module\impl\pit\BountyList.java|1174|1185|yPosSetting|field|org.brutality.module.impl.pit.BountyList|yPosSetting
+   Method End: BountyList()V
+   Method Start: onPlayerTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V
+      @|org\brutality\module\impl\pit\BountyList.java|1231|1243|onPlayerTick|method|org.brutality.module.impl.pit.BountyList|onPlayerTick|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V
+      @|org\brutality\module\impl\pit\BountyList.java|1244|1269|TickEvent.PlayerTickEvent|class|net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent
+      @|org\brutality\module\impl\pit\BountyList.java|1270|1275|event|param|org.brutality.module.impl.pit.BountyList|onPlayerTick|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V|event|0
+      @|org\brutality\module\impl\pit\BountyList.java|1291|1293|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\BountyList.java|1294|1302|theWorld|field|net.minecraft.client.Minecraft|theWorld
+      @|org\brutality\module\impl\pit\BountyList.java|1326|1339|bountyPlayers|field|org.brutality.module.impl.pit.BountyList|bountyPlayers
+      @|org\brutality\module\impl\pit\BountyList.java|1340|1345|clear|method|java.util.Map|clear|()V
+      @|org\brutality\module\impl\pit\BountyList.java|1366|1378|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer
+      @|org\brutality\module\impl\pit\BountyList.java|1388|1390|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\BountyList.java|1391|1399|theWorld|field|net.minecraft.client.Minecraft|theWorld
+      @|org\brutality\module\impl\pit\BountyList.java|1400|1414|playerEntities|field|net.minecraft.world.World|playerEntities
+      @|org\brutality\module\impl\pit\BountyList.java|1434|1440|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\BountyList.java|1454|1465|StringUtils|class|net.minecraft.util.StringUtils
+      @|org\brutality\module\impl\pit\BountyList.java|1466|1483|stripControlCodes|method|net.minecraft.util.StringUtils|stripControlCodes|(Ljava/lang/String;)Ljava/lang/String;
+      @|org\brutality\module\impl\pit\BountyList.java|1491|1505|getDisplayName|method|net.minecraft.command.ICommandSender|getDisplayName|()Lnet/minecraft/util/IChatComponent;
+      @|org\brutality\module\impl\pit\BountyList.java|1508|1524|getFormattedText|method|net.minecraft.util.IChatComponent|getFormattedText|()Ljava/lang/String;
+      @|org\brutality\module\impl\pit\BountyList.java|1560|1567|matches|method|java.lang.String|matches|(Ljava/lang/String;)Z
+      @|org\brutality\module\impl\pit\BountyList.java|1604|1610|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\BountyList.java|1622|1639|getPlayerLocation|method|org.brutality.module.impl.pit.BountyList|getPlayerLocation|(Lnet/minecraft/entity/player/EntityPlayer;)Ljava/lang/String;
+      @|org\brutality\module\impl\pit\BountyList.java|1694|1713|getDistanceToEntity|method|net.minecraft.entity.Entity|getDistanceToEntity|(Lnet/minecraft/entity/Entity;)F
+      @|org\brutality\module\impl\pit\BountyList.java|1714|1716|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\BountyList.java|1717|1726|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\BountyList.java|1749|1762|bountyPlayers|field|org.brutality.module.impl.pit.BountyList|bountyPlayers
+      @|org\brutality\module\impl\pit\BountyList.java|1763|1766|put|method|java.util.Map|put|(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      @|org\brutality\module\impl\pit\BountyList.java|1790|1796|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\BountyList.java|1797|1803|format|method|java.lang.String|format|(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+   Method End: onPlayerTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V
+   Method Start: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|org\brutality\module\impl\pit\BountyList.java|1913|1932|onRenderGameOverlay|method|org.brutality.module.impl.pit.BountyList|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|org\brutality\module\impl\pit\BountyList.java|1933|1960|RenderGameOverlayEvent.Text|class|net.minecraftforge.client.event.RenderGameOverlayEvent.Text
+      @|org\brutality\module\impl\pit\BountyList.java|1961|1966|event|param|org.brutality.module.impl.pit.BountyList|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V|event|0
+      @|org\brutality\module\impl\pit\BountyList.java|1982|1984|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\BountyList.java|1985|1994|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\BountyList.java|2006|2008|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\BountyList.java|2009|2017|theWorld|field|net.minecraft.client.Minecraft|theWorld
+      @|org\brutality\module\impl\pit\BountyList.java|2048|2056|dragging|field|org.brutality.module.impl.pit.BountyList|dragging
+      @|org\brutality\module\impl\pit\BountyList.java|2072|2076|posX|field|org.brutality.module.impl.pit.BountyList|posX
+      @|org\brutality\module\impl\pit\BountyList.java|2080|2085|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\BountyList.java|2086|2090|getX|method|org.lwjgl.input.Mouse|getX|()I
+      @|org\brutality\module\impl\pit\BountyList.java|2100|2105|dragX|field|org.brutality.module.impl.pit.BountyList|dragX
+      @|org\brutality\module\impl\pit\BountyList.java|2119|2123|posY|field|org.brutality.module.impl.pit.BountyList|posY
+      @|org\brutality\module\impl\pit\BountyList.java|2127|2129|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\BountyList.java|2130|2143|displayHeight|field|net.minecraft.client.Minecraft|displayHeight
+      @|org\brutality\module\impl\pit\BountyList.java|2146|2151|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\BountyList.java|2152|2156|getY|method|org.lwjgl.input.Mouse|getY|()I
+      @|org\brutality\module\impl\pit\BountyList.java|2166|2171|dragY|field|org.brutality.module.impl.pit.BountyList|dragY
+      @|org\brutality\module\impl\pit\BountyList.java|2196|2201|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\BountyList.java|2202|2214|isButtonDown|method|org.lwjgl.input.Mouse|isButtonDown|(I)Z
+      @|org\brutality\module\impl\pit\BountyList.java|2238|2246|dragging|field|org.brutality.module.impl.pit.BountyList|dragging
+      @|org\brutality\module\impl\pit\BountyList.java|2250|2265|isMouseOverText|method|org.brutality.module.impl.pit.BountyList|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z
+      @|org\brutality\module\impl\pit\BountyList.java|2266|2271|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\BountyList.java|2272|2276|getX|method|org.lwjgl.input.Mouse|getX|()I
+      @|org\brutality\module\impl\pit\BountyList.java|2285|2287|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\BountyList.java|2288|2301|displayHeight|field|net.minecraft.client.Minecraft|displayHeight
+      @|org\brutality\module\impl\pit\BountyList.java|2304|2309|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\BountyList.java|2310|2314|getY|method|org.lwjgl.input.Mouse|getY|()I
+      @|org\brutality\module\impl\pit\BountyList.java|2339|2341|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\BountyList.java|2362|2370|dragging|field|org.brutality.module.impl.pit.BountyList|dragging
+      @|org\brutality\module\impl\pit\BountyList.java|2395|2400|dragX|field|org.brutality.module.impl.pit.BountyList|dragX
+      @|org\brutality\module\impl\pit\BountyList.java|2403|2408|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\BountyList.java|2409|2413|getX|method|org.lwjgl.input.Mouse|getX|()I
+      @|org\brutality\module\impl\pit\BountyList.java|2422|2426|posX|field|org.brutality.module.impl.pit.BountyList|posX
+      @|org\brutality\module\impl\pit\BountyList.java|2444|2449|dragY|field|org.brutality.module.impl.pit.BountyList|dragY
+      @|org\brutality\module\impl\pit\BountyList.java|2453|2455|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\BountyList.java|2456|2469|displayHeight|field|net.minecraft.client.Minecraft|displayHeight
+      @|org\brutality\module\impl\pit\BountyList.java|2472|2477|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\BountyList.java|2478|2482|getY|method|org.lwjgl.input.Mouse|getY|()I
+      @|org\brutality\module\impl\pit\BountyList.java|2492|2496|posY|field|org.brutality.module.impl.pit.BountyList|posY
+      @|org\brutality\module\impl\pit\BountyList.java|2541|2549|dragging|field|org.brutality.module.impl.pit.BountyList|dragging
+      @|org\brutality\module\impl\pit\BountyList.java|2588|2592|posY|field|org.brutality.module.impl.pit.BountyList|posY
+      @|org\brutality\module\impl\pit\BountyList.java|2602|2604|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\BountyList.java|2605|2620|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\pit\BountyList.java|2621|2641|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|org\brutality\module\impl\pit\BountyList.java|2658|2662|posX|field|org.brutality.module.impl.pit.BountyList|posX
+      @|org\brutality\module\impl\pit\BountyList.java|2691|2693|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\BountyList.java|2694|2709|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\pit\BountyList.java|2710|2721|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
+      @|org\brutality\module\impl\pit\BountyList.java|2741|2750|Map.Entry|class|java.util.Map.Entry
+      @|org\brutality\module\impl\pit\BountyList.java|2751|2757|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\BountyList.java|2759|2765|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\BountyList.java|2775|2788|bountyPlayers|field|org.brutality.module.impl.pit.BountyList|bountyPlayers
+      @|org\brutality\module\impl\pit\BountyList.java|2789|2797|entrySet|method|java.util.Map|entrySet|()Ljava/util/Set;
+      @|org\brutality\module\impl\pit\BountyList.java|2815|2821|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\BountyList.java|2835|2841|getKey|method|java.util.Map.Entry|getKey|()Ljava/lang/Object;
+      @|org\brutality\module\impl\pit\BountyList.java|2858|2866|getValue|method|java.util.Map.Entry|getValue|()Ljava/lang/Object;
+      @|org\brutality\module\impl\pit\BountyList.java|2882|2884|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\BountyList.java|2885|2900|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\pit\BountyList.java|2901|2921|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|org\brutality\module\impl\pit\BountyList.java|2928|2932|posX|field|org.brutality.module.impl.pit.BountyList|posX
+      @|org\brutality\module\impl\pit\BountyList.java|2965|2967|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\BountyList.java|2968|2983|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\pit\BountyList.java|2984|2995|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
+   Method End: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+   Method Start: isMouseOverText(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z
+      @|org\brutality\module\impl\pit\BountyList.java|3038|3053|isMouseOverText|method|org.brutality.module.impl.pit.BountyList|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z
+      @|org\brutality\module\impl\pit\BountyList.java|3058|3064|mouseX|param|org.brutality.module.impl.pit.BountyList|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mouseX|0
+      @|org\brutality\module\impl\pit\BountyList.java|3070|3076|mouseY|param|org.brutality.module.impl.pit.BountyList|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mouseY|1
+      @|org\brutality\module\impl\pit\BountyList.java|3078|3084|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\BountyList.java|3085|3089|text|param|org.brutality.module.impl.pit.BountyList|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|text|2
+      @|org\brutality\module\impl\pit\BountyList.java|3091|3100|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\BountyList.java|3101|3103|mc|param|org.brutality.module.impl.pit.BountyList|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mc|3
+      @|org\brutality\module\impl\pit\BountyList.java|3131|3133|mc|param|org.brutality.module.impl.pit.BountyList|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mc|3
+      @|org\brutality\module\impl\pit\BountyList.java|3134|3149|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\pit\BountyList.java|3150|3164|getStringWidth|method|net.minecraft.client.gui.FontRenderer|getStringWidth|(Ljava/lang/String;)I
+      @|org\brutality\module\impl\pit\BountyList.java|3165|3169|text|param|org.brutality.module.impl.pit.BountyList|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|text|2
+      @|org\brutality\module\impl\pit\BountyList.java|3197|3199|mc|param|org.brutality.module.impl.pit.BountyList|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mc|3
+      @|org\brutality\module\impl\pit\BountyList.java|3200|3215|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\pit\BountyList.java|3216|3227|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
+      @|org\brutality\module\impl\pit\BountyList.java|3244|3250|mouseX|param|org.brutality.module.impl.pit.BountyList|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mouseX|0
+      @|org\brutality\module\impl\pit\BountyList.java|3254|3258|posX|field|org.brutality.module.impl.pit.BountyList|posX
+      @|org\brutality\module\impl\pit\BountyList.java|3262|3268|mouseX|param|org.brutality.module.impl.pit.BountyList|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mouseX|0
+      @|org\brutality\module\impl\pit\BountyList.java|3272|3276|posX|field|org.brutality.module.impl.pit.BountyList|posX
+      @|org\brutality\module\impl\pit\BountyList.java|3292|3298|mouseY|param|org.brutality.module.impl.pit.BountyList|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mouseY|1
+      @|org\brutality\module\impl\pit\BountyList.java|3302|3306|posY|field|org.brutality.module.impl.pit.BountyList|posY
+      @|org\brutality\module\impl\pit\BountyList.java|3310|3316|mouseY|param|org.brutality.module.impl.pit.BountyList|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mouseY|1
+      @|org\brutality\module\impl\pit\BountyList.java|3320|3324|posY|field|org.brutality.module.impl.pit.BountyList|posY
+   Method End: isMouseOverText(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z
+   Method Start: getPlayerLocation(Lnet/minecraft/entity/player/EntityPlayer;)Ljava/lang/String;
+      @|org\brutality\module\impl\pit\BountyList.java|3365|3382|getPlayerLocation|method|org.brutality.module.impl.pit.BountyList|getPlayerLocation|(Lnet/minecraft/entity/player/EntityPlayer;)Ljava/lang/String;
+      @|org\brutality\module\impl\pit\BountyList.java|3358|3364|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\BountyList.java|3383|3395|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer
+      @|org\brutality\module\impl\pit\BountyList.java|3396|3402|player|param|org.brutality.module.impl.pit.BountyList|getPlayerLocation|(Lnet/minecraft/entity/player/EntityPlayer;)Ljava/lang/String;|player|0
+      @|org\brutality\module\impl\pit\BountyList.java|3425|3431|player|param|org.brutality.module.impl.pit.BountyList|getPlayerLocation|(Lnet/minecraft/entity/player/EntityPlayer;)Ljava/lang/String;|player|0
+      @|org\brutality\module\impl\pit\BountyList.java|3432|3436|posX|field|net.minecraft.entity.Entity|posX
+      @|org\brutality\module\impl\pit\BountyList.java|3457|3463|player|param|org.brutality.module.impl.pit.BountyList|getPlayerLocation|(Lnet/minecraft/entity/player/EntityPlayer;)Ljava/lang/String;|player|0
+      @|org\brutality\module\impl\pit\BountyList.java|3464|3468|posZ|field|net.minecraft.entity.Entity|posZ
+      @|org\brutality\module\impl\pit\BountyList.java|3483|3489|player|param|org.brutality.module.impl.pit.BountyList|getPlayerLocation|(Lnet/minecraft/entity/player/EntityPlayer;)Ljava/lang/String;|player|0
+      @|org\brutality\module\impl\pit\BountyList.java|3490|3494|posY|field|net.minecraft.entity.Entity|posY
+   Method End: getPlayerLocation(Lnet/minecraft/entity/player/EntityPlayer;)Ljava/lang/String;
+Class End  : org.brutality.module.impl.pit.BountyList
+endProcessing org\brutality\module\impl\pit\BountyList.java
+
 processing org\brutality\module\impl\pit\CakeAura.java
 @|org\brutality\module\impl\pit\CakeAura.java|8|37|org.brutality.module.impl.pit|package|org.brutality.module.impl.pit|(file)
 Class Start: org.brutality.module.impl.pit.CakeAura
@@ -2919,6 +3098,59 @@ Class Start: org.brutality.module.impl.pit.DarkList
 Class End  : org.brutality.module.impl.pit.DarkList
 endProcessing org\brutality\module\impl\pit\DarkList.java
 
+processing org\brutality\module\impl\pit\Events.java
+@|org\brutality\module\impl\pit\Events.java|8|37|org.brutality.module.impl.pit|package|org.brutality.module.impl.pit|(file)
+Class Start: org.brutality.module.impl.pit.Events
+   @|org\brutality\module\impl\pit\Events.java|525|538|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\pit\Events.java|539|543|yPos|field|org.brutality.module.impl.pit.Events|yPos|
+   @|org\brutality\module\impl\pit\Events.java|550|563|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\pit\Events.java|620|633|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\pit\Events.java|634|638|xPos|field|org.brutality.module.impl.pit.Events|xPos|
+   @|org\brutality\module\impl\pit\Events.java|645|658|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\pit\Events.java|714|724|TimerUtils|class|org.brutality.utils.TimerUtils
+   @|org\brutality\module\impl\pit\Events.java|725|736|timeRefresh|field|org.brutality.module.impl.pit.Events|timeRefresh|
+   @|org\brutality\module\impl\pit\Events.java|743|753|TimerUtils|class|org.brutality.utils.TimerUtils
+   @|org\brutality\module\impl\pit\Events.java|775|785|TimerUtils|class|org.brutality.utils.TimerUtils
+   @|org\brutality\module\impl\pit\Events.java|786|790|time|field|org.brutality.module.impl.pit.Events|time|
+   @|org\brutality\module\impl\pit\Events.java|797|807|TimerUtils|class|org.brutality.utils.TimerUtils
+   @|org\brutality\module\impl\pit\Events.java|828|834|String|class|java.lang.String
+   @|org\brutality\module\impl\pit\Events.java|823|827|List|class|java.util.List
+   @|org\brutality\module\impl\pit\Events.java|836|845|eventList|field|org.brutality.module.impl.pit.Events|eventList|
+   @|org\brutality\module\impl\pit\Events.java|852|861|ArrayList|class|java.util.ArrayList
+   Method Start: Events()V
+      @|org\brutality\module\impl\pit\Events.java|879|885|Events|method|org.brutality.module.impl.pit.Events|Events|()V
+      @|org\brutality\module\impl\pit\Events.java|943|951|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\pit\Events.java|952|955|PIT|field|org.brutality.module.Category|PIT
+   Method End: Events()V
+   Method Start: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|org\brutality\module\impl\pit\Events.java|1001|1020|onRenderGameOverlay|method|org.brutality.module.impl.pit.Events|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|org\brutality\module\impl\pit\Events.java|1021|1048|RenderGameOverlayEvent.Text|class|net.minecraftforge.client.event.RenderGameOverlayEvent.Text
+      @|org\brutality\module\impl\pit\Events.java|1049|1054|event|param|org.brutality.module.impl.pit.Events|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V|event|0
+      @|org\brutality\module\impl\pit\Events.java|1066|1075|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\Events.java|1081|1090|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\Events.java|1091|1103|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\Events.java|1115|1127|FontRenderer|class|net.minecraft.client.gui.FontRenderer
+      @|org\brutality\module\impl\pit\Events.java|1136|1151|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\pit\Events.java|1187|1191|xPos|field|org.brutality.module.impl.pit.Events|xPos
+      ERROR SimpleName: getValue null
+      @|org\brutality\module\impl\pit\Events.java|1238|1242|yPos|field|org.brutality.module.impl.pit.Events|yPos
+      ERROR SimpleName: getValue null
+      @|org\brutality\module\impl\pit\Events.java|1269|1275|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\Events.java|1290|1299|eventList|field|org.brutality.module.impl.pit.Events|eventList
+      @|org\brutality\module\impl\pit\Events.java|1318|1338|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|org\brutality\module\impl\pit\Events.java|1398|1409|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
+   Method End: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+   Method Start: setEventList(Ljava/util/List;)V
+      @|org\brutality\module\impl\pit\Events.java|1444|1456|setEventList|method|org.brutality.module.impl.pit.Events|setEventList|(Ljava/util/List;)V
+      @|org\brutality\module\impl\pit\Events.java|1462|1468|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\Events.java|1457|1461|List|class|java.util.List
+      @|org\brutality\module\impl\pit\Events.java|1470|1479|eventList|param|org.brutality.module.impl.pit.Events|setEventList|(Ljava/util/List;)V|eventList|0
+      @|org\brutality\module\impl\pit\Events.java|1496|1505|eventList|field|org.brutality.module.impl.pit.Events|eventList
+      @|org\brutality\module\impl\pit\Events.java|1508|1517|eventList|param|org.brutality.module.impl.pit.Events|setEventList|(Ljava/util/List;)V|eventList|0
+   Method End: setEventList(Ljava/util/List;)V
+Class End  : org.brutality.module.impl.pit.Events
+endProcessing org\brutality\module\impl\pit\Events.java
+
 processing org\brutality\module\impl\pit\PitSwap.java
 @|org\brutality\module\impl\pit\PitSwap.java|8|37|org.brutality.module.impl.pit|package|org.brutality.module.impl.pit|(file)
 Class Start: org.brutality.module.impl.pit.PitSwap
@@ -3095,207 +3327,57 @@ Class End  : org.brutality.module.impl.pit.PitSwap
 endProcessing org\brutality\module\impl\pit\PitSwap.java
 
 processing org\brutality\module\impl\pit\SewerESP.java
-@|org\brutality\module\impl\pit\SewerESP.java|8|40|org.brutality.module.impl.render|package|org.brutality.module.impl.render|(file)
-Class Start: org.brutality.module.impl.render.SewerESP
-   @|org\brutality\module\impl\pit\SewerESP.java|1008|1022|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
-   @|org\brutality\module\impl\pit\SewerESP.java|1023|1027|fill|field|org.brutality.module.impl.render.SewerESP|fill|
-   @|org\brutality\module\impl\pit\SewerESP.java|1034|1048|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
-   @|org\brutality\module\impl\pit\SewerESP.java|1088|1102|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
-   @|org\brutality\module\impl\pit\SewerESP.java|1103|1110|outline|field|org.brutality.module.impl.render.SewerESP|outline|
-   @|org\brutality\module\impl\pit\SewerESP.java|1117|1131|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
-   @|org\brutality\module\impl\pit\SewerESP.java|1174|1188|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
-   @|org\brutality\module\impl\pit\SewerESP.java|1189|1196|tracers|field|org.brutality.module.impl.render.SewerESP|tracers|
-   @|org\brutality\module\impl\pit\SewerESP.java|1203|1217|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
-   @|org\brutality\module\impl\pit\SewerESP.java|1260|1272|ColorSetting|class|org.brutality.settings.impl.ColorSetting
-   @|org\brutality\module\impl\pit\SewerESP.java|1273|1278|color|field|org.brutality.module.impl.render.SewerESP|color|
-   @|org\brutality\module\impl\pit\SewerESP.java|1285|1297|ColorSetting|class|org.brutality.settings.impl.ColorSetting
-   @|org\brutality\module\impl\pit\SewerESP.java|1313|1318|Color|class|java.awt.Color
-   @|org\brutality\module\impl\pit\SewerESP.java|1319|1325|YELLOW|field|java.awt.Color|YELLOW
-   @|org\brutality\module\impl\pit\SewerESP.java|1346|1359|NumberSetting|class|org.brutality.settings.impl.NumberSetting
-   @|org\brutality\module\impl\pit\SewerESP.java|1360|1369|lineWidth|field|org.brutality.module.impl.render.SewerESP|lineWidth|
-   @|org\brutality\module\impl\pit\SewerESP.java|1376|1389|NumberSetting|class|org.brutality.settings.impl.NumberSetting
-   @|org\brutality\module\impl\pit\SewerESP.java|1449|1465|treasureDetected|field|org.brutality.module.impl.render.SewerESP|treasureDetected|
-   @|org\brutality\module\impl\pit\SewerESP.java|1492|1505|detectionTime|field|org.brutality.module.impl.render.SewerESP|detectionTime|
-   @|org\brutality\module\impl\pit\SewerESP.java|1541|1557|DISPLAY_DURATION|field|org.brutality.module.impl.render.SewerESP|DISPLAY_DURATION|
+@|org\brutality\module\impl\pit\SewerESP.java|8|37|org.brutality.module.impl.pit|package|org.brutality.module.impl.pit|(file)
+Class Start: org.brutality.module.impl.pit.SewerESP
+   @|org\brutality\module\impl\pit\SewerESP.java|616|632|showNotification|field|org.brutality.module.impl.pit.SewerESP|showNotification|
+   @|org\brutality\module\impl\pit\SewerESP.java|658|675|notificationTicks|field|org.brutality.module.impl.pit.SewerESP|notificationTicks|
+   @|org\brutality\module\impl\pit\SewerESP.java|710|731|NOTIFICATION_DURATION|field|org.brutality.module.impl.pit.SewerESP|NOTIFICATION_DURATION|
    Method Start: SewerESP()V
-      @|org\brutality\module\impl\pit\SewerESP.java|1614|1622|SewerESP|method|org.brutality.module.impl.render.SewerESP|SewerESP|()V
-      @|org\brutality\module\impl\pit\SewerESP.java|1683|1691|Category|class|org.brutality.module.Category
-      @|org\brutality\module\impl\pit\SewerESP.java|1692|1695|PIT|field|org.brutality.module.Category|PIT
-      @|org\brutality\module\impl\pit\SewerESP.java|1706|1717|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
-      @|org\brutality\module\impl\pit\SewerESP.java|1718|1722|fill|field|org.brutality.module.impl.render.SewerESP|fill
-      @|org\brutality\module\impl\pit\SewerESP.java|1724|1731|outline|field|org.brutality.module.impl.render.SewerESP|outline
-      @|org\brutality\module\impl\pit\SewerESP.java|1733|1740|tracers|field|org.brutality.module.impl.render.SewerESP|tracers
-      @|org\brutality\module\impl\pit\SewerESP.java|1742|1747|color|field|org.brutality.module.impl.render.SewerESP|color
-      @|org\brutality\module\impl\pit\SewerESP.java|1749|1758|lineWidth|field|org.brutality.module.impl.render.SewerESP|lineWidth
+      @|org\brutality\module\impl\pit\SewerESP.java|786|794|SewerESP|method|org.brutality.module.impl.pit.SewerESP|SewerESP|()V
+      @|org\brutality\module\impl\pit\SewerESP.java|894|902|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\pit\SewerESP.java|903|906|PIT|field|org.brutality.module.Category|PIT
    Method End: SewerESP()V
-   Method Start: onChat(Lorg/brutality/events/listeners/EventChat;)V
-      @|org\brutality\module\impl\pit\SewerESP.java|1801|1807|onChat|method|org.brutality.module.impl.render.SewerESP|onChat|(Lorg/brutality/events/listeners/EventChat;)V
-      @|org\brutality\module\impl\pit\SewerESP.java|1808|1817|EventChat|class|org.brutality.events.listeners.EventChat
-      @|org\brutality\module\impl\pit\SewerESP.java|1818|1823|event|param|org.brutality.module.impl.render.SewerESP|onChat|(Lorg/brutality/events/listeners/EventChat;)V|event|0
-      @|org\brutality\module\impl\pit\SewerESP.java|1839|1844|event|param|org.brutality.module.impl.render.SewerESP|onChat|(Lorg/brutality/events/listeners/EventChat;)V|event|0
-      @|org\brutality\module\impl\pit\SewerESP.java|1845|1855|getMessage|method|org.brutality.events.listeners.EventChat|getMessage|()Ljava/lang/String;
-      @|org\brutality\module\impl\pit\SewerESP.java|1858|1866|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|org\brutality\module\impl\pit\SewerESP.java|1927|1943|treasureDetected|field|org.brutality.module.impl.render.SewerESP|treasureDetected
-      @|org\brutality\module\impl\pit\SewerESP.java|1964|1977|detectionTime|field|org.brutality.module.impl.render.SewerESP|detectionTime
-      @|org\brutality\module\impl\pit\SewerESP.java|1980|1986|System|class|java.lang.System
-      @|org\brutality\module\impl\pit\SewerESP.java|1987|2004|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
-      @|org\brutality\module\impl\pit\SewerESP.java|2020|2029|Minecraft|class|net.minecraft.client.Minecraft
-      @|org\brutality\module\impl\pit\SewerESP.java|2030|2042|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
-      @|org\brutality\module\impl\pit\SewerESP.java|2045|2053|theWorld|field|net.minecraft.client.Minecraft|theWorld
-      @|org\brutality\module\impl\pit\SewerESP.java|2054|2069|playSoundEffect|method|net.minecraft.world.World|playSoundEffect|(DDDLjava/lang/String;FF)V
-      @|org\brutality\module\impl\pit\SewerESP.java|2070|2072|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\SewerESP.java|2073|2082|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\SewerESP.java|2083|2087|posX|field|net.minecraft.entity.Entity|posX
-      @|org\brutality\module\impl\pit\SewerESP.java|2089|2091|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\SewerESP.java|2092|2101|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\SewerESP.java|2102|2106|posY|field|net.minecraft.entity.Entity|posY
-      @|org\brutality\module\impl\pit\SewerESP.java|2108|2110|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\SewerESP.java|2111|2120|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\SewerESP.java|2121|2125|posZ|field|net.minecraft.entity.Entity|posZ
-      @|org\brutality\module\impl\pit\SewerESP.java|2170|2176|System|class|java.lang.System
-      @|org\brutality\module\impl\pit\SewerESP.java|2177|2180|out|field|java.lang.System|out
-      @|org\brutality\module\impl\pit\SewerESP.java|2181|2188|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
-      @|org\brutality\module\impl\pit\SewerESP.java|2224|2233|enableESP|method|org.brutality.module.impl.render.SewerESP|enableESP|()V
-      @|org\brutality\module\impl\pit\SewerESP.java|2256|2261|event|param|org.brutality.module.impl.render.SewerESP|onChat|(Lorg/brutality/events/listeners/EventChat;)V|event|0
-      @|org\brutality\module\impl\pit\SewerESP.java|2262|2272|getMessage|method|org.brutality.events.listeners.EventChat|getMessage|()Ljava/lang/String;
-      @|org\brutality\module\impl\pit\SewerESP.java|2275|2283|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|org\brutality\module\impl\pit\SewerESP.java|2299|2304|event|param|org.brutality.module.impl.render.SewerESP|onChat|(Lorg/brutality/events/listeners/EventChat;)V|event|0
-      @|org\brutality\module\impl\pit\SewerESP.java|2305|2315|getMessage|method|org.brutality.events.listeners.EventChat|getMessage|()Ljava/lang/String;
-      @|org\brutality\module\impl\pit\SewerESP.java|2318|2326|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|org\brutality\module\impl\pit\SewerESP.java|2365|2381|treasureDetected|field|org.brutality.module.impl.render.SewerESP|treasureDetected
-      @|org\brutality\module\impl\pit\SewerESP.java|2403|2409|System|class|java.lang.System
-      @|org\brutality\module\impl\pit\SewerESP.java|2410|2413|out|field|java.lang.System|out
-      @|org\brutality\module\impl\pit\SewerESP.java|2414|2421|println|method|java.io.PrintStream|println|(Ljava/lang/String;)V
-      @|org\brutality\module\impl\pit\SewerESP.java|2469|2479|disableESP|method|org.brutality.module.impl.render.SewerESP|disableESP|()V
-   Method End: onChat(Lorg/brutality/events/listeners/EventChat;)V
-   Method Start: onRender(Lorg/brutality/events/listeners/EventRender3D;)V
-      @|org\brutality\module\impl\pit\SewerESP.java|2533|2541|onRender|method|org.brutality.module.impl.render.SewerESP|onRender|(Lorg/brutality/events/listeners/EventRender3D;)V
-      @|org\brutality\module\impl\pit\SewerESP.java|2542|2555|EventRender3D|class|org.brutality.events.listeners.EventRender3D
-      @|org\brutality\module\impl\pit\SewerESP.java|2556|2561|event|param|org.brutality.module.impl.render.SewerESP|onRender|(Lorg/brutality/events/listeners/EventRender3D;)V|event|0
-      @|org\brutality\module\impl\pit\SewerESP.java|2577|2593|treasureDetected|field|org.brutality.module.impl.render.SewerESP|treasureDetected
-      @|org\brutality\module\impl\pit\SewerESP.java|2614|2620|Object|class|java.lang.Object
-      @|org\brutality\module\impl\pit\SewerESP.java|2625|2627|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\SewerESP.java|2628|2636|theWorld|field|net.minecraft.client.Minecraft|theWorld
-      @|org\brutality\module\impl\pit\SewerESP.java|2637|2657|loadedTileEntityList|field|net.minecraft.world.World|loadedTileEntityList
-      @|org\brutality\module\impl\pit\SewerESP.java|2694|2709|TileEntityChest|class|net.minecraft.tileentity.TileEntityChest
-      @|org\brutality\module\impl\pit\SewerESP.java|2804|2819|TileEntityChest|class|net.minecraft.tileentity.TileEntityChest
-      @|org\brutality\module\impl\pit\SewerESP.java|2832|2847|TileEntityChest|class|net.minecraft.tileentity.TileEntityChest
-      @|org\brutality\module\impl\pit\SewerESP.java|2892|2898|getPos|method|net.minecraft.tileentity.TileEntity|getPos|()Lnet/minecraft/util/BlockPos;
-      @|org\brutality\module\impl\pit\SewerESP.java|2901|2905|getX|method|net.minecraft.util.Vec3i|getX|()I
-      @|org\brutality\module\impl\pit\SewerESP.java|2910|2912|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\SewerESP.java|2913|2929|getRenderManager|method|net.minecraft.client.Minecraft|getRenderManager|()Lnet/minecraft/client/renderer/entity/RenderManager;
-      @|org\brutality\module\impl\pit\SewerESP.java|2932|2942|viewerPosX|field|net.minecraft.client.renderer.entity.RenderManager|viewerPosX
-      @|org\brutality\module\impl\pit\SewerESP.java|2984|2990|getPos|method|net.minecraft.tileentity.TileEntity|getPos|()Lnet/minecraft/util/BlockPos;
-      @|org\brutality\module\impl\pit\SewerESP.java|2993|2997|getY|method|net.minecraft.util.Vec3i|getY|()I
-      @|org\brutality\module\impl\pit\SewerESP.java|3002|3004|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\SewerESP.java|3005|3021|getRenderManager|method|net.minecraft.client.Minecraft|getRenderManager|()Lnet/minecraft/client/renderer/entity/RenderManager;
-      @|org\brutality\module\impl\pit\SewerESP.java|3024|3034|viewerPosY|field|net.minecraft.client.renderer.entity.RenderManager|viewerPosY
-      @|org\brutality\module\impl\pit\SewerESP.java|3076|3082|getPos|method|net.minecraft.tileentity.TileEntity|getPos|()Lnet/minecraft/util/BlockPos;
-      @|org\brutality\module\impl\pit\SewerESP.java|3085|3089|getZ|method|net.minecraft.util.Vec3i|getZ|()I
-      @|org\brutality\module\impl\pit\SewerESP.java|3094|3096|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\SewerESP.java|3097|3113|getRenderManager|method|net.minecraft.client.Minecraft|getRenderManager|()Lnet/minecraft/client/renderer/entity/RenderManager;
-      @|org\brutality\module\impl\pit\SewerESP.java|3116|3126|viewerPosZ|field|net.minecraft.client.renderer.entity.RenderManager|viewerPosZ
-      @|org\brutality\module\impl\pit\SewerESP.java|3153|3157|fill|field|org.brutality.module.impl.render.SewerESP|fill
-      @|org\brutality\module\impl\pit\SewerESP.java|3158|3167|isEnabled|method|org.brutality.settings.impl.BooleanSetting|isEnabled|()Z
-      @|org\brutality\module\impl\pit\SewerESP.java|3197|3208|RenderUtils|class|org.brutality.utils.RenderUtils
-      @|org\brutality\module\impl\pit\SewerESP.java|3209|3222|drawFilledBox|method|org.brutality.utils.RenderUtils|drawFilledBox|(DDDDDDFFFF)V
-      @|org\brutality\module\impl\pit\SewerESP.java|3253|3258|color|field|org.brutality.module.impl.render.SewerESP|color
-      ERROR SimpleName: getColor null
-      ERROR SimpleName: getRed null
-      @|org\brutality\module\impl\pit\SewerESP.java|3289|3294|color|field|org.brutality.module.impl.render.SewerESP|color
-      ERROR SimpleName: getColor null
-      ERROR SimpleName: getGreen null
-      @|org\brutality\module\impl\pit\SewerESP.java|3327|3332|color|field|org.brutality.module.impl.render.SewerESP|color
-      ERROR SimpleName: getColor null
-      ERROR SimpleName: getBlue null
-      @|org\brutality\module\impl\pit\SewerESP.java|3418|3425|outline|field|org.brutality.module.impl.render.SewerESP|outline
-      @|org\brutality\module\impl\pit\SewerESP.java|3426|3435|isEnabled|method|org.brutality.settings.impl.BooleanSetting|isEnabled|()Z
-      @|org\brutality\module\impl\pit\SewerESP.java|3465|3476|RenderUtils|class|org.brutality.utils.RenderUtils
-      @|org\brutality\module\impl\pit\SewerESP.java|3477|3484|drawBox|method|org.brutality.utils.RenderUtils|drawBox|(DDDDDDFFFF)V
-      @|org\brutality\module\impl\pit\SewerESP.java|3515|3520|color|field|org.brutality.module.impl.render.SewerESP|color
-      ERROR SimpleName: getColor null
-      ERROR SimpleName: getRed null
-      @|org\brutality\module\impl\pit\SewerESP.java|3551|3556|color|field|org.brutality.module.impl.render.SewerESP|color
-      ERROR SimpleName: getColor null
-      ERROR SimpleName: getGreen null
-      @|org\brutality\module\impl\pit\SewerESP.java|3589|3594|color|field|org.brutality.module.impl.render.SewerESP|color
-      ERROR SimpleName: getColor null
-      ERROR SimpleName: getBlue null
-      @|org\brutality\module\impl\pit\SewerESP.java|3680|3687|tracers|field|org.brutality.module.impl.render.SewerESP|tracers
-      @|org\brutality\module\impl\pit\SewerESP.java|3688|3697|isEnabled|method|org.brutality.settings.impl.BooleanSetting|isEnabled|()Z
-      @|org\brutality\module\impl\pit\SewerESP.java|3727|3747|drawTracerToTreasure|method|org.brutality.module.impl.render.SewerESP|drawTracerToTreasure|(Lnet/minecraft/util/BlockPos;IF)V
-      @|org\brutality\module\impl\pit\SewerESP.java|3757|3763|getPos|method|net.minecraft.tileentity.TileEntity|getPos|()Lnet/minecraft/util/BlockPos;
-      @|org\brutality\module\impl\pit\SewerESP.java|3767|3772|color|field|org.brutality.module.impl.render.SewerESP|color
-      ERROR SimpleName: getColor null
-      ERROR SimpleName: getRGB null
-      @|org\brutality\module\impl\pit\SewerESP.java|3802|3811|lineWidth|field|org.brutality.module.impl.render.SewerESP|lineWidth
-      ERROR SimpleName: getValue null
-   Method End: onRender(Lorg/brutality/events/listeners/EventRender3D;)V
-   Method Start: onRenderWorldLast(Lnet/minecraftforge/client/event/RenderWorldLastEvent;)V
-      @|org\brutality\module\impl\pit\SewerESP.java|3932|3949|onRenderWorldLast|method|org.brutality.module.impl.render.SewerESP|onRenderWorldLast|(Lnet/minecraftforge/client/event/RenderWorldLastEvent;)V
-      @|org\brutality\module\impl\pit\SewerESP.java|3950|3970|RenderWorldLastEvent|class|net.minecraftforge.client.event.RenderWorldLastEvent
-      @|org\brutality\module\impl\pit\SewerESP.java|3971|3976|event|param|org.brutality.module.impl.render.SewerESP|onRenderWorldLast|(Lnet/minecraftforge/client/event/RenderWorldLastEvent;)V|event|0
-      @|org\brutality\module\impl\pit\SewerESP.java|3992|4008|treasureDetected|field|org.brutality.module.impl.render.SewerESP|treasureDetected
-      @|org\brutality\module\impl\pit\SewerESP.java|4012|4018|System|class|java.lang.System
-      @|org\brutality\module\impl\pit\SewerESP.java|4019|4036|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
-      @|org\brutality\module\impl\pit\SewerESP.java|4041|4054|detectionTime|field|org.brutality.module.impl.render.SewerESP|detectionTime
-      @|org\brutality\module\impl\pit\SewerESP.java|4057|4073|DISPLAY_DURATION|field|org.brutality.module.impl.render.SewerESP|DISPLAY_DURATION
-      @|org\brutality\module\impl\pit\SewerESP.java|4089|4112|drawTreasureSpawnedText|method|org.brutality.module.impl.render.SewerESP|drawTreasureSpawnedText|()V
-   Method End: onRenderWorldLast(Lnet/minecraftforge/client/event/RenderWorldLastEvent;)V
-   Method Start: drawTracerToTreasure(Lnet/minecraft/util/BlockPos;IF)V
-      @|org\brutality\module\impl\pit\SewerESP.java|4150|4170|drawTracerToTreasure|method|org.brutality.module.impl.render.SewerESP|drawTracerToTreasure|(Lnet/minecraft/util/BlockPos;IF)V
-      @|org\brutality\module\impl\pit\SewerESP.java|4171|4179|BlockPos|class|net.minecraft.util.BlockPos
-      @|org\brutality\module\impl\pit\SewerESP.java|4180|4183|pos|param|org.brutality.module.impl.render.SewerESP|drawTracerToTreasure|(Lnet/minecraft/util/BlockPos;IF)V|pos|0
-      @|org\brutality\module\impl\pit\SewerESP.java|4189|4194|color|param|org.brutality.module.impl.render.SewerESP|drawTracerToTreasure|(Lnet/minecraft/util/BlockPos;IF)V|color|1
-      @|org\brutality\module\impl\pit\SewerESP.java|4202|4211|lineWidth|param|org.brutality.module.impl.render.SewerESP|drawTracerToTreasure|(Lnet/minecraft/util/BlockPos;IF)V|lineWidth|2
-      @|org\brutality\module\impl\pit\SewerESP.java|4223|4237|EntityPlayerSP|class|net.minecraft.client.entity.EntityPlayerSP
-      @|org\brutality\module\impl\pit\SewerESP.java|4247|4249|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\SewerESP.java|4250|4259|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\SewerESP.java|4269|4273|Vec3|class|net.minecraft.util.Vec3
-      @|org\brutality\module\impl\pit\SewerESP.java|4290|4294|Vec3|class|net.minecraft.util.Vec3
-      @|org\brutality\module\impl\pit\SewerESP.java|4302|4306|posX|field|net.minecraft.entity.Entity|posX
-      @|org\brutality\module\impl\pit\SewerESP.java|4315|4319|posY|field|net.minecraft.entity.Entity|posY
-      @|org\brutality\module\impl\pit\SewerESP.java|4329|4341|getEyeHeight|method|net.minecraft.entity.Entity|getEyeHeight|()F
-      @|org\brutality\module\impl\pit\SewerESP.java|4352|4356|posZ|field|net.minecraft.entity.Entity|posZ
-      @|org\brutality\module\impl\pit\SewerESP.java|4367|4371|Vec3|class|net.minecraft.util.Vec3
-      @|org\brutality\module\impl\pit\SewerESP.java|4390|4394|Vec3|class|net.minecraft.util.Vec3
-      @|org\brutality\module\impl\pit\SewerESP.java|4395|4398|pos|param|org.brutality.module.impl.render.SewerESP|drawTracerToTreasure|(Lnet/minecraft/util/BlockPos;IF)V|pos|0
-      @|org\brutality\module\impl\pit\SewerESP.java|4399|4403|getX|method|net.minecraft.util.Vec3i|getX|()I
-      @|org\brutality\module\impl\pit\SewerESP.java|4413|4416|pos|param|org.brutality.module.impl.render.SewerESP|drawTracerToTreasure|(Lnet/minecraft/util/BlockPos;IF)V|pos|0
-      @|org\brutality\module\impl\pit\SewerESP.java|4417|4421|getY|method|net.minecraft.util.Vec3i|getY|()I
-      @|org\brutality\module\impl\pit\SewerESP.java|4431|4434|pos|param|org.brutality.module.impl.render.SewerESP|drawTracerToTreasure|(Lnet/minecraft/util/BlockPos;IF)V|pos|0
-      @|org\brutality\module\impl\pit\SewerESP.java|4435|4439|getZ|method|net.minecraft.util.Vec3i|getZ|()I
-      @|org\brutality\module\impl\pit\SewerESP.java|4459|4470|RenderUtils|class|org.brutality.utils.RenderUtils
-      @|org\brutality\module\impl\pit\SewerESP.java|4471|4479|drawLine|method|org.brutality.utils.RenderUtils|drawLine|(Lnet/minecraft/util/Vec3;Lnet/minecraft/util/Vec3;IF)V
-      @|org\brutality\module\impl\pit\SewerESP.java|4504|4509|color|param|org.brutality.module.impl.render.SewerESP|drawTracerToTreasure|(Lnet/minecraft/util/BlockPos;IF)V|color|1
-      @|org\brutality\module\impl\pit\SewerESP.java|4511|4520|lineWidth|param|org.brutality.module.impl.render.SewerESP|drawTracerToTreasure|(Lnet/minecraft/util/BlockPos;IF)V|lineWidth|2
-   Method End: drawTracerToTreasure(Lnet/minecraft/util/BlockPos;IF)V
-   Method Start: drawTreasureSpawnedText()V
-      @|org\brutality\module\impl\pit\SewerESP.java|4547|4570|drawTreasureSpawnedText|method|org.brutality.module.impl.render.SewerESP|drawTreasureSpawnedText|()V
-      @|org\brutality\module\impl\pit\SewerESP.java|4583|4595|FontRenderer|class|net.minecraft.client.gui.FontRenderer
-      @|org\brutality\module\impl\pit\SewerESP.java|4611|4613|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\SewerESP.java|4614|4629|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
-      @|org\brutality\module\impl\pit\SewerESP.java|4639|4645|String|class|java.lang.String
-      @|org\brutality\module\impl\pit\SewerESP.java|4682|4698|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
-      @|org\brutality\module\impl\pit\SewerESP.java|4722|4738|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
-      @|org\brutality\module\impl\pit\SewerESP.java|4739|4741|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\SewerESP.java|4781|4795|getScaledWidth|method|net.minecraft.client.gui.ScaledResolution|getScaledWidth|()I
-      @|org\brutality\module\impl\pit\SewerESP.java|4837|4852|getScaledHeight|method|net.minecraft.client.gui.ScaledResolution|getScaledHeight|()I
-      @|org\brutality\module\impl\pit\SewerESP.java|4900|4914|getStringWidth|method|net.minecraft.client.gui.FontRenderer|getStringWidth|(Ljava/lang/String;)I
-      @|org\brutality\module\impl\pit\SewerESP.java|4976|4996|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
-      @|org\brutality\module\impl\pit\SewerESP.java|5009|5014|Color|class|java.awt.Color
-      @|org\brutality\module\impl\pit\SewerESP.java|5015|5021|YELLOW|field|java.awt.Color|YELLOW
-      @|org\brutality\module\impl\pit\SewerESP.java|5022|5028|getRGB|method|java.awt.Color|getRGB|()I
-   Method End: drawTreasureSpawnedText()V
-   Method Start: enableESP()V
-      @|org\brutality\module\impl\pit\SewerESP.java|5057|5066|enableESP|method|org.brutality.module.impl.render.SewerESP|enableESP|()V
-      @|org\brutality\module\impl\pit\SewerESP.java|5150|5166|treasureDetected|field|org.brutality.module.impl.render.SewerESP|treasureDetected
-   Method End: enableESP()V
-   Method Start: disableESP()V
-      @|org\brutality\module\impl\pit\SewerESP.java|5199|5209|disableESP|method|org.brutality.module.impl.render.SewerESP|disableESP|()V
-      @|org\brutality\module\impl\pit\SewerESP.java|5294|5310|treasureDetected|field|org.brutality.module.impl.render.SewerESP|treasureDetected
-   Method End: disableESP()V
-Class End  : org.brutality.module.impl.render.SewerESP
+   Method Start: onChatReceived(Lnet/minecraftforge/client/event/ClientChatReceivedEvent;)V
+      @|org\brutality\module\impl\pit\SewerESP.java|952|966|onChatReceived|method|org.brutality.module.impl.pit.SewerESP|onChatReceived|(Lnet/minecraftforge/client/event/ClientChatReceivedEvent;)V
+      @|org\brutality\module\impl\pit\SewerESP.java|967|990|ClientChatReceivedEvent|class|net.minecraftforge.client.event.ClientChatReceivedEvent
+      @|org\brutality\module\impl\pit\SewerESP.java|991|996|event|param|org.brutality.module.impl.pit.SewerESP|onChatReceived|(Lnet/minecraftforge/client/event/ClientChatReceivedEvent;)V|event|0
+      @|org\brutality\module\impl\pit\SewerESP.java|1012|1017|event|param|org.brutality.module.impl.pit.SewerESP|onChatReceived|(Lnet/minecraftforge/client/event/ClientChatReceivedEvent;)V|event|0
+      @|org\brutality\module\impl\pit\SewerESP.java|1018|1025|message|field|net.minecraftforge.client.event.ClientChatReceivedEvent|message
+      @|org\brutality\module\impl\pit\SewerESP.java|1026|1044|getUnformattedText|method|net.minecraft.util.IChatComponent|getUnformattedText|()Ljava/lang/String;
+      @|org\brutality\module\impl\pit\SewerESP.java|1047|1055|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|org\brutality\module\impl\pit\SewerESP.java|1115|1131|showNotification|field|org.brutality.module.impl.pit.SewerESP|showNotification
+      @|org\brutality\module\impl\pit\SewerESP.java|1152|1169|notificationTicks|field|org.brutality.module.impl.pit.SewerESP|notificationTicks
+      @|org\brutality\module\impl\pit\SewerESP.java|1172|1193|NOTIFICATION_DURATION|field|org.brutality.module.impl.pit.SewerESP|NOTIFICATION_DURATION
+   Method End: onChatReceived(Lnet/minecraftforge/client/event/ClientChatReceivedEvent;)V
+   Method Start: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|org\brutality\module\impl\pit\SewerESP.java|1248|1267|onRenderGameOverlay|method|org.brutality.module.impl.pit.SewerESP|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|org\brutality\module\impl\pit\SewerESP.java|1268|1295|RenderGameOverlayEvent.Text|class|net.minecraftforge.client.event.RenderGameOverlayEvent.Text
+      @|org\brutality\module\impl\pit\SewerESP.java|1296|1301|event|param|org.brutality.module.impl.pit.SewerESP|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V|event|0
+      @|org\brutality\module\impl\pit\SewerESP.java|1317|1333|showNotification|field|org.brutality.module.impl.pit.SewerESP|showNotification
+      @|org\brutality\module\impl\pit\SewerESP.java|1349|1358|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SewerESP.java|1364|1373|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\SewerESP.java|1374|1386|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\SewerESP.java|1402|1414|FontRenderer|class|net.minecraft.client.gui.FontRenderer
+      @|org\brutality\module\impl\pit\SewerESP.java|1423|1438|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\pit\SewerESP.java|1452|1468|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\pit\SewerESP.java|1478|1494|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\pit\SewerESP.java|1513|1519|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\SewerESP.java|1576|1590|getScaledWidth|method|net.minecraft.client.gui.ScaledResolution|getScaledWidth|()I
+      @|org\brutality\module\impl\pit\SewerESP.java|1598|1612|getStringWidth|method|net.minecraft.client.gui.FontRenderer|getStringWidth|(Ljava/lang/String;)I
+      @|org\brutality\module\impl\pit\SewerESP.java|1648|1663|getScaledHeight|method|net.minecraft.client.gui.ScaledResolution|getScaledHeight|()I
+      @|org\brutality\module\impl\pit\SewerESP.java|1675|1686|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
+      @|org\brutality\module\impl\pit\SewerESP.java|1708|1728|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+   Method End: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+   Method Start: onClientTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$ClientTickEvent;)V
+      @|org\brutality\module\impl\pit\SewerESP.java|1805|1817|onClientTick|method|org.brutality.module.impl.pit.SewerESP|onClientTick|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$ClientTickEvent;)V
+      @|org\brutality\module\impl\pit\SewerESP.java|1818|1843|TickEvent.ClientTickEvent|class|net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent
+      @|org\brutality\module\impl\pit\SewerESP.java|1844|1849|event|param|org.brutality.module.impl.pit.SewerESP|onClientTick|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$ClientTickEvent;)V|event|0
+      @|org\brutality\module\impl\pit\SewerESP.java|1865|1881|showNotification|field|org.brutality.module.impl.pit.SewerESP|showNotification
+      @|org\brutality\module\impl\pit\SewerESP.java|1897|1914|notificationTicks|field|org.brutality.module.impl.pit.SewerESP|notificationTicks
+      @|org\brutality\module\impl\pit\SewerESP.java|1934|1951|notificationTicks|field|org.brutality.module.impl.pit.SewerESP|notificationTicks
+      @|org\brutality\module\impl\pit\SewerESP.java|1976|1992|showNotification|field|org.brutality.module.impl.pit.SewerESP|showNotification
+   Method End: onClientTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$ClientTickEvent;)V
+Class End  : org.brutality.module.impl.pit.SewerESP
 endProcessing org\brutality\module\impl\pit\SewerESP.java
 
 processing org\brutality\module\impl\pit\SlotSwap.java
@@ -3528,233 +3610,294 @@ endProcessing org\brutality\module\impl\pit\SogeSwap.java
 processing org\brutality\module\impl\pit\TelebowTimer.java
 @|org\brutality\module\impl\pit\TelebowTimer.java|8|37|org.brutality.module.impl.pit|package|org.brutality.module.impl.pit|(file)
 Class Start: org.brutality.module.impl.pit.TelebowTimer
-   @|org\brutality\module\impl\pit\TelebowTimer.java|662|668|String|class|java.lang.String
-   @|org\brutality\module\impl\pit\TelebowTimer.java|670|674|Long|class|java.lang.Long
-   @|org\brutality\module\impl\pit\TelebowTimer.java|658|661|Map|class|java.util.Map
-   @|org\brutality\module\impl\pit\TelebowTimer.java|676|689|telebowTimers|field|org.brutality.module.impl.pit.TelebowTimer|telebowTimers|
-   @|org\brutality\module\impl\pit\TelebowTimer.java|696|703|HashMap|class|java.util.HashMap
-   @|org\brutality\module\impl\pit\TelebowTimer.java|727|743|RenderingTelebow|class|org.brutality.utils.RenderingTelebow
-   @|org\brutality\module\impl\pit\TelebowTimer.java|744|760|renderingTelebow|field|org.brutality.module.impl.pit.TelebowTimer|renderingTelebow|
-   @|org\brutality\module\impl\pit\TelebowTimer.java|767|783|RenderingTelebow|class|org.brutality.utils.RenderingTelebow
+   @|org\brutality\module\impl\pit\TelebowTimer.java|665|678|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\pit\TelebowTimer.java|679|690|yPosSetting|field|org.brutality.module.impl.pit.TelebowTimer|yPosSetting|
+   @|org\brutality\module\impl\pit\TelebowTimer.java|697|710|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\pit\TelebowTimer.java|761|774|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\pit\TelebowTimer.java|775|786|xPosSetting|field|org.brutality.module.impl.pit.TelebowTimer|xPosSetting|
+   @|org\brutality\module\impl\pit\TelebowTimer.java|793|806|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\pit\TelebowTimer.java|859|867|dragging|field|org.brutality.module.impl.pit.TelebowTimer|dragging|
+   @|org\brutality\module\impl\pit\TelebowTimer.java|893|898|dragX|field|org.brutality.module.impl.pit.TelebowTimer|dragX|
+   @|org\brutality\module\impl\pit\TelebowTimer.java|920|925|dragY|field|org.brutality.module.impl.pit.TelebowTimer|dragY|
+   @|org\brutality\module\impl\pit\TelebowTimer.java|944|954|TimerUtils|class|org.brutality.utils.TimerUtils
+   @|org\brutality\module\impl\pit\TelebowTimer.java|955|960|timer|field|org.brutality.module.impl.pit.TelebowTimer|timer|
+   @|org\brutality\module\impl\pit\TelebowTimer.java|967|977|TimerUtils|class|org.brutality.utils.TimerUtils
+   @|org\brutality\module\impl\pit\TelebowTimer.java|997|1005|cooldown|field|org.brutality.module.impl.pit.TelebowTimer|cooldown|
+   @|org\brutality\module\impl\pit\TelebowTimer.java|1031|1045|cooldownActive|field|org.brutality.module.impl.pit.TelebowTimer|cooldownActive|
    Method Start: TelebowTimer()V
-      @|org\brutality\module\impl\pit\TelebowTimer.java|799|811|TelebowTimer|method|org.brutality.module.impl.pit.TelebowTimer|TelebowTimer|()V
-      @|org\brutality\module\impl\pit\TelebowTimer.java|893|901|Category|class|org.brutality.module.Category
-      @|org\brutality\module\impl\pit\TelebowTimer.java|902|905|PIT|field|org.brutality.module.Category|PIT
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1067|1079|TelebowTimer|method|org.brutality.module.impl.pit.TelebowTimer|TelebowTimer|()V
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1156|1164|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1165|1168|PIT|field|org.brutality.module.Category|PIT
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1179|1190|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1191|1202|xPosSetting|field|org.brutality.module.impl.pit.TelebowTimer|xPosSetting
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1204|1215|yPosSetting|field|org.brutality.module.impl.pit.TelebowTimer|yPosSetting
    Method End: TelebowTimer()V
    Method Start: onArrowLoose(Lnet/minecraftforge/event/entity/player/ArrowLooseEvent;)V
-      @|org\brutality\module\impl\pit\TelebowTimer.java|951|963|onArrowLoose|method|org.brutality.module.impl.pit.TelebowTimer|onArrowLoose|(Lnet/minecraftforge/event/entity/player/ArrowLooseEvent;)V
-      @|org\brutality\module\impl\pit\TelebowTimer.java|964|979|ArrowLooseEvent|class|net.minecraftforge.event.entity.player.ArrowLooseEvent
-      @|org\brutality\module\impl\pit\TelebowTimer.java|980|985|event|param|org.brutality.module.impl.pit.TelebowTimer|onArrowLoose|(Lnet/minecraftforge/event/entity/player/ArrowLooseEvent;)V|event|0
-      @|org\brutality\module\impl\pit\TelebowTimer.java|997|1011|EntityPlayerSP|class|net.minecraft.client.entity.EntityPlayerSP
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1021|1030|Minecraft|class|net.minecraft.client.Minecraft
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1031|1043|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1046|1055|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1069|1074|event|param|org.brutality.module.impl.pit.TelebowTimer|onArrowLoose|(Lnet/minecraftforge/event/entity/player/ArrowLooseEvent;)V|event|0
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1075|1087|entityPlayer|field|net.minecraftforge.event.entity.player.PlayerEvent|entityPlayer
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1108|1118|isSneaking|method|net.minecraft.entity.Entity|isSneaking|()Z
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1136|1145|ItemStack|class|net.minecraft.item.ItemStack
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1158|1163|event|param|org.brutality.module.impl.pit.TelebowTimer|onArrowLoose|(Lnet/minecraftforge/event/entity/player/ArrowLooseEvent;)V|event|0
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1164|1167|bow|field|net.minecraftforge.event.entity.player.ArrowLooseEvent|bow
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1216|1223|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1237|1244|ItemBow|class|net.minecraft.item.ItemBow
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1278|1292|hasDisplayName|method|net.minecraft.item.ItemStack|hasDisplayName|()Z
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1308|1322|getDisplayName|method|net.minecraft.item.ItemStack|getDisplayName|()Ljava/lang/String;
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1325|1333|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1383|1401|getTelebowDuration|method|org.brutality.module.impl.pit.TelebowTimer|getTelebowDuration|(Lnet/minecraft/item/ItemStack;)I
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1478|1491|telebowTimers|field|org.brutality.module.impl.pit.TelebowTimer|telebowTimers
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1492|1495|put|method|java.util.Map|put|(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1503|1510|getName|method|net.minecraft.command.ICommandSender|getName|()Ljava/lang/String;
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1514|1520|System|class|java.lang.System
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1521|1538|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1543|1551|TimeUnit|class|java.util.concurrent.TimeUnit
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1552|1559|SECONDS|field|java.util.concurrent.TimeUnit|SECONDS
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1560|1568|toMillis|method|java.util.concurrent.TimeUnit|toMillis|(J)J
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1261|1273|onArrowLoose|method|org.brutality.module.impl.pit.TelebowTimer|onArrowLoose|(Lnet/minecraftforge/event/entity/player/ArrowLooseEvent;)V
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1274|1289|ArrowLooseEvent|class|net.minecraftforge.event.entity.player.ArrowLooseEvent
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1290|1295|event|param|org.brutality.module.impl.pit.TelebowTimer|onArrowLoose|(Lnet/minecraftforge/event/entity/player/ArrowLooseEvent;)V|event|0
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1307|1321|EntityPlayerSP|class|net.minecraft.client.entity.EntityPlayerSP
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1331|1340|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1341|1353|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1356|1365|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1379|1384|event|param|org.brutality.module.impl.pit.TelebowTimer|onArrowLoose|(Lnet/minecraftforge/event/entity/player/ArrowLooseEvent;)V|event|0
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1385|1397|entityPlayer|field|net.minecraftforge.event.entity.player.PlayerEvent|entityPlayer
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1423|1432|ItemStack|class|net.minecraft.item.ItemStack
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1445|1450|event|param|org.brutality.module.impl.pit.TelebowTimer|onArrowLoose|(Lnet/minecraftforge/event/entity/player/ArrowLooseEvent;)V|event|0
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1451|1454|bow|field|net.minecraftforge.event.entity.player.ArrowLooseEvent|bow
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1503|1517|hasDisplayName|method|net.minecraft.item.ItemStack|hasDisplayName|()Z
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1533|1547|getTagCompound|method|net.minecraft.item.ItemStack|getTagCompound|()Lnet/minecraft/nbt/NBTTagCompound;
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1577|1583|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1608|1622|getDisplayName|method|net.minecraft.item.ItemStack|getDisplayName|()Ljava/lang/String;
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1658|1666|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1691|1705|getTagCompound|method|net.minecraft.item.ItemStack|getTagCompound|()Lnet/minecraft/nbt/NBTTagCompound;
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1708|1716|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1719|1727|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1766|1780|cooldownActive|field|org.brutality.module.impl.pit.TelebowTimer|cooldownActive
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1824|1838|getTagCompound|method|net.minecraft.item.ItemStack|getTagCompound|()Lnet/minecraft/nbt/NBTTagCompound;
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1841|1849|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1852|1860|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1901|1909|cooldown|field|org.brutality.module.impl.pit.TelebowTimer|cooldown
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1972|1986|getTagCompound|method|net.minecraft.item.ItemStack|getTagCompound|()Lnet/minecraft/nbt/NBTTagCompound;
+      @|org\brutality\module\impl\pit\TelebowTimer.java|1989|1997|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2000|2008|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2049|2057|cooldown|field|org.brutality.module.impl.pit.TelebowTimer|cooldown
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2131|2139|cooldown|field|org.brutality.module.impl.pit.TelebowTimer|cooldown
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2199|2204|timer|field|org.brutality.module.impl.pit.TelebowTimer|timer
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2205|2210|reset|method|org.brutality.utils.TimerUtils|reset|()V
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2234|2248|cooldownActive|field|org.brutality.module.impl.pit.TelebowTimer|cooldownActive
    Method End: onArrowLoose(Lnet/minecraftforge/event/entity/player/ArrowLooseEvent;)V
-   Method Start: getTelebowDuration(Lnet/minecraft/item/ItemStack;)I
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1668|1686|getTelebowDuration|method|org.brutality.module.impl.pit.TelebowTimer|getTelebowDuration|(Lnet/minecraft/item/ItemStack;)I
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1687|1696|ItemStack|class|net.minecraft.item.ItemStack
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1697|1706|itemStack|param|org.brutality.module.impl.pit.TelebowTimer|getTelebowDuration|(Lnet/minecraft/item/ItemStack;)I|itemStack|0
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1718|1724|String|class|java.lang.String
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1739|1748|itemStack|param|org.brutality.module.impl.pit.TelebowTimer|getTelebowDuration|(Lnet/minecraft/item/ItemStack;)I|itemStack|0
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1749|1763|getDisplayName|method|net.minecraft.item.ItemStack|getDisplayName|()Ljava/lang/String;
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1791|1799|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1849|1857|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-      @|org\brutality\module\impl\pit\TelebowTimer.java|1908|1916|contains|method|java.lang.String|contains|(Ljava/lang/CharSequence;)Z
-   Method End: getTelebowDuration(Lnet/minecraft/item/ItemStack;)I
-   Method Start: onRenderGameOverlay(Lnet/minecraftforge/fml/common/gameevent/TickEvent$RenderTickEvent;)V
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2005|2024|onRenderGameOverlay|method|org.brutality.module.impl.pit.TelebowTimer|onRenderGameOverlay|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$RenderTickEvent;)V
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2025|2050|TickEvent.RenderTickEvent|class|net.minecraftforge.fml.common.gameevent.TickEvent.RenderTickEvent
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2051|2056|event|param|org.brutality.module.impl.pit.TelebowTimer|onRenderGameOverlay|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$RenderTickEvent;)V|event|0
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2068|2077|Minecraft|class|net.minecraft.client.Minecraft
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2083|2092|Minecraft|class|net.minecraft.client.Minecraft
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2093|2105|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2136|2142|System|class|java.lang.System
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2143|2160|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2173|2186|telebowTimers|field|org.brutality.module.impl.pit.TelebowTimer|telebowTimers
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2187|2195|entrySet|method|java.util.Map|entrySet|()Ljava/util/Set;
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2198|2206|removeIf|method|java.util.Collection|removeIf|(Ljava/util/function/Predicate;)Z
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2284|2293|Map.Entry|class|java.util.Map.Entry
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2294|2300|String|class|java.lang.String
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2302|2306|Long|class|java.lang.Long
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2316|2329|telebowTimers|field|org.brutality.module.impl.pit.TelebowTimer|telebowTimers
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2330|2338|entrySet|method|java.util.Map|entrySet|()Ljava/util/Set;
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2356|2362|String|class|java.lang.String
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2382|2388|getKey|method|java.util.Map.Entry|getKey|()Ljava/lang/Object;
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2431|2439|getValue|method|java.util.Map.Entry|getValue|()Ljava/lang/Object;
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2469|2475|String|class|java.lang.String
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2483|2489|String|class|java.lang.String
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2490|2496|format|method|java.lang.String|format|(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2520|2528|TimeUnit|class|java.util.concurrent.TimeUnit
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2529|2541|MILLISECONDS|field|java.util.concurrent.TimeUnit|MILLISECONDS
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2542|2551|toSeconds|method|java.util.concurrent.TimeUnit|toSeconds|(J)J
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2581|2597|renderingTelebow|field|org.brutality.module.impl.pit.TelebowTimer|renderingTelebow
-      @|org\brutality\module\impl\pit\TelebowTimer.java|2598|2609|renderTimer|method|org.brutality.utils.RenderingTelebow|renderTimer|(Ljava/lang/String;III)V
-   Method End: onRenderGameOverlay(Lnet/minecraftforge/fml/common/gameevent/TickEvent$RenderTickEvent;)V
+   Method Start: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2342|2361|onRenderGameOverlay|method|org.brutality.module.impl.pit.TelebowTimer|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2362|2389|RenderGameOverlayEvent.Text|class|net.minecraftforge.client.event.RenderGameOverlayEvent.Text
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2390|2395|event|param|org.brutality.module.impl.pit.TelebowTimer|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V|event|0
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2407|2416|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2422|2431|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2432|2444|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2456|2472|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2482|2498|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2533|2544|xPosSetting|field|org.brutality.module.impl.pit.TelebowTimer|xPosSetting
+      ERROR SimpleName: getValue null
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2586|2597|yPosSetting|field|org.brutality.module.impl.pit.TelebowTimer|yPosSetting
+      ERROR SimpleName: getValue null
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2626|2639|currentScreen|field|net.minecraft.client.Minecraft|currentScreen
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2667|2675|dragging|field|org.brutality.module.impl.pit.TelebowTimer|dragging
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2702|2707|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2708|2712|getX|method|org.lwjgl.input.Mouse|getX|()I
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2720|2734|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2739|2744|dragX|field|org.brutality.module.impl.pit.TelebowTimer|dragX
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2773|2786|displayHeight|field|net.minecraft.client.Minecraft|displayHeight
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2789|2794|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2795|2799|getY|method|org.lwjgl.input.Mouse|getY|()I
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2808|2822|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2827|2832|dragY|field|org.brutality.module.impl.pit.TelebowTimer|dragY
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2850|2861|xPosSetting|field|org.brutality.module.impl.pit.TelebowTimer|xPosSetting
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2862|2870|setValue|method|org.brutality.settings.impl.NumberSetting|setValue|(D)V
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2900|2911|yPosSetting|field|org.brutality.module.impl.pit.TelebowTimer|yPosSetting
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2912|2920|setValue|method|org.brutality.settings.impl.NumberSetting|setValue|(D)V
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2965|2970|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\TelebowTimer.java|2971|2983|isButtonDown|method|org.lwjgl.input.Mouse|isButtonDown|(I)Z
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3011|3019|dragging|field|org.brutality.module.impl.pit.TelebowTimer|dragging
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3023|3038|isMouseOverText|method|org.brutality.module.impl.pit.TelebowTimer|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3039|3044|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3045|3049|getX|method|org.lwjgl.input.Mouse|getX|()I
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3057|3071|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3079|3092|displayHeight|field|net.minecraft.client.Minecraft|displayHeight
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3095|3100|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3101|3105|getY|method|org.lwjgl.input.Mouse|getY|()I
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3114|3128|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3146|3154|cooldown|field|org.brutality.module.impl.pit.TelebowTimer|cooldown
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3183|3191|dragging|field|org.brutality.module.impl.pit.TelebowTimer|dragging
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3220|3225|dragX|field|org.brutality.module.impl.pit.TelebowTimer|dragX
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3228|3233|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3234|3238|getX|method|org.lwjgl.input.Mouse|getX|()I
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3246|3260|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3297|3302|dragY|field|org.brutality.module.impl.pit.TelebowTimer|dragY
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3309|3322|displayHeight|field|net.minecraft.client.Minecraft|displayHeight
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3325|3330|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3331|3335|getY|method|org.lwjgl.input.Mouse|getY|()I
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3344|3358|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3430|3438|dragging|field|org.brutality.module.impl.pit.TelebowTimer|dragging
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3485|3499|cooldownActive|field|org.brutality.module.impl.pit.TelebowTimer|cooldownActive
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3503|3508|timer|field|org.brutality.module.impl.pit.TelebowTimer|timer
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3509|3519|hasReached|method|org.brutality.utils.TimerUtils|hasReached|(J)Z
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3520|3528|cooldown|field|org.brutality.module.impl.pit.TelebowTimer|cooldown
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3553|3567|cooldownActive|field|org.brutality.module.impl.pit.TelebowTimer|cooldownActive
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3596|3610|cooldownActive|field|org.brutality.module.impl.pit.TelebowTimer|cooldownActive
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3652|3660|cooldown|field|org.brutality.module.impl.pit.TelebowTimer|cooldown
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3671|3676|timer|field|org.brutality.module.impl.pit.TelebowTimer|timer
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3677|3690|getTimePassed|method|org.brutality.utils.TimerUtils|getTimePassed|()J
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3715|3721|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3771|3786|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3787|3807|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+   Method End: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+   Method Start: isMouseOverText(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3874|3889|isMouseOverText|method|org.brutality.module.impl.pit.TelebowTimer|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3894|3900|mouseX|param|org.brutality.module.impl.pit.TelebowTimer|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mouseX|0
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3906|3912|mouseY|param|org.brutality.module.impl.pit.TelebowTimer|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mouseY|1
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3914|3920|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3921|3925|text|param|org.brutality.module.impl.pit.TelebowTimer|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|text|2
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3927|3936|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3937|3939|mc|param|org.brutality.module.impl.pit.TelebowTimer|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mc|3
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3967|3969|mc|param|org.brutality.module.impl.pit.TelebowTimer|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mc|3
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3970|3985|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\pit\TelebowTimer.java|3986|4000|getStringWidth|method|net.minecraft.client.gui.FontRenderer|getStringWidth|(Ljava/lang/String;)I
+      @|org\brutality\module\impl\pit\TelebowTimer.java|4001|4005|text|param|org.brutality.module.impl.pit.TelebowTimer|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|text|2
+      @|org\brutality\module\impl\pit\TelebowTimer.java|4033|4035|mc|param|org.brutality.module.impl.pit.TelebowTimer|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mc|3
+      @|org\brutality\module\impl\pit\TelebowTimer.java|4036|4051|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\pit\TelebowTimer.java|4052|4063|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
+      @|org\brutality\module\impl\pit\TelebowTimer.java|4080|4086|mouseX|param|org.brutality.module.impl.pit.TelebowTimer|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mouseX|0
+      @|org\brutality\module\impl\pit\TelebowTimer.java|4090|4101|xPosSetting|field|org.brutality.module.impl.pit.TelebowTimer|xPosSetting
+      ERROR SimpleName: getValue null
+      @|org\brutality\module\impl\pit\TelebowTimer.java|4116|4122|mouseX|param|org.brutality.module.impl.pit.TelebowTimer|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mouseX|0
+      @|org\brutality\module\impl\pit\TelebowTimer.java|4126|4137|xPosSetting|field|org.brutality.module.impl.pit.TelebowTimer|xPosSetting
+      ERROR SimpleName: getValue null
+      @|org\brutality\module\impl\pit\TelebowTimer.java|4180|4186|mouseY|param|org.brutality.module.impl.pit.TelebowTimer|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mouseY|1
+      @|org\brutality\module\impl\pit\TelebowTimer.java|4190|4201|yPosSetting|field|org.brutality.module.impl.pit.TelebowTimer|yPosSetting
+      ERROR SimpleName: getValue null
+      @|org\brutality\module\impl\pit\TelebowTimer.java|4216|4222|mouseY|param|org.brutality.module.impl.pit.TelebowTimer|isMouseOverText|(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z|mouseY|1
+      @|org\brutality\module\impl\pit\TelebowTimer.java|4226|4237|yPosSetting|field|org.brutality.module.impl.pit.TelebowTimer|yPosSetting
+      ERROR SimpleName: getValue null
+   Method End: isMouseOverText(IILjava/lang/String;Lnet/minecraft/client/Minecraft;)Z
 Class End  : org.brutality.module.impl.pit.TelebowTimer
 endProcessing org\brutality\module\impl\pit\TelebowTimer.java
 
 processing org\brutality\module\impl\pit\VenomedNotifications.java
 @|org\brutality\module\impl\pit\VenomedNotifications.java|8|37|org.brutality.module.impl.pit|package|org.brutality.module.impl.pit|(file)
 Class Start: org.brutality.module.impl.pit.VenomedNotifications
-   @|org\brutality\module\impl\pit\VenomedNotifications.java|819|825|String|class|java.lang.String
-   @|org\brutality\module\impl\pit\VenomedNotifications.java|827|834|Integer|class|java.lang.Integer
-   @|org\brutality\module\impl\pit\VenomedNotifications.java|815|818|Map|class|java.util.Map
-   @|org\brutality\module\impl\pit\VenomedNotifications.java|836|850|venomedPlayers|field|org.brutality.module.impl.pit.VenomedNotifications|venomedPlayers|
-   @|org\brutality\module\impl\pit\VenomedNotifications.java|857|864|HashMap|class|java.util.HashMap
-   @|org\brutality\module\impl\pit\VenomedNotifications.java|887|899|venomedListX|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListX|
-   @|org\brutality\module\impl\pit\VenomedNotifications.java|945|957|venomedListY|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListY|
-   @|org\brutality\module\impl\pit\VenomedNotifications.java|1007|1015|dragging|field|org.brutality.module.impl.pit.VenomedNotifications|dragging|
-   @|org\brutality\module\impl\pit\VenomedNotifications.java|1041|1046|dragX|field|org.brutality.module.impl.pit.VenomedNotifications|dragX|
-   @|org\brutality\module\impl\pit\VenomedNotifications.java|1068|1073|dragY|field|org.brutality.module.impl.pit.VenomedNotifications|dragY|
+   @|org\brutality\module\impl\pit\VenomedNotifications.java|772|778|String|class|java.lang.String
+   @|org\brutality\module\impl\pit\VenomedNotifications.java|767|771|List|class|java.util.List
+   @|org\brutality\module\impl\pit\VenomedNotifications.java|780|794|venomedPlayers|field|org.brutality.module.impl.pit.VenomedNotifications|venomedPlayers|
+   @|org\brutality\module\impl\pit\VenomedNotifications.java|801|810|ArrayList|class|java.util.ArrayList
+   @|org\brutality\module\impl\pit\VenomedNotifications.java|833|845|venomedListX|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListX|
+   @|org\brutality\module\impl\pit\VenomedNotifications.java|891|903|venomedListY|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListY|
+   @|org\brutality\module\impl\pit\VenomedNotifications.java|953|961|dragging|field|org.brutality.module.impl.pit.VenomedNotifications|dragging|
+   @|org\brutality\module\impl\pit\VenomedNotifications.java|987|992|dragX|field|org.brutality.module.impl.pit.VenomedNotifications|dragX|
+   @|org\brutality\module\impl\pit\VenomedNotifications.java|1014|1019|dragY|field|org.brutality.module.impl.pit.VenomedNotifications|dragY|
    Method Start: VenomedNotifications()V
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1091|1111|VenomedNotifications|method|org.brutality.module.impl.pit.VenomedNotifications|VenomedNotifications|()V
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1191|1199|Category|class|org.brutality.module.Category
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1200|1203|PIT|field|org.brutality.module.Category|PIT
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1037|1057|VenomedNotifications|method|org.brutality.module.impl.pit.VenomedNotifications|VenomedNotifications|()V
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1129|1137|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1138|1141|PIT|field|org.brutality.module.Category|PIT
    Method End: VenomedNotifications()V
    Method Start: onTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1249|1255|onTick|method|org.brutality.module.impl.pit.VenomedNotifications|onTick|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1256|1281|TickEvent.PlayerTickEvent|class|net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1282|1287|event|param|org.brutality.module.impl.pit.VenomedNotifications|onTick|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V|event|0
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1303|1305|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1306|1315|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1366|1380|venomedPlayers|field|org.brutality.module.impl.pit.VenomedNotifications|venomedPlayers
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1381|1386|clear|method|java.util.Map|clear|()V
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1403|1415|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1425|1427|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1428|1436|theWorld|field|net.minecraft.client.Minecraft|theWorld
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1437|1451|playerEntities|field|net.minecraft.world.World|playerEntities
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1467|1479|PotionEffect|class|net.minecraft.potion.PotionEffect
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1496|1517|getActivePotionEffect|method|net.minecraft.entity.EntityLivingBase|getActivePotionEffect|(Lnet/minecraft/potion/Potion;)Lnet/minecraft/potion/PotionEffect;
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1518|1524|Potion|class|net.minecraft.potion.Potion
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1525|1531|poison|field|net.minecraft.potion.Potion|poison
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1606|1617|getDuration|method|net.minecraft.potion.PotionEffect|getDuration|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1642|1648|String|class|java.lang.String
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1669|1683|getDisplayName|method|net.minecraft.command.ICommandSender|getDisplayName|()Lnet/minecraft/util/IChatComponent;
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1686|1702|getFormattedText|method|net.minecraft.util.IChatComponent|getFormattedText|()Ljava/lang/String;
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1757|1771|venomedPlayers|field|org.brutality.module.impl.pit.VenomedNotifications|venomedPlayers
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1772|1775|put|method|java.util.Map|put|(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1187|1193|onTick|method|org.brutality.module.impl.pit.VenomedNotifications|onTick|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1194|1219|TickEvent.PlayerTickEvent|class|net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1220|1225|event|param|org.brutality.module.impl.pit.VenomedNotifications|onTick|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V|event|0
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1241|1243|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1244|1253|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1304|1318|venomedPlayers|field|org.brutality.module.impl.pit.VenomedNotifications|venomedPlayers
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1319|1324|clear|method|java.util.Collection|clear|()V
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1341|1353|EntityPlayer|class|net.minecraft.entity.player.EntityPlayer
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1363|1365|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1366|1374|theWorld|field|net.minecraft.client.Minecraft|theWorld
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1375|1389|playerEntities|field|net.minecraft.world.World|playerEntities
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1405|1417|PotionEffect|class|net.minecraft.potion.PotionEffect
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1434|1455|getActivePotionEffect|method|net.minecraft.entity.EntityLivingBase|getActivePotionEffect|(Lnet/minecraft/potion/Potion;)Lnet/minecraft/potion/PotionEffect;
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1456|1462|Potion|class|net.minecraft.potion.Potion
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1463|1469|poison|field|net.minecraft.potion.Potion|poison
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1544|1555|getDuration|method|net.minecraft.potion.PotionEffect|getDuration|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1580|1586|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1607|1621|getDisplayName|method|net.minecraft.command.ICommandSender|getDisplayName|()Lnet/minecraft/util/IChatComponent;
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1624|1640|getFormattedText|method|net.minecraft.util.IChatComponent|getFormattedText|()Ljava/lang/String;
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1695|1701|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1776|1790|venomedPlayers|field|org.brutality.module.impl.pit.VenomedNotifications|venomedPlayers
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1791|1794|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
    Method End: onTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V
    Method Start: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1866|1885|onRenderGameOverlay|method|org.brutality.module.impl.pit.VenomedNotifications|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1886|1913|RenderGameOverlayEvent.Post|class|net.minecraftforge.client.event.RenderGameOverlayEvent.Post
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1914|1919|event|param|org.brutality.module.impl.pit.VenomedNotifications|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V|event|0
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1935|1937|mc|field|org.brutality.utils.interfaces.MC|mc
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|1938|1947|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2001|2006|event|param|org.brutality.module.impl.pit.VenomedNotifications|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V|event|0
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2007|2011|type|field|net.minecraftforge.client.event.RenderGameOverlayEvent|type
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2015|2049|RenderGameOverlayEvent.ElementType|class|net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2050|2054|CHAT|field|net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType|CHAT
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2070|2079|Minecraft|class|net.minecraft.client.Minecraft
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2085|2094|Minecraft|class|net.minecraft.client.Minecraft
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2095|2107|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2123|2139|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2149|2165|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2183|2195|FontRenderer|class|net.minecraft.client.gui.FontRenderer
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2204|2219|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2238|2246|dragging|field|org.brutality.module.impl.pit.VenomedNotifications|dragging
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2266|2278|venomedListX|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListX
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2281|2286|Mouse|class|org.lwjgl.input.Mouse
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2287|2291|getX|method|org.lwjgl.input.Mouse|getX|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2299|2313|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2318|2323|dragX|field|org.brutality.module.impl.pit.VenomedNotifications|dragX
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2341|2353|venomedListY|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListY
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2360|2373|displayHeight|field|net.minecraft.client.Minecraft|displayHeight
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2376|2381|Mouse|class|org.lwjgl.input.Mouse
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2382|2386|getY|method|org.lwjgl.input.Mouse|getY|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2395|2409|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2414|2419|dragY|field|org.brutality.module.impl.pit.VenomedNotifications|dragY
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2452|2457|Mouse|class|org.lwjgl.input.Mouse
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2458|2470|isButtonDown|method|org.lwjgl.input.Mouse|isButtonDown|(I)Z
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2498|2506|dragging|field|org.brutality.module.impl.pit.VenomedNotifications|dragging
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2510|2525|isMouseOverList|method|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2526|2531|Mouse|class|org.lwjgl.input.Mouse
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2532|2536|getX|method|org.lwjgl.input.Mouse|getX|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2544|2558|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2566|2579|displayHeight|field|net.minecraft.client.Minecraft|displayHeight
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2582|2587|Mouse|class|org.lwjgl.input.Mouse
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2588|2592|getY|method|org.lwjgl.input.Mouse|getY|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2601|2615|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2646|2654|dragging|field|org.brutality.module.impl.pit.VenomedNotifications|dragging
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2683|2688|dragX|field|org.brutality.module.impl.pit.VenomedNotifications|dragX
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2691|2696|Mouse|class|org.lwjgl.input.Mouse
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2697|2701|getX|method|org.lwjgl.input.Mouse|getX|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2709|2723|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2728|2740|venomedListX|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListX
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2762|2767|dragY|field|org.brutality.module.impl.pit.VenomedNotifications|dragY
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2774|2787|displayHeight|field|net.minecraft.client.Minecraft|displayHeight
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2790|2795|Mouse|class|org.lwjgl.input.Mouse
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2796|2800|getY|method|org.lwjgl.input.Mouse|getY|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2809|2823|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2828|2840|venomedListY|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListY
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2897|2905|dragging|field|org.brutality.module.impl.pit.VenomedNotifications|dragging
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2954|2966|venomedListY|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListY
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|2993|3005|venomedListX|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListX
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3061|3081|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3144|3153|Map.Entry|class|java.util.Map.Entry
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3154|3160|String|class|java.lang.String
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3162|3169|Integer|class|java.lang.Integer
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3179|3193|venomedPlayers|field|org.brutality.module.impl.pit.VenomedNotifications|venomedPlayers
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3194|3202|entrySet|method|java.util.Map|entrySet|()Ljava/util/Set;
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3224|3230|String|class|java.lang.String
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3250|3256|getKey|method|java.util.Map.Entry|getKey|()Ljava/lang/Object;
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3297|3305|getValue|method|java.util.Map.Entry|getValue|()Ljava/lang/Object;
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3325|3331|String|class|java.lang.String
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3416|3436|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3470|3481|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3513|3533|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3564|3578|getStringWidth|method|net.minecraft.client.gui.FontRenderer|getStringWidth|(Ljava/lang/String;)I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3607|3618|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3650|3670|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3697|3711|getStringWidth|method|net.minecraft.client.gui.FontRenderer|getStringWidth|(Ljava/lang/String;)I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3741|3752|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3798|3809|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1870|1889|onRenderGameOverlay|method|org.brutality.module.impl.pit.VenomedNotifications|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1890|1917|RenderGameOverlayEvent.Post|class|net.minecraftforge.client.event.RenderGameOverlayEvent.Post
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1918|1923|event|param|org.brutality.module.impl.pit.VenomedNotifications|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V|event|0
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1939|1941|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|1942|1951|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2005|2010|event|param|org.brutality.module.impl.pit.VenomedNotifications|onRenderGameOverlay|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V|event|0
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2011|2015|type|field|net.minecraftforge.client.event.RenderGameOverlayEvent|type
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2019|2053|RenderGameOverlayEvent.ElementType|class|net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2054|2058|CHAT|field|net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType|CHAT
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2074|2083|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2089|2098|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2099|2111|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2127|2143|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2153|2169|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2187|2199|FontRenderer|class|net.minecraft.client.gui.FontRenderer
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2208|2223|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2242|2250|dragging|field|org.brutality.module.impl.pit.VenomedNotifications|dragging
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2270|2282|venomedListX|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListX
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2285|2290|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2291|2295|getX|method|org.lwjgl.input.Mouse|getX|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2303|2317|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2322|2327|dragX|field|org.brutality.module.impl.pit.VenomedNotifications|dragX
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2345|2357|venomedListY|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListY
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2364|2377|displayHeight|field|net.minecraft.client.Minecraft|displayHeight
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2380|2385|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2386|2390|getY|method|org.lwjgl.input.Mouse|getY|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2399|2413|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2418|2423|dragY|field|org.brutality.module.impl.pit.VenomedNotifications|dragY
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2456|2461|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2462|2474|isButtonDown|method|org.lwjgl.input.Mouse|isButtonDown|(I)Z
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2502|2510|dragging|field|org.brutality.module.impl.pit.VenomedNotifications|dragging
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2514|2529|isMouseOverList|method|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2530|2535|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2536|2540|getX|method|org.lwjgl.input.Mouse|getX|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2548|2562|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2570|2583|displayHeight|field|net.minecraft.client.Minecraft|displayHeight
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2586|2591|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2592|2596|getY|method|org.lwjgl.input.Mouse|getY|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2605|2619|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2650|2658|dragging|field|org.brutality.module.impl.pit.VenomedNotifications|dragging
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2687|2692|dragX|field|org.brutality.module.impl.pit.VenomedNotifications|dragX
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2695|2700|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2701|2705|getX|method|org.lwjgl.input.Mouse|getX|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2713|2727|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2732|2744|venomedListX|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListX
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2766|2771|dragY|field|org.brutality.module.impl.pit.VenomedNotifications|dragY
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2778|2791|displayHeight|field|net.minecraft.client.Minecraft|displayHeight
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2794|2799|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2800|2804|getY|method|org.lwjgl.input.Mouse|getY|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2813|2827|getScaleFactor|method|net.minecraft.client.gui.ScaledResolution|getScaleFactor|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2832|2844|venomedListY|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListY
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2901|2909|dragging|field|org.brutality.module.impl.pit.VenomedNotifications|dragging
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2958|2970|venomedListY|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListY
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|2997|3009|venomedListX|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListX
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3065|3085|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3148|3154|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3168|3182|venomedPlayers|field|org.brutality.module.impl.pit.VenomedNotifications|venomedPlayers
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3202|3208|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3230|3235|split|method|java.lang.String|split|(Ljava/lang/String;)[Ljava/lang/String;
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3273|3279|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3319|3325|String|class|java.lang.String
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3390|3410|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3444|3455|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3487|3507|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3530|3544|getStringWidth|method|net.minecraft.client.gui.FontRenderer|getStringWidth|(Ljava/lang/String;)I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3573|3584|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3630|3641|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
    Method End: onRenderGameOverlay(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Post;)V
    Method Start: isMouseOverList(IILnet/minecraft/client/gui/FontRenderer;)Z
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3862|3877|isMouseOverList|method|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3882|3888|mouseX|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|mouseX|0
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3894|3900|mouseY|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|mouseY|1
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3902|3914|FontRenderer|class|net.minecraft.client.gui.FontRenderer
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3915|3917|fr|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|fr|2
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3946|3948|fr|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|fr|2
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3949|3960|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3964|3978|venomedPlayers|field|org.brutality.module.impl.pit.VenomedNotifications|venomedPlayers
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|3979|3983|size|method|java.util.Map|size|()I
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|4059|4065|mouseX|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|mouseX|0
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|4069|4081|venomedListX|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListX
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|4085|4091|mouseX|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|mouseX|0
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|4095|4107|venomedListX|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListX
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|4139|4145|mouseY|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|mouseY|1
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|4149|4161|venomedListY|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListY
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|4165|4171|mouseY|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|mouseY|1
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|4175|4187|venomedListY|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListY
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3694|3709|isMouseOverList|method|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3714|3720|mouseX|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|mouseX|0
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3726|3732|mouseY|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|mouseY|1
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3734|3746|FontRenderer|class|net.minecraft.client.gui.FontRenderer
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3747|3749|fr|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|fr|2
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3778|3780|fr|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|fr|2
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3781|3792|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3796|3810|venomedPlayers|field|org.brutality.module.impl.pit.VenomedNotifications|venomedPlayers
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3811|3815|size|method|java.util.Collection|size|()I
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3891|3897|mouseX|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|mouseX|0
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3901|3913|venomedListX|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListX
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3917|3923|mouseX|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|mouseX|0
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3927|3939|venomedListX|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListX
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3971|3977|mouseY|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|mouseY|1
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3981|3993|venomedListY|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListY
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|3997|4003|mouseY|param|org.brutality.module.impl.pit.VenomedNotifications|isMouseOverList|(IILnet/minecraft/client/gui/FontRenderer;)Z|mouseY|1
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|4007|4019|venomedListY|field|org.brutality.module.impl.pit.VenomedNotifications|venomedListY
    Method End: isMouseOverList(IILnet/minecraft/client/gui/FontRenderer;)Z
    Method Start: onDisable()V
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|4239|4248|onDisable|method|org.brutality.module.Module|onDisable|()V
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|4267|4276|onDisable|method|org.brutality.module.Module|onDisable|()V
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|4071|4080|onDisable|method|org.brutality.module.Module|onDisable|()V
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|4099|4108|onDisable|method|org.brutality.module.Module|onDisable|()V
    Method End: onDisable()V
    Method Start: onEnable()V
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|4317|4325|onEnable|method|org.brutality.module.Module|onEnable|()V
-      @|org\brutality\module\impl\pit\VenomedNotifications.java|4344|4352|onEnable|method|org.brutality.module.Module|onEnable|()V
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|4149|4157|onEnable|method|org.brutality.module.Module|onEnable|()V
+      @|org\brutality\module\impl\pit\VenomedNotifications.java|4176|4184|onEnable|method|org.brutality.module.Module|onEnable|()V
    Method End: onEnable()V
 Class End  : org.brutality.module.impl.pit.VenomedNotifications
 endProcessing org\brutality\module\impl\pit\VenomedNotifications.java
@@ -7537,6 +7680,69 @@ Class Start: org.brutality.utils.BlockUtils
 Class End  : org.brutality.utils.BlockUtils
 endProcessing org\brutality\utils\BlockUtils.java
 
+processing org\brutality\utils\CheckEventsRunnable.java
+@|org\brutality\utils\CheckEventsRunnable.java|8|27|org.brutality.utils|package|org.brutality.utils|(file)
+Class Start: org.brutality.utils.CheckEventsRunnable
+   @|org\brutality\utils\CheckEventsRunnable.java|541|547|String|class|java.lang.String
+   @|org\brutality\utils\CheckEventsRunnable.java|548|558|EVENTS_URL|field|org.brutality.utils.CheckEventsRunnable|EVENTS_URL|
+   @|org\brutality\utils\CheckEventsRunnable.java|616|622|String|class|java.lang.String
+   @|org\brutality\utils\CheckEventsRunnable.java|611|615|List|class|java.util.List
+   @|org\brutality\utils\CheckEventsRunnable.java|624|633|eventList|field|org.brutality.utils.CheckEventsRunnable|eventList|
+   @|org\brutality\utils\CheckEventsRunnable.java|640|649|ArrayList|class|java.util.ArrayList
+   Method Start: run()V
+      @|org\brutality\utils\CheckEventsRunnable.java|686|689|run|method|java.lang.Runnable|run|()V
+      @|org\brutality\utils\CheckEventsRunnable.java|751|754|URL|class|java.net.URL
+      @|org\brutality\utils\CheckEventsRunnable.java|765|768|URL|class|java.net.URL
+      @|org\brutality\utils\CheckEventsRunnable.java|769|779|EVENTS_URL|field|org.brutality.utils.CheckEventsRunnable|EVENTS_URL
+      @|org\brutality\utils\CheckEventsRunnable.java|798|815|HttpURLConnection|class|java.net.HttpURLConnection
+      @|org\brutality\utils\CheckEventsRunnable.java|830|847|HttpURLConnection|class|java.net.HttpURLConnection
+      @|org\brutality\utils\CheckEventsRunnable.java|853|867|openConnection|method|java.net.URL|openConnection|()Ljava/net/URLConnection;
+      @|org\brutality\utils\CheckEventsRunnable.java|898|914|setRequestMethod|method|java.net.HttpURLConnection|setRequestMethod|(Ljava/lang/String;)V
+      @|org\brutality\utils\CheckEventsRunnable.java|940|957|InputStreamReader|class|java.io.InputStreamReader
+      @|org\brutality\utils\CheckEventsRunnable.java|971|988|InputStreamReader|class|java.io.InputStreamReader
+      @|org\brutality\utils\CheckEventsRunnable.java|1000|1014|getInputStream|method|java.net.URLConnection|getInputStream|()Ljava/io/InputStream;
+      @|org\brutality\utils\CheckEventsRunnable.java|1035|1045|JsonParser|class|com.google.gson.JsonParser
+      @|org\brutality\utils\CheckEventsRunnable.java|1059|1069|JsonParser|class|com.google.gson.JsonParser
+      @|org\brutality\utils\CheckEventsRunnable.java|1089|1098|JsonArray|class|com.google.gson.JsonArray
+      @|org\brutality\utils\CheckEventsRunnable.java|1118|1123|parse|method|com.google.gson.JsonParser|parse|(Ljava/io/Reader;)Lcom/google/gson/JsonElement;
+      @|org\brutality\utils\CheckEventsRunnable.java|1132|1146|getAsJsonArray|method|com.google.gson.JsonElement|getAsJsonArray|()Lcom/google/gson/JsonArray;
+      @|org\brutality\utils\CheckEventsRunnable.java|1167|1171|List|class|java.util.List
+      @|org\brutality\utils\CheckEventsRunnable.java|1172|1178|String|class|java.lang.String
+      @|org\brutality\utils\CheckEventsRunnable.java|1199|1208|ArrayList|class|java.util.ArrayList
+      @|org\brutality\utils\CheckEventsRunnable.java|1235|1246|JsonElement|class|com.google.gson.JsonElement
+      @|org\brutality\utils\CheckEventsRunnable.java|1290|1300|JsonObject|class|com.google.gson.JsonObject
+      @|org\brutality\utils\CheckEventsRunnable.java|1322|1337|getAsJsonObject|method|com.google.gson.JsonElement|getAsJsonObject|()Lcom/google/gson/JsonObject;
+      @|org\brutality\utils\CheckEventsRunnable.java|1361|1367|String|class|java.lang.String
+      @|org\brutality\utils\CheckEventsRunnable.java|1386|1389|get|method|com.google.gson.JsonObject|get|(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+      @|org\brutality\utils\CheckEventsRunnable.java|1398|1409|getAsString|method|com.google.gson.JsonElement|getAsString|()Ljava/lang/String;
+      @|org\brutality\utils\CheckEventsRunnable.java|1461|1464|get|method|com.google.gson.JsonObject|get|(Ljava/lang/String;)Lcom/google/gson/JsonElement;
+      @|org\brutality\utils\CheckEventsRunnable.java|1478|1487|getAsLong|method|com.google.gson.JsonElement|getAsLong|()J
+      @|org\brutality\utils\CheckEventsRunnable.java|1524|1527|add|method|java.util.Collection|add|(Ljava/lang/Object;)Z
+      @|org\brutality\utils\CheckEventsRunnable.java|1556|1562|System|class|java.lang.System
+      @|org\brutality\utils\CheckEventsRunnable.java|1563|1580|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+      @|org\brutality\utils\CheckEventsRunnable.java|1647|1651|sort|method|java.util.List|sort|(Ljava/util/Comparator;)V
+      @|org\brutality\utils\CheckEventsRunnable.java|1652|1662|Comparator|class|java.util.Comparator
+      @|org\brutality\utils\CheckEventsRunnable.java|1663|1676|comparingLong|method|java.util.Comparator|comparingLong|(Ljava/util/function/ToLongFunction;)Ljava/util/Comparator;
+      @|org\brutality\utils\CheckEventsRunnable.java|1752|1761|eventList|field|org.brutality.utils.CheckEventsRunnable|eventList
+      @|org\brutality\utils\CheckEventsRunnable.java|1777|1781|size|method|java.util.Collection|size|()I
+      @|org\brutality\utils\CheckEventsRunnable.java|1804|1811|subList|method|java.util.List|subList|(II)Ljava/util/List;
+      @|org\brutality\utils\CheckEventsRunnable.java|1857|1863|Module|class|org.brutality.module.Module
+      @|org\brutality\utils\CheckEventsRunnable.java|1877|1892|BrutalityClient|class|org.brutality.BrutalityClient
+      @|org\brutality\utils\CheckEventsRunnable.java|1893|1904|getInstance|method|org.brutality.BrutalityClient|getInstance|()Lorg/brutality/BrutalityClient;
+      @|org\brutality\utils\CheckEventsRunnable.java|1907|1923|getModuleManager|method|org.brutality.BrutalityClient|getModuleManager|()Lorg/brutality/module/ModuleManager;
+      @|org\brutality\utils\CheckEventsRunnable.java|1926|1936|getModules|method|org.brutality.module.ModuleManager|getModules|()Ljava/util/ArrayList;
+      @|org\brutality\utils\CheckEventsRunnable.java|1988|1994|Events|class|org.brutality.module.impl.pit.Events
+      @|org\brutality\utils\CheckEventsRunnable.java|2024|2030|Events|class|org.brutality.module.impl.pit.Events
+      @|org\brutality\utils\CheckEventsRunnable.java|2044|2056|setEventList|method|org.brutality.module.impl.pit.Events|setEventList|(Ljava/util/List;)V
+      @|org\brutality\utils\CheckEventsRunnable.java|2057|2066|eventList|field|org.brutality.utils.CheckEventsRunnable|eventList
+      @|org\brutality\utils\CheckEventsRunnable.java|2126|2132|Thread|class|java.lang.Thread
+      @|org\brutality\utils\CheckEventsRunnable.java|2133|2138|sleep|method|java.lang.Thread|sleep|(J)V
+      @|org\brutality\utils\CheckEventsRunnable.java|2207|2216|Exception|class|java.lang.Exception
+      @|org\brutality\utils\CheckEventsRunnable.java|2236|2251|printStackTrace|method|java.lang.Throwable|printStackTrace|()V
+   Method End: run()V
+Class End  : org.brutality.utils.CheckEventsRunnable
+endProcessing org\brutality\utils\CheckEventsRunnable.java
+
 processing org\brutality\utils\Colors.java
 @|org\brutality\utils\Colors.java|8|27|org.brutality.utils|package|org.brutality.utils|(file)
 Class Start: org.brutality.utils.Colors
@@ -8405,6 +8611,35 @@ Class Start: org.brutality.utils.Timer
    Method End: reset()V
 Class End  : org.brutality.utils.Timer
 endProcessing org\brutality\utils\Timer.java
+
+processing org\brutality\utils\TimerUtils.java
+@|org\brutality\utils\TimerUtils.java|8|27|org.brutality.utils|package|org.brutality.utils|(file)
+Class Start: org.brutality.utils.TimerUtils
+   @|org\brutality\utils\TimerUtils.java|73|79|lastMS|field|org.brutality.utils.TimerUtils|lastMS|
+   Method Start: TimerUtils()V
+      @|org\brutality\utils\TimerUtils.java|93|103|TimerUtils|method|org.brutality.utils.TimerUtils|TimerUtils|()V
+      @|org\brutality\utils\TimerUtils.java|116|121|reset|method|org.brutality.utils.TimerUtils|reset|()V
+   Method End: TimerUtils()V
+   Method Start: hasReached(J)Z
+      @|org\brutality\utils\TimerUtils.java|151|161|hasReached|method|org.brutality.utils.TimerUtils|hasReached|(J)Z
+      @|org\brutality\utils\TimerUtils.java|167|179|milliseconds|param|org.brutality.utils.TimerUtils|hasReached|(J)Z|milliseconds|0
+      @|org\brutality\utils\TimerUtils.java|198|211|getTimePassed|method|org.brutality.utils.TimerUtils|getTimePassed|()J
+      @|org\brutality\utils\TimerUtils.java|217|229|milliseconds|param|org.brutality.utils.TimerUtils|hasReached|(J)Z|milliseconds|0
+   Method End: hasReached(J)Z
+   Method Start: reset()V
+      @|org\brutality\utils\TimerUtils.java|254|259|reset|method|org.brutality.utils.TimerUtils|reset|()V
+      @|org\brutality\utils\TimerUtils.java|272|278|lastMS|field|org.brutality.utils.TimerUtils|lastMS
+      @|org\brutality\utils\TimerUtils.java|281|287|System|class|java.lang.System
+      @|org\brutality\utils\TimerUtils.java|288|305|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+   Method End: reset()V
+   Method Start: getTimePassed()J
+      @|org\brutality\utils\TimerUtils.java|332|345|getTimePassed|method|org.brutality.utils.TimerUtils|getTimePassed|()J
+      @|org\brutality\utils\TimerUtils.java|365|371|System|class|java.lang.System
+      @|org\brutality\utils\TimerUtils.java|372|389|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+      @|org\brutality\utils\TimerUtils.java|394|400|lastMS|field|org.brutality.utils.TimerUtils|lastMS
+   Method End: getTimePassed()J
+Class End  : org.brutality.utils.TimerUtils
+endProcessing org\brutality\utils\TimerUtils.java
 
 processing org\brutality\utils\Utils.java
 @|org\brutality\utils\Utils.java|8|27|org.brutality.utils|package|org.brutality.utils|(file)

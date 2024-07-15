@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 118 files
+Processing 122 files
 processing org\brutality\BrutalityClient.java
 processing org\brutality\command\Command.java
 processing org\brutality\command\CommandManager.java
@@ -55,8 +55,10 @@ processing org\brutality\module\impl\pit\AutoAura.java
 processing org\brutality\module\impl\pit\AutoEgg.java
 processing org\brutality\module\impl\pit\AutoSpawn.java
 processing org\brutality\module\impl\pit\AutoSteak.java
+processing org\brutality\module\impl\pit\BountyList.java
 processing org\brutality\module\impl\pit\CakeAura.java
 processing org\brutality\module\impl\pit\DarkList.java
+processing org\brutality\module\impl\pit\Events.java
 processing org\brutality\module\impl\pit\PitSwap.java
 processing org\brutality\module\impl\pit\SewerESP.java
 processing org\brutality\module\impl\pit\SlotSwap.java
@@ -99,6 +101,7 @@ processing org\brutality\ui\font\CustomFontRenderer.java
 processing org\brutality\ui\font\FontCharacter.java
 processing org\brutality\ui\font\FontManager.java
 processing org\brutality\utils\BlockUtils.java
+processing org\brutality\utils\CheckEventsRunnable.java
 processing org\brutality\utils\Colors.java
 processing org\brutality\utils\InventoryUtils.java
 processing org\brutality\utils\PacketUtils.java
@@ -109,6 +112,7 @@ processing org\brutality\utils\RenderingTelebow.java
 processing org\brutality\utils\RotationUtils.java
 processing org\brutality\utils\TimeHelper.java
 processing org\brutality\utils\Timer.java
+processing org\brutality\utils\TimerUtils.java
 processing org\brutality\utils\Utils.java
 processing org\brutality\utils\Wrapper.java
 processing org\brutality\utils\exceptions\NotImplementedException.java
