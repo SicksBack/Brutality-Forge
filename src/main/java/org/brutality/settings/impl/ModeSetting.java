@@ -12,7 +12,7 @@ import java.util.HashMap;
 public class ModeSetting extends Setting {
     private final Mode<?>[] options;
     private Mode<?> selected;
-    public HashMap<Mode<?>, ArrayList<Setting>> settings = new HashMap<>(); // Bitte lass meine Eltern am leben
+    public HashMap<Mode<?>, ArrayList<Setting>> settings = new HashMap<>();
 
     public ModeSetting(String name, Module parent, Mode<?> defaultValue, Mode<?>[] options) {
         super(name, parent);
@@ -89,5 +89,24 @@ public class ModeSetting extends Setting {
             this.selected = selected;
             mm.updateSettings(this);
         }
+    }
+
+    // New methods added
+    public boolean is(String mode) {
+        return selected.getName().equalsIgnoreCase(mode);
+    }
+
+    public String getMode() {
+        return selected.getName();
+    }
+
+    public int getIndex() {
+        return Arrays.asList(options).indexOf(selected);
+    }
+
+    public void cycle() {
+        int index = Arrays.asList(options).indexOf(selected);
+        index = (index + 1) % options.length;
+        setSelected(options[index]);
     }
 }

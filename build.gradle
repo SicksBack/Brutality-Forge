@@ -43,6 +43,11 @@ dependencies {
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.32'
 
+    dependencies {
+        implementation 'org.jsoup:jsoup:1.14.3'
+    }
+
+
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"

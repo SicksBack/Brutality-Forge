@@ -1,48 +1,8 @@
-[15:20:10] [Client thread/INFO]: Setting user: Player861
-[15:20:16] [Client thread/INFO]: LWJGL Version: 2.9.4
-[15:20:25] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
-[15:20:26] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[15:20:26] [Thread-9/INFO]: Initializing LWJGL OpenAL
-[15:20:26] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[15:20:27] [Thread-9/INFO]: OpenAL initialized.
-[15:20:27] [Sound Library Loader/INFO]: Sound engine started
-[15:20:35] [Client thread/INFO]: Created: 16x16 textures-atlas
-[15:20:41] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
-[15:20:41] [Client thread/INFO]: SoundSystem shutting down...
-[15:20:41] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[15:20:41] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[15:20:42] [Thread-13/INFO]: Initializing LWJGL OpenAL
-[15:20:42] [Thread-13/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[15:20:42] [Thread-13/INFO]: OpenAL initialized.
-[15:20:42] [Sound Library Loader/INFO]: Sound engine started
-[15:20:48] [Client thread/INFO]: Created: 512x512 textures-atlas
-[15:22:00] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
-[15:22:00] [Server thread/INFO]: Generating keypair
-[15:22:01] [Server thread/INFO]: Preparing start region for level 0
-[15:22:02] [Server thread/INFO]: Preparing spawn area: 2%
-[15:22:03] [Server thread/INFO]: Preparing spawn area: 23%
-[15:22:04] [Server thread/INFO]: Changing view distance to 8, from 10
-[15:22:08] [Server thread/INFO]: Player861[local:E:7179ddb6] logged in with entity id 293 at (-346.4487497264596, 4.0, -2019.5292700002315)
-[15:22:08] [Server thread/INFO]: Player861 joined the game
-[15:22:11] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 3060ms behind, skipping 61 tick(s)
-[15:22:16] [Server thread/INFO]: Saving and pausing game...
-[15:22:16] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[15:22:16] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[15:22:16] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[15:22:19] [Server thread/INFO]: Player861 has just earned the achievement [Taking Inventory]
-[15:22:19] [Client thread/INFO]: [CHAT] Player861 has just earned the achievement [Taking Inventory]
-[15:22:24] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
-[15:22:24] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
-[15:22:24] [Server thread/INFO]: Saving and pausing game...
-[15:22:24] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[15:22:24] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[15:22:24] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[15:22:31] [Client thread/INFO]: Stopping!
-[15:22:31] [Client thread/INFO]: SoundSystem shutting down...
-[15:22:31] [Server thread/INFO]: Stopping server
-[15:22:31] [Server thread/INFO]: Saving players
-[15:22:31] [Server thread/INFO]: Saving worlds
-[15:22:31] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[15:22:31] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[15:22:31] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[15:22:31] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[08:57:29] [Client thread/INFO]: Setting user: Player206
+[08:57:34] [Client thread/INFO]: LWJGL Version: 2.9.4
+[08:57:37] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
+[08:57:38] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[08:57:38] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[08:57:38] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[08:57:38] [Thread-9/INFO]: OpenAL initialized.
+[08:57:38] [Sound Library Loader/INFO]: Sound engine started

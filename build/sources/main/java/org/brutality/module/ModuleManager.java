@@ -56,6 +56,12 @@ public class ModuleManager extends ArrayList<Module> {
         new AutoClicker();
         new Health();
         new ChestESP();
+        new SewerESP();
+        new MeteorDetector();
+        new Sprint();
+        new VenomedNotifications();
+        new DarkList();
+        new NoHurtCam();
     }
 
     public void updateSettings(Setting setting) {

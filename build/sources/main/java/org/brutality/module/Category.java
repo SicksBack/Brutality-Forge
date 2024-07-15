@@ -7,6 +7,8 @@ public enum Category {
     MOVEMENT,
     PLAYER,
     WORLD,
-    HARRYS,
-    PIT;
+    HYPIXEL,
+    PIT,
+    WEASEL,
+    HARRYS;
 }

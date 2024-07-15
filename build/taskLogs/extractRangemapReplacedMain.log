@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 104 files
+Processing 118 files
 processing org\brutality\BrutalityClient.java
 processing org\brutality\command\Command.java
 processing org\brutality\command\CommandManager.java
@@ -10,8 +10,9 @@ processing org\brutality\commands\Command.java
 processing org\brutality\commands\CommandManager.java
 processing org\brutality\commands\impl\BindCommand.java
 processing org\brutality\events\Event.java
+processing org\brutality\events\EventBase.java
 processing org\brutality\events\EventListener.java
-processing org\brutality\events\EventRenderGUI.java
+processing org\brutality\events\EventManager.java
 processing org\brutality\events\EventTarget.java
 processing org\brutality\events\JumpEvent.java
 processing org\brutality\events\PartialRenderTickEvent.java
@@ -30,6 +31,8 @@ processing org\brutality\events\listeners\EventKey.java
 processing org\brutality\events\listeners\EventMotion.java
 processing org\brutality\events\listeners\EventPacketReceive.java
 processing org\brutality\events\listeners\EventPacketSend.java
+processing org\brutality\events\listeners\EventRender3D.java
+processing org\brutality\events\listeners\EventRenderGUI.java
 processing org\brutality\events\listeners\EventRenderWorld.java
 processing org\brutality\events\listeners\EventUpdate.java
 processing org\brutality\events\network\EventSendPacket.java
@@ -40,20 +43,26 @@ processing org\brutality\module\impl\World\AntiBot.java
 processing org\brutality\module\impl\combat\AutoClicker.java
 processing org\brutality\module\impl\combat\KillAura.java
 processing org\brutality\module\impl\combat\Velocity.java
+processing org\brutality\module\impl\harrys\MeteorDetector.java
+processing org\brutality\module\impl\hypixel\Tracker.java
 processing org\brutality\module\impl\move\Fly.java
 processing org\brutality\module\impl\move\KeepSprint.java
 processing org\brutality\module\impl\move\LongJump.java
 processing org\brutality\module\impl\move\NoSlow.java
 processing org\brutality\module\impl\move\Speed.java
+processing org\brutality\module\impl\move\Sprint.java
 processing org\brutality\module\impl\pit\AutoAura.java
 processing org\brutality\module\impl\pit\AutoEgg.java
 processing org\brutality\module\impl\pit\AutoSpawn.java
 processing org\brutality\module\impl\pit\AutoSteak.java
 processing org\brutality\module\impl\pit\CakeAura.java
+processing org\brutality\module\impl\pit\DarkList.java
 processing org\brutality\module\impl\pit\PitSwap.java
+processing org\brutality\module\impl\pit\SewerESP.java
 processing org\brutality\module\impl\pit\SlotSwap.java
 processing org\brutality\module\impl\pit\SogeSwap.java
 processing org\brutality\module\impl\pit\TelebowTimer.java
+processing org\brutality\module\impl\pit\VenomedNotifications.java
 processing org\brutality\module\impl\pit\VenomedTimer.java
 processing org\brutality\module\impl\pit\WhoGotDogged.java
 processing org\brutality\module\impl\player\Blink.java
@@ -62,11 +71,14 @@ processing org\brutality\module\impl\player\FastPlace.java
 processing org\brutality\module\impl\player\Freecam.java
 processing org\brutality\module\impl\player\Friends.java
 processing org\brutality\module\impl\player\KOS.java
+processing org\brutality\module\impl\player\NoHurtCam.java
 processing org\brutality\module\impl\player\Scaffold.java
 processing org\brutality\module\impl\render\ArrayListModule.java
 processing org\brutality\module\impl\render\Chams.java
+processing org\brutality\module\impl\render\ChestESP.java
 processing org\brutality\module\impl\render\ClickGuiModule.java
 processing org\brutality\module\impl\render\HUDModule.java
+processing org\brutality\module\impl\render\Health.java
 processing org\brutality\module\impl\render\NameTag.java
 processing org\brutality\notifications\NotificationManager.java
 processing org\brutality\settings\Setting.java
@@ -90,8 +102,10 @@ processing org\brutality\utils\BlockUtils.java
 processing org\brutality\utils\Colors.java
 processing org\brutality\utils\InventoryUtils.java
 processing org\brutality\utils\PacketUtils.java
+processing org\brutality\utils\PlayerUtils.java
 processing org\brutality\utils\Reflection.java
 processing org\brutality\utils\RenderUtils.java
+processing org\brutality\utils\RenderingTelebow.java
 processing org\brutality\utils\RotationUtils.java
 processing org\brutality\utils\TimeHelper.java
 processing org\brutality\utils\Timer.java

@@ -1,72 +1,91 @@
 package org.brutality.module.impl.pit;
 
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
-import org.brutality.events.Event;
-import org.brutality.events.listeners.EventUpdate;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.inventory.GuiContainer;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.brutality.module.Category;
 import org.brutality.module.Module;
+import org.brutality.settings.impl.BooleanSetting;
 import org.brutality.settings.impl.NumberSetting;
-import org.brutality.utils.Timer;
+import org.lwjgl.input.Mouse;
 
 public class SogeSwap extends Module {
 
     private final NumberSetting delaySetting;
-    private final NumberSetting healthSetting;
-    private Timer timer = new Timer();
-    private Timer resettimer = new Timer();
-    private int currentSlot = 0;
-    private boolean useFirstAidEgg = false;
-    private int eggSlot;
+    private final BooleanSetting holdLeftClick;
+    private long lastSlotSet;
+    private long lastSwap;
+    private int swordSlot;
+    private int tierIIISwordSlot;
+    private boolean toggle = true;
 
     public SogeSwap() {
-        super("SogeSwap", "Automatically uses first-aid egg based on health", Category.PIT);
-        this.delaySetting = new NumberSetting("Delay", this, 50, 1, 100, 0);
-        this.healthSetting = new NumberSetting("Health", this, 10, 1, 10, 0);
-        addSettings(delaySetting, healthSetting);
+        super("SogeSwap", "Automatically swaps between sword and Tier III sword", Category.PIT);
+        this.delaySetting = new NumberSetting("Delay", this, 50, 1, 100, 1);
+        this.holdLeftClick = new BooleanSetting("Hold Left Click", this, true);
+        addSettings(delaySetting, holdLeftClick);
     }
 
-
-    public void onDisable() {
-        this.useFirstAidEgg = false;
+    @Override
+    public void onEnable() {
+        super.onEnable();
+        this.lastSlotSet = 0;
+        this.lastSwap = 0;
     }
 
+    @SubscribeEvent
+    public void setSlots(TickEvent.ClientTickEvent e) {
+        if (Minecraft.getMinecraft().thePlayer == null || Minecraft.getMinecraft().theWorld == null || System.currentTimeMillis() - this.lastSlotSet < 1000L || !this.toggle) {
+            return;
+        }
+        for (int i = 0; i <= 9; ++i) {
+            if (Minecraft.getMinecraft().thePlayer.inventory.getStackInSlot(i) == null) continue;
+            if (Minecraft.getMinecraft().thePlayer.inventory.getStackInSlot(i).getDisplayName().contains("Diamond Sword")) {
+                this.swordSlot = i;
+            }
+            if (Minecraft.getMinecraft().thePlayer.inventory.getStackInSlot(i).getDisplayName().contains("Tier III Sword")) {
+                this.tierIIISwordSlot = i;
+            }
+        }
+        this.lastSlotSet = System.currentTimeMillis();
+    }
 
-    public void onEvent(Event e) {
-        if (e instanceof EventUpdate) {
-            if (this.mc.currentScreen != null) {
+    @SubscribeEvent
+    public void swap(TickEvent.RenderTickEvent e) {
+        if (Minecraft.getMinecraft().thePlayer == null || Minecraft.getMinecraft().theWorld == null || System.currentTimeMillis() - this.lastSwap < this.delaySetting.getValue() || !this.toggle) {
+            return;
+        }
+
+        if (holdLeftClick.isEnabled()) {
+            if (!Mouse.isButtonDown(0) || Minecraft.getMinecraft().currentScreen instanceof GuiContainer || Minecraft.getMinecraft().thePlayer.getHeldItem() == null) {
                 return;
             }
-            if ((this.mc.thePlayer.getHealth() / 2.0f) <= this.healthSetting.getValue()) {
-                if (!this.useFirstAidEgg && this.timer.hasTimeElapsed((long) this.delaySetting.getValue(), true)) {
-                    this.eggSlot = this.findEggSlot();
-                    if (this.eggSlot != -1) {
-                        this.currentSlot = this.mc.thePlayer.inventory.currentItem;
-                        this.mc.thePlayer.inventory.currentItem = this.eggSlot;
-                        this.useFirstAidEgg = true;
-                    }
-                } else if (this.useFirstAidEgg && this.mc.thePlayer.inventory.currentItem == this.eggSlot) {
-                    ItemStack itemStack = this.mc.thePlayer.inventory.getStackInSlot(this.eggSlot);
-                    if (itemStack != null && itemStack.stackSize > 0) {
-                        this.mc.playerController.sendUseItem(this.mc.thePlayer, this.mc.theWorld, itemStack);
-                        this.mc.thePlayer.inventory.currentItem = this.currentSlot;
-                        this.useFirstAidEgg = false;
-                    }
-                }
-            }
-            if (this.resettimer.hasTimeElapsed(5000L, true)) {
-                this.useFirstAidEgg = false;
-            }
         }
+
+        if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null &&
+                (Minecraft.getMinecraft().thePlayer.getHeldItem().getDisplayName().contains("Tier III Sword") ||
+                        Minecraft.getMinecraft().thePlayer.getHeldItem().getDisplayName().contains("Diamond Sword"))) {
+            handleAutoSwap();
+        }
+        this.lastSwap = System.currentTimeMillis();
     }
 
-    private int findEggSlot() {
-        for (int i = 0; i < 9; i++) {
-            ItemStack itemStack = this.mc.thePlayer.inventory.mainInventory[i];
-            if (itemStack != null && itemStack.getItem() == Items.egg) { // Assuming "First-Aid Egg" uses the same item ID as an egg
-                return i;
-            }
+    private void handleAutoSwap() {
+        int presentItems = 0;
+        if (this.swordSlot != -1) {
+            ++presentItems;
         }
-        return -1;
+        if (this.tierIIISwordSlot != -1) {
+            ++presentItems;
+        }
+        if (presentItems >= 2) {
+            if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Minecraft.getMinecraft().thePlayer.getHeldItem().getDisplayName().contains("Diamond Sword")) {
+                Minecraft.getMinecraft().thePlayer.inventory.currentItem = this.tierIIISwordSlot;
+            } else if (Minecraft.getMinecraft().thePlayer.getHeldItem() != null && Minecraft.getMinecraft().thePlayer.getHeldItem().getDisplayName().contains("Tier III Sword")) {
+                Minecraft.getMinecraft().thePlayer.inventory.currentItem = this.swordSlot;
+            }
+            this.lastSwap = System.currentTimeMillis();
+        }
     }
 }

@@ -1,20 +1,21 @@
 package org.brutality.settings.impl;
 
-import lombok.Getter;
 import org.brutality.module.Module;
 import org.brutality.settings.Setting;
 
-@Getter
 public class BooleanSetting extends Setting {
     private boolean enabled;
 
-    public BooleanSetting(String name, Module parent, boolean defaultValue) {
+    public BooleanSetting(String name, Module parent, boolean enabled) {
         super(name, parent);
-        this.enabled = defaultValue;
+        this.enabled = enabled;
+    }
+
+    public boolean isEnabled() {
+        return enabled;
     }
 
     public void setEnabled(boolean enabled) {
         this.enabled = enabled;
-        mm.updateSettings(this);
     }
 }

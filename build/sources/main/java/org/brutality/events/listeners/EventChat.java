@@ -12,4 +12,8 @@ public class EventChat extends Event<EventChat> {
     public String getMessage() {
         return message;
     }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
 }
