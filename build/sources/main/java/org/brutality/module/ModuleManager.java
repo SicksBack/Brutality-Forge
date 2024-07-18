@@ -53,17 +53,18 @@ public class ModuleManager extends ArrayList<Module> {
         new AutoSpawn();
         new CakeAura();
         new SlotSwap();
-        new AutoClicker();
         new Health();
         new ChestESP();
         new SewerESP();
-        new MeteorDetector();
+        new MeteoriteTracker();
         new Sprint();
         new VenomedNotifications();
         new DarkList();
         new NoHurtCam();
         new BountyList();
         new Events();
+        new Focus();
+        new Gamble();
     }
 
     public void updateSettings(Setting setting) {

@@ -29,4 +29,12 @@ public class Setting implements SM, MM {
          */
         parent.getModeSettingParent().getSettings().get(parent).add(this);
     }
+
+    protected void setName(String name) {
+        this.name = name;
+    }
+
+    protected void setParent(Module parent) {
+        this.parent = parent;
+    }
 }

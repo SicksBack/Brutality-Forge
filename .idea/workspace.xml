@@ -5,10 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b08d3aa7-97e8-4ba8-b3a7-9b1cdbc7f2d3" name="Default Changelist" comment="huge update&#10;+whogotdogged&#10;+darklist&#10;+venomednotifications&#10;+autoclicker&#10;+nohurtcam&#10;+sprint">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/BountyList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/Events.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/CheckEventsRunnable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/TimerUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-07-17-1.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-07-17-2.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-07-17-3.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-07-17-4.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-07-17-5.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-07-17-6.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/logs/2024-07-17-7.log.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/playerdata/0de52af9-02ff-3033-a9e5-ba9cb563491f.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/playerdata/19c68aa8-b95a-383d-a79c-e77aa512ccca.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/playerdata/2e2bad62-fd9f-3bb5-a89e-b314a4f30e73.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/playerdata/3b73482c-4090-3c74-a2d4-17e9934c9bd9.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/playerdata/46c6e0f0-63e8-3a58-bf04-38eedc04d149.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/playerdata/8b8434b7-4246-3db8-89e4-a51a52bc8fc9.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/playerdata/8ce64f24-c135-3001-9ff7-8b03d3719e4f.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/playerdata/955d257f-8897-3d8b-b175-e59818b1c178.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/playerdata/d2fd1c5d-4760-35a0-aa0f-c197e25af2ac.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/playerdata/d4625839-68ff-34de-8208-19f0e474753e.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/playerdata/e6ce70cd-b7cc-34be-b059-93e41d35480c.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/playerdata/e842b536-bd2e-36a7-9e4d-a97b10ab8389.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/stats/0de52af9-02ff-3033-a9e5-ba9cb563491f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/stats/19c68aa8-b95a-383d-a79c-e77aa512ccca.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/stats/2e2bad62-fd9f-3bb5-a89e-b314a4f30e73.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/stats/3b73482c-4090-3c74-a2d4-17e9934c9bd9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/stats/46c6e0f0-63e8-3a58-bf04-38eedc04d149.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/stats/8b8434b7-4246-3db8-89e4-a51a52bc8fc9.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/stats/8ce64f24-c135-3001-9ff7-8b03d3719e4f.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/stats/955d257f-8897-3d8b-b175-e59818b1c178.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/stats/d2fd1c5d-4760-35a0-aa0f-c197e25af2ac.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/stats/d4625839-68ff-34de-8208-19f0e474753e.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/stats/e6ce70cd-b7cc-34be-b059-93e41d35480c.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/run/saves/God/stats/e842b536-bd2e-36a7-9e4d-a97b10ab8389.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/harrys/Gamble.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/weasel/AutoGrinder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/settings/impl/NumberSettingForScale.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/ReflectionUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/minecraft/brutality/font/textures/Vape.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/assets/minecraft/brutality/font/textures/desktop.ini" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/fileContent/annotation-processors.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.bin" afterDir="false" />
@@ -18,23 +51,124 @@
       <change beforePath="$PROJECT_DIR$/.gradle/4.5/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/taskHistory/taskHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/BrutalityClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/brutality/BrutalityClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/ModuleManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/ModuleManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/impl/pit/TelebowTimer.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/impl/pit/TelebowTimer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/BrutalityClient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/command/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/command/CommandManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/command/impl/FriendsCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/command/impl/KOSCommand.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/commands/BindManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/commands/Command.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/events/EventTarget.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/events/SendPacketEvent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/events/listeners/EventUpdate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/Category.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/Module.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/ModuleManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/impl/combat/AutoClicker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/impl/combat/KillAura.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/impl/harrys/MeteorDetector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/impl/pit/TelebowTimer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/impl/player/FastPlace.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/impl/render/ArrayListModule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/impl/render/ChestESP.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/impl/render/ClickGuiModule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/impl/render/HUDModule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/module/impl/render/Health.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/notifications/NotificationManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/settings/Setting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/settings/SettingsManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/settings/impl/BooleanSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/settings/impl/ColorPicker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/settings/impl/ColorSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/settings/impl/ExtendableSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/settings/impl/InputSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/settings/impl/Mode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/settings/impl/ModeSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/settings/impl/MultiBooleanSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/settings/impl/NumberSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/settings/impl/SimpleModeSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/ui/clickGui/ClickGui.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/ui/font/CustomFontRenderer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/ui/font/FontCharacter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/ui/font/FontManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/utils/RotationUtils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/utils/Utils.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/utils/exceptions/NotImplementedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/utils/interfaces/MC.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/utils/interfaces/MM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/utils/interfaces/SM.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/utils/math/MathUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/utils/render/GuiUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/utils/render/RenderUtil.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/modid-1.0-sources.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/modid-1.0-sources.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/libs/modid-1.0.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/modid-1.0.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/replacedMain.rangemap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/retromapping/retromappedReplacedMain.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/retromapping/retromappedReplacedMain.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/BrutalityClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/org/brutality/BrutalityClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/command/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/command/CommandManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/command/impl/FriendsCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/command/impl/KOSCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/commands/BindManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/org/brutality/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/events/SendPacketEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/org/brutality/events/SendPacketEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/ModuleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/impl/combat/AutoClicker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/impl/combat/KillAura.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/impl/combat/KillAura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/impl/harrys/MeteorDetector.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/impl/pit/TelebowTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/impl/pit/TelebowTimer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/impl/player/FastPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/impl/player/FastPlace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/impl/render/ArrayListModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/impl/render/ArrayListModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/impl/render/Health.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/org/brutality/module/impl/render/Health.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/settings/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/org/brutality/settings/Setting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/settings/impl/SimpleModeSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/org/brutality/settings/impl/SimpleModeSetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/org/brutality/utils/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/taskLogs/extractRangemapReplacedMain.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/taskLogs/extractRangemapReplacedMain.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/taskLogs/retromapReplacedMain.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/taskLogs/retromapReplacedMain.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/BrutalityClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/BrutalityClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/config/splash.properties" beforeDir="false" afterPath="$PROJECT_DIR$/run/config/splash.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-07-15-1.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-07-15-1.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-07-15-2.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-07-15-2.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-07-15-3.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-07-15-3.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-07-15-4.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-07-15-4.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-07-15-5.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-07-15-5.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-07-15-6.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-07-15-6.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/2024-07-15-7.log.gz" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/2024-07-15-7.log.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/fml-client-1.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/fml-client-1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/fml-client-2.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/fml-client-2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/fml-client-3.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/fml-client-3.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/fml-client-latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/fml-client-latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/fml-junk-earlystartup.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/fml-junk-earlystartup.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/logs/latest.log" beforeDir="false" afterPath="$PROJECT_DIR$/run/logs/latest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/run/options.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/God/DIM-1/data/villages_nether.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/God/DIM-1/data/villages_nether.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/God/DIM1/data/villages_end.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/God/DIM1/data/villages_end.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/God/data/villages.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/God/data/villages.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/God/level.dat" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/God/level.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/God/level.dat_old" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/God/level.dat_old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/God/region/r.-1.-4.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/God/region/r.-1.-4.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/God/region/r.-1.-5.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/God/region/r.-1.-5.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/God/region/r.-2.-4.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/God/region/r.-2.-4.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/God/region/r.-2.-5.mca" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/God/region/r.-2.-5.mca" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/saves/God/session.lock" beforeDir="false" afterPath="$PROJECT_DIR$/run/saves/God/session.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/usercache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usercache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/usernamecache.json" beforeDir="false" afterPath="$PROJECT_DIR$/run/usernamecache.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/command/Command.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/command/CommandManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/command/impl/FriendsCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/command/impl/KOSCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/commands/BindManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/commands/Command.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/events/SendPacketEvent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/events/SendPacketEvent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/ModuleManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/SewerESP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/SewerESP.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/TelebowTimer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/TelebowTimer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/VenomedNotifications.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/VenomedNotifications.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/combat/AutoClicker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/combat/KillAura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/combat/KillAura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/harrys/MeteorDetector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/harrys/MeteoriteTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/player/FastPlace.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/player/FastPlace.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/render/ArrayListModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/render/ArrayListModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/render/Health.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/render/Health.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/settings/Setting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/settings/Setting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/settings/impl/SimpleModeSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/settings/impl/SimpleModeSetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/utils/TimerUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/TimerUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

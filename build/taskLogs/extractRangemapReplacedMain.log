@@ -1,11 +1,6 @@
 Symbol range map extraction starting
-Processing 122 files
+Processing 120 files
 processing org\brutality\BrutalityClient.java
-processing org\brutality\command\Command.java
-processing org\brutality\command\CommandManager.java
-processing org\brutality\command\impl\FriendsCommand.java
-processing org\brutality\command\impl\KOSCommand.java
-processing org\brutality\commands\BindManager.java
 processing org\brutality\commands\Command.java
 processing org\brutality\commands\CommandManager.java
 processing org\brutality\commands\impl\BindCommand.java
@@ -40,10 +35,10 @@ processing org\brutality\module\Category.java
 processing org\brutality\module\Module.java
 processing org\brutality\module\ModuleManager.java
 processing org\brutality\module\impl\World\AntiBot.java
-processing org\brutality\module\impl\combat\AutoClicker.java
 processing org\brutality\module\impl\combat\KillAura.java
 processing org\brutality\module\impl\combat\Velocity.java
-processing org\brutality\module\impl\harrys\MeteorDetector.java
+processing org\brutality\module\impl\harrys\Gamble.java
+processing org\brutality\module\impl\harrys\MeteoriteTracker.java
 processing org\brutality\module\impl\hypixel\Tracker.java
 processing org\brutality\module\impl\move\Fly.java
 processing org\brutality\module\impl\move\KeepSprint.java
@@ -59,6 +54,7 @@ processing org\brutality\module\impl\pit\BountyList.java
 processing org\brutality\module\impl\pit\CakeAura.java
 processing org\brutality\module\impl\pit\DarkList.java
 processing org\brutality\module\impl\pit\Events.java
+processing org\brutality\module\impl\pit\Focus.java
 processing org\brutality\module\impl\pit\PitSwap.java
 processing org\brutality\module\impl\pit\SewerESP.java
 processing org\brutality\module\impl\pit\SlotSwap.java
@@ -95,6 +91,7 @@ processing org\brutality\settings\impl\Mode.java
 processing org\brutality\settings\impl\ModeSetting.java
 processing org\brutality\settings\impl\MultiBooleanSetting.java
 processing org\brutality\settings\impl\NumberSetting.java
+processing org\brutality\settings\impl\NumberSettingForScale.java
 processing org\brutality\settings\impl\SimpleModeSetting.java
 processing org\brutality\ui\clickGui\ClickGui.java
 processing org\brutality\ui\font\CustomFontRenderer.java
@@ -107,6 +104,7 @@ processing org\brutality\utils\InventoryUtils.java
 processing org\brutality\utils\PacketUtils.java
 processing org\brutality\utils\PlayerUtils.java
 processing org\brutality\utils\Reflection.java
+processing org\brutality\utils\ReflectionUtils.java
 processing org\brutality\utils\RenderUtils.java
 processing org\brutality\utils\RenderingTelebow.java
 processing org\brutality\utils\RotationUtils.java

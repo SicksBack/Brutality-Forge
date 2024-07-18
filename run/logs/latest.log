@@ -1,8 +1,62 @@
-[08:57:29] [Client thread/INFO]: Setting user: Player206
-[08:57:34] [Client thread/INFO]: LWJGL Version: 2.9.4
-[08:57:37] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
-[08:57:38] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[08:57:38] [Thread-9/INFO]: Initializing LWJGL OpenAL
-[08:57:38] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[08:57:38] [Thread-9/INFO]: OpenAL initialized.
-[08:57:38] [Sound Library Loader/INFO]: Sound engine started
+[22:52:46] [Client thread/INFO]: Setting user: Player718
+[22:52:53] [Client thread/INFO]: LWJGL Version: 2.9.4
+[22:52:58] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
+[22:52:58] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[22:52:59] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[22:52:59] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[22:52:59] [Thread-9/INFO]: OpenAL initialized.
+[22:52:59] [Sound Library Loader/INFO]: Sound engine started
+[22:53:06] [Client thread/INFO]: Created: 16x16 textures-atlas
+[22:53:10] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
+[22:53:10] [Client thread/INFO]: SoundSystem shutting down...
+[22:53:10] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[22:53:10] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[22:53:11] [Thread-13/INFO]: Initializing LWJGL OpenAL
+[22:53:11] [Thread-13/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[22:53:11] [Thread-13/INFO]: OpenAL initialized.
+[22:53:11] [Sound Library Loader/INFO]: Sound engine started
+[22:53:17] [Client thread/INFO]: Created: 512x512 textures-atlas
+[22:53:44] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
+[22:53:44] [Server thread/INFO]: Generating keypair
+[22:53:44] [Server thread/INFO]: Preparing start region for level 0
+[22:53:45] [Server thread/INFO]: Changing view distance to 8, from 10
+[22:53:46] [Server thread/INFO]: Player718[local:E:d77e4b05] logged in with entity id 283 at (-386.93120570546455, 4.0, -2073.319848803996)
+[22:53:46] [Server thread/INFO]: Player718 joined the game
+[22:53:53] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
+[22:53:53] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
+[22:53:53] [Server thread/INFO]: Saving and pausing game...
+[22:53:53] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
+[22:53:53] [Server thread/INFO]: Saving chunks for level 'God'/Nether
+[22:53:53] [Server thread/INFO]: Saving chunks for level 'God'/The End
+[22:53:57] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
+[22:53:57] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
+[22:53:57] [Server thread/INFO]: Saving and pausing game...
+[22:53:57] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
+[22:53:57] [Server thread/INFO]: Saving chunks for level 'God'/Nether
+[22:53:57] [Server thread/INFO]: Saving chunks for level 'God'/The End
+[22:54:07] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
+[22:54:07] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
+[22:54:07] [Server thread/INFO]: Saving and pausing game...
+[22:54:07] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
+[22:54:07] [Server thread/INFO]: Saving chunks for level 'God'/Nether
+[22:54:07] [Server thread/INFO]: Saving chunks for level 'God'/The End
+[22:54:16] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
+[22:54:16] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
+[22:54:16] [Server thread/INFO]: Saving and pausing game...
+[22:54:16] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
+[22:54:16] [Server thread/INFO]: Saving chunks for level 'God'/Nether
+[22:54:16] [Server thread/INFO]: Saving chunks for level 'God'/The End
+[22:54:21] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
+[22:54:21] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
+[22:54:21] [Server thread/INFO]: Saving and pausing game...
+[22:54:21] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
+[22:54:21] [Server thread/INFO]: Saving chunks for level 'God'/Nether
+[22:54:21] [Server thread/INFO]: Saving chunks for level 'God'/The End
+[22:54:38] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
+[22:54:38] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
+[22:54:38] [Server thread/INFO]: Saving and pausing game...
+[22:54:38] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
+[22:54:38] [Server thread/INFO]: Saving chunks for level 'God'/Nether
+[22:54:38] [Server thread/INFO]: Saving chunks for level 'God'/The End
+[22:55:07] [Client Shutdown Thread/INFO]: Stopping server
+[22:55:07] [Client Shutdown Thread/INFO]: Saving players
