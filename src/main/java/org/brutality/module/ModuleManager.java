@@ -10,6 +10,7 @@ import org.brutality.module.impl.player.*;
 import org.brutality.module.impl.render.*;
 import org.brutality.module.impl.harrys.*;
 import lombok.Getter;
+import org.brutality.module.impl.weasel.AutoGrinder;
 import org.brutality.settings.Setting;
 import org.brutality.settings.impl.ButtonSetting;
 
@@ -65,6 +66,7 @@ public class ModuleManager extends ArrayList<Module> {
         new Events();
         new Focus();
         new Gamble();
+        new AutoGrinder();
     }
 
     public void updateSettings(Setting setting) {
