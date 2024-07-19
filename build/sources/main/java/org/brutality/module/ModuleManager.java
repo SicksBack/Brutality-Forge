@@ -2,6 +2,7 @@ package org.brutality.module;
 
 import net.minecraft.inventory.Slot;
 import net.minecraft.world.World;
+import net.minecraft.world.storage.SaveHandler;
 import org.brutality.module.impl.World.*;
 import org.brutality.module.impl.combat.*;
 import org.brutality.module.impl.move.*;
@@ -10,8 +11,10 @@ import org.brutality.module.impl.player.*;
 import org.brutality.module.impl.render.*;
 import org.brutality.module.impl.harrys.*;
 import lombok.Getter;
+import org.brutality.module.impl.weasel.AutoGrinder;
 import org.brutality.settings.Setting;
 import org.brutality.settings.impl.ButtonSetting;
+import sun.security.provider.SHA;
 
 import javax.naming.Name;
 import java.util.ArrayList;
@@ -65,6 +68,8 @@ public class ModuleManager extends ArrayList<Module> {
         new Events();
         new Focus();
         new Gamble();
+        new AutoGrinder();
+        new SharkDamage();
     }
 
     public void updateSettings(Setting setting) {

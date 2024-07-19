@@ -21,7 +21,6 @@ import org.brutality.settings.impl.BooleanSetting;
 import org.brutality.settings.impl.NumberSetting;
 import org.brutality.utils.RotationUtils;
 import org.brutality.utils.Utils;
-import org.lwjgl.input.Mouse;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -34,9 +33,9 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class KillAura extends Module {
     public static EntityLivingBase target;
     private final NumberSetting aps = new NumberSetting("APS", this, 10, 1, 20, 1);
-    private final NumberSetting attackRange = new NumberSetting("Range (attack)", this, 3, 3, 6, 1);
-    private final NumberSetting swingRange = new NumberSetting("Range (swing)", this, 3.3, 3, 8, 1);
-    private final NumberSetting blockRange = new NumberSetting("Range (block)", this, 6, 3, 12, 1);
+    private final NumberSetting attackRange = new NumberSetting("Range (attack)", this, 3.0, 3.0, 6.0, 1);
+    private final NumberSetting swingRange = new NumberSetting("Range (swing)", this, 3.3, 3.0, 8.0, 1);
+    private final NumberSetting blockRange = new NumberSetting("Range (block)", this, 6.0, 3.0, 12.0, 1);
     private final BooleanSetting targetInvis = new BooleanSetting("Target invis", this, true);
     private final BooleanSetting disableInInventory = new BooleanSetting("Disable in inventory", this, true);
     private final BooleanSetting disableWhileBlocking = new BooleanSetting("Disable while blocking", this, false);
@@ -66,11 +65,9 @@ public class KillAura extends Module {
         this.addSettings(aps, attackRange, swingRange, blockRange, targetInvis, disableInInventory, disableWhileBlocking, hitThroughBlocks, ignoreTeammates, weaponOnly, sortMode);
     }
 
-
     public void onEnable() {
         this.rand = new Random();
     }
-
 
     public void onDisable() {
         this.resetVariables();
@@ -151,7 +148,6 @@ public class KillAura extends Module {
             }
         }
     }
-
 
     public String getInfo() {
         return sortModes[(int) sortMode.getValue()];
@@ -234,7 +230,6 @@ public class KillAura extends Module {
         if (System.currentTimeMillis() > this.k) {
             if (!this.n && this.rand.nextInt(100) >= 85) {
                 this.n = true;
-                this.m = 1.1 + this.rand.nextDouble() * 0.15;
             } else {
                 this.n = false;
             }

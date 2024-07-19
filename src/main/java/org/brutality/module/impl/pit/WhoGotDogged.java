@@ -37,7 +37,7 @@ public class WhoGotDogged extends Module {
     @SubscribeEvent
     public void onClientChatReceived(ClientChatReceivedEvent event) {
         String msg;
-        if ((msg = event.message.getUnformattedText()).contains("A player has been removed from your game.")) {
+        if ((msg = event.message.getUnformattedText()).contains("A player has been removed from your game")) {
             this.banCooldown.reset();
         }
     }

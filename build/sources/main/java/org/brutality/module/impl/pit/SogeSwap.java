@@ -21,7 +21,7 @@ public class SogeSwap extends Module {
     private boolean toggle = true;
 
     public SogeSwap() {
-        super("SogeSwap", "Automatically swaps between sword and Tier III sword", Category.PIT);
+        super("SogeSwap", "sword swap", Category.PIT);
         this.delaySetting = new NumberSetting("Delay", this, 50, 1, 100, 1);
         this.holdLeftClick = new BooleanSetting("Hold Left Click", this, true);
         addSettings(delaySetting, holdLeftClick);

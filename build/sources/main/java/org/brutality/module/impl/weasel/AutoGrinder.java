@@ -2,29 +2,28 @@ package org.brutality.module.impl.weasel;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockPos;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
-import net.minecraftforge.client.event.RenderWorldLastEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.brutality.module.Category;
 import org.brutality.module.Module;
 import org.brutality.settings.impl.BooleanSetting;
-import org.brutality.settings.impl.NumberSetting;
+import org.brutality.utils.Timer;
 
 public class AutoGrinder extends Module {
 
     private boolean aimingAtEnemy = false;
-    private int ticks = 0;
+    private Timer swapTimer = new Timer();
+    private Timer moveTimer = new Timer();
 
     private final BooleanSetting enableModule = new BooleanSetting("Enable", this, true);
-    private final NumberSetting attackInterval = new NumberSetting("Attack Interval", this, 1, 1, 10, 1);
 
     public AutoGrinder() {
         super("AutoGrinder", "Automatically grinds mobs or players", Category.WEASEL);
-        this.addSettings(enableModule, attackInterval);
+        this.addSettings(enableModule);
     }
 
     @SubscribeEvent
@@ -52,11 +51,13 @@ public class AutoGrinder extends Module {
             return;
         }
 
-        ticks++;
-        if (ticks % 2 == 0) {
-            mc.thePlayer.inventory.currentItem = 2;
-        } else {
-            mc.thePlayer.inventory.currentItem = 0;
+        // Move player to (0, 80, 0) if at spawn (0, 86, 0)
+        if (mc.thePlayer.getPosition().equals(new BlockPos(0, 86, 0))) {
+            moveToTarget(new BlockPos(0, 80, 0));
+        }
+
+        if (swapTimer.hasTimeElapsed(75, true)) {
+            swapWeapon();
         }
 
         if (aimingAtEnemy) {
@@ -64,6 +65,35 @@ public class AutoGrinder extends Module {
             if (target != null) {
                 attackTarget(target);
             }
+        }
+    }
+
+    private void moveToTarget(BlockPos targetPos) {
+        if (moveTimer.hasTimeElapsed(50, true)) {
+            double dx = targetPos.getX() - mc.thePlayer.posX;
+            double dy = targetPos.getY() - mc.thePlayer.posY;
+            double dz = targetPos.getZ() - mc.thePlayer.posZ;
+
+            double distance = Math.sqrt(dx * dx + dz * dz);
+            float yaw = (float) (Math.atan2(dz, dx) * (180 / Math.PI)) - 90;
+            float pitch = (float) -(Math.atan2(dy, distance) * (180 / Math.PI));
+
+            mc.thePlayer.rotationYaw = yaw;
+            mc.thePlayer.rotationPitch = pitch;
+
+            mc.thePlayer.setPosition(targetPos.getX() + 0.5, targetPos.getY(), targetPos.getZ() + 0.5);
+        }
+    }
+
+    private void swapWeapon() {
+        ItemStack item0 = mc.thePlayer.inventory.mainInventory[0];
+        ItemStack item2 = mc.thePlayer.inventory.mainInventory[2];
+
+        if ((item0 != null && item0.getItem().equals(Item.getItemById(276))) &&  // Diamond Sword ID
+                (item2 != null && item2.getDisplayName().equals("Combat Spade"))) {
+            mc.thePlayer.inventory.currentItem = mc.thePlayer.inventory.currentItem == 0 ? 2 : 0;
+        } else if (item0 != null && item0.getItem().equals(Item.getItemById(276))) {  // Diamond Sword ID
+            mc.thePlayer.inventory.currentItem = 0;
         }
     }
 
@@ -96,7 +126,6 @@ public class AutoGrinder extends Module {
             mc.playerController.attackEntity(mc.thePlayer, target);
         }
     }
-
 
     public void onDisable() {
         aimingAtEnemy = false;

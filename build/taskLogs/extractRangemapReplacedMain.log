@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 120 files
+Processing 123 files
 processing org\brutality\BrutalityClient.java
 processing org\brutality\commands\Command.java
 processing org\brutality\commands\CommandManager.java
@@ -10,6 +10,7 @@ processing org\brutality\events\EventListener.java
 processing org\brutality\events\EventManager.java
 processing org\brutality\events\EventTarget.java
 processing org\brutality\events\JumpEvent.java
+processing org\brutality\events\ModEvent.java
 processing org\brutality\events\PartialRenderTickEvent.java
 processing org\brutality\events\PostInputEvent.java
 processing org\brutality\events\PostMotionEvent.java
@@ -57,6 +58,7 @@ processing org\brutality\module\impl\pit\Events.java
 processing org\brutality\module\impl\pit\Focus.java
 processing org\brutality\module\impl\pit\PitSwap.java
 processing org\brutality\module\impl\pit\SewerESP.java
+processing org\brutality\module\impl\pit\SharkDamage.java
 processing org\brutality\module\impl\pit\SlotSwap.java
 processing org\brutality\module\impl\pit\SogeSwap.java
 processing org\brutality\module\impl\pit\TelebowTimer.java
@@ -78,6 +80,7 @@ processing org\brutality\module\impl\render\ClickGuiModule.java
 processing org\brutality\module\impl\render\HUDModule.java
 processing org\brutality\module\impl\render\Health.java
 processing org\brutality\module\impl\render\NameTag.java
+processing org\brutality\module\impl\weasel\AutoGrinder.java
 processing org\brutality\notifications\NotificationManager.java
 processing org\brutality\settings\Setting.java
 processing org\brutality\settings\SettingsManager.java
