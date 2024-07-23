@@ -1,7 +1,8 @@
 package org.brutality.events;
 
-public abstract class Event<T> {
-    private boolean cancelled = false;
+public abstract class Event {
+
+    private boolean cancelled;
 
     public boolean isCancelled() {
         return cancelled;

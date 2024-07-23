@@ -1,53 +1,42 @@
-[21:52:26] [Client thread/INFO]: Setting user: Player671
-[21:52:28] [Client thread/INFO]: LWJGL Version: 2.9.4
-[21:52:37] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
-[21:52:39] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:52:39] [Thread-9/INFO]: Initializing LWJGL OpenAL
-[21:52:39] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[21:52:39] [Thread-9/INFO]: OpenAL initialized.
-[21:52:39] [Sound Library Loader/INFO]: Sound engine started
-[21:52:52] [Client thread/INFO]: Created: 16x16 textures-atlas
-[21:52:59] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
-[21:52:59] [Client thread/INFO]: SoundSystem shutting down...
-[21:52:59] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[21:52:59] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[21:52:59] [Thread-13/INFO]: Initializing LWJGL OpenAL
-[21:52:59] [Thread-13/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[21:52:59] [Thread-13/INFO]: OpenAL initialized.
-[21:52:59] [Sound Library Loader/INFO]: Sound engine started
-[21:53:04] [Client thread/INFO]: Created: 512x512 textures-atlas
-[21:53:12] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
-[21:53:12] [Server thread/INFO]: Generating keypair
-[21:53:12] [Server thread/INFO]: Preparing start region for level 0
-[21:53:13] [Server thread/INFO]: Changing view distance to 8, from 10
-[21:53:14] [Server thread/INFO]: Player671[local:E:a5fc9347] logged in with entity id 285 at (-386.9431865438397, 4.0, -2073.7942536513197)
-[21:53:14] [Server thread/INFO]: Player671 joined the game
-[21:53:20] [Server thread/INFO]: Player671 has just earned the achievement [Taking Inventory]
-[21:53:20] [Client thread/INFO]: [CHAT] Player671 has just earned the achievement [Taking Inventory]
-[21:53:41] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
-[21:53:41] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
-[21:53:41] [Server thread/INFO]: Saving and pausing game...
-[21:53:41] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[21:53:41] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[21:53:41] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[21:53:43] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
-[21:53:43] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
-[21:53:43] [Server thread/INFO]: Saving and pausing game...
-[21:53:43] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[21:53:43] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[21:53:43] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[21:53:44] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled SharkDamage
-[21:53:50] [Client thread/WARN]: Unable to play unknown soundEvent: minecraft:step.anvil
-[21:54:03] [Server thread/INFO]: Saving and pausing game...
-[21:54:03] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[21:54:03] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[21:54:03] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[21:54:03] [Server thread/INFO]: Stopping server
-[21:54:03] [Server thread/INFO]: Saving players
-[21:54:03] [Server thread/INFO]: Saving worlds
-[21:54:03] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[21:54:03] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[21:54:03] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[21:54:04] [Client thread/INFO]: Stopping!
-[21:54:04] [Client thread/INFO]: SoundSystem shutting down...
-[21:54:04] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[16:26:42] [Client thread/INFO]: Setting user: Player608
+[16:26:52] [Client thread/INFO]: LWJGL Version: 2.9.4
+[16:27:03] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
+[16:27:04] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[16:27:04] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[16:27:04] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[16:27:04] [Thread-9/INFO]: OpenAL initialized.
+[16:27:05] [Sound Library Loader/INFO]: Sound engine started
+[16:27:15] [Client thread/INFO]: Created: 16x16 textures-atlas
+[16:27:28] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
+[16:27:28] [Client thread/INFO]: SoundSystem shutting down...
+[16:27:28] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[16:27:28] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[16:27:29] [Thread-13/INFO]: Initializing LWJGL OpenAL
+[16:27:29] [Thread-13/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[16:27:29] [Thread-13/INFO]: OpenAL initialized.
+[16:27:29] [Sound Library Loader/INFO]: Sound engine started
+[16:27:36] [Client thread/INFO]: Created: 512x512 textures-atlas
+[16:28:07] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
+[16:28:07] [Server thread/INFO]: Generating keypair
+[16:28:07] [Server thread/INFO]: Preparing start region for level 0
+[16:28:08] [Server thread/INFO]: Changing view distance to 8, from 10
+[16:28:09] [Server thread/INFO]: Player608[local:E:749f3fba] logged in with entity id 106 at (726.1302810110313, 4.0, 307.7117661489475)
+[16:28:09] [Server thread/INFO]: Player608 joined the game
+[16:28:14] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2524ms behind, skipping 50 tick(s)
+[16:28:23] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
+[16:28:23] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
+[16:28:24] [Server thread/INFO]: Saving and pausing game...
+[16:28:24] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
+[16:28:24] [Server thread/INFO]: Saving chunks for level 'God'/Nether
+[16:28:24] [Server thread/INFO]: Saving chunks for level 'God'/The End
+[16:28:25] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled KillAura
+[16:28:25] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled Velocity
+[16:28:25] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled AutoClicker
+[16:28:27] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled HUD
+[16:28:54] [Server thread/INFO]: Player608 has just earned the achievement [Taking Inventory]
+[16:28:54] [Client thread/INFO]: [CHAT] Player608 has just earned the achievement [Taking Inventory]
+[16:29:02] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 2296ms behind, skipping 45 tick(s)
+[16:30:12] [Client thread/INFO]: Stopping!
+[16:30:14] [Client thread/INFO]: SoundSystem shutting down...
+[16:30:15] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[16:30:17] [Client Shutdown Thread/INFO]: Stopping server

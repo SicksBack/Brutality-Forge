@@ -11,7 +11,6 @@ import org.brutality.module.impl.player.*;
 import org.brutality.module.impl.render.*;
 import org.brutality.module.impl.harrys.*;
 import lombok.Getter;
-import org.brutality.module.impl.weasel.AutoGrinder;
 import org.brutality.settings.Setting;
 import org.brutality.settings.impl.ButtonSetting;
 import sun.security.provider.SHA;
@@ -25,8 +24,8 @@ public class ModuleManager extends ArrayList<Module> {
     public static ButtonSetting reach;
 
     public void init() {
-        new HUDModule();
-        new ArrayListModule();
+        new HUD();
+        new Interface();
         new ClickGuiModule();
         new KillAura(); // Register the KillAura module
         new PitSwap();
@@ -70,6 +69,7 @@ public class ModuleManager extends ArrayList<Module> {
         new Gamble();
         new AutoGrinder();
         new SharkDamage();
+        new AutoClicker();
     }
 
     public void updateSettings(Setting setting) {

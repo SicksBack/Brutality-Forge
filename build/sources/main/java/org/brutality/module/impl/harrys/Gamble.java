@@ -35,9 +35,9 @@ public class Gamble extends Module {
     public void onChatReceived(ClientChatReceivedEvent event) {
         String message = event.message.getUnformattedText();
 
-        if (message.contains("Gamble event started")) {
+        if (message.contains("MAJOR EVENT! GAMBLE starting now")) {
             tracking = true;
-        } else if (message.contains("Gamble event ended")) {
+        } else if (message.contains("PIT EVENT ENDED: GAMBLE!")) {
             tracking = false;
             waypoints.clear();
         } else if (tracking) {
