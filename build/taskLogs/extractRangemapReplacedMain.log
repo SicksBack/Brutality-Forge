@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 124 files
+Processing 130 files
 processing org\brutality\BrutalityClient.java
 processing org\brutality\commands\Command.java
 processing org\brutality\commands\CommandManager.java
@@ -22,10 +22,12 @@ processing org\brutality\events\ReceivePacketEvent.java
 processing org\brutality\events\RenderLivingEvent.java
 processing org\brutality\events\SendPacketEvent.java
 processing org\brutality\events\SlowDownEvent.java
+processing org\brutality\events\listeners\BlurEvent.java
 processing org\brutality\events\listeners\EventKey.java
 processing org\brutality\events\listeners\EventMotion.java
 processing org\brutality\events\listeners\EventPacketReceive.java
 processing org\brutality\events\listeners\EventPacketSend.java
+processing org\brutality\events\listeners\EventRender2D.java
 processing org\brutality\events\listeners\EventRender3D.java
 processing org\brutality\events\listeners\EventRenderGUI.java
 processing org\brutality\events\listeners\EventRenderWorld.java
@@ -36,12 +38,14 @@ processing org\brutality\module\Module.java
 processing org\brutality\module\ModuleManager.java
 processing org\brutality\module\impl\World\AntiBot.java
 processing org\brutality\module\impl\combat\AimAssist.java
+processing org\brutality\module\impl\combat\AutoClicker.java
 processing org\brutality\module\impl\combat\KillAura.java
 processing org\brutality\module\impl\combat\Velocity.java
 processing org\brutality\module\impl\harrys\AutoGrinder.java
 processing org\brutality\module\impl\harrys\Gamble.java
 processing org\brutality\module\impl\harrys\MeteoriteTracker.java
 processing org\brutality\module\impl\hypixel\Tracker.java
+processing org\brutality\module\impl\misc\ModuleSound.java
 processing org\brutality\module\impl\move\Fly.java
 processing org\brutality\module\impl\move\KeepSprint.java
 processing org\brutality\module\impl\move\LongJump.java
@@ -77,6 +81,7 @@ processing org\brutality\module\impl\player\Scaffold.java
 processing org\brutality\module\impl\render\Chams.java
 processing org\brutality\module\impl\render\ChestESP.java
 processing org\brutality\module\impl\render\ClickGuiModule.java
+processing org\brutality\module\impl\render\HUD.java
 processing org\brutality\module\impl\render\Health.java
 processing org\brutality\module\impl\render\Interface.java
 processing org\brutality\module\impl\render\NameTag.java
@@ -102,6 +107,7 @@ processing org\brutality\ui\font\FontManager.java
 processing org\brutality\utils\BlockUtils.java
 processing org\brutality\utils\Colors.java
 processing org\brutality\utils\EntityUtils.java
+processing org\brutality\utils\HUDUtils.java
 processing org\brutality\utils\InterfaceUtils.java
 processing org\brutality\utils\InventoryUtils.java
 processing org\brutality\utils\NameTagRenderUtils.java

@@ -1,16 +1,25 @@
 package org.brutality.events;
 
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.fml.common.eventhandler.EventBus;
+import java.util.ArrayList;
+import java.util.List;
 
 public class EventManager {
-    public static final EventBus EVENT_BUS = new EventBus();
 
-    public static void register(Object object) {
-        MinecraftForge.EVENT_BUS.register(object);
+    private static final List<Object> registeredListeners = new ArrayList<>();
+
+    public static void register(Object listener) {
+        if (!registeredListeners.contains(listener)) {
+            registeredListeners.add(listener);
+        }
     }
 
-    public static void unregister(Object object) {
-        MinecraftForge.EVENT_BUS.unregister(object);
+    public static void unregister(Object listener) {
+        registeredListeners.remove(listener);
+    }
+
+    public static void post(Event event) {
+        for (Object listener : registeredListeners) {
+            // Add logic to post the event to the listener
+        }
     }
 }

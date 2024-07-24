@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 124 files
+Processing 130 files
 processing org\brutality\BrutalityClient.java
 @|org\brutality\BrutalityClient.java|8|21|org.brutality|package|org.brutality|(file)
 Class Start: org.brutality.BrutalityClient
@@ -563,6 +563,12 @@ Class Start: org.brutality.events.SlowDownEvent
 Class End  : org.brutality.events.SlowDownEvent
 endProcessing org\brutality\events\SlowDownEvent.java
 
+processing org\brutality\events\listeners\BlurEvent.java
+@|org\brutality\events\listeners\BlurEvent.java|8|38|org.brutality.events.listeners|package|org.brutality.events.listeners|(file)
+Class Start: org.brutality.events.listeners.BlurEvent
+Class End  : org.brutality.events.listeners.BlurEvent
+endProcessing org\brutality\events\listeners\BlurEvent.java
+
 processing org\brutality\events\listeners\EventKey.java
 @|org\brutality\events\listeners\EventKey.java|8|38|org.brutality.events.listeners|package|org.brutality.events.listeners|(file)
 Class Start: org.brutality.events.listeners.EventKey
@@ -675,6 +681,23 @@ Class Start: org.brutality.events.listeners.EventPacketSend
 Class End  : org.brutality.events.listeners.EventPacketSend
 endProcessing org\brutality\events\listeners\EventPacketSend.java
 
+processing org\brutality\events\listeners\EventRender2D.java
+@|org\brutality\events\listeners\EventRender2D.java|8|38|org.brutality.events.listeners|package|org.brutality.events.listeners|(file)
+Class Start: org.brutality.events.listeners.EventRender2D
+   @|org\brutality\events\listeners\EventRender2D.java|144|156|partialTicks|field|org.brutality.events.listeners.EventRender2D|partialTicks|
+   Method Start: EventRender2D(F)V
+      @|org\brutality\events\listeners\EventRender2D.java|170|183|EventRender2D|method|org.brutality.events.listeners.EventRender2D|EventRender2D|(F)V
+      @|org\brutality\events\listeners\EventRender2D.java|190|202|partialTicks|param|org.brutality.events.listeners.EventRender2D|EventRender2D|(F)V|partialTicks|0
+      @|org\brutality\events\listeners\EventRender2D.java|219|231|partialTicks|field|org.brutality.events.listeners.EventRender2D|partialTicks
+      @|org\brutality\events\listeners\EventRender2D.java|234|246|partialTicks|param|org.brutality.events.listeners.EventRender2D|EventRender2D|(F)V|partialTicks|0
+   Method End: EventRender2D(F)V
+   Method Start: getPartialTicks()F
+      @|org\brutality\events\listeners\EventRender2D.java|272|287|getPartialTicks|method|org.brutality.events.listeners.EventRender2D|getPartialTicks|()F
+      @|org\brutality\events\listeners\EventRender2D.java|307|319|partialTicks|field|org.brutality.events.listeners.EventRender2D|partialTicks
+   Method End: getPartialTicks()F
+Class End  : org.brutality.events.listeners.EventRender2D
+endProcessing org\brutality\events\listeners\EventRender2D.java
+
 processing org\brutality\events\listeners\EventRender3D.java
 @|org\brutality\events\listeners\EventRender3D.java|8|38|org.brutality.events.listeners|package|org.brutality.events.listeners|(file)
 Class Start: org.brutality.events.listeners.EventRender3D
@@ -753,10 +776,11 @@ Enum Start: org.brutality.module.Category
    @|org\brutality\module\Category.java|134|142|MOVEMENT|field|org.brutality.module.Category|MOVEMENT
    @|org\brutality\module\Category.java|148|154|PLAYER|field|org.brutality.module.Category|PLAYER
    @|org\brutality\module\Category.java|160|165|WORLD|field|org.brutality.module.Category|WORLD
-   @|org\brutality\module\Category.java|171|178|HYPIXEL|field|org.brutality.module.Category|HYPIXEL
-   @|org\brutality\module\Category.java|184|187|PIT|field|org.brutality.module.Category|PIT
-   @|org\brutality\module\Category.java|193|199|WEASEL|field|org.brutality.module.Category|WEASEL
-   @|org\brutality\module\Category.java|205|211|HARRYS|field|org.brutality.module.Category|HARRYS
+   @|org\brutality\module\Category.java|171|175|MISC|field|org.brutality.module.Category|MISC
+   @|org\brutality\module\Category.java|181|188|HYPIXEL|field|org.brutality.module.Category|HYPIXEL
+   @|org\brutality\module\Category.java|194|197|PIT|field|org.brutality.module.Category|PIT
+   @|org\brutality\module\Category.java|203|209|WEASEL|field|org.brutality.module.Category|WEASEL
+   @|org\brutality\module\Category.java|215|221|HARRYS|field|org.brutality.module.Category|HARRYS
 Enum End  : org.brutality.module.Category
 endProcessing org\brutality\module\Category.java
 
@@ -864,86 +888,88 @@ Class Start: org.brutality.module.ModuleManager
    @|org\brutality\module\ModuleManager.java|777|782|reach|field|org.brutality.module.ModuleManager|reach|
    Method Start: init()V
       @|org\brutality\module\ModuleManager.java|801|805|init|method|org.brutality.module.ModuleManager|init|()V
-      @|org\brutality\module\ModuleManager.java|822|831|Interface|class|org.brutality.module.impl.render.Interface
-      @|org\brutality\module\ModuleManager.java|847|861|ClickGuiModule|class|org.brutality.module.impl.render.ClickGuiModule
-      @|org\brutality\module\ModuleManager.java|877|885|KillAura|class|org.brutality.module.impl.combat.KillAura
-      @|org\brutality\module\ModuleManager.java|933|940|PitSwap|class|org.brutality.module.impl.pit.PitSwap
-      @|org\brutality\module\ModuleManager.java|956|966|KeepSprint|class|org.brutality.module.impl.move.KeepSprint
-      @|org\brutality\module\ModuleManager.java|982|990|Velocity|class|org.brutality.module.impl.combat.Velocity
-      @|org\brutality\module\ModuleManager.java|1006|1012|NoSlow|class|org.brutality.module.impl.move.NoSlow
-      @|org\brutality\module\ModuleManager.java|1028|1040|TelebowTimer|class|org.brutality.module.impl.pit.TelebowTimer
-      @|org\brutality\module\ModuleManager.java|1056|1063|Freecam|class|org.brutality.module.impl.player.Freecam
-      @|org\brutality\module\ModuleManager.java|1079|1087|Scaffold|class|org.brutality.module.impl.player.Scaffold
-      @|org\brutality\module\ModuleManager.java|1103|1108|Speed|class|org.brutality.module.impl.move.Speed
-      @|org\brutality\module\ModuleManager.java|1124|1132|LongJump|class|org.brutality.module.impl.move.LongJump
-      @|org\brutality\module\ModuleManager.java|1148|1151|Fly|class|org.brutality.module.impl.move.Fly
-      @|org\brutality\module\ModuleManager.java|1167|1174|AntiBot|class|org.brutality.module.impl.World.AntiBot
-      @|org\brutality\module\ModuleManager.java|1190|1195|Blink|class|org.brutality.module.impl.player.Blink
-      @|org\brutality\module\ModuleManager.java|1211|1218|FakeLag|class|org.brutality.module.impl.player.FakeLag
-      @|org\brutality\module\ModuleManager.java|1234|1243|FastPlace|class|org.brutality.module.impl.player.FastPlace
-      @|org\brutality\module\ModuleManager.java|1259|1264|Chams|class|org.brutality.module.impl.render.Chams
-      @|org\brutality\module\ModuleManager.java|1280|1287|NameTag|class|org.brutality.module.impl.render.NameTag
-      @|org\brutality\module\ModuleManager.java|1303|1306|KOS|class|org.brutality.module.impl.player.KOS
-      @|org\brutality\module\ModuleManager.java|1322|1329|Friends|class|org.brutality.module.impl.player.Friends
-      @|org\brutality\module\ModuleManager.java|1345|1357|VenomedTimer|class|org.brutality.module.impl.pit.VenomedTimer
-      @|org\brutality\module\ModuleManager.java|1373|1385|WhoGotDogged|class|org.brutality.module.impl.pit.WhoGotDogged
-      @|org\brutality\module\ModuleManager.java|1401|1409|AutoAura|class|org.brutality.module.impl.pit.AutoAura
-      @|org\brutality\module\ModuleManager.java|1425|1432|AutoEgg|class|org.brutality.module.impl.pit.AutoEgg
-      @|org\brutality\module\ModuleManager.java|1448|1457|AutoSteak|class|org.brutality.module.impl.pit.AutoSteak
-      @|org\brutality\module\ModuleManager.java|1473|1481|SogeSwap|class|org.brutality.module.impl.pit.SogeSwap
-      @|org\brutality\module\ModuleManager.java|1497|1506|AutoSpawn|class|org.brutality.module.impl.pit.AutoSpawn
-      @|org\brutality\module\ModuleManager.java|1522|1530|CakeAura|class|org.brutality.module.impl.pit.CakeAura
-      @|org\brutality\module\ModuleManager.java|1546|1554|SlotSwap|class|org.brutality.module.impl.pit.SlotSwap
-      @|org\brutality\module\ModuleManager.java|1570|1576|Health|class|org.brutality.module.impl.render.Health
-      @|org\brutality\module\ModuleManager.java|1592|1600|ChestESP|class|org.brutality.module.impl.render.ChestESP
-      @|org\brutality\module\ModuleManager.java|1616|1624|SewerESP|class|org.brutality.module.impl.pit.SewerESP
-      @|org\brutality\module\ModuleManager.java|1640|1656|MeteoriteTracker|class|org.brutality.module.impl.harrys.MeteoriteTracker
-      @|org\brutality\module\ModuleManager.java|1672|1678|Sprint|class|org.brutality.module.impl.move.Sprint
-      @|org\brutality\module\ModuleManager.java|1694|1714|VenomedNotifications|class|org.brutality.module.impl.pit.VenomedNotifications
-      @|org\brutality\module\ModuleManager.java|1730|1738|DarkList|class|org.brutality.module.impl.pit.DarkList
-      @|org\brutality\module\ModuleManager.java|1754|1763|NoHurtCam|class|org.brutality.module.impl.player.NoHurtCam
-      @|org\brutality\module\ModuleManager.java|1779|1789|BountyList|class|org.brutality.module.impl.pit.BountyList
-      @|org\brutality\module\ModuleManager.java|1805|1811|Events|class|org.brutality.module.impl.pit.Events
-      @|org\brutality\module\ModuleManager.java|1827|1832|Focus|class|org.brutality.module.impl.pit.Focus
-      @|org\brutality\module\ModuleManager.java|1848|1854|Gamble|class|org.brutality.module.impl.harrys.Gamble
-      @|org\brutality\module\ModuleManager.java|1870|1881|AutoGrinder|class|org.brutality.module.impl.harrys.AutoGrinder
-      @|org\brutality\module\ModuleManager.java|1897|1908|SharkDamage|class|org.brutality.module.impl.pit.SharkDamage
+      @|org\brutality\module\ModuleManager.java|822|825|HUD|class|org.brutality.module.impl.render.HUD
+      @|org\brutality\module\ModuleManager.java|841|850|Interface|class|org.brutality.module.impl.render.Interface
+      @|org\brutality\module\ModuleManager.java|866|880|ClickGuiModule|class|org.brutality.module.impl.render.ClickGuiModule
+      @|org\brutality\module\ModuleManager.java|896|904|KillAura|class|org.brutality.module.impl.combat.KillAura
+      @|org\brutality\module\ModuleManager.java|952|959|PitSwap|class|org.brutality.module.impl.pit.PitSwap
+      @|org\brutality\module\ModuleManager.java|975|985|KeepSprint|class|org.brutality.module.impl.move.KeepSprint
+      @|org\brutality\module\ModuleManager.java|1001|1009|Velocity|class|org.brutality.module.impl.combat.Velocity
+      @|org\brutality\module\ModuleManager.java|1025|1031|NoSlow|class|org.brutality.module.impl.move.NoSlow
+      @|org\brutality\module\ModuleManager.java|1047|1059|TelebowTimer|class|org.brutality.module.impl.pit.TelebowTimer
+      @|org\brutality\module\ModuleManager.java|1075|1082|Freecam|class|org.brutality.module.impl.player.Freecam
+      @|org\brutality\module\ModuleManager.java|1098|1106|Scaffold|class|org.brutality.module.impl.player.Scaffold
+      @|org\brutality\module\ModuleManager.java|1122|1127|Speed|class|org.brutality.module.impl.move.Speed
+      @|org\brutality\module\ModuleManager.java|1143|1151|LongJump|class|org.brutality.module.impl.move.LongJump
+      @|org\brutality\module\ModuleManager.java|1167|1170|Fly|class|org.brutality.module.impl.move.Fly
+      @|org\brutality\module\ModuleManager.java|1186|1193|AntiBot|class|org.brutality.module.impl.World.AntiBot
+      @|org\brutality\module\ModuleManager.java|1209|1214|Blink|class|org.brutality.module.impl.player.Blink
+      @|org\brutality\module\ModuleManager.java|1230|1237|FakeLag|class|org.brutality.module.impl.player.FakeLag
+      @|org\brutality\module\ModuleManager.java|1253|1262|FastPlace|class|org.brutality.module.impl.player.FastPlace
+      @|org\brutality\module\ModuleManager.java|1278|1283|Chams|class|org.brutality.module.impl.render.Chams
+      @|org\brutality\module\ModuleManager.java|1299|1306|NameTag|class|org.brutality.module.impl.render.NameTag
+      @|org\brutality\module\ModuleManager.java|1322|1325|KOS|class|org.brutality.module.impl.player.KOS
+      @|org\brutality\module\ModuleManager.java|1341|1348|Friends|class|org.brutality.module.impl.player.Friends
+      @|org\brutality\module\ModuleManager.java|1364|1376|VenomedTimer|class|org.brutality.module.impl.pit.VenomedTimer
+      @|org\brutality\module\ModuleManager.java|1392|1404|WhoGotDogged|class|org.brutality.module.impl.pit.WhoGotDogged
+      @|org\brutality\module\ModuleManager.java|1420|1428|AutoAura|class|org.brutality.module.impl.pit.AutoAura
+      @|org\brutality\module\ModuleManager.java|1444|1451|AutoEgg|class|org.brutality.module.impl.pit.AutoEgg
+      @|org\brutality\module\ModuleManager.java|1467|1476|AutoSteak|class|org.brutality.module.impl.pit.AutoSteak
+      @|org\brutality\module\ModuleManager.java|1492|1500|SogeSwap|class|org.brutality.module.impl.pit.SogeSwap
+      @|org\brutality\module\ModuleManager.java|1516|1525|AutoSpawn|class|org.brutality.module.impl.pit.AutoSpawn
+      @|org\brutality\module\ModuleManager.java|1541|1549|CakeAura|class|org.brutality.module.impl.pit.CakeAura
+      @|org\brutality\module\ModuleManager.java|1565|1573|SlotSwap|class|org.brutality.module.impl.pit.SlotSwap
+      @|org\brutality\module\ModuleManager.java|1589|1595|Health|class|org.brutality.module.impl.render.Health
+      @|org\brutality\module\ModuleManager.java|1611|1619|ChestESP|class|org.brutality.module.impl.render.ChestESP
+      @|org\brutality\module\ModuleManager.java|1635|1643|SewerESP|class|org.brutality.module.impl.pit.SewerESP
+      @|org\brutality\module\ModuleManager.java|1659|1675|MeteoriteTracker|class|org.brutality.module.impl.harrys.MeteoriteTracker
+      @|org\brutality\module\ModuleManager.java|1691|1697|Sprint|class|org.brutality.module.impl.move.Sprint
+      @|org\brutality\module\ModuleManager.java|1713|1733|VenomedNotifications|class|org.brutality.module.impl.pit.VenomedNotifications
+      @|org\brutality\module\ModuleManager.java|1749|1757|DarkList|class|org.brutality.module.impl.pit.DarkList
+      @|org\brutality\module\ModuleManager.java|1773|1782|NoHurtCam|class|org.brutality.module.impl.player.NoHurtCam
+      @|org\brutality\module\ModuleManager.java|1798|1808|BountyList|class|org.brutality.module.impl.pit.BountyList
+      @|org\brutality\module\ModuleManager.java|1824|1830|Events|class|org.brutality.module.impl.pit.Events
+      @|org\brutality\module\ModuleManager.java|1846|1851|Focus|class|org.brutality.module.impl.pit.Focus
+      @|org\brutality\module\ModuleManager.java|1867|1873|Gamble|class|org.brutality.module.impl.harrys.Gamble
+      @|org\brutality\module\ModuleManager.java|1889|1900|AutoGrinder|class|org.brutality.module.impl.harrys.AutoGrinder
+      @|org\brutality\module\ModuleManager.java|1916|1927|SharkDamage|class|org.brutality.module.impl.pit.SharkDamage
+      @|org\brutality\module\ModuleManager.java|1943|1954|AutoClicker|class|org.brutality.module.impl.combat.AutoClicker
    Method End: init()V
    Method Start: updateSettings(Lorg/brutality/settings/Setting;)V
-      @|org\brutality\module\ModuleManager.java|1935|1949|updateSettings|method|org.brutality.module.ModuleManager|updateSettings|(Lorg/brutality/settings/Setting;)V
-      @|org\brutality\module\ModuleManager.java|1950|1957|Setting|class|org.brutality.settings.Setting
-      @|org\brutality\module\ModuleManager.java|1958|1965|setting|param|org.brutality.module.ModuleManager|updateSettings|(Lorg/brutality/settings/Setting;)V|setting|0
-      @|org\brutality\module\ModuleManager.java|1977|1984|forEach|method|java.lang.Iterable|forEach|(Ljava/util/function/Consumer;)V
+      @|org\brutality\module\ModuleManager.java|1981|1995|updateSettings|method|org.brutality.module.ModuleManager|updateSettings|(Lorg/brutality/settings/Setting;)V
+      @|org\brutality\module\ModuleManager.java|1996|2003|Setting|class|org.brutality.settings.Setting
+      @|org\brutality\module\ModuleManager.java|2004|2011|setting|param|org.brutality.module.ModuleManager|updateSettings|(Lorg/brutality/settings/Setting;)V|setting|0
+      @|org\brutality\module\ModuleManager.java|2023|2030|forEach|method|java.lang.Iterable|forEach|(Ljava/util/function/Consumer;)V
    Method End: updateSettings(Lorg/brutality/settings/Setting;)V
    Method Start: getModuleByClass(Ljava/lang/Class;)Lorg/brutality/module/Module;
-      @|org\brutality\module\ModuleManager.java|2067|2083|getModuleByClass|method|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;
-      @|org\brutality\module\ModuleManager.java|2084|2089|Class|class|java.lang.Class
-      @|org\brutality\module\ModuleManager.java|2093|2098|clazz|param|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;|clazz|0
-      @|org\brutality\module\ModuleManager.java|2110|2116|Module|class|org.brutality.module.Module
-      @|org\brutality\module\ModuleManager.java|2126|2132|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|2135|2141|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|2175|2184|findFirst|method|java.util.stream.Stream|findFirst|()Ljava/util/Optional;
-      @|org\brutality\module\ModuleManager.java|2187|2193|orElse|method|java.util.Optional|orElse|(Ljava/lang/Object;)Ljava/lang/Object;
-      @|org\brutality\module\ModuleManager.java|2240|2245|clazz|param|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;|clazz|0
-      @|org\brutality\module\ModuleManager.java|2246|2250|cast|method|java.lang.Class|cast|(Ljava/lang/Object;)Ljava/lang/Object;
+      @|org\brutality\module\ModuleManager.java|2113|2129|getModuleByClass|method|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;
+      @|org\brutality\module\ModuleManager.java|2130|2135|Class|class|java.lang.Class
+      @|org\brutality\module\ModuleManager.java|2139|2144|clazz|param|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;|clazz|0
+      @|org\brutality\module\ModuleManager.java|2156|2162|Module|class|org.brutality.module.Module
+      @|org\brutality\module\ModuleManager.java|2172|2178|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
+      @|org\brutality\module\ModuleManager.java|2181|2187|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      @|org\brutality\module\ModuleManager.java|2221|2230|findFirst|method|java.util.stream.Stream|findFirst|()Ljava/util/Optional;
+      @|org\brutality\module\ModuleManager.java|2233|2239|orElse|method|java.util.Optional|orElse|(Ljava/lang/Object;)Ljava/lang/Object;
+      @|org\brutality\module\ModuleManager.java|2286|2291|clazz|param|org.brutality.module.ModuleManager|getModuleByClass|(Ljava/lang/Class;)Lorg/brutality/module/Module;|clazz|0
+      @|org\brutality\module\ModuleManager.java|2292|2296|cast|method|java.lang.Class|cast|(Ljava/lang/Object;)Ljava/lang/Object;
    Method End: getModuleByClass(Ljava/lang/Class;)Lorg/brutality/module/Module;
    Method Start: getModulesByCategory(Lorg/brutality/module/Category;)Ljava/util/ArrayList;
-      @|org\brutality\module\ModuleManager.java|2296|2316|getModulesByCategory|method|org.brutality.module.ModuleManager|getModulesByCategory|(Lorg/brutality/module/Category;)Ljava/util/ArrayList;
-      @|org\brutality\module\ModuleManager.java|2288|2294|Module|class|org.brutality.module.Module
-      @|org\brutality\module\ModuleManager.java|2278|2287|ArrayList|class|java.util.ArrayList
-      @|org\brutality\module\ModuleManager.java|2317|2325|Category|class|org.brutality.module.Category
-      @|org\brutality\module\ModuleManager.java|2326|2334|category|param|org.brutality.module.ModuleManager|getModulesByCategory|(Lorg/brutality/module/Category;)Ljava/util/ArrayList;|category|0
-      @|org\brutality\module\ModuleManager.java|2353|2359|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|2362|2368|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
-      @|org\brutality\module\ModuleManager.java|2418|2425|collect|method|java.util.stream.Stream|collect|(Ljava/util/stream/Collector;)Ljava/lang/Object;
-      @|org\brutality\module\ModuleManager.java|2426|2436|Collectors|class|java.util.stream.Collectors
-      @|org\brutality\module\ModuleManager.java|2437|2449|toCollection|method|java.util.stream.Collectors|toCollection|(Ljava/util/function/Supplier;)Ljava/util/stream/Collector;
+      @|org\brutality\module\ModuleManager.java|2342|2362|getModulesByCategory|method|org.brutality.module.ModuleManager|getModulesByCategory|(Lorg/brutality/module/Category;)Ljava/util/ArrayList;
+      @|org\brutality\module\ModuleManager.java|2334|2340|Module|class|org.brutality.module.Module
+      @|org\brutality\module\ModuleManager.java|2324|2333|ArrayList|class|java.util.ArrayList
+      @|org\brutality\module\ModuleManager.java|2363|2371|Category|class|org.brutality.module.Category
+      @|org\brutality\module\ModuleManager.java|2372|2380|category|param|org.brutality.module.ModuleManager|getModulesByCategory|(Lorg/brutality/module/Category;)Ljava/util/ArrayList;|category|0
+      @|org\brutality\module\ModuleManager.java|2399|2405|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
+      @|org\brutality\module\ModuleManager.java|2408|2414|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      @|org\brutality\module\ModuleManager.java|2464|2471|collect|method|java.util.stream.Stream|collect|(Ljava/util/stream/Collector;)Ljava/lang/Object;
+      @|org\brutality\module\ModuleManager.java|2472|2482|Collectors|class|java.util.stream.Collectors
+      @|org\brutality\module\ModuleManager.java|2483|2495|toCollection|method|java.util.stream.Collectors|toCollection|(Ljava/util/function/Supplier;)Ljava/util/stream/Collector;
    Method End: getModulesByCategory(Lorg/brutality/module/Category;)Ljava/util/ArrayList;
    Method Start: getModules()Ljava/util/ArrayList;
-      @|org\brutality\module\ModuleManager.java|2504|2514|getModules|method|org.brutality.module.ModuleManager|getModules|()Ljava/util/ArrayList;
-      @|org\brutality\module\ModuleManager.java|2496|2502|Module|class|org.brutality.module.Module
-      @|org\brutality\module\ModuleManager.java|2486|2495|ArrayList|class|java.util.ArrayList
-      @|org\brutality\module\ModuleManager.java|2538|2547|ArrayList|class|java.util.ArrayList
+      @|org\brutality\module\ModuleManager.java|2550|2560|getModules|method|org.brutality.module.ModuleManager|getModules|()Ljava/util/ArrayList;
+      @|org\brutality\module\ModuleManager.java|2542|2548|Module|class|org.brutality.module.Module
+      @|org\brutality\module\ModuleManager.java|2532|2541|ArrayList|class|java.util.ArrayList
+      @|org\brutality\module\ModuleManager.java|2584|2593|ArrayList|class|java.util.ArrayList
    Method End: getModules()Ljava/util/ArrayList;
 Class End  : org.brutality.module.ModuleManager
 endProcessing org\brutality\module\ModuleManager.java
@@ -959,6 +985,78 @@ processing org\brutality\module\impl\combat\AimAssist.java
 Class Start: org.brutality.module.impl.combat.AimAssist
 Class End  : org.brutality.module.impl.combat.AimAssist
 endProcessing org\brutality\module\impl\combat\AimAssist.java
+
+processing org\brutality\module\impl\combat\AutoClicker.java
+@|org\brutality\module\impl\combat\AutoClicker.java|8|40|org.brutality.module.impl.combat|package|org.brutality.module.impl.combat|(file)
+Class Start: org.brutality.module.impl.combat.AutoClicker
+   @|org\brutality\module\impl\combat\AutoClicker.java|542|556|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
+   @|org\brutality\module\impl\combat\AutoClicker.java|557|570|holdLeftClick|field|org.brutality.module.impl.combat.AutoClicker|holdLeftClick|
+   @|org\brutality\module\impl\combat\AutoClicker.java|577|591|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
+   @|org\brutality\module\impl\combat\AutoClicker.java|636|649|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\combat\AutoClicker.java|650|664|clickPerSecond|field|org.brutality.module.impl.combat.AutoClicker|clickPerSecond|
+   @|org\brutality\module\impl\combat\AutoClicker.java|671|684|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\combat\AutoClicker.java|745|754|Minecraft|class|net.minecraft.client.Minecraft
+   @|org\brutality\module\impl\combat\AutoClicker.java|755|757|mc|field|org.brutality.module.impl.combat.AutoClicker|mc|
+   @|org\brutality\module\impl\combat\AutoClicker.java|760|769|Minecraft|class|net.minecraft.client.Minecraft
+   @|org\brutality\module\impl\combat\AutoClicker.java|770|782|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   @|org\brutality\module\impl\combat\AutoClicker.java|798|803|Robot|class|java.awt.Robot
+   @|org\brutality\module\impl\combat\AutoClicker.java|804|809|robot|field|org.brutality.module.impl.combat.AutoClicker|robot|
+   @|org\brutality\module\impl\combat\AutoClicker.java|828|841|lastClickTime|field|org.brutality.module.impl.combat.AutoClicker|lastClickTime|
+   Method Start: AutoClicker()V
+      @|org\brutality\module\impl\combat\AutoClicker.java|855|866|AutoClicker|method|org.brutality.module.impl.combat.AutoClicker|AutoClicker|()V
+      @|org\brutality\module\impl\combat\AutoClicker.java|904|912|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\combat\AutoClicker.java|913|919|COMBAT|field|org.brutality.module.Category|COMBAT
+      @|org\brutality\module\impl\combat\AutoClicker.java|930|941|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
+      @|org\brutality\module\impl\combat\AutoClicker.java|942|955|holdLeftClick|field|org.brutality.module.impl.combat.AutoClicker|holdLeftClick
+      @|org\brutality\module\impl\combat\AutoClicker.java|957|971|clickPerSecond|field|org.brutality.module.impl.combat.AutoClicker|clickPerSecond
+      @|org\brutality\module\impl\combat\AutoClicker.java|1001|1006|robot|field|org.brutality.module.impl.combat.AutoClicker|robot
+      @|org\brutality\module\impl\combat\AutoClicker.java|1013|1018|Robot|class|java.awt.Robot
+      @|org\brutality\module\impl\combat\AutoClicker.java|1039|1051|AWTException|class|java.awt.AWTException
+      @|org\brutality\module\impl\combat\AutoClicker.java|1071|1086|printStackTrace|method|java.lang.Throwable|printStackTrace|()V
+   Method End: AutoClicker()V
+   Method Start: onUpdate(Lorg/brutality/events/listeners/EventUpdate;)V
+      @|org\brutality\module\impl\combat\AutoClicker.java|1140|1148|onUpdate|method|org.brutality.module.impl.combat.AutoClicker|onUpdate|(Lorg/brutality/events/listeners/EventUpdate;)V
+      @|org\brutality\module\impl\combat\AutoClicker.java|1149|1160|EventUpdate|class|org.brutality.events.listeners.EventUpdate
+      @|org\brutality\module\impl\combat\AutoClicker.java|1161|1166|event|param|org.brutality.module.impl.combat.AutoClicker|onUpdate|(Lorg/brutality/events/listeners/EventUpdate;)V|event|0
+      @|org\brutality\module\impl\combat\AutoClicker.java|1182|1195|holdLeftClick|field|org.brutality.module.impl.combat.AutoClicker|holdLeftClick
+      @|org\brutality\module\impl\combat\AutoClicker.java|1196|1205|isEnabled|method|org.brutality.settings.impl.BooleanSetting|isEnabled|()Z
+      @|org\brutality\module\impl\combat\AutoClicker.java|1211|1213|mc|field|org.brutality.module.impl.combat.AutoClicker|mc
+      @|org\brutality\module\impl\combat\AutoClicker.java|1214|1226|gameSettings|field|net.minecraft.client.Minecraft|gameSettings
+      @|org\brutality\module\impl\combat\AutoClicker.java|1227|1240|keyBindAttack|field|net.minecraft.client.settings.GameSettings|keyBindAttack
+      @|org\brutality\module\impl\combat\AutoClicker.java|1241|1250|isKeyDown|method|net.minecraft.client.settings.KeyBinding|isKeyDown|()Z
+      @|org\brutality\module\impl\combat\AutoClicker.java|1284|1298|clickPerSecond|field|org.brutality.module.impl.combat.AutoClicker|clickPerSecond
+      ERROR SimpleName: getValue null
+      @|org\brutality\module\impl\combat\AutoClicker.java|1366|1372|System|class|java.lang.System
+      @|org\brutality\module\impl\combat\AutoClicker.java|1373|1390|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+      @|org\brutality\module\impl\combat\AutoClicker.java|1395|1408|lastClickTime|field|org.brutality.module.impl.combat.AutoClicker|lastClickTime
+      @|org\brutality\module\impl\combat\AutoClicker.java|1437|1454|simulateLeftClick|method|org.brutality.module.impl.combat.AutoClicker|simulateLeftClick|()V
+      @|org\brutality\module\impl\combat\AutoClicker.java|1474|1487|lastClickTime|field|org.brutality.module.impl.combat.AutoClicker|lastClickTime
+      @|org\brutality\module\impl\combat\AutoClicker.java|1490|1496|System|class|java.lang.System
+      @|org\brutality\module\impl\combat\AutoClicker.java|1497|1514|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+   Method End: onUpdate(Lorg/brutality/events/listeners/EventUpdate;)V
+   Method Start: simulateLeftClick()V
+      @|org\brutality\module\impl\combat\AutoClicker.java|1566|1583|simulateLeftClick|method|org.brutality.module.impl.combat.AutoClicker|simulateLeftClick|()V
+      @|org\brutality\module\impl\combat\AutoClicker.java|1600|1605|robot|field|org.brutality.module.impl.combat.AutoClicker|robot
+      @|org\brutality\module\impl\combat\AutoClicker.java|1629|1634|robot|field|org.brutality.module.impl.combat.AutoClicker|robot
+      @|org\brutality\module\impl\combat\AutoClicker.java|1635|1645|mousePress|method|java.awt.Robot|mousePress|(I)V
+      @|org\brutality\module\impl\combat\AutoClicker.java|1646|1656|InputEvent|class|java.awt.event.InputEvent
+      @|org\brutality\module\impl\combat\AutoClicker.java|1657|1674|BUTTON1_DOWN_MASK|field|java.awt.event.InputEvent|BUTTON1_DOWN_MASK
+      @|org\brutality\module\impl\combat\AutoClicker.java|1689|1694|robot|field|org.brutality.module.impl.combat.AutoClicker|robot
+      @|org\brutality\module\impl\combat\AutoClicker.java|1695|1707|mouseRelease|method|java.awt.Robot|mouseRelease|(I)V
+      @|org\brutality\module\impl\combat\AutoClicker.java|1708|1718|InputEvent|class|java.awt.event.InputEvent
+      @|org\brutality\module\impl\combat\AutoClicker.java|1719|1736|BUTTON1_DOWN_MASK|field|java.awt.event.InputEvent|BUTTON1_DOWN_MASK
+   Method End: simulateLeftClick()V
+   Method Start: onDisable()V
+      @|org\brutality\module\impl\combat\AutoClicker.java|1773|1782|onDisable|method|org.brutality.module.Module|onDisable|()V
+      @|org\brutality\module\impl\combat\AutoClicker.java|1801|1810|onDisable|method|org.brutality.module.Module|onDisable|()V
+      @|org\brutality\module\impl\combat\AutoClicker.java|1888|1893|robot|field|org.brutality.module.impl.combat.AutoClicker|robot
+      @|org\brutality\module\impl\combat\AutoClicker.java|1917|1922|robot|field|org.brutality.module.impl.combat.AutoClicker|robot
+      @|org\brutality\module\impl\combat\AutoClicker.java|1923|1935|mouseRelease|method|java.awt.Robot|mouseRelease|(I)V
+      @|org\brutality\module\impl\combat\AutoClicker.java|1936|1946|InputEvent|class|java.awt.event.InputEvent
+      @|org\brutality\module\impl\combat\AutoClicker.java|1947|1964|BUTTON1_DOWN_MASK|field|java.awt.event.InputEvent|BUTTON1_DOWN_MASK
+   Method End: onDisable()V
+Class End  : org.brutality.module.impl.combat.AutoClicker
+endProcessing org\brutality\module\impl\combat\AutoClicker.java
 
 processing org\brutality\module\impl\combat\KillAura.java
 @|org\brutality\module\impl\combat\KillAura.java|8|40|org.brutality.module.impl.combat|package|org.brutality.module.impl.combat|(file)
@@ -1148,66 +1246,35 @@ endProcessing org\brutality\module\impl\combat\Velocity.java
 processing org\brutality\module\impl\harrys\AutoGrinder.java
 @|org\brutality\module\impl\harrys\AutoGrinder.java|8|40|org.brutality.module.impl.harrys|package|org.brutality.module.impl.harrys|(file)
 Class Start: org.brutality.module.impl.harrys.AutoGrinder
-   @|org\brutality\module\impl\harrys\AutoGrinder.java|340|349|Minecraft|class|net.minecraft.client.Minecraft
-   @|org\brutality\module\impl\harrys\AutoGrinder.java|350|352|mc|field|org.brutality.module.impl.harrys.AutoGrinder|mc|
-   @|org\brutality\module\impl\harrys\AutoGrinder.java|355|364|Minecraft|class|net.minecraft.client.Minecraft
-   @|org\brutality\module\impl\harrys\AutoGrinder.java|365|377|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
-   @|org\brutality\module\impl\harrys\AutoGrinder.java|399|407|BlockPos|class|net.minecraft.util.BlockPos
-   @|org\brutality\module\impl\harrys\AutoGrinder.java|408|417|targetPos|field|org.brutality.module.impl.harrys.AutoGrinder|targetPos|
-   @|org\brutality\module\impl\harrys\AutoGrinder.java|424|432|BlockPos|class|net.minecraft.util.BlockPos
    Method Start: AutoGrinder()V
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|456|467|AutoGrinder|method|org.brutality.module.impl.harrys.AutoGrinder|AutoGrinder|()V
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|542|550|Category|class|org.brutality.module.Category
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|551|557|HARRYS|field|org.brutality.module.Category|HARRYS
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|264|275|AutoGrinder|method|org.brutality.module.impl.harrys.AutoGrinder|AutoGrinder|()V
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|359|367|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|368|374|HARRYS|field|org.brutality.module.Category|HARRYS
    Method End: AutoGrinder()V
-   Method Start: onEvent(Lorg/brutality/events/Event;)V
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|583|590|onEvent|method|org.brutality.module.impl.harrys.AutoGrinder|onEvent|(Lorg/brutality/events/Event;)V
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|591|596|Event|class|org.brutality.events.Event
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|597|602|event|param|org.brutality.module.impl.harrys.AutoGrinder|onEvent|(Lorg/brutality/events/Event;)V|event|0
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|618|623|event|param|org.brutality.module.impl.harrys.AutoGrinder|onEvent|(Lorg/brutality/events/Event;)V|event|0
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|635|646|EventUpdate|class|org.brutality.events.listeners.EventUpdate
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|662|670|onUpdate|method|org.brutality.module.impl.harrys.AutoGrinder|onUpdate|(Lorg/brutality/events/listeners/EventUpdate;)V
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|672|683|EventUpdate|class|org.brutality.events.listeners.EventUpdate
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|685|690|event|param|org.brutality.module.impl.harrys.AutoGrinder|onEvent|(Lorg/brutality/events/Event;)V|event|0
-   Method End: onEvent(Lorg/brutality/events/Event;)V
    Method Start: onUpdate(Lorg/brutality/events/listeners/EventUpdate;)V
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|726|734|onUpdate|method|org.brutality.module.impl.harrys.AutoGrinder|onUpdate|(Lorg/brutality/events/listeners/EventUpdate;)V
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|735|746|EventUpdate|class|org.brutality.events.listeners.EventUpdate
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|747|752|event|param|org.brutality.module.impl.harrys.AutoGrinder|onUpdate|(Lorg/brutality/events/listeners/EventUpdate;)V|event|0
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|768|770|mc|field|org.brutality.module.impl.harrys.AutoGrinder|mc
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|771|780|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|792|794|mc|field|org.brutality.module.impl.harrys.AutoGrinder|mc
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|795|803|theWorld|field|net.minecraft.client.Minecraft|theWorld
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|869|878|targetPos|field|org.brutality.module.impl.harrys.AutoGrinder|targetPos
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|879|883|getX|method|net.minecraft.util.Vec3i|getX|()I
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|888|890|mc|field|org.brutality.module.impl.harrys.AutoGrinder|mc
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|891|900|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|901|905|posX|field|net.minecraft.entity.Entity|posX
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|930|939|targetPos|field|org.brutality.module.impl.harrys.AutoGrinder|targetPos
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|940|944|getY|method|net.minecraft.util.Vec3i|getY|()I
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|949|951|mc|field|org.brutality.module.impl.harrys.AutoGrinder|mc
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|952|961|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|962|966|posY|field|net.minecraft.entity.Entity|posY
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|991|1000|targetPos|field|org.brutality.module.impl.harrys.AutoGrinder|targetPos
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1001|1005|getZ|method|net.minecraft.util.Vec3i|getZ|()I
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1010|1012|mc|field|org.brutality.module.impl.harrys.AutoGrinder|mc
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1013|1022|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1023|1027|posZ|field|net.minecraft.entity.Entity|posZ
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1056|1060|Math|class|java.lang.Math
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1061|1065|sqrt|method|java.lang.Math|sqrt|(D)D
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1178|1182|Math|class|java.lang.Math
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1183|1188|atan2|method|java.lang.Math|atan2|(DD)D
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1214|1218|Math|class|java.lang.Math
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1219|1221|PI|field|java.lang.Math|PI
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1244|1246|mc|field|org.brutality.module.impl.harrys.AutoGrinder|mc
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1247|1256|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1257|1268|rotationYaw|field|net.minecraft.entity.Entity|rotationYaw
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1288|1290|mc|field|org.brutality.module.impl.harrys.AutoGrinder|mc
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1291|1300|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1301|1312|moveForward|field|net.minecraft.entity.EntityLivingBase|moveForward
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1350|1352|mc|field|org.brutality.module.impl.harrys.AutoGrinder|mc
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1353|1362|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\harrys\AutoGrinder.java|1363|1374|moveForward|field|net.minecraft.entity.EntityLivingBase|moveForward
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|417|425|onUpdate|method|org.brutality.module.impl.harrys.AutoGrinder|onUpdate|(Lorg/brutality/events/listeners/EventUpdate;)V
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|426|437|EventUpdate|class|org.brutality.events.listeners.EventUpdate
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|438|443|event|param|org.brutality.module.impl.harrys.AutoGrinder|onUpdate|(Lorg/brutality/events/listeners/EventUpdate;)V|event|0
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|568|570|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|571|580|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|581|585|posX|field|net.minecraft.entity.Entity|posX
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|621|623|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|624|633|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|634|638|posZ|field|net.minecraft.entity.Entity|posZ
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|666|670|Math|class|java.lang.Math
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|671|675|sqrt|method|java.lang.Math|sqrt|(D)D
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|815|817|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|818|827|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|828|835|motionX|field|net.minecraft.entity.Entity|motionX
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|879|881|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|882|891|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|892|899|motionZ|field|net.minecraft.entity.Entity|motionZ
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|960|962|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|963|972|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|973|980|motionX|field|net.minecraft.entity.Entity|motionX
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|998|1000|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|1001|1010|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\harrys\AutoGrinder.java|1011|1018|motionZ|field|net.minecraft.entity.Entity|motionZ
    Method End: onUpdate(Lorg/brutality/events/listeners/EventUpdate;)V
 Class End  : org.brutality.module.impl.harrys.AutoGrinder
 endProcessing org\brutality\module\impl\harrys\AutoGrinder.java
@@ -1440,6 +1507,12 @@ processing org\brutality\module\impl\hypixel\Tracker.java
 Class Start: org.brutality.module.impl.hypixel.Tracker
 Class End  : org.brutality.module.impl.hypixel.Tracker
 endProcessing org\brutality\module\impl\hypixel\Tracker.java
+
+processing org\brutality\module\impl\misc\ModuleSound.java
+@|org\brutality\module\impl\misc\ModuleSound.java|8|38|org.brutality.module.impl.misc|package|org.brutality.module.impl.misc|(file)
+Class Start: org.brutality.module.impl.misc.ModuleSound
+Class End  : org.brutality.module.impl.misc.ModuleSound
+endProcessing org\brutality\module\impl\misc\ModuleSound.java
 
 processing org\brutality\module\impl\move\Fly.java
 @|org\brutality\module\impl\move\Fly.java|8|38|org.brutality.module.impl.move|package|org.brutality.module.impl.move|(file)
@@ -3795,77 +3868,83 @@ endProcessing org\brutality\module\impl\player\FakeLag.java
 processing org\brutality\module\impl\player\FastPlace.java
 @|org\brutality\module\impl\player\FastPlace.java|8|40|org.brutality.module.impl.player|package|org.brutality.module.impl.player|(file)
 Class Start: org.brutality.module.impl.player.FastPlace
-   @|org\brutality\module\impl\player\FastPlace.java|522|535|NumberSetting|class|org.brutality.settings.impl.NumberSetting
-   @|org\brutality\module\impl\player\FastPlace.java|536|545|tickDelay|field|org.brutality.module.impl.player.FastPlace|tickDelay|
-   @|org\brutality\module\impl\player\FastPlace.java|552|565|NumberSetting|class|org.brutality.settings.impl.NumberSetting
-   @|org\brutality\module\impl\player\FastPlace.java|617|631|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
-   @|org\brutality\module\impl\player\FastPlace.java|632|642|blocksOnly|field|org.brutality.module.impl.player.FastPlace|blocksOnly|
-   @|org\brutality\module\impl\player\FastPlace.java|649|663|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
-   @|org\brutality\module\impl\player\FastPlace.java|710|724|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
-   @|org\brutality\module\impl\player\FastPlace.java|725|735|pitchCheck|field|org.brutality.module.impl.player.FastPlace|pitchCheck|
-   @|org\brutality\module\impl\player\FastPlace.java|742|756|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
-   @|org\brutality\module\impl\player\FastPlace.java|799|808|Minecraft|class|net.minecraft.client.Minecraft
-   @|org\brutality\module\impl\player\FastPlace.java|809|811|mc|field|org.brutality.module.impl.player.FastPlace|mc|
-   @|org\brutality\module\impl\player\FastPlace.java|814|823|Minecraft|class|net.minecraft.client.Minecraft
-   @|org\brutality\module\impl\player\FastPlace.java|824|836|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
-   @|org\brutality\module\impl\player\FastPlace.java|856|861|delay|field|org.brutality.module.impl.player.FastPlace|delay|
+   @|org\brutality\module\impl\player\FastPlace.java|548|561|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\player\FastPlace.java|562|567|delay|field|org.brutality.module.impl.player.FastPlace|delay|
+   @|org\brutality\module\impl\player\FastPlace.java|574|587|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\player\FastPlace.java|650|664|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
+   @|org\brutality\module\impl\player\FastPlace.java|665|675|blocksOnly|field|org.brutality.module.impl.player.FastPlace|blocksOnly|
+   @|org\brutality\module\impl\player\FastPlace.java|682|696|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
+   @|org\brutality\module\impl\player\FastPlace.java|743|757|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
+   @|org\brutality\module\impl\player\FastPlace.java|758|767|randomize|field|org.brutality.module.impl.player.FastPlace|randomize|
+   @|org\brutality\module\impl\player\FastPlace.java|774|788|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
+   @|org\brutality\module\impl\player\FastPlace.java|829|834|Field|class|java.lang.reflect.Field
+   @|org\brutality\module\impl\player\FastPlace.java|835|860|rightClickDelayTimerField|field|org.brutality.module.impl.player.FastPlace|rightClickDelayTimerField|
    Method Start: FastPlace()V
-      @|org\brutality\module\impl\player\FastPlace.java|875|884|FastPlace|method|org.brutality.module.impl.player.FastPlace|FastPlace|()V
-      @|org\brutality\module\impl\player\FastPlace.java|940|948|Category|class|org.brutality.module.Category
-      @|org\brutality\module\impl\player\FastPlace.java|949|955|PLAYER|field|org.brutality.module.Category|PLAYER
-      @|org\brutality\module\impl\player\FastPlace.java|971|982|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
-      @|org\brutality\module\impl\player\FastPlace.java|983|992|tickDelay|field|org.brutality.module.impl.player.FastPlace|tickDelay
-      @|org\brutality\module\impl\player\FastPlace.java|994|1004|blocksOnly|field|org.brutality.module.impl.player.FastPlace|blocksOnly
-      @|org\brutality\module\impl\player\FastPlace.java|1006|1016|pitchCheck|field|org.brutality.module.impl.player.FastPlace|pitchCheck
+      @|org\brutality\module\impl\player\FastPlace.java|874|883|FastPlace|method|org.brutality.module.impl.player.FastPlace|FastPlace|()V
+      @|org\brutality\module\impl\player\FastPlace.java|954|962|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\player\FastPlace.java|963|969|PLAYER|field|org.brutality.module.Category|PLAYER
+      @|org\brutality\module\impl\player\FastPlace.java|980|991|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
+      @|org\brutality\module\impl\player\FastPlace.java|992|997|delay|field|org.brutality.module.impl.player.FastPlace|delay
+      @|org\brutality\module\impl\player\FastPlace.java|999|1009|blocksOnly|field|org.brutality.module.impl.player.FastPlace|blocksOnly
+      @|org\brutality\module\impl\player\FastPlace.java|1011|1020|randomize|field|org.brutality.module.impl.player.FastPlace|randomize
+      @|org\brutality\module\impl\player\FastPlace.java|1050|1075|rightClickDelayTimerField|field|org.brutality.module.impl.player.FastPlace|rightClickDelayTimerField
+      @|org\brutality\module\impl\player\FastPlace.java|1078|1087|Minecraft|class|net.minecraft.client.Minecraft
+      @|org\brutality\module\impl\player\FastPlace.java|1094|1110|getDeclaredField|method|java.lang.Class|getDeclaredField|(Ljava/lang/String;)Ljava/lang/reflect/Field;
+      @|org\brutality\module\impl\player\FastPlace.java|1148|1173|rightClickDelayTimerField|field|org.brutality.module.impl.player.FastPlace|rightClickDelayTimerField
+      @|org\brutality\module\impl\player\FastPlace.java|1174|1187|setAccessible|method|java.lang.reflect.AccessibleObject|setAccessible|(Z)V
+      @|org\brutality\module\impl\player\FastPlace.java|1212|1232|NoSuchFieldException|class|java.lang.NoSuchFieldException
+      @|org\brutality\module\impl\player\FastPlace.java|1252|1267|printStackTrace|method|java.lang.Throwable|printStackTrace|()V
    Method End: FastPlace()V
-   Method Start: onTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V
-      @|org\brutality\module\impl\player\FastPlace.java|1062|1068|onTick|method|org.brutality.module.impl.player.FastPlace|onTick|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V
-      @|org\brutality\module\impl\player\FastPlace.java|1069|1094|TickEvent.PlayerTickEvent|class|net.minecraftforge.fml.common.gameevent.TickEvent.PlayerTickEvent
-      @|org\brutality\module\impl\player\FastPlace.java|1095|1100|event|param|org.brutality.module.impl.player.FastPlace|onTick|(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V|event|0
-      @|org\brutality\module\impl\player\FastPlace.java|1116|1118|mc|field|org.brutality.module.impl.player.FastPlace|mc
-      @|org\brutality\module\impl\player\FastPlace.java|1119|1128|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\player\FastPlace.java|1140|1142|mc|field|org.brutality.module.impl.player.FastPlace|mc
-      @|org\brutality\module\impl\player\FastPlace.java|1143|1151|theWorld|field|net.minecraft.client.Minecraft|theWorld
-      @|org\brutality\module\impl\player\FastPlace.java|1179|1189|blocksOnly|field|org.brutality.module.impl.player.FastPlace|blocksOnly
-      @|org\brutality\module\impl\player\FastPlace.java|1190|1199|isEnabled|method|org.brutality.settings.impl.BooleanSetting|isEnabled|()Z
-      @|org\brutality\module\impl\player\FastPlace.java|1207|1209|mc|field|org.brutality.module.impl.player.FastPlace|mc
-      @|org\brutality\module\impl\player\FastPlace.java|1210|1219|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\player\FastPlace.java|1220|1231|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
-      @|org\brutality\module\impl\player\FastPlace.java|1234|1241|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
-      @|org\brutality\module\impl\player\FastPlace.java|1255|1264|ItemBlock|class|net.minecraft.item.ItemBlock
-      @|org\brutality\module\impl\player\FastPlace.java|1324|1334|pitchCheck|field|org.brutality.module.impl.player.FastPlace|pitchCheck
-      @|org\brutality\module\impl\player\FastPlace.java|1335|1344|isEnabled|method|org.brutality.settings.impl.BooleanSetting|isEnabled|()Z
-      @|org\brutality\module\impl\player\FastPlace.java|1350|1352|mc|field|org.brutality.module.impl.player.FastPlace|mc
-      @|org\brutality\module\impl\player\FastPlace.java|1353|1362|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\player\FastPlace.java|1363|1376|rotationPitch|field|net.minecraft.entity.Entity|rotationPitch
-      @|org\brutality\module\impl\player\FastPlace.java|1440|1442|mc|field|org.brutality.module.impl.player.FastPlace|mc
-      @|org\brutality\module\impl\player\FastPlace.java|1443|1452|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\player\FastPlace.java|1453|1464|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
-      @|org\brutality\module\impl\player\FastPlace.java|1478|1480|mc|field|org.brutality.module.impl.player.FastPlace|mc
-      @|org\brutality\module\impl\player\FastPlace.java|1481|1490|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
-      @|org\brutality\module\impl\player\FastPlace.java|1491|1502|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
-      @|org\brutality\module\impl\player\FastPlace.java|1505|1512|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
-      @|org\brutality\module\impl\player\FastPlace.java|1526|1535|ItemBlock|class|net.minecraft.item.ItemBlock
-      @|org\brutality\module\impl\player\FastPlace.java|1555|1570|ReflectionUtils|class|org.brutality.utils.ReflectionUtils
-      @|org\brutality\module\impl\player\FastPlace.java|1571|1586|setPrivateField|method|org.brutality.utils.ReflectionUtils|setPrivateField|(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
-      @|org\brutality\module\impl\player\FastPlace.java|1587|1589|mc|field|org.brutality.module.impl.player.FastPlace|mc
-      @|org\brutality\module\impl\player\FastPlace.java|1615|1620|delay|field|org.brutality.module.impl.player.FastPlace|delay
-      @|org\brutality\module\impl\player\FastPlace.java|1660|1675|ReflectionUtils|class|org.brutality.utils.ReflectionUtils
-      @|org\brutality\module\impl\player\FastPlace.java|1676|1691|setPrivateField|method|org.brutality.utils.ReflectionUtils|setPrivateField|(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
-      @|org\brutality\module\impl\player\FastPlace.java|1692|1694|mc|field|org.brutality.module.impl.player.FastPlace|mc
-   Method End: onTick(Lnet/minecraftforge/fml/common/gameevent/TickEvent$PlayerTickEvent;)V
-   Method Start: onEnable()V
-      @|org\brutality\module\impl\player\FastPlace.java|1772|1780|onEnable|method|org.brutality.module.Module|onEnable|()V
-      @|org\brutality\module\impl\player\FastPlace.java|1793|1798|delay|field|org.brutality.module.impl.player.FastPlace|delay
-      @|org\brutality\module\impl\player\FastPlace.java|1807|1816|tickDelay|field|org.brutality.module.impl.player.FastPlace|tickDelay
+   Method Start: onPreMotion(Lorg/brutality/events/PreMotionEvent;)V
+      @|org\brutality\module\impl\player\FastPlace.java|1324|1335|onPreMotion|method|org.brutality.module.impl.player.FastPlace|onPreMotion|(Lorg/brutality/events/PreMotionEvent;)V
+      @|org\brutality\module\impl\player\FastPlace.java|1342|1356|PreMotionEvent|class|org.brutality.events.PreMotionEvent
+      @|org\brutality\module\impl\player\FastPlace.java|1357|1362|event|param|org.brutality.module.impl.player.FastPlace|onPreMotion|(Lorg/brutality/events/PreMotionEvent;)V|event|0
+      @|org\brutality\module\impl\player\FastPlace.java|1378|1388|blocksOnly|field|org.brutality.module.impl.player.FastPlace|blocksOnly
+      @|org\brutality\module\impl\player\FastPlace.java|1389|1398|isEnabled|method|org.brutality.settings.impl.BooleanSetting|isEnabled|()Z
+      @|org\brutality\module\impl\player\FastPlace.java|1406|1408|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\player\FastPlace.java|1409|1418|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\player\FastPlace.java|1419|1430|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\player\FastPlace.java|1444|1446|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\player\FastPlace.java|1447|1456|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\player\FastPlace.java|1457|1468|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\player\FastPlace.java|1471|1478|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
+      @|org\brutality\module\impl\player\FastPlace.java|1492|1494|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\player\FastPlace.java|1495|1504|thePlayer|field|net.minecraft.client.Minecraft|thePlayer
+      @|org\brutality\module\impl\player\FastPlace.java|1505|1516|getHeldItem|method|net.minecraft.entity.EntityLivingBase|getHeldItem|()Lnet/minecraft/item/ItemStack;
+      @|org\brutality\module\impl\player\FastPlace.java|1519|1526|getItem|method|net.minecraft.item.ItemStack|getItem|()Lnet/minecraft/item/Item;
+      @|org\brutality\module\impl\player\FastPlace.java|1540|1549|ItemBlock|class|net.minecraft.item.ItemBlock
+      @|org\brutality\module\impl\player\FastPlace.java|1609|1614|delay|field|org.brutality.module.impl.player.FastPlace|delay
       ERROR SimpleName: getValue null
-   Method End: onEnable()V
-   Method Start: onDisable()V
-      @|org\brutality\module\impl\player\FastPlace.java|1853|1862|onDisable|method|org.brutality.module.Module|onDisable|()V
-      @|org\brutality\module\impl\player\FastPlace.java|1875|1890|ReflectionUtils|class|org.brutality.utils.ReflectionUtils
-      @|org\brutality\module\impl\player\FastPlace.java|1891|1906|setPrivateField|method|org.brutality.utils.ReflectionUtils|setPrivateField|(Ljava/lang/Object;Ljava/lang/String;Ljava/lang/Object;)V
-      @|org\brutality\module\impl\player\FastPlace.java|1907|1909|mc|field|org.brutality.module.impl.player.FastPlace|mc
-   Method End: onDisable()V
+      @|org\brutality\module\impl\player\FastPlace.java|1675|1684|randomize|field|org.brutality.module.impl.player.FastPlace|randomize
+      @|org\brutality\module\impl\player\FastPlace.java|1685|1694|isEnabled|method|org.brutality.settings.impl.BooleanSetting|isEnabled|()Z
+      @|org\brutality\module\impl\player\FastPlace.java|1729|1740|RandomUtils|class|org.apache.commons.lang3.RandomUtils
+      @|org\brutality\module\impl\player\FastPlace.java|1741|1748|nextInt|method|org.apache.commons.lang3.RandomUtils|nextInt|(II)I
+      @|org\brutality\module\impl\player\FastPlace.java|1792|1815|setRightClickDelayTimer|method|org.brutality.module.impl.player.FastPlace|setRightClickDelayTimer|(I)V
+      @|org\brutality\module\impl\player\FastPlace.java|1862|1885|getRightClickDelayTimer|method|org.brutality.module.impl.player.FastPlace|getRightClickDelayTimer|()I
+      @|org\brutality\module\impl\player\FastPlace.java|1924|1933|randomize|field|org.brutality.module.impl.player.FastPlace|randomize
+      @|org\brutality\module\impl\player\FastPlace.java|1934|1943|isEnabled|method|org.brutality.settings.impl.BooleanSetting|isEnabled|()Z
+      @|org\brutality\module\impl\player\FastPlace.java|1982|1993|RandomUtils|class|org.apache.commons.lang3.RandomUtils
+      @|org\brutality\module\impl\player\FastPlace.java|1994|2001|nextInt|method|org.apache.commons.lang3.RandomUtils|nextInt|(II)I
+      @|org\brutality\module\impl\player\FastPlace.java|2053|2076|setRightClickDelayTimer|method|org.brutality.module.impl.player.FastPlace|setRightClickDelayTimer|(I)V
+   Method End: onPreMotion(Lorg/brutality/events/PreMotionEvent;)V
+   Method Start: getRightClickDelayTimer()I
+      @|org\brutality\module\impl\player\FastPlace.java|2137|2160|getRightClickDelayTimer|method|org.brutality.module.impl.player.FastPlace|getRightClickDelayTimer|()I
+      @|org\brutality\module\impl\player\FastPlace.java|2198|2223|rightClickDelayTimerField|field|org.brutality.module.impl.player.FastPlace|rightClickDelayTimerField
+      @|org\brutality\module\impl\player\FastPlace.java|2224|2230|getInt|method|java.lang.reflect.Field|getInt|(Ljava/lang/Object;)I
+      @|org\brutality\module\impl\player\FastPlace.java|2231|2233|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\player\FastPlace.java|2253|2275|IllegalAccessException|class|java.lang.IllegalAccessException
+      @|org\brutality\module\impl\player\FastPlace.java|2295|2310|printStackTrace|method|java.lang.Throwable|printStackTrace|()V
+   Method End: getRightClickDelayTimer()I
+   Method Start: setRightClickDelayTimer(I)V
+      @|org\brutality\module\impl\player\FastPlace.java|2370|2393|setRightClickDelayTimer|method|org.brutality.module.impl.player.FastPlace|setRightClickDelayTimer|(I)V
+      @|org\brutality\module\impl\player\FastPlace.java|2398|2403|value|param|org.brutality.module.impl.player.FastPlace|setRightClickDelayTimer|(I)V|value|0
+      @|org\brutality\module\impl\player\FastPlace.java|2433|2458|rightClickDelayTimerField|field|org.brutality.module.impl.player.FastPlace|rightClickDelayTimerField
+      @|org\brutality\module\impl\player\FastPlace.java|2459|2465|setInt|method|java.lang.reflect.Field|setInt|(Ljava/lang/Object;I)V
+      @|org\brutality\module\impl\player\FastPlace.java|2466|2468|mc|field|org.brutality.utils.interfaces.MC|mc
+      @|org\brutality\module\impl\player\FastPlace.java|2470|2475|value|param|org.brutality.module.impl.player.FastPlace|setRightClickDelayTimer|(I)V|value|0
+      @|org\brutality\module\impl\player\FastPlace.java|2495|2517|IllegalAccessException|class|java.lang.IllegalAccessException
+      @|org\brutality\module\impl\player\FastPlace.java|2537|2552|printStackTrace|method|java.lang.Throwable|printStackTrace|()V
+   Method End: setRightClickDelayTimer(I)V
 Class End  : org.brutality.module.impl.player.FastPlace
 endProcessing org\brutality\module\impl\player\FastPlace.java
 
@@ -4067,6 +4146,309 @@ Class Start: org.brutality.module.impl.render.ClickGuiModule
 Class End  : org.brutality.module.impl.render.ClickGuiModule
 endProcessing org\brutality\module\impl\render\ClickGuiModule.java
 
+processing org\brutality\module\impl\render\HUD.java
+@|org\brutality\module\impl\render\HUD.java|8|40|org.brutality.module.impl.render|package|org.brutality.module.impl.render|(file)
+Class Start: org.brutality.module.impl.render.HUD
+   @|org\brutality\module\impl\render\HUD.java|996|1008|ColorSetting|class|org.brutality.settings.impl.ColorSetting
+   @|org\brutality\module\impl\render\HUD.java|1009|1021|colorSetting|field|org.brutality.module.impl.render.HUD|colorSetting|
+   @|org\brutality\module\impl\render\HUD.java|1028|1040|ColorSetting|class|org.brutality.settings.impl.ColorSetting
+   @|org\brutality\module\impl\render\HUD.java|1056|1061|Color|class|java.awt.Color
+   @|org\brutality\module\impl\render\HUD.java|1062|1067|WHITE|field|java.awt.Color|WHITE
+   @|org\brutality\module\impl\render\HUD.java|1087|1101|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
+   @|org\brutality\module\impl\render\HUD.java|1102|1119|backgroundSetting|field|org.brutality.module.impl.render.HUD|backgroundSetting|
+   @|org\brutality\module\impl\render\HUD.java|1126|1140|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
+   @|org\brutality\module\impl\render\HUD.java|1185|1199|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
+   @|org\brutality\module\impl\render\HUD.java|1200|1216|watermarkSetting|field|org.brutality.module.impl.render.HUD|watermarkSetting|
+   @|org\brutality\module\impl\render\HUD.java|1223|1237|BooleanSetting|class|org.brutality.settings.impl.BooleanSetting
+   @|org\brutality\module\impl\render\HUD.java|1302|1315|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\render\HUD.java|1316|1330|spacingSetting|field|org.brutality.module.impl.render.HUD|spacingSetting|
+   @|org\brutality\module\impl\render\HUD.java|1337|1350|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\render\HUD.java|1399|1412|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\render\HUD.java|1413|1425|scaleSetting|field|org.brutality.module.impl.render.HUD|scaleSetting|
+   @|org\brutality\module\impl\render\HUD.java|1432|1445|NumberSetting|class|org.brutality.settings.impl.NumberSetting
+   @|org\brutality\module\impl\render\HUD.java|1518|1535|SimpleModeSetting|class|org.brutality.settings.impl.SimpleModeSetting
+   @|org\brutality\module\impl\render\HUD.java|1536|1547|fontSetting|field|org.brutality.module.impl.render.HUD|fontSetting|
+   @|org\brutality\module\impl\render\HUD.java|1554|1571|SimpleModeSetting|class|org.brutality.settings.impl.SimpleModeSetting
+   @|org\brutality\module\impl\render\HUD.java|1600|1606|String|class|java.lang.String
+   @|org\brutality\module\impl\render\HUD.java|1651|1668|SimpleModeSetting|class|org.brutality.settings.impl.SimpleModeSetting
+   @|org\brutality\module\impl\render\HUD.java|1669|1680|modeSetting|field|org.brutality.module.impl.render.HUD|modeSetting|
+   @|org\brutality\module\impl\render\HUD.java|1687|1704|SimpleModeSetting|class|org.brutality.settings.impl.SimpleModeSetting
+   @|org\brutality\module\impl\render\HUD.java|1733|1739|String|class|java.lang.String
+   @|org\brutality\module\impl\render\HUD.java|1786|1790|posX|field|org.brutality.module.impl.render.HUD|posX|
+   @|org\brutality\module\impl\render\HUD.java|1797|1801|posY|field|org.brutality.module.impl.render.HUD|posY|
+   @|org\brutality\module\impl\render\HUD.java|1824|1829|dragX|field|org.brutality.module.impl.render.HUD|dragX|
+   @|org\brutality\module\impl\render\HUD.java|1831|1836|dragY|field|org.brutality.module.impl.render.HUD|dragY|
+   @|org\brutality\module\impl\render\HUD.java|1858|1866|dragging|field|org.brutality.module.impl.render.HUD|dragging|
+   @|org\brutality\module\impl\render\HUD.java|1888|1906|CustomFontRenderer|class|org.brutality.ui.font.CustomFontRenderer
+   @|org\brutality\module\impl\render\HUD.java|1907|1925|smoothFontRenderer|field|org.brutality.module.impl.render.HUD|smoothFontRenderer|
+   @|org\brutality\module\impl\render\HUD.java|1939|1957|CustomFontRenderer|class|org.brutality.ui.font.CustomFontRenderer
+   @|org\brutality\module\impl\render\HUD.java|1958|1973|bigFontRenderer|field|org.brutality.module.impl.render.HUD|bigFontRenderer|
+   @|org\brutality\module\impl\render\HUD.java|1987|1996|Minecraft|class|net.minecraft.client.Minecraft
+   @|org\brutality\module\impl\render\HUD.java|1997|1999|mc|field|org.brutality.module.impl.render.HUD|mc|
+   @|org\brutality\module\impl\render\HUD.java|2002|2011|Minecraft|class|net.minecraft.client.Minecraft
+   @|org\brutality\module\impl\render\HUD.java|2012|2024|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   @|org\brutality\module\impl\render\HUD.java|2046|2062|ResourceLocation|class|net.minecraft.util.ResourceLocation
+   @|org\brutality\module\impl\render\HUD.java|2063|2074|vapeV4Image|field|org.brutality.module.impl.render.HUD|vapeV4Image|
+   @|org\brutality\module\impl\render\HUD.java|2081|2097|ResourceLocation|class|net.minecraft.util.ResourceLocation
+   @|org\brutality\module\impl\render\HUD.java|2153|2169|ResourceLocation|class|net.minecraft.util.ResourceLocation
+   @|org\brutality\module\impl\render\HUD.java|2170|2178|boxImage|field|org.brutality.module.impl.render.HUD|boxImage|
+   @|org\brutality\module\impl\render\HUD.java|2185|2201|ResourceLocation|class|net.minecraft.util.ResourceLocation
+   @|org\brutality\module\impl\render\HUD.java|2262|2267|Color|class|java.awt.Color
+   @|org\brutality\module\impl\render\HUD.java|2257|2261|List|class|java.util.List
+   @|org\brutality\module\impl\render\HUD.java|2269|2275|colors|field|org.brutality.module.impl.render.HUD|colors|
+   @|org\brutality\module\impl\render\HUD.java|2278|2284|Arrays|class|java.util.Arrays
+   @|org\brutality\module\impl\render\HUD.java|2285|2291|asList|method|java.util.Arrays|asList|([Ljava/lang/Object;)Ljava/util/List;
+   @|org\brutality\module\impl\render\HUD.java|2292|2297|Color|class|java.awt.Color
+   @|org\brutality\module\impl\render\HUD.java|2298|2303|GREEN|field|java.awt.Color|GREEN
+   @|org\brutality\module\impl\render\HUD.java|2305|2310|Color|class|java.awt.Color
+   @|org\brutality\module\impl\render\HUD.java|2311|2317|YELLOW|field|java.awt.Color|YELLOW
+   @|org\brutality\module\impl\render\HUD.java|2319|2324|Color|class|java.awt.Color
+   @|org\brutality\module\impl\render\HUD.java|2325|2328|RED|field|java.awt.Color|RED
+   @|org\brutality\module\impl\render\HUD.java|2334|2339|Color|class|java.awt.Color
+   @|org\brutality\module\impl\render\HUD.java|2356|2361|Color|class|java.awt.Color
+   @|org\brutality\module\impl\render\HUD.java|2362|2366|CYAN|field|java.awt.Color|CYAN
+   @|org\brutality\module\impl\render\HUD.java|2381|2386|Color|class|java.awt.Color
+   @|org\brutality\module\impl\render\HUD.java|2387|2398|randomColor|field|org.brutality.module.impl.render.HUD|randomColor|
+   Method Start: HUD()V
+      @|org\brutality\module\impl\render\HUD.java|2440|2443|HUD|method|org.brutality.module.impl.render.HUD|HUD|()V
+      @|org\brutality\module\impl\render\HUD.java|2504|2512|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\render\HUD.java|2513|2519|RENDER|field|org.brutality.module.Category|RENDER
+      @|org\brutality\module\impl\render\HUD.java|2530|2536|setKey|method|org.brutality.module.Module|setKey|(I)V
+      @|org\brutality\module\impl\render\HUD.java|2537|2545|Keyboard|class|org.lwjgl.input.Keyboard
+      @|org\brutality\module\impl\render\HUD.java|2546|2551|KEY_P|field|org.lwjgl.input.Keyboard|KEY_P
+      @|org\brutality\module\impl\render\HUD.java|2562|2580|smoothFontRenderer|field|org.brutality.module.impl.render.HUD|smoothFontRenderer
+      @|org\brutality\module\impl\render\HUD.java|2587|2605|CustomFontRenderer|class|org.brutality.ui.font.CustomFontRenderer
+      @|org\brutality\module\impl\render\HUD.java|2610|2614|Font|class|java.awt.Font
+      @|org\brutality\module\impl\render\HUD.java|2624|2628|Font|class|java.awt.Font
+      @|org\brutality\module\impl\render\HUD.java|2629|2634|PLAIN|field|java.awt.Font|PLAIN
+      @|org\brutality\module\impl\render\HUD.java|2662|2677|bigFontRenderer|field|org.brutality.module.impl.render.HUD|bigFontRenderer
+      @|org\brutality\module\impl\render\HUD.java|2684|2702|CustomFontRenderer|class|org.brutality.ui.font.CustomFontRenderer
+      @|org\brutality\module\impl\render\HUD.java|2707|2711|Font|class|java.awt.Font
+      @|org\brutality\module\impl\render\HUD.java|2721|2725|Font|class|java.awt.Font
+      @|org\brutality\module\impl\render\HUD.java|2726|2730|BOLD|field|java.awt.Font|BOLD
+      @|org\brutality\module\impl\render\HUD.java|2758|2769|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
+      @|org\brutality\module\impl\render\HUD.java|2770|2782|colorSetting|field|org.brutality.module.impl.render.HUD|colorSetting
+      @|org\brutality\module\impl\render\HUD.java|2784|2801|backgroundSetting|field|org.brutality.module.impl.render.HUD|backgroundSetting
+      @|org\brutality\module\impl\render\HUD.java|2803|2819|watermarkSetting|field|org.brutality.module.impl.render.HUD|watermarkSetting
+      @|org\brutality\module\impl\render\HUD.java|2821|2835|spacingSetting|field|org.brutality.module.impl.render.HUD|spacingSetting
+      @|org\brutality\module\impl\render\HUD.java|2837|2849|scaleSetting|field|org.brutality.module.impl.render.HUD|scaleSetting
+      @|org\brutality\module\impl\render\HUD.java|2851|2862|fontSetting|field|org.brutality.module.impl.render.HUD|fontSetting
+      @|org\brutality\module\impl\render\HUD.java|2864|2875|modeSetting|field|org.brutality.module.impl.render.HUD|modeSetting
+   Method End: HUD()V
+   Method Start: onRender2D(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|org\brutality\module\impl\render\HUD.java|2921|2931|onRender2D|method|org.brutality.module.impl.render.HUD|onRender2D|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|org\brutality\module\impl\render\HUD.java|2932|2959|RenderGameOverlayEvent.Text|class|net.minecraftforge.client.event.RenderGameOverlayEvent.Text
+      @|org\brutality\module\impl\render\HUD.java|2960|2965|event|param|org.brutality.module.impl.render.HUD|onRender2D|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V|event|0
+      @|org\brutality\module\impl\render\HUD.java|3008|3010|mc|field|org.brutality.module.impl.render.HUD|mc
+      @|org\brutality\module\impl\render\HUD.java|3011|3024|currentScreen|field|net.minecraft.client.Minecraft|currentScreen
+      @|org\brutality\module\impl\render\HUD.java|3048|3062|handleDragging|method|org.brutality.module.impl.render.HUD|handleDragging|()V
+      @|org\brutality\module\impl\render\HUD.java|3089|3100|modeSetting|field|org.brutality.module.impl.render.HUD|modeSetting
+      @|org\brutality\module\impl\render\HUD.java|3101|3109|getValue|method|org.brutality.settings.impl.SimpleModeSetting|getValue|()Ljava/lang/String;
+      @|org\brutality\module\impl\render\HUD.java|3112|3118|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
+      @|org\brutality\module\impl\render\HUD.java|3144|3160|renderVapeV4Mode|method|org.brutality.module.impl.render.HUD|renderVapeV4Mode|()V
+      @|org\brutality\module\impl\render\HUD.java|3183|3194|modeSetting|field|org.brutality.module.impl.render.HUD|modeSetting
+      @|org\brutality\module\impl\render\HUD.java|3195|3203|getValue|method|org.brutality.settings.impl.SimpleModeSetting|getValue|()Ljava/lang/String;
+      @|org\brutality\module\impl\render\HUD.java|3206|3212|equals|method|java.lang.String|equals|(Ljava/lang/Object;)Z
+      @|org\brutality\module\impl\render\HUD.java|3243|3264|renderPrimeCheatsMode|method|org.brutality.module.impl.render.HUD|renderPrimeCheatsMode|()V
+   Method End: onRender2D(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+   Method Start: renderVapeV4Mode()V
+      @|org\brutality\module\impl\render\HUD.java|3302|3318|renderVapeV4Mode|method|org.brutality.module.impl.render.HUD|renderVapeV4Mode|()V
+      @|org\brutality\module\impl\render\HUD.java|3343|3355|colorSetting|field|org.brutality.module.impl.render.HUD|colorSetting
+      ERROR SimpleName: getColor null
+      ERROR SimpleName: getRGB null
+      @|org\brutality\module\impl\render\HUD.java|3405|3419|spacingSetting|field|org.brutality.module.impl.render.HUD|spacingSetting
+      ERROR SimpleName: getValue null
+      @|org\brutality\module\impl\render\HUD.java|3481|3493|scaleSetting|field|org.brutality.module.impl.render.HUD|scaleSetting
+      ERROR SimpleName: getValue null
+      @|org\brutality\module\impl\render\HUD.java|3604|3620|watermarkSetting|field|org.brutality.module.impl.render.HUD|watermarkSetting
+      @|org\brutality\module\impl\render\HUD.java|3621|3630|isEnabled|method|org.brutality.settings.impl.BooleanSetting|isEnabled|()Z
+      @|org\brutality\module\impl\render\HUD.java|3648|3657|drawImage|method|org.brutality.module.impl.render.HUD|drawImage|(Lnet/minecraft/util/ResourceLocation;II)V
+      @|org\brutality\module\impl\render\HUD.java|3658|3669|vapeV4Image|field|org.brutality.module.impl.render.HUD|vapeV4Image
+      @|org\brutality\module\impl\render\HUD.java|3671|3675|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|3677|3681|posY|field|org.brutality.module.impl.render.HUD|posY
+      @|org\brutality\module\impl\render\HUD.java|3717|3721|posY|field|org.brutality.module.impl.render.HUD|posY
+      @|org\brutality\module\impl\render\HUD.java|3802|3806|List|class|java.util.List
+      @|org\brutality\module\impl\render\HUD.java|3807|3813|Module|class|org.brutality.module.Module
+      @|org\brutality\module\impl\render\HUD.java|3832|3834|mm|field|org.brutality.utils.interfaces.MM|mm
+      @|org\brutality\module\impl\render\HUD.java|3835|3841|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
+      @|org\brutality\module\impl\render\HUD.java|3861|3867|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      ERROR SimpleName: sorted null
+      ERROR SimpleName: collect null
+      @|org\brutality\module\impl\render\HUD.java|4063|4073|Collectors|class|java.util.stream.Collectors
+      @|org\brutality\module\impl\render\HUD.java|4074|4080|toList|method|java.util.stream.Collectors|toList|()Ljava/util/stream/Collector;
+      @|org\brutality\module\impl\render\HUD.java|4098|4115|backgroundSetting|field|org.brutality.module.impl.render.HUD|backgroundSetting
+      @|org\brutality\module\impl\render\HUD.java|4116|4125|isEnabled|method|org.brutality.settings.impl.BooleanSetting|isEnabled|()Z
+      @|org\brutality\module\impl\render\HUD.java|4143|4146|Gui|class|net.minecraft.client.gui.Gui
+      @|org\brutality\module\impl\render\HUD.java|4147|4155|drawRect|method|net.minecraft.client.gui.Gui|drawRect|(IIIII)V
+      @|org\brutality\module\impl\render\HUD.java|4156|4160|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|4171|4175|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|4208|4212|size|method|java.util.Collection|size|()I
+      @|org\brutality\module\impl\render\HUD.java|4222|4240|smoothFontRenderer|field|org.brutality.module.impl.render.HUD|smoothFontRenderer
+      @|org\brutality\module\impl\render\HUD.java|4241|4254|getFontHeight|method|org.brutality.ui.font.CustomFontRenderer|getFontHeight|()F
+      @|org\brutality\module\impl\render\HUD.java|4262|4267|Color|class|java.awt.Color
+      @|org\brutality\module\impl\render\HUD.java|4282|4288|getRGB|method|java.awt.Color|getRGB|()I
+      @|org\brutality\module\impl\render\HUD.java|4312|4316|GL11|class|org.lwjgl.opengl.GL11
+      @|org\brutality\module\impl\render\HUD.java|4317|4329|glPushMatrix|method|org.lwjgl.opengl.GL11|glPushMatrix|()V
+      @|org\brutality\module\impl\render\HUD.java|4341|4345|GL11|class|org.lwjgl.opengl.GL11
+      @|org\brutality\module\impl\render\HUD.java|4346|4354|glScaled|method|org.lwjgl.opengl.GL11|glScaled|(DDD)V
+      @|org\brutality\module\impl\render\HUD.java|4390|4401|fontSetting|field|org.brutality.module.impl.render.HUD|fontSetting
+      @|org\brutality\module\impl\render\HUD.java|4402|4410|getValue|method|org.brutality.settings.impl.SimpleModeSetting|getValue|()Ljava/lang/String;
+      @|org\brutality\module\impl\render\HUD.java|4413|4429|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|org\brutality\module\impl\render\HUD.java|4460|4466|Module|class|org.brutality.module.Module
+      @|org\brutality\module\impl\render\HUD.java|4505|4523|smoothFontRenderer|field|org.brutality.module.impl.render.HUD|smoothFontRenderer
+      @|org\brutality\module\impl\render\HUD.java|4524|4544|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      ERROR SimpleName: getName null
+      @|org\brutality\module\impl\render\HUD.java|4559|4563|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|4635|4653|smoothFontRenderer|field|org.brutality.module.impl.render.HUD|smoothFontRenderer
+      @|org\brutality\module\impl\render\HUD.java|4654|4667|getFontHeight|method|org.brutality.ui.font.CustomFontRenderer|getFontHeight|()F
+      @|org\brutality\module\impl\render\HUD.java|4738|4744|Module|class|org.brutality.module.Module
+      @|org\brutality\module\impl\render\HUD.java|4783|4785|mc|field|org.brutality.module.impl.render.HUD|mc
+      @|org\brutality\module\impl\render\HUD.java|4786|4801|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\render\HUD.java|4802|4822|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      ERROR SimpleName: getName null
+      @|org\brutality\module\impl\render\HUD.java|4837|4841|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|4913|4915|mc|field|org.brutality.module.impl.render.HUD|mc
+      @|org\brutality\module\impl\render\HUD.java|4916|4931|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\render\HUD.java|4932|4943|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
+      @|org\brutality\module\impl\render\HUD.java|4997|5001|GL11|class|org.lwjgl.opengl.GL11
+      @|org\brutality\module\impl\render\HUD.java|5002|5013|glPopMatrix|method|org.lwjgl.opengl.GL11|glPopMatrix|()V
+   Method End: renderVapeV4Mode()V
+   Method Start: renderPrimeCheatsMode()V
+      @|org\brutality\module\impl\render\HUD.java|5041|5062|renderPrimeCheatsMode|method|org.brutality.module.impl.render.HUD|renderPrimeCheatsMode|()V
+      @|org\brutality\module\impl\render\HUD.java|5215|5218|Gui|class|net.minecraft.client.gui.Gui
+      @|org\brutality\module\impl\render\HUD.java|5219|5227|drawRect|method|net.minecraft.client.gui.Gui|drawRect|(IIIII)V
+      @|org\brutality\module\impl\render\HUD.java|5228|5232|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|5234|5238|posY|field|org.brutality.module.impl.render.HUD|posY
+      @|org\brutality\module\impl\render\HUD.java|5240|5244|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|5257|5261|posY|field|org.brutality.module.impl.render.HUD|posY
+      @|org\brutality\module\impl\render\HUD.java|5279|5284|Color|class|java.awt.Color
+      @|org\brutality\module\impl\render\HUD.java|5302|5308|getRGB|method|java.awt.Color|getRGB|()I
+      @|org\brutality\module\impl\render\HUD.java|5387|5389|mc|field|org.brutality.module.impl.render.HUD|mc
+      @|org\brutality\module\impl\render\HUD.java|5390|5405|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\render\HUD.java|5406|5426|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|org\brutality\module\impl\render\HUD.java|5434|5438|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|5459|5461|mc|field|org.brutality.module.impl.render.HUD|mc
+      @|org\brutality\module\impl\render\HUD.java|5462|5477|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\render\HUD.java|5478|5492|getStringWidth|method|net.minecraft.client.gui.FontRenderer|getStringWidth|(Ljava/lang/String;)I
+      @|org\brutality\module\impl\render\HUD.java|5506|5510|posY|field|org.brutality.module.impl.render.HUD|posY
+      @|org\brutality\module\impl\render\HUD.java|5532|5534|mc|field|org.brutality.module.impl.render.HUD|mc
+      @|org\brutality\module\impl\render\HUD.java|5535|5550|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\render\HUD.java|5551|5562|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
+      @|org\brutality\module\impl\render\HUD.java|5604|5608|List|class|java.util.List
+      @|org\brutality\module\impl\render\HUD.java|5609|5615|Module|class|org.brutality.module.Module
+      @|org\brutality\module\impl\render\HUD.java|5634|5636|mm|field|org.brutality.utils.interfaces.MM|mm
+      @|org\brutality\module\impl\render\HUD.java|5637|5643|stream|method|java.util.Collection|stream|()Ljava/util/stream/Stream;
+      @|org\brutality\module\impl\render\HUD.java|5663|5669|filter|method|java.util.stream.Stream|filter|(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;
+      ERROR SimpleName: sorted null
+      ERROR SimpleName: collect null
+      @|org\brutality\module\impl\render\HUD.java|5865|5875|Collectors|class|java.util.stream.Collectors
+      @|org\brutality\module\impl\render\HUD.java|5876|5882|toList|method|java.util.stream.Collectors|toList|()Ljava/util/stream/Collector;
+      @|org\brutality\module\impl\render\HUD.java|5904|5908|posY|field|org.brutality.module.impl.render.HUD|posY
+      @|org\brutality\module\impl\render\HUD.java|5976|5980|GL11|class|org.lwjgl.opengl.GL11
+      @|org\brutality\module\impl\render\HUD.java|5981|5993|glPushMatrix|method|org.lwjgl.opengl.GL11|glPushMatrix|()V
+      @|org\brutality\module\impl\render\HUD.java|6005|6009|GL11|class|org.lwjgl.opengl.GL11
+      @|org\brutality\module\impl\render\HUD.java|6010|6018|glScaled|method|org.lwjgl.opengl.GL11|glScaled|(DDD)V
+      @|org\brutality\module\impl\render\HUD.java|6054|6065|randomColor|field|org.brutality.module.impl.render.HUD|randomColor
+      @|org\brutality\module\impl\render\HUD.java|6117|6123|Random|class|java.util.Random
+      @|org\brutality\module\impl\render\HUD.java|6137|6143|Random|class|java.util.Random
+      @|org\brutality\module\impl\render\HUD.java|6159|6170|randomColor|field|org.brutality.module.impl.render.HUD|randomColor
+      @|org\brutality\module\impl\render\HUD.java|6173|6179|colors|field|org.brutality.module.impl.render.HUD|colors
+      @|org\brutality\module\impl\render\HUD.java|6180|6183|get|method|java.util.List|get|(I)Ljava/lang/Object;
+      @|org\brutality\module\impl\render\HUD.java|6191|6198|nextInt|method|java.util.Random|nextInt|(I)I
+      @|org\brutality\module\impl\render\HUD.java|6199|6205|colors|field|org.brutality.module.impl.render.HUD|colors
+      @|org\brutality\module\impl\render\HUD.java|6206|6210|size|method|java.util.Collection|size|()I
+      @|org\brutality\module\impl\render\HUD.java|6286|6297|randomColor|field|org.brutality.module.impl.render.HUD|randomColor
+      @|org\brutality\module\impl\render\HUD.java|6298|6304|getRGB|method|java.awt.Color|getRGB|()I
+      @|org\brutality\module\impl\render\HUD.java|6322|6328|Module|class|org.brutality.module.Module
+      @|org\brutality\module\impl\render\HUD.java|6367|6378|fontSetting|field|org.brutality.module.impl.render.HUD|fontSetting
+      @|org\brutality\module\impl\render\HUD.java|6379|6387|getValue|method|org.brutality.settings.impl.SimpleModeSetting|getValue|()Ljava/lang/String;
+      @|org\brutality\module\impl\render\HUD.java|6390|6406|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|org\brutality\module\impl\render\HUD.java|6436|6454|smoothFontRenderer|field|org.brutality.module.impl.render.HUD|smoothFontRenderer
+      @|org\brutality\module\impl\render\HUD.java|6455|6475|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      ERROR SimpleName: getName null
+      @|org\brutality\module\impl\render\HUD.java|6490|6494|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|6581|6583|mc|field|org.brutality.module.impl.render.HUD|mc
+      @|org\brutality\module\impl\render\HUD.java|6584|6599|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\render\HUD.java|6600|6620|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      ERROR SimpleName: getName null
+      @|org\brutality\module\impl\render\HUD.java|6635|6639|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|6720|6722|mc|field|org.brutality.module.impl.render.HUD|mc
+      @|org\brutality\module\impl\render\HUD.java|6723|6738|fontRendererObj|field|net.minecraft.client.Minecraft|fontRendererObj
+      @|org\brutality\module\impl\render\HUD.java|6739|6750|FONT_HEIGHT|field|net.minecraft.client.gui.FontRenderer|FONT_HEIGHT
+      @|org\brutality\module\impl\render\HUD.java|6781|6785|GL11|class|org.lwjgl.opengl.GL11
+      @|org\brutality\module\impl\render\HUD.java|6786|6797|glPopMatrix|method|org.lwjgl.opengl.GL11|glPopMatrix|()V
+   Method End: renderPrimeCheatsMode()V
+   Method Start: handleDragging()V
+      @|org\brutality\module\impl\render\HUD.java|6825|6839|handleDragging|method|org.brutality.module.impl.render.HUD|handleDragging|()V
+      @|org\brutality\module\impl\render\HUD.java|6856|6861|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\render\HUD.java|6862|6874|isButtonDown|method|org.lwjgl.input.Mouse|isButtonDown|(I)Z
+      @|org\brutality\module\impl\render\HUD.java|6898|6906|dragging|field|org.brutality.module.impl.render.HUD|dragging
+      @|org\brutality\module\impl\render\HUD.java|6910|6921|isMouseOver|method|org.brutality.module.impl.render.HUD|isMouseOver|()Z
+      @|org\brutality\module\impl\render\HUD.java|6943|6951|dragging|field|org.brutality.module.impl.render.HUD|dragging
+      @|org\brutality\module\impl\render\HUD.java|6976|6981|dragX|field|org.brutality.module.impl.render.HUD|dragX
+      @|org\brutality\module\impl\render\HUD.java|6984|6989|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\render\HUD.java|6990|6994|getX|method|org.lwjgl.input.Mouse|getX|()I
+      @|org\brutality\module\impl\render\HUD.java|7003|7007|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|7025|7030|dragY|field|org.brutality.module.impl.render.HUD|dragY
+      @|org\brutality\module\impl\render\HUD.java|7037|7053|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\render\HUD.java|7054|7056|mc|field|org.brutality.module.impl.render.HUD|mc
+      @|org\brutality\module\impl\render\HUD.java|7058|7073|getScaledHeight|method|net.minecraft.client.gui.ScaledResolution|getScaledHeight|()I
+      @|org\brutality\module\impl\render\HUD.java|7078|7083|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\render\HUD.java|7084|7088|getY|method|org.lwjgl.input.Mouse|getY|()I
+      @|org\brutality\module\impl\render\HUD.java|7097|7101|posY|field|org.brutality.module.impl.render.HUD|posY
+      @|org\brutality\module\impl\render\HUD.java|7133|7141|dragging|field|org.brutality.module.impl.render.HUD|dragging
+      @|org\brutality\module\impl\render\HUD.java|7161|7165|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|7168|7173|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\render\HUD.java|7174|7178|getX|method|org.lwjgl.input.Mouse|getX|()I
+      @|org\brutality\module\impl\render\HUD.java|7187|7192|dragX|field|org.brutality.module.impl.render.HUD|dragX
+      @|org\brutality\module\impl\render\HUD.java|7210|7214|posY|field|org.brutality.module.impl.render.HUD|posY
+      @|org\brutality\module\impl\render\HUD.java|7221|7237|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\render\HUD.java|7238|7240|mc|field|org.brutality.module.impl.render.HUD|mc
+      @|org\brutality\module\impl\render\HUD.java|7242|7257|getScaledHeight|method|net.minecraft.client.gui.ScaledResolution|getScaledHeight|()I
+      @|org\brutality\module\impl\render\HUD.java|7262|7267|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\render\HUD.java|7268|7272|getY|method|org.lwjgl.input.Mouse|getY|()I
+      @|org\brutality\module\impl\render\HUD.java|7281|7286|dragY|field|org.brutality.module.impl.render.HUD|dragY
+      @|org\brutality\module\impl\render\HUD.java|7331|7339|dragging|field|org.brutality.module.impl.render.HUD|dragging
+      @|org\brutality\module\impl\render\HUD.java|7361|7372|randomColor|field|org.brutality.module.impl.render.HUD|randomColor
+   Method End: handleDragging()V
+   Method Start: isMouseOver()Z
+      @|org\brutality\module\impl\render\HUD.java|7490|7501|isMouseOver|method|org.brutality.module.impl.render.HUD|isMouseOver|()Z
+      @|org\brutality\module\impl\render\HUD.java|7527|7532|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\render\HUD.java|7533|7537|getX|method|org.lwjgl.input.Mouse|getX|()I
+      @|org\brutality\module\impl\render\HUD.java|7570|7586|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\render\HUD.java|7587|7589|mc|field|org.brutality.module.impl.render.HUD|mc
+      @|org\brutality\module\impl\render\HUD.java|7591|7606|getScaledHeight|method|net.minecraft.client.gui.ScaledResolution|getScaledHeight|()I
+      @|org\brutality\module\impl\render\HUD.java|7611|7616|Mouse|class|org.lwjgl.input.Mouse
+      @|org\brutality\module\impl\render\HUD.java|7617|7621|getY|method|org.lwjgl.input.Mouse|getY|()I
+      @|org\brutality\module\impl\render\HUD.java|7654|7658|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|7672|7676|posX|field|org.brutality.module.impl.render.HUD|posX
+      @|org\brutality\module\impl\render\HUD.java|7696|7700|posY|field|org.brutality.module.impl.render.HUD|posY
+      @|org\brutality\module\impl\render\HUD.java|7714|7718|posY|field|org.brutality.module.impl.render.HUD|posY
+   Method End: isMouseOver()Z
+   Method Start: drawImage(Lnet/minecraft/util/ResourceLocation;II)V
+      @|org\brutality\module\impl\render\HUD.java|7749|7758|drawImage|method|org.brutality.module.impl.render.HUD|drawImage|(Lnet/minecraft/util/ResourceLocation;II)V
+      @|org\brutality\module\impl\render\HUD.java|7759|7775|ResourceLocation|class|net.minecraft.util.ResourceLocation
+      @|org\brutality\module\impl\render\HUD.java|7776|7784|resource|param|org.brutality.module.impl.render.HUD|drawImage|(Lnet/minecraft/util/ResourceLocation;II)V|resource|0
+      @|org\brutality\module\impl\render\HUD.java|7790|7791|x|param|org.brutality.module.impl.render.HUD|drawImage|(Lnet/minecraft/util/ResourceLocation;II)V|x|1
+      @|org\brutality\module\impl\render\HUD.java|7797|7798|y|param|org.brutality.module.impl.render.HUD|drawImage|(Lnet/minecraft/util/ResourceLocation;II)V|y|2
+      @|org\brutality\module\impl\render\HUD.java|7810|7812|mc|field|org.brutality.module.impl.render.HUD|mc
+      @|org\brutality\module\impl\render\HUD.java|7813|7830|getTextureManager|method|net.minecraft.client.Minecraft|getTextureManager|()Lnet/minecraft/client/renderer/texture/TextureManager;
+      @|org\brutality\module\impl\render\HUD.java|7833|7844|bindTexture|method|net.minecraft.client.renderer.texture.TextureManager|bindTexture|(Lnet/minecraft/util/ResourceLocation;)V
+      @|org\brutality\module\impl\render\HUD.java|7845|7853|resource|param|org.brutality.module.impl.render.HUD|drawImage|(Lnet/minecraft/util/ResourceLocation;II)V|resource|0
+      @|org\brutality\module\impl\render\HUD.java|7864|7878|GlStateManager|class|net.minecraft.client.renderer.GlStateManager
+      @|org\brutality\module\impl\render\HUD.java|7879|7890|enableBlend|method|net.minecraft.client.renderer.GlStateManager|enableBlend|()V
+      @|org\brutality\module\impl\render\HUD.java|7902|7916|GlStateManager|class|net.minecraft.client.renderer.GlStateManager
+      @|org\brutality\module\impl\render\HUD.java|7917|7922|color|method|net.minecraft.client.renderer.GlStateManager|color|(FFFF)V
+      @|org\brutality\module\impl\render\HUD.java|7956|7959|Gui|class|net.minecraft.client.gui.Gui
+      @|org\brutality\module\impl\render\HUD.java|7960|7995|drawModalRectWithCustomSizedTexture|method|net.minecraft.client.gui.Gui|drawModalRectWithCustomSizedTexture|(IIFFIIFF)V
+      @|org\brutality\module\impl\render\HUD.java|7996|7997|x|param|org.brutality.module.impl.render.HUD|drawImage|(Lnet/minecraft/util/ResourceLocation;II)V|x|1
+      @|org\brutality\module\impl\render\HUD.java|7999|8000|y|param|org.brutality.module.impl.render.HUD|drawImage|(Lnet/minecraft/util/ResourceLocation;II)V|y|2
+      @|org\brutality\module\impl\render\HUD.java|8075|8089|GlStateManager|class|net.minecraft.client.renderer.GlStateManager
+      @|org\brutality\module\impl\render\HUD.java|8090|8102|disableBlend|method|net.minecraft.client.renderer.GlStateManager|disableBlend|()V
+   Method End: drawImage(Lnet/minecraft/util/ResourceLocation;II)V
+Class End  : org.brutality.module.impl.render.HUD
+endProcessing org\brutality\module\impl\render\HUD.java
+
 processing org\brutality\module\impl\render\Health.java
 @|org\brutality\module\impl\render\Health.java|8|40|org.brutality.module.impl.render|package|org.brutality.module.impl.render|(file)
 Class Start: org.brutality.module.impl.render.Health
@@ -4171,6 +4553,141 @@ endProcessing org\brutality\module\impl\render\Health.java
 processing org\brutality\module\impl\render\Interface.java
 @|org\brutality\module\impl\render\Interface.java|8|40|org.brutality.module.impl.render|package|org.brutality.module.impl.render|(file)
 Class Start: org.brutality.module.impl.render.Interface
+   @|org\brutality\module\impl\render\Interface.java|703|720|SimpleModeSetting|class|org.brutality.settings.impl.SimpleModeSetting
+   @|org\brutality\module\impl\render\Interface.java|721|732|modeSetting|field|org.brutality.module.impl.render.Interface|modeSetting|
+   @|org\brutality\module\impl\render\Interface.java|739|756|SimpleModeSetting|class|org.brutality.settings.impl.SimpleModeSetting
+   @|org\brutality\module\impl\render\Interface.java|789|795|String|class|java.lang.String
+   @|org\brutality\module\impl\render\Interface.java|862|874|ColorSetting|class|org.brutality.settings.impl.ColorSetting
+   @|org\brutality\module\impl\render\Interface.java|875|891|riseColorSetting|field|org.brutality.module.impl.render.Interface|riseColorSetting|
+   @|org\brutality\module\impl\render\Interface.java|898|910|ColorSetting|class|org.brutality.settings.impl.ColorSetting
+   @|org\brutality\module\impl\render\Interface.java|931|936|Color|class|java.awt.Color
+   @|org\brutality\module\impl\render\Interface.java|937|940|RED|field|java.awt.Color|RED
+   @|org\brutality\module\impl\render\Interface.java|956|965|Minecraft|class|net.minecraft.client.Minecraft
+   @|org\brutality\module\impl\render\Interface.java|966|968|mc|field|org.brutality.module.impl.render.Interface|mc|
+   @|org\brutality\module\impl\render\Interface.java|971|980|Minecraft|class|net.minecraft.client.Minecraft
+   @|org\brutality\module\impl\render\Interface.java|981|993|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   @|org\brutality\module\impl\render\Interface.java|1009|1027|CustomFontRenderer|class|org.brutality.ui.font.CustomFontRenderer
+   @|org\brutality\module\impl\render\Interface.java|1028|1046|customFontRenderer|field|org.brutality.module.impl.render.Interface|customFontRenderer|
+   @|org\brutality\module\impl\render\Interface.java|1065|1084|lastColorChangeTime|field|org.brutality.module.impl.render.Interface|lastColorChangeTime|
+   @|org\brutality\module\impl\render\Interface.java|1110|1116|isCyan|field|org.brutality.module.impl.render.Interface|isCyan|
+   @|org\brutality\module\impl\render\Interface.java|1142|1152|colorIndex|field|org.brutality.module.impl.render.Interface|colorIndex|
+   @|org\brutality\module\impl\render\Interface.java|1177|1193|ResourceLocation|class|net.minecraft.util.ResourceLocation
+   @|org\brutality\module\impl\render\Interface.java|1194|1203|moonImage|field|org.brutality.module.impl.render.Interface|moonImage|
+   @|org\brutality\module\impl\render\Interface.java|1210|1226|ResourceLocation|class|net.minecraft.util.ResourceLocation
+   Method Start: Interface()V
+      @|org\brutality\module\impl\render\Interface.java|1276|1285|Interface|method|org.brutality.module.impl.render.Interface|Interface|()V
+      @|org\brutality\module\impl\render\Interface.java|1354|1362|Category|class|org.brutality.module.Category
+      @|org\brutality\module\impl\render\Interface.java|1363|1369|RENDER|field|org.brutality.module.Category|RENDER
+      @|org\brutality\module\impl\render\Interface.java|1380|1386|setKey|method|org.brutality.module.Module|setKey|(I)V
+      @|org\brutality\module\impl\render\Interface.java|1387|1395|Keyboard|class|org.lwjgl.input.Keyboard
+      @|org\brutality\module\impl\render\Interface.java|1396|1401|KEY_I|field|org.lwjgl.input.Keyboard|KEY_I
+      @|org\brutality\module\impl\render\Interface.java|1412|1430|customFontRenderer|field|org.brutality.module.impl.render.Interface|customFontRenderer
+      @|org\brutality\module\impl\render\Interface.java|1437|1455|CustomFontRenderer|class|org.brutality.ui.font.CustomFontRenderer
+      @|org\brutality\module\impl\render\Interface.java|1460|1464|Font|class|java.awt.Font
+      @|org\brutality\module\impl\render\Interface.java|1474|1478|Font|class|java.awt.Font
+      @|org\brutality\module\impl\render\Interface.java|1479|1483|BOLD|field|java.awt.Font|BOLD
+      @|org\brutality\module\impl\render\Interface.java|1511|1522|addSettings|method|org.brutality.module.Module|addSettings|([Lorg/brutality/settings/Setting;)V
+      @|org\brutality\module\impl\render\Interface.java|1523|1534|modeSetting|field|org.brutality.module.impl.render.Interface|modeSetting
+      @|org\brutality\module\impl\render\Interface.java|1536|1552|riseColorSetting|field|org.brutality.module.impl.render.Interface|riseColorSetting
+   Method End: Interface()V
+   Method Start: onRender2D(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|org\brutality\module\impl\render\Interface.java|1598|1608|onRender2D|method|org.brutality.module.impl.render.Interface|onRender2D|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+      @|org\brutality\module\impl\render\Interface.java|1609|1636|RenderGameOverlayEvent.Text|class|net.minecraftforge.client.event.RenderGameOverlayEvent.Text
+      @|org\brutality\module\impl\render\Interface.java|1637|1642|event|param|org.brutality.module.impl.render.Interface|onRender2D|(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V|event|0
+      @|org\brutality\module\impl\render\Interface.java|1654|1670|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\render\Interface.java|1680|1696|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\render\Interface.java|1697|1699|mc|field|org.brutality.module.impl.render.Interface|mc
+      @|org\brutality\module\impl\render\Interface.java|1715|1726|modeSetting|field|org.brutality.module.impl.render.Interface|modeSetting
+      @|org\brutality\module\impl\render\Interface.java|1727|1735|getValue|method|org.brutality.settings.impl.SimpleModeSetting|getValue|()Ljava/lang/String;
+      @|org\brutality\module\impl\render\Interface.java|1738|1754|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|org\brutality\module\impl\render\Interface.java|1778|1792|renderRiseText|method|org.brutality.module.impl.render.Interface|renderRiseText|(Lnet/minecraft/client/gui/ScaledResolution;)V
+      @|org\brutality\module\impl\render\Interface.java|1817|1828|modeSetting|field|org.brutality.module.impl.render.Interface|modeSetting
+      @|org\brutality\module\impl\render\Interface.java|1829|1837|getValue|method|org.brutality.settings.impl.SimpleModeSetting|getValue|()Ljava/lang/String;
+      @|org\brutality\module\impl\render\Interface.java|1840|1856|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|org\brutality\module\impl\render\Interface.java|1880|1895|renderMoonImage|method|org.brutality.module.impl.render.Interface|renderMoonImage|(Lnet/minecraft/client/gui/ScaledResolution;)V
+      @|org\brutality\module\impl\render\Interface.java|1920|1931|modeSetting|field|org.brutality.module.impl.render.Interface|modeSetting
+      @|org\brutality\module\impl\render\Interface.java|1932|1940|getValue|method|org.brutality.settings.impl.SimpleModeSetting|getValue|()Ljava/lang/String;
+      @|org\brutality\module\impl\render\Interface.java|1943|1959|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|org\brutality\module\impl\render\Interface.java|1990|2011|renderPrimeCheatsText|method|org.brutality.module.impl.render.Interface|renderPrimeCheatsText|(Lnet/minecraft/client/gui/ScaledResolution;)V
+      @|org\brutality\module\impl\render\Interface.java|2036|2047|modeSetting|field|org.brutality.module.impl.render.Interface|modeSetting
+      @|org\brutality\module\impl\render\Interface.java|2048|2056|getValue|method|org.brutality.settings.impl.SimpleModeSetting|getValue|()Ljava/lang/String;
+      @|org\brutality\module\impl\render\Interface.java|2059|2075|equalsIgnoreCase|method|java.lang.String|equalsIgnoreCase|(Ljava/lang/String;)Z
+      @|org\brutality\module\impl\render\Interface.java|2104|2123|renderBrutalityText|method|org.brutality.module.impl.render.Interface|renderBrutalityText|(Lnet/minecraft/client/gui/ScaledResolution;)V
+   Method End: onRender2D(Lnet/minecraftforge/client/event/RenderGameOverlayEvent$Text;)V
+   Method Start: renderRiseText(Lnet/minecraft/client/gui/ScaledResolution;)V
+      @|org\brutality\module\impl\render\Interface.java|2163|2177|renderRiseText|method|org.brutality.module.impl.render.Interface|renderRiseText|(Lnet/minecraft/client/gui/ScaledResolution;)V
+      @|org\brutality\module\impl\render\Interface.java|2178|2194|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\render\Interface.java|2195|2197|sr|param|org.brutality.module.impl.render.Interface|renderRiseText|(Lnet/minecraft/client/gui/ScaledResolution;)V|sr|0
+      @|org\brutality\module\impl\render\Interface.java|2221|2237|riseColorSetting|field|org.brutality.module.impl.render.Interface|riseColorSetting
+      ERROR SimpleName: getColor null
+      ERROR SimpleName: getRGB null
+      @|org\brutality\module\impl\render\Interface.java|2267|2273|String|class|java.lang.String
+      @|org\brutality\module\impl\render\Interface.java|2335|2353|customFontRenderer|field|org.brutality.module.impl.render.Interface|customFontRenderer
+      @|org\brutality\module\impl\render\Interface.java|2354|2374|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+   Method End: renderRiseText(Lnet/minecraft/client/gui/ScaledResolution;)V
+   Method Start: renderMoonImage(Lnet/minecraft/client/gui/ScaledResolution;)V
+      @|org\brutality\module\impl\render\Interface.java|2419|2434|renderMoonImage|method|org.brutality.module.impl.render.Interface|renderMoonImage|(Lnet/minecraft/client/gui/ScaledResolution;)V
+      @|org\brutality\module\impl\render\Interface.java|2435|2451|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\render\Interface.java|2452|2454|sr|param|org.brutality.module.impl.render.Interface|renderMoonImage|(Lnet/minecraft/client/gui/ScaledResolution;)V|sr|0
+      @|org\brutality\module\impl\render\Interface.java|2504|2506|mc|field|org.brutality.module.impl.render.Interface|mc
+      @|org\brutality\module\impl\render\Interface.java|2507|2524|getTextureManager|method|net.minecraft.client.Minecraft|getTextureManager|()Lnet/minecraft/client/renderer/texture/TextureManager;
+      @|org\brutality\module\impl\render\Interface.java|2527|2538|bindTexture|method|net.minecraft.client.renderer.texture.TextureManager|bindTexture|(Lnet/minecraft/util/ResourceLocation;)V
+      @|org\brutality\module\impl\render\Interface.java|2539|2548|moonImage|field|org.brutality.module.impl.render.Interface|moonImage
+      @|org\brutality\module\impl\render\Interface.java|2559|2573|GlStateManager|class|net.minecraft.client.renderer.GlStateManager
+      @|org\brutality\module\impl\render\Interface.java|2574|2585|enableBlend|method|net.minecraft.client.renderer.GlStateManager|enableBlend|()V
+      @|org\brutality\module\impl\render\Interface.java|2597|2611|GlStateManager|class|net.minecraft.client.renderer.GlStateManager
+      @|org\brutality\module\impl\render\Interface.java|2612|2617|color|method|net.minecraft.client.renderer.GlStateManager|color|(FFFF)V
+      @|org\brutality\module\impl\render\Interface.java|2651|2665|GlStateManager|class|net.minecraft.client.renderer.GlStateManager
+      @|org\brutality\module\impl\render\Interface.java|2666|2676|pushMatrix|method|net.minecraft.client.renderer.GlStateManager|pushMatrix|()V
+      @|org\brutality\module\impl\render\Interface.java|2688|2702|GlStateManager|class|net.minecraft.client.renderer.GlStateManager
+      @|org\brutality\module\impl\render\Interface.java|2703|2708|scale|method|net.minecraft.client.renderer.GlStateManager|scale|(DDD)V
+      @|org\brutality\module\impl\render\Interface.java|2762|2764|mc|field|org.brutality.module.impl.render.Interface|mc
+      @|org\brutality\module\impl\render\Interface.java|2765|2774|ingameGUI|field|net.minecraft.client.Minecraft|ingameGUI
+      @|org\brutality\module\impl\render\Interface.java|2775|2796|drawTexturedModalRect|method|net.minecraft.client.gui.Gui|drawTexturedModalRect|(IIIIII)V
+      @|org\brutality\module\impl\render\Interface.java|2868|2882|GlStateManager|class|net.minecraft.client.renderer.GlStateManager
+      @|org\brutality\module\impl\render\Interface.java|2883|2892|popMatrix|method|net.minecraft.client.renderer.GlStateManager|popMatrix|()V
+      @|org\brutality\module\impl\render\Interface.java|2904|2918|GlStateManager|class|net.minecraft.client.renderer.GlStateManager
+      @|org\brutality\module\impl\render\Interface.java|2919|2931|disableBlend|method|net.minecraft.client.renderer.GlStateManager|disableBlend|()V
+   Method End: renderMoonImage(Lnet/minecraft/client/gui/ScaledResolution;)V
+   Method Start: renderPrimeCheatsText(Lnet/minecraft/client/gui/ScaledResolution;)V
+      @|org\brutality\module\impl\render\Interface.java|2959|2980|renderPrimeCheatsText|method|org.brutality.module.impl.render.Interface|renderPrimeCheatsText|(Lnet/minecraft/client/gui/ScaledResolution;)V
+      @|org\brutality\module\impl\render\Interface.java|2981|2997|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\render\Interface.java|2998|3000|sr|param|org.brutality.module.impl.render.Interface|renderPrimeCheatsText|(Lnet/minecraft/client/gui/ScaledResolution;)V|sr|0
+      @|org\brutality\module\impl\render\Interface.java|3012|3018|String|class|java.lang.String
+      @|org\brutality\module\impl\render\Interface.java|3110|3116|System|class|java.lang.System
+      @|org\brutality\module\impl\render\Interface.java|3117|3134|currentTimeMillis|method|java.lang.System|currentTimeMillis|()J
+      @|org\brutality\module\impl\render\Interface.java|3164|3183|lastColorChangeTime|field|org.brutality.module.impl.render.Interface|lastColorChangeTime
+      @|org\brutality\module\impl\render\Interface.java|3233|3239|isCyan|field|org.brutality.module.impl.render.Interface|isCyan
+      @|org\brutality\module\impl\render\Interface.java|3243|3249|isCyan|field|org.brutality.module.impl.render.Interface|isCyan
+      @|org\brutality\module\impl\render\Interface.java|3263|3282|lastColorChangeTime|field|org.brutality.module.impl.render.Interface|lastColorChangeTime
+      @|org\brutality\module\impl\render\Interface.java|3425|3438|StringBuilder|class|java.lang.StringBuilder
+      @|org\brutality\module\impl\render\Interface.java|3459|3472|StringBuilder|class|java.lang.StringBuilder
+      @|org\brutality\module\impl\render\Interface.java|3509|3515|length|method|java.lang.CharSequence|length|()I
+      @|org\brutality\module\impl\render\Interface.java|3546|3556|colorIndex|field|org.brutality.module.impl.render.Interface|colorIndex
+      @|org\brutality\module\impl\render\Interface.java|3590|3596|append|method|java.lang.AbstractStringBuilder|append|(Ljava/lang/String;)Ljava/lang/AbstractStringBuilder;
+      @|org\brutality\module\impl\render\Interface.java|3597|3603|isCyan|field|org.brutality.module.impl.render.Interface|isCyan
+      @|org\brutality\module\impl\render\Interface.java|3619|3625|append|method|java.lang.Appendable|append|(C)Ljava/lang/Appendable;
+      @|org\brutality\module\impl\render\Interface.java|3631|3637|charAt|method|java.lang.CharSequence|charAt|(I)C
+      @|org\brutality\module\impl\render\Interface.java|3694|3700|append|method|java.lang.AbstractStringBuilder|append|(Ljava/lang/String;)Ljava/lang/AbstractStringBuilder;
+      @|org\brutality\module\impl\render\Interface.java|3707|3713|append|method|java.lang.Appendable|append|(C)Ljava/lang/Appendable;
+      @|org\brutality\module\impl\render\Interface.java|3719|3725|charAt|method|java.lang.CharSequence|charAt|(I)C
+      @|org\brutality\module\impl\render\Interface.java|3764|3782|customFontRenderer|field|org.brutality.module.impl.render.Interface|customFontRenderer
+      @|org\brutality\module\impl\render\Interface.java|3783|3803|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+      @|org\brutality\module\impl\render\Interface.java|3818|3826|toString|method|java.lang.Object|toString|()Ljava/lang/String;
+      @|org\brutality\module\impl\render\Interface.java|3878|3897|lastColorChangeTime|field|org.brutality.module.impl.render.Interface|lastColorChangeTime
+      @|org\brutality\module\impl\render\Interface.java|3920|3930|colorIndex|field|org.brutality.module.impl.render.Interface|colorIndex
+      @|org\brutality\module\impl\render\Interface.java|3950|3960|colorIndex|field|org.brutality.module.impl.render.Interface|colorIndex
+      @|org\brutality\module\impl\render\Interface.java|3969|3975|length|method|java.lang.CharSequence|length|()I
+      @|org\brutality\module\impl\render\Interface.java|3997|4007|colorIndex|field|org.brutality.module.impl.render.Interface|colorIndex
+   Method End: renderPrimeCheatsText(Lnet/minecraft/client/gui/ScaledResolution;)V
+   Method Start: renderBrutalityText(Lnet/minecraft/client/gui/ScaledResolution;)V
+      @|org\brutality\module\impl\render\Interface.java|4061|4080|renderBrutalityText|method|org.brutality.module.impl.render.Interface|renderBrutalityText|(Lnet/minecraft/client/gui/ScaledResolution;)V
+      @|org\brutality\module\impl\render\Interface.java|4081|4097|ScaledResolution|class|net.minecraft.client.gui.ScaledResolution
+      @|org\brutality\module\impl\render\Interface.java|4098|4100|sr|param|org.brutality.module.impl.render.Interface|renderBrutalityText|(Lnet/minecraft/client/gui/ScaledResolution;)V|sr|0
+      @|org\brutality\module\impl\render\Interface.java|4112|4118|String|class|java.lang.String
+      @|org\brutality\module\impl\render\Interface.java|4187|4205|customFontRenderer|field|org.brutality.module.impl.render.Interface|customFontRenderer
+      @|org\brutality\module\impl\render\Interface.java|4206|4226|drawStringWithShadow|method|net.minecraft.client.gui.FontRenderer|drawStringWithShadow|(Ljava/lang/String;FFI)I
+   Method End: renderBrutalityText(Lnet/minecraft/client/gui/ScaledResolution;)V
 Class End  : org.brutality.module.impl.render.Interface
 endProcessing org\brutality\module\impl\render\Interface.java
 
@@ -7311,6 +7828,60 @@ Class Start: org.brutality.utils.EntityUtils
    Method End: isValidTarget(Lnet/minecraft/entity/Entity;)Z
 Class End  : org.brutality.utils.EntityUtils
 endProcessing org\brutality\utils\EntityUtils.java
+
+processing org\brutality\utils\HUDUtils.java
+@|org\brutality\utils\HUDUtils.java|8|27|org.brutality.utils|package|org.brutality.utils|(file)
+Class Start: org.brutality.utils.HUDUtils
+   @|org\brutality\utils\HUDUtils.java|254|263|Minecraft|class|net.minecraft.client.Minecraft
+   @|org\brutality\utils\HUDUtils.java|264|266|mc|field|org.brutality.utils.HUDUtils|mc|
+   @|org\brutality\utils\HUDUtils.java|269|278|Minecraft|class|net.minecraft.client.Minecraft
+   @|org\brutality\utils\HUDUtils.java|279|291|getMinecraft|method|net.minecraft.client.Minecraft|getMinecraft|()Lnet/minecraft/client/Minecraft;
+   Method Start: drawRect(IIIII)V
+      @|org\brutality\utils\HUDUtils.java|319|327|drawRect|method|org.brutality.utils.HUDUtils|drawRect|(IIIII)V
+      @|org\brutality\utils\HUDUtils.java|332|336|left|param|org.brutality.utils.HUDUtils|drawRect|(IIIII)V|left|0
+      @|org\brutality\utils\HUDUtils.java|342|345|top|param|org.brutality.utils.HUDUtils|drawRect|(IIIII)V|top|1
+      @|org\brutality\utils\HUDUtils.java|351|356|right|param|org.brutality.utils.HUDUtils|drawRect|(IIIII)V|right|2
+      @|org\brutality\utils\HUDUtils.java|362|368|bottom|param|org.brutality.utils.HUDUtils|drawRect|(IIIII)V|bottom|3
+      @|org\brutality\utils\HUDUtils.java|374|379|color|param|org.brutality.utils.HUDUtils|drawRect|(IIIII)V|color|4
+      @|org\brutality\utils\HUDUtils.java|391|394|Gui|class|net.minecraft.client.gui.Gui
+      @|org\brutality\utils\HUDUtils.java|395|403|drawRect|method|net.minecraft.client.gui.Gui|drawRect|(IIIII)V
+      @|org\brutality\utils\HUDUtils.java|404|408|left|param|org.brutality.utils.HUDUtils|drawRect|(IIIII)V|left|0
+      @|org\brutality\utils\HUDUtils.java|410|413|top|param|org.brutality.utils.HUDUtils|drawRect|(IIIII)V|top|1
+      @|org\brutality\utils\HUDUtils.java|415|420|right|param|org.brutality.utils.HUDUtils|drawRect|(IIIII)V|right|2
+      @|org\brutality\utils\HUDUtils.java|422|428|bottom|param|org.brutality.utils.HUDUtils|drawRect|(IIIII)V|bottom|3
+      @|org\brutality\utils\HUDUtils.java|430|435|color|param|org.brutality.utils.HUDUtils|drawRect|(IIIII)V|color|4
+   Method End: drawRect(IIIII)V
+   Method Start: drawImage(Lnet/minecraft/util/ResourceLocation;IIII)V
+      @|org\brutality\utils\HUDUtils.java|468|477|drawImage|method|org.brutality.utils.HUDUtils|drawImage|(Lnet/minecraft/util/ResourceLocation;IIII)V
+      @|org\brutality\utils\HUDUtils.java|478|494|ResourceLocation|class|net.minecraft.util.ResourceLocation
+      @|org\brutality\utils\HUDUtils.java|495|511|resourceLocation|param|org.brutality.utils.HUDUtils|drawImage|(Lnet/minecraft/util/ResourceLocation;IIII)V|resourceLocation|0
+      @|org\brutality\utils\HUDUtils.java|517|518|x|param|org.brutality.utils.HUDUtils|drawImage|(Lnet/minecraft/util/ResourceLocation;IIII)V|x|1
+      @|org\brutality\utils\HUDUtils.java|524|525|y|param|org.brutality.utils.HUDUtils|drawImage|(Lnet/minecraft/util/ResourceLocation;IIII)V|y|2
+      @|org\brutality\utils\HUDUtils.java|531|536|width|param|org.brutality.utils.HUDUtils|drawImage|(Lnet/minecraft/util/ResourceLocation;IIII)V|width|3
+      @|org\brutality\utils\HUDUtils.java|542|548|height|param|org.brutality.utils.HUDUtils|drawImage|(Lnet/minecraft/util/ResourceLocation;IIII)V|height|4
+      @|org\brutality\utils\HUDUtils.java|560|562|mc|field|org.brutality.utils.HUDUtils|mc
+      @|org\brutality\utils\HUDUtils.java|563|580|getTextureManager|method|net.minecraft.client.Minecraft|getTextureManager|()Lnet/minecraft/client/renderer/texture/TextureManager;
+      @|org\brutality\utils\HUDUtils.java|583|594|bindTexture|method|net.minecraft.client.renderer.texture.TextureManager|bindTexture|(Lnet/minecraft/util/ResourceLocation;)V
+      @|org\brutality\utils\HUDUtils.java|595|611|resourceLocation|param|org.brutality.utils.HUDUtils|drawImage|(Lnet/minecraft/util/ResourceLocation;IIII)V|resourceLocation|0
+      @|org\brutality\utils\HUDUtils.java|622|636|GlStateManager|class|net.minecraft.client.renderer.GlStateManager
+      @|org\brutality\utils\HUDUtils.java|637|648|enableAlpha|method|net.minecraft.client.renderer.GlStateManager|enableAlpha|()V
+      @|org\brutality\utils\HUDUtils.java|660|674|GlStateManager|class|net.minecraft.client.renderer.GlStateManager
+      @|org\brutality\utils\HUDUtils.java|675|686|enableBlend|method|net.minecraft.client.renderer.GlStateManager|enableBlend|()V
+      @|org\brutality\utils\HUDUtils.java|698|701|Gui|class|net.minecraft.client.gui.Gui
+      @|org\brutality\utils\HUDUtils.java|702|737|drawModalRectWithCustomSizedTexture|method|net.minecraft.client.gui.Gui|drawModalRectWithCustomSizedTexture|(IIFFIIFF)V
+      @|org\brutality\utils\HUDUtils.java|738|739|x|param|org.brutality.utils.HUDUtils|drawImage|(Lnet/minecraft/util/ResourceLocation;IIII)V|x|1
+      @|org\brutality\utils\HUDUtils.java|741|742|y|param|org.brutality.utils.HUDUtils|drawImage|(Lnet/minecraft/util/ResourceLocation;IIII)V|y|2
+      @|org\brutality\utils\HUDUtils.java|750|755|width|param|org.brutality.utils.HUDUtils|drawImage|(Lnet/minecraft/util/ResourceLocation;IIII)V|width|3
+      @|org\brutality\utils\HUDUtils.java|757|763|height|param|org.brutality.utils.HUDUtils|drawImage|(Lnet/minecraft/util/ResourceLocation;IIII)V|height|4
+      @|org\brutality\utils\HUDUtils.java|765|770|width|param|org.brutality.utils.HUDUtils|drawImage|(Lnet/minecraft/util/ResourceLocation;IIII)V|width|3
+      @|org\brutality\utils\HUDUtils.java|772|778|height|param|org.brutality.utils.HUDUtils|drawImage|(Lnet/minecraft/util/ResourceLocation;IIII)V|height|4
+      @|org\brutality\utils\HUDUtils.java|789|803|GlStateManager|class|net.minecraft.client.renderer.GlStateManager
+      @|org\brutality\utils\HUDUtils.java|804|816|disableAlpha|method|net.minecraft.client.renderer.GlStateManager|disableAlpha|()V
+      @|org\brutality\utils\HUDUtils.java|828|842|GlStateManager|class|net.minecraft.client.renderer.GlStateManager
+      @|org\brutality\utils\HUDUtils.java|843|855|disableBlend|method|net.minecraft.client.renderer.GlStateManager|disableBlend|()V
+   Method End: drawImage(Lnet/minecraft/util/ResourceLocation;IIII)V
+Class End  : org.brutality.utils.HUDUtils
+endProcessing org\brutality\utils\HUDUtils.java
 
 processing org\brutality\utils\InterfaceUtils.java
 @|org\brutality\utils\InterfaceUtils.java|8|27|org.brutality.utils|package|org.brutality.utils|(file)
