@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 130 files
+Processing 131 files
 processing org\brutality\BrutalityClient.java
 processing org\brutality\commands\Command.java
 processing org\brutality\commands\CommandManager.java
@@ -45,7 +45,6 @@ processing org\brutality\module\impl\harrys\AutoGrinder.java
 processing org\brutality\module\impl\harrys\Gamble.java
 processing org\brutality\module\impl\harrys\MeteoriteTracker.java
 processing org\brutality\module\impl\hypixel\Tracker.java
-processing org\brutality\module\impl\misc\ModuleSound.java
 processing org\brutality\module\impl\move\Fly.java
 processing org\brutality\module\impl\move\KeepSprint.java
 processing org\brutality\module\impl\move\LongJump.java
@@ -81,10 +80,12 @@ processing org\brutality\module\impl\player\Scaffold.java
 processing org\brutality\module\impl\render\Chams.java
 processing org\brutality\module\impl\render\ChestESP.java
 processing org\brutality\module\impl\render\ClickGuiModule.java
+processing org\brutality\module\impl\render\CustomChat.java
 processing org\brutality\module\impl\render\HUD.java
 processing org\brutality\module\impl\render\Health.java
 processing org\brutality\module\impl\render\Interface.java
 processing org\brutality\module\impl\render\NameTag.java
+processing org\brutality\module\impl\weasel\StaffDetector.java
 processing org\brutality\notifications\NotificationManager.java
 processing org\brutality\settings\Setting.java
 processing org\brutality\settings\SettingsManager.java
