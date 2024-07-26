@@ -15,9 +15,9 @@ public class StaffDetector extends Module {
 
     private final BooleanSetting autoLeave = new BooleanSetting("Auto Leave", this, true);
     private final Minecraft mc = Minecraft.getMinecraft();
-    private boolean staffJoined = false;
-    private boolean staffVanished = false;
+    private boolean staffAlert = false;
     private long displayTime = 0;
+    private String alertMessage = "";
 
     public StaffDetector() {
         super("StaffDetector", "Detects when staff join or leave the game", Category.WEASEL);
@@ -30,8 +30,9 @@ public class StaffDetector extends Module {
         String message = chatComponent.getUnformattedText();
 
         if (message.contains("Unoriginal_Guy joined the game")) {
-            staffJoined = true;
+            staffAlert = true;
             displayTime = System.currentTimeMillis();
+            alertMessage = "STAFF JOINED!";
             playAlertSound();
             if (autoLeave.isEnabled()) {
                 mc.theWorld.sendQuittingDisconnectingPacket();
@@ -39,24 +40,25 @@ public class StaffDetector extends Module {
         } else if (message.contains("Unoriginal_Guy left the game")) {
             mc.thePlayer.sendChatMessage("/msg Unoriginal_Guy a");
         } else if (message.contains("You cannot message this player")) {
-            staffVanished = true;
+            staffAlert = true;
             displayTime = System.currentTimeMillis();
+            alertMessage = "STAFF VANISHED!";
             playAlertSound();
             if (autoLeave.isEnabled()) {
                 mc.theWorld.sendQuittingDisconnectingPacket();
             }
         } else if (message.contains("There is no player online whose name starts with 'Unoriginal_Guy'")) {
-            staffJoined = false;
-            staffVanished = false;
+            staffAlert = true;
+            displayTime = System.currentTimeMillis();
+            alertMessage = "STAFF LEFT!";
+            playAlertSound();
         }
     }
 
     @SubscribeEvent
     public void onRenderOverlay(RenderGameOverlayEvent.Text event) {
-        if (staffJoined && System.currentTimeMillis() - displayTime < 5000) {
-            renderAlert("STAFF JOINED!");
-        } else if (staffVanished && System.currentTimeMillis() - displayTime < 5000) {
-            renderAlert("STAFF VANISHED!");
+        if (staffAlert && System.currentTimeMillis() - displayTime < 5000) {
+            renderAlert(alertMessage);
         }
     }
 
@@ -77,3 +79,4 @@ public class StaffDetector extends Module {
         mc.thePlayer.playSound("random.orb", 1.0F, 1.0F); // Plays a "ting" sound
     }
 }
+
