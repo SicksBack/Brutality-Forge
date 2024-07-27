@@ -90,8 +90,8 @@ public class RequirementChecker extends Module {
                     if (parts.length == 2) {
                         gainedGold = Double.parseDouble(parts[0].replaceAll("[^0-9.]", ""));
                         neededGold = Double.parseDouble(parts[1].replaceAll("[^0-9.]", ""));
+                        event.setCanceled(true);
                     }
-                    event.setCanceled(true);
                 }
             } catch (Exception e) {
                 logger.error(message, e);
