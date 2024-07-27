@@ -16,6 +16,8 @@ import org.brutality.module.Category;
 import org.brutality.module.Module;
 import org.lwjgl.input.Mouse;
 
+import java.text.NumberFormat;
+
 public class RequirementChecker extends Module {
     private static final Logger logger = LogManager.getLogger("RequirementChecker");
     private int tickCount = 0;
@@ -64,10 +66,17 @@ public class RequirementChecker extends Module {
     public void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
         if (mc.thePlayer != null && mc.theWorld != null && mc.getCurrentServerData() != null) {
             FontRenderer fontRenderer = mc.fontRendererObj;
+            NumberFormat numberFormat = NumberFormat.getNumberInstance();
 
-            fontRenderer.drawStringWithShadow(String.format("§aGold Requirement: §6%.2f§7/§6%.2f", gainedGold, neededGold), textX, textY, 0xFFFFFF);
+            String formattedGainedGold = numberFormat.format(gainedGold);
+            String formattedNeededGold = numberFormat.format(neededGold);
+
+            String displayText = String.format("§aGold Requirement: §6%s§7/§6%s", formattedGainedGold, formattedNeededGold);
+
+            fontRenderer.drawStringWithShadow(displayText, textX, textY, 0xFFFFFF);
         }
     }
+
 
     @SubscribeEvent
     public void onChatReceived(ClientChatReceivedEvent event) {

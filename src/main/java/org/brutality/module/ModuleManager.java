@@ -31,6 +31,7 @@ public class ModuleManager extends ArrayList<Module> {
         new ClickGuiModule();
         new KillAura(); // Register the KillAura module
         new PitSwap();
+        new GambleSwapper();
         new KeepSprint();
         new Velocity();
         new NoSlow();
