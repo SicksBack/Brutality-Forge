@@ -12,6 +12,7 @@ import org.brutality.module.impl.render.*;
 import org.brutality.module.impl.harrys.*;
 import lombok.Getter;
 import org.brutality.module.impl.weasel.RequirementChecker;
+import org.brutality.module.impl.weasel.StaffDetector;
 import org.brutality.settings.Setting;
 import org.brutality.settings.impl.ButtonSetting;
 import sun.security.provider.SHA;
@@ -74,6 +75,8 @@ public class ModuleManager extends ArrayList<Module> {
         new AutoGrinder();
         new SharkDamage();
         new AutoClicker();
+        new org.brutality.module.impl.weasel.AutoGrinder();
+        new StaffDetector();
     }
 
     public void updateSettings(Setting setting) {
