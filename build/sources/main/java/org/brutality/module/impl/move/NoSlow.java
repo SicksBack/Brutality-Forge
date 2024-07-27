@@ -11,12 +11,12 @@ import org.brutality.module.Module;
 import org.brutality.settings.impl.SimpleModeSetting;
 
 public class NoSlow extends Module {
-    private SimpleModeSetting modeSetting;
+    private final SimpleModeSetting modeSetting;
     private boolean allowed;
 
     public NoSlow() {
         super("NoSlow", "Allows you to move at normal speed while using an item", Category.MOVEMENT);
-        modeSetting = new SimpleModeSetting("Mode", this, "Vanilla", new String[]{"Vanilla", "Hypixel Blink"});
+        modeSetting = new SimpleModeSetting("Mode", this, "Vanilla", new String[]{"Vanilla", "Blink"});
         addSettings(modeSetting);
     }
 

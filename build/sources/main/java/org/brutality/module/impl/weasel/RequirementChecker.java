@@ -71,7 +71,7 @@ public class RequirementChecker extends Module {
             String formattedGainedGold = numberFormat.format(gainedGold);
             String formattedNeededGold = numberFormat.format(neededGold);
 
-            String displayText = String.format("§aGold Requirement: §6%s§7/§6%s", formattedGainedGold, formattedNeededGold);
+            String displayText = String.format("§aGold Requirement: §6%s§7/§6%sg", formattedGainedGold, formattedNeededGold);
 
             fontRenderer.drawStringWithShadow(displayText, textX, textY, 0xFFFFFF);
         }
@@ -91,6 +91,7 @@ public class RequirementChecker extends Module {
                         gainedGold = Double.parseDouble(parts[0].replaceAll("[^0-9.]", ""));
                         neededGold = Double.parseDouble(parts[1].replaceAll("[^0-9.]", ""));
                     }
+                    event.setCanceled(true);
                 }
             } catch (Exception e) {
                 logger.error(message, e);

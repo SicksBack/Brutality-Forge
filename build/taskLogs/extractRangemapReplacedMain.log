@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 131 files
+Processing 132 files
 processing org\brutality\BrutalityClient.java
 processing org\brutality\commands\Command.java
 processing org\brutality\commands\CommandManager.java
@@ -39,6 +39,7 @@ processing org\brutality\module\ModuleManager.java
 processing org\brutality\module\impl\World\AntiBot.java
 processing org\brutality\module\impl\combat\AimAssist.java
 processing org\brutality\module\impl\combat\AutoClicker.java
+processing org\brutality\module\impl\combat\Criticals.java
 processing org\brutality\module\impl\combat\KillAura.java
 processing org\brutality\module\impl\combat\Velocity.java
 processing org\brutality\module\impl\harrys\AutoGrinder.java

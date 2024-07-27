@@ -28,6 +28,7 @@ public class ModuleManager extends ArrayList<Module> {
         new RequirementChecker();
         new HUD();
         new Interface();
+        new Criticals();
         new ClickGuiModule();
         new KillAura(); // Register the KillAura module
         new PitSwap();
