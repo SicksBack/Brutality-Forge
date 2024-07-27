@@ -11,6 +11,7 @@ import org.brutality.module.impl.player.*;
 import org.brutality.module.impl.render.*;
 import org.brutality.module.impl.harrys.*;
 import lombok.Getter;
+import org.brutality.module.impl.weasel.RequirementChecker;
 import org.brutality.settings.Setting;
 import org.brutality.settings.impl.ButtonSetting;
 import sun.security.provider.SHA;
@@ -24,6 +25,7 @@ public class ModuleManager extends ArrayList<Module> {
     public static ButtonSetting reach;
 
     public void init() {
+        new RequirementChecker();
         new HUD();
         new Interface();
         new ClickGuiModule();

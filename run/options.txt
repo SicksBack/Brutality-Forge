@@ -1,6 +1,6 @@
 invertYMouse:false
 mouseSensitivity:0.23943663
-fov:1.0
+fov:0.05
 gamma:1.0
 saturation:0.0
 renderDistance:8
@@ -39,7 +39,7 @@ chatHeightUnfocused:0.44366196
 chatScale:1.0
 chatWidth:1.0
 showInventoryAchievementHint:false
-mipmapLevels:4
+mipmapLevels:0
 streamBytesPerPixel:0.5
 streamMicVolume:1.0
 streamSystemVolume:1.0
@@ -95,7 +95,7 @@ key_ClickGui:54
 key_KeepSprint:37
 key_Health:35
 key_MeteoriteTracker:50
-soundCategory_master:1.0
+soundCategory_master:0.4834437
 soundCategory_music:0.0
 soundCategory_record:1.0
 soundCategory_weather:0.0

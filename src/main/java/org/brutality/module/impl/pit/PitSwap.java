@@ -19,7 +19,7 @@ public class PitSwap extends Module {
     private long lastSwap;
     private int swordSlot;
     private int spadeSlot;
-    private boolean toggle = true;
+    private final boolean toggle = true;
 
     public PitSwap() {
         super("PitSwap", "Automatically swaps between sword and spade", Category.PIT);

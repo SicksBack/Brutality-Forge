@@ -1,109 +1,127 @@
-[09:49:05] [Client thread/INFO]: Setting user: Player83
-[09:49:12] [Client thread/INFO]: LWJGL Version: 2.9.4
-[09:49:22] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
-[09:49:23] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[09:49:23] [Thread-9/INFO]: Initializing LWJGL OpenAL
-[09:49:23] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[09:49:24] [Thread-9/INFO]: OpenAL initialized.
-[09:49:24] [Sound Library Loader/INFO]: Sound engine started
-[09:49:34] [Client thread/INFO]: Created: 16x16 textures-atlas
-[09:49:43] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
-[09:49:43] [Client thread/INFO]: SoundSystem shutting down...
-[09:49:43] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[09:49:43] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[09:49:43] [Thread-13/INFO]: Initializing LWJGL OpenAL
-[09:49:43] [Thread-13/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[09:49:43] [Thread-13/INFO]: OpenAL initialized.
-[09:49:43] [Sound Library Loader/INFO]: Sound engine started
-[09:49:49] [Client thread/INFO]: Created: 512x512 textures-atlas
-[09:51:28] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
-[09:51:28] [Server thread/INFO]: Generating keypair
-[09:51:28] [Server thread/INFO]: Preparing start region for level 0
-[09:51:29] [Server thread/INFO]: Preparing spawn area: 47%
-[09:51:30] [Server thread/INFO]: Changing view distance to 8, from 10
-[09:51:31] [Server thread/INFO]: Player83[local:E:97f92a8a] logged in with entity id 35 at (387.79014742375995, 4.0, 259.858460044637)
-[09:51:31] [Server thread/INFO]: Player83 joined the game
-[09:51:39] [Server thread/INFO]: Saving and pausing game...
-[09:51:39] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[09:51:39] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[09:51:39] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[09:51:41] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
-[09:51:41] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
-[09:51:42] [Server thread/INFO]: Saving and pausing game...
-[09:51:42] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[09:51:42] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[09:51:42] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[09:51:44] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled HUD
-[09:51:47] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
-[09:51:47] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
-[09:51:47] [Server thread/INFO]: Saving and pausing game...
-[09:51:47] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[09:51:48] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[09:51:48] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[09:51:58] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled Interface
-[09:51:59] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
-[09:51:59] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
-[09:51:59] [Server thread/INFO]: Saving and pausing game...
-[09:51:59] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[09:51:59] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[09:51:59] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[09:52:03] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
-[09:52:03] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
-[09:52:03] [Server thread/INFO]: Saving and pausing game...
-[09:52:03] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[09:52:03] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[09:52:03] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[09:52:08] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
-[09:52:08] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
-[09:52:08] [Server thread/INFO]: Saving and pausing game...
-[09:52:08] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[09:52:08] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[09:52:08] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[09:52:18] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
-[09:52:18] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
-[09:52:18] [Server thread/INFO]: Saving and pausing game...
-[09:52:18] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[09:52:18] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[09:52:18] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[09:52:19] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled FastPlace
-[09:52:21] [Server thread/INFO]: Player83 has just earned the achievement [Taking Inventory]
-[09:52:21] [Client thread/INFO]: [CHAT] Player83 has just earned the achievement [Taking Inventory]
-[09:52:30] [Server thread/INFO]: Saving and pausing game...
-[09:52:30] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[09:52:30] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[09:52:30] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[09:52:37] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
-[09:52:37] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
-[09:52:37] [Server thread/INFO]: Saving and pausing game...
-[09:52:37] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[09:52:37] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[09:52:37] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[09:52:45] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled KillAura
-[09:52:48] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled KillAura
-[09:52:50] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled AutoClicker
-[09:52:52] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
-[09:52:52] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
-[09:52:52] [Server thread/INFO]: Saving and pausing game...
-[09:52:52] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[09:52:53] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[09:52:53] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[09:52:54] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled AutoClicker
-[09:53:03] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
-[09:53:03] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
-[09:53:03] [Server thread/INFO]: Saving and pausing game...
-[09:53:03] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[09:53:03] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[09:53:03] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[09:54:22] [Client thread/INFO]: Stopping!
-[09:54:22] [Client thread/INFO]: SoundSystem shutting down...
-[09:54:22] [Server thread/INFO]: Stopping server
-[09:54:22] [Server thread/INFO]: Saving players
-[09:54:22] [Server thread/INFO]: Saving worlds
-[09:54:22] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
-[09:54:22] [Server thread/INFO]: Saving chunks for level 'God'/Nether
-[09:54:22] [Server thread/INFO]: Saving chunks for level 'God'/The End
-[09:54:22] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[09:54:22] [Client Shutdown Thread/INFO]: Stopping server
-[09:54:22] [Client Shutdown Thread/INFO]: Saving players
-[09:54:22] [Client Shutdown Thread/INFO]: Saving worlds
-[09:54:22] [Client Shutdown Thread/INFO]: Saving chunks for level 'God'/Overworld
+[23:46:09] [Client thread/INFO]: Setting user: Player62
+[23:46:13] [Client thread/INFO]: LWJGL Version: 2.9.4
+[23:46:17] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
+[23:46:17] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[23:46:18] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[23:46:18] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[23:46:18] [Thread-9/INFO]: OpenAL initialized.
+[23:46:18] [Sound Library Loader/INFO]: Sound engine started
+[23:46:24] [Client thread/INFO]: Created: 16x16 textures-atlas
+[23:46:30] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Brutalityclient
+[23:46:30] [Client thread/INFO]: SoundSystem shutting down...
+[23:46:30] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[23:46:30] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[23:46:30] [Thread-13/INFO]: Initializing LWJGL OpenAL
+[23:46:30] [Thread-13/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[23:46:30] [Thread-13/INFO]: OpenAL initialized.
+[23:46:31] [Sound Library Loader/INFO]: Sound engine started
+[23:46:36] [Client thread/INFO]: Created: 512x512 textures-atlas
+[23:46:40] [Server thread/INFO]: Starting integrated minecraft server version 1.8.9
+[23:46:40] [Server thread/INFO]: Generating keypair
+[23:46:40] [Server thread/INFO]: Preparing start region for level 0
+[23:46:40] [Server thread/INFO]: Changing view distance to 8, from 10
+[23:46:42] [Server thread/INFO]: Player62[local:E:18ae91ad] logged in with entity id 33 at (373.9050368291159, 5.0, 239.5007551504011)
+[23:46:42] [Server thread/INFO]: Player62 joined the game
+[23:46:43] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Enabled ClickGui
+[23:46:43] [Client thread/INFO]: [CHAT] §4[BRUTALITY]§r Disabled ClickGui
+[23:46:43] [Server thread/INFO]: Saving and pausing game...
+[23:46:43] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
+[23:46:43] [Server thread/INFO]: Saving chunks for level 'God'/Nether
+[23:46:43] [Server thread/INFO]: Saving chunks for level 'God'/The End
+[23:46:54] [Server thread/INFO]: Saving and pausing game...
+[23:46:54] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
+[23:46:54] [Server thread/INFO]: Saving chunks for level 'God'/Nether
+[23:46:54] [Server thread/INFO]: Saving chunks for level 'God'/The End
+[23:46:55] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:46:55] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:47:00] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:47:00] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:47:05] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:47:05] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:47:06] [Server thread/INFO]: Saving and pausing game...
+[23:47:06] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
+[23:47:06] [Server thread/INFO]: Saving chunks for level 'God'/Nether
+[23:47:06] [Server thread/INFO]: Saving chunks for level 'God'/The End
+[23:47:10] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:47:10] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:47:15] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:47:15] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:47:20] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:47:20] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:47:25] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:47:25] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:47:27] [Server thread/INFO]: Saving and pausing game...
+[23:47:27] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
+[23:47:27] [Server thread/INFO]: Saving chunks for level 'God'/Nether
+[23:47:27] [Server thread/INFO]: Saving chunks for level 'God'/The End
+[23:47:30] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:47:30] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:47:35] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:47:35] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:47:40] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:47:40] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:47:45] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:47:45] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:47:50] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:47:50] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:47:55] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:47:55] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:48:00] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:48:00] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:48:05] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:48:05] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:48:10] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:48:10] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:48:15] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:48:15] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:48:20] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:48:20] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:48:25] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:48:25] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:48:30] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:48:30] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:48:35] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:48:35] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:48:40] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:48:40] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:48:45] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:48:45] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:48:50] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:48:50] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:48:55] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:48:55] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:49:00] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:49:00] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:49:05] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:49:05] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:49:10] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:49:10] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:49:15] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:49:15] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:49:20] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:49:20] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:49:25] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:49:25] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:49:30] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:49:30] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:49:35] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:49:35] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:49:40] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:49:40] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:49:45] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:49:45] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:49:50] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:49:50] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:49:55] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:49:55] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:50:00] [Client thread/INFO]: [CHAT] Gold requirement: Unknown command. Try /help for a list of commands
+[23:50:00] [Client thread/INFO]: [CHAT] Unknown command. Try /help for a list of commands
+[23:50:03] [Client thread/INFO]: Stopping!
+[23:50:03] [Client thread/INFO]: SoundSystem shutting down...
+[23:50:03] [Server thread/INFO]: Stopping server
+[23:50:03] [Server thread/INFO]: Saving players
+[23:50:03] [Server thread/INFO]: Saving worlds
+[23:50:03] [Server thread/INFO]: Saving chunks for level 'God'/Overworld
+[23:50:03] [Server thread/INFO]: Saving chunks for level 'God'/Nether
+[23:50:03] [Server thread/INFO]: Saving chunks for level 'God'/The End
+[23:50:03] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
