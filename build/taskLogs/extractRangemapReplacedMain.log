@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 132 files
+Processing 137 files
 processing org\brutality\BrutalityClient.java
 processing org\brutality\commands\Command.java
 processing org\brutality\commands\CommandManager.java
@@ -62,6 +62,7 @@ processing org\brutality\module\impl\pit\DarkList.java
 processing org\brutality\module\impl\pit\Events.java
 processing org\brutality\module\impl\pit\Focus.java
 processing org\brutality\module\impl\pit\GambleSwapper.java
+processing org\brutality\module\impl\pit\MindAssaultDamage.java
 processing org\brutality\module\impl\pit\PitSwap.java
 processing org\brutality\module\impl\pit\SewerESP.java
 processing org\brutality\module\impl\pit\SharkDamage.java
@@ -86,7 +87,10 @@ processing org\brutality\module\impl\render\HUD.java
 processing org\brutality\module\impl\render\Health.java
 processing org\brutality\module\impl\render\Interface.java
 processing org\brutality\module\impl\render\NameTag.java
+processing org\brutality\module\impl\weasel\AutoGrinder.java
+processing org\brutality\module\impl\weasel\AutoOOF.java
 processing org\brutality\module\impl\weasel\RequirementChecker.java
+processing org\brutality\module\impl\weasel\StaffDetector.java
 processing org\brutality\notifications\NotificationManager.java
 processing org\brutality\settings\Setting.java
 processing org\brutality\settings\SettingsManager.java
@@ -114,6 +118,7 @@ processing org\brutality\utils\InterfaceUtils.java
 processing org\brutality\utils\InventoryUtils.java
 processing org\brutality\utils\NameTagRenderUtils.java
 processing org\brutality\utils\PacketUtils.java
+processing org\brutality\utils\PathFinding\PathFinder.java
 processing org\brutality\utils\PlayerUtils.java
 processing org\brutality\utils\Reflection.java
 processing org\brutality\utils\ReflectionUtils.java

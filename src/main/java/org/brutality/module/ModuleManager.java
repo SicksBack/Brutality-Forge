@@ -11,6 +11,7 @@ import org.brutality.module.impl.player.*;
 import org.brutality.module.impl.render.*;
 import org.brutality.module.impl.harrys.*;
 import lombok.Getter;
+import org.brutality.module.impl.weasel.AutoOOF;
 import org.brutality.module.impl.weasel.RequirementChecker;
 import org.brutality.module.impl.weasel.StaffDetector;
 import org.brutality.settings.Setting;
@@ -77,6 +78,8 @@ public class ModuleManager extends ArrayList<Module> {
         new AutoClicker();
         new org.brutality.module.impl.weasel.AutoGrinder();
         new StaffDetector();
+        new AutoOOF();
+        new MindAssaultDamage();
     }
 
     public void updateSettings(Setting setting) {
