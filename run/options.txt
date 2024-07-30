@@ -10,7 +10,7 @@ bobView:false
 anaglyph3d:false
 maxFps:260
 fboEnable:true
-difficulty:2
+difficulty:3
 fancyGraphics:false
 ao:0
 renderClouds:false
@@ -93,7 +93,6 @@ key_key.hotbar.9:47
 key_HUD:25
 key_ClickGui:54
 key_KeepSprint:37
-key_Health:35
 key_MeteoriteTracker:50
 soundCategory_master:0.4834437
 soundCategory_music:0.0

@@ -1,8 +1,5 @@
 package org.brutality.module;
 
-import net.minecraft.inventory.Slot;
-import net.minecraft.world.World;
-import net.minecraft.world.storage.SaveHandler;
 import org.brutality.module.impl.World.*;
 import org.brutality.module.impl.combat.*;
 import org.brutality.module.impl.move.*;
@@ -14,11 +11,10 @@ import lombok.Getter;
 import org.brutality.module.impl.weasel.AutoOOF;
 import org.brutality.module.impl.weasel.RequirementChecker;
 import org.brutality.module.impl.weasel.StaffDetector;
+import org.brutality.module.impl.weasel.WeaselGrinder;
 import org.brutality.settings.Setting;
 import org.brutality.settings.impl.ButtonSetting;
-import sun.security.provider.SHA;
 
-import javax.naming.Name;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
@@ -73,13 +69,15 @@ public class ModuleManager extends ArrayList<Module> {
         new Events();
         new Focus();
         new Gamble();
-        new AutoGrinder();
+        new HarryGrinder();
         new SharkDamage();
         new AutoClicker();
-        new org.brutality.module.impl.weasel.AutoGrinder();
+        new WeaselGrinder();
         new StaffDetector();
         new AutoOOF();
         new MindAssaultDamage();
+        new PrestigeList();
+        new DlegSwap();
     }
 
     public void updateSettings(Setting setting) {
