@@ -12,4 +12,9 @@ public class BlockUtils {
         World world = mc.theWorld;
         return world.getBlockState(pos).getBlock() == block;
     }
+
+    public static Block getBlock(BlockPos pos) {
+        World world = mc.theWorld;
+        return world.getBlockState(pos).getBlock();
+    }
 }

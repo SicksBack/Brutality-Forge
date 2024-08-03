@@ -1,5 +1,5 @@
 Symbol range map extraction starting
-Processing 132 files
+Processing 140 files
 processing org\brutality\BrutalityClient.java
 processing org\brutality\commands\Command.java
 processing org\brutality\commands\CommandManager.java
@@ -37,13 +37,14 @@ processing org\brutality\module\Category.java
 processing org\brutality\module\Module.java
 processing org\brutality\module\ModuleManager.java
 processing org\brutality\module\impl\World\AntiBot.java
+processing org\brutality\module\impl\World\WhoGotDogged.java
 processing org\brutality\module\impl\combat\AimAssist.java
 processing org\brutality\module\impl\combat\AutoClicker.java
 processing org\brutality\module\impl\combat\Criticals.java
 processing org\brutality\module\impl\combat\KillAura.java
 processing org\brutality\module\impl\combat\Velocity.java
-processing org\brutality\module\impl\harrys\AutoGrinder.java
 processing org\brutality\module\impl\harrys\Gamble.java
+processing org\brutality\module\impl\harrys\HarryGrinder.java
 processing org\brutality\module\impl\harrys\MeteoriteTracker.java
 processing org\brutality\module\impl\hypixel\Tracker.java
 processing org\brutality\module\impl\move\Fly.java
@@ -56,22 +57,13 @@ processing org\brutality\module\impl\pit\AutoAura.java
 processing org\brutality\module\impl\pit\AutoEgg.java
 processing org\brutality\module\impl\pit\AutoSpawn.java
 processing org\brutality\module\impl\pit\AutoSteak.java
-processing org\brutality\module\impl\pit\BountyList.java
-processing org\brutality\module\impl\pit\CakeAura.java
-processing org\brutality\module\impl\pit\DarkList.java
-processing org\brutality\module\impl\pit\Events.java
-processing org\brutality\module\impl\pit\Focus.java
+processing org\brutality\module\impl\pit\DlegSwap.java
 processing org\brutality\module\impl\pit\GambleSwapper.java
 processing org\brutality\module\impl\pit\PitSwap.java
-processing org\brutality\module\impl\pit\SewerESP.java
-processing org\brutality\module\impl\pit\SharkDamage.java
 processing org\brutality\module\impl\pit\SlotSwap.java
 processing org\brutality\module\impl\pit\SogeSwap.java
-processing org\brutality\module\impl\pit\TelebowTimer.java
-processing org\brutality\module\impl\pit\VenomedNotifications.java
-processing org\brutality\module\impl\pit\VenomedTimer.java
-processing org\brutality\module\impl\pit\WhoGotDogged.java
 processing org\brutality\module\impl\player\Blink.java
+processing org\brutality\module\impl\player\CakeAura.java
 processing org\brutality\module\impl\player\FakeLag.java
 processing org\brutality\module\impl\player\FastPlace.java
 processing org\brutality\module\impl\player\Freecam.java
@@ -79,14 +71,28 @@ processing org\brutality\module\impl\player\Friends.java
 processing org\brutality\module\impl\player\KOS.java
 processing org\brutality\module\impl\player\NoHurtCam.java
 processing org\brutality\module\impl\player\Scaffold.java
+processing org\brutality\module\impl\render\BountyList.java
 processing org\brutality\module\impl\render\Chams.java
 processing org\brutality\module\impl\render\ChestESP.java
 processing org\brutality\module\impl\render\ClickGuiModule.java
+processing org\brutality\module\impl\render\DarkList.java
+processing org\brutality\module\impl\render\Events.java
+processing org\brutality\module\impl\render\Focus.java
 processing org\brutality\module\impl\render\HUD.java
 processing org\brutality\module\impl\render\Health.java
 processing org\brutality\module\impl\render\Interface.java
+processing org\brutality\module\impl\render\MindAssaultDamage.java
 processing org\brutality\module\impl\render\NameTag.java
+processing org\brutality\module\impl\render\PrestigeList.java
+processing org\brutality\module\impl\render\SewerESP.java
+processing org\brutality\module\impl\render\SharkDamage.java
+processing org\brutality\module\impl\render\TelebowTimer.java
+processing org\brutality\module\impl\render\VenomedNotifications.java
+processing org\brutality\module\impl\render\VenomedTimer.java
+processing org\brutality\module\impl\weasel\AutoOOF.java
 processing org\brutality\module\impl\weasel\RequirementChecker.java
+processing org\brutality\module\impl\weasel\StaffDetector.java
+processing org\brutality\module\impl\weasel\WeaselGrinder.java
 processing org\brutality\notifications\NotificationManager.java
 processing org\brutality\settings\Setting.java
 processing org\brutality\settings\SettingsManager.java
@@ -114,6 +120,8 @@ processing org\brutality\utils\InterfaceUtils.java
 processing org\brutality\utils\InventoryUtils.java
 processing org\brutality\utils\NameTagRenderUtils.java
 processing org\brutality\utils\PacketUtils.java
+processing org\brutality\utils\PathFinding\PathFinder.java
+processing org\brutality\utils\PlayerData.java
 processing org\brutality\utils\PlayerUtils.java
 processing org\brutality\utils\Reflection.java
 processing org\brutality\utils\ReflectionUtils.java

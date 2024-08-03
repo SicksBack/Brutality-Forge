@@ -41,4 +41,12 @@ public class Utils {
             min.setValue(max.getValue());
         }
     }
+
+    public static long getDifference(long start, long end) {
+        return end - start;
+    }
+
+    public static String formatColor(String message) {
+        return message.replaceAll("&", "\u00a7");
+    }
 }
