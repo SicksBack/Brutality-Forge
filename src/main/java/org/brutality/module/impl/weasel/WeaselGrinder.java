@@ -5,6 +5,7 @@ import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.util.Vec3;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.PlayerEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.brutality.module.Category;
 import org.brutality.module.Module;
@@ -21,6 +22,7 @@ public class WeaselGrinder extends Module {
     private final NumberSetting fovTolerance;
     private final SimpleModeSetting sorting;
     private final NumberSetting attackRange;
+    private double spawnY = 0;
     private int ticks = 0;
 
     public WeaselGrinder() {
@@ -42,6 +44,11 @@ public class WeaselGrinder extends Module {
             ticks++;
             runGrinder();
         }
+    }
+
+    @SubscribeEvent
+    public void onJoin(PlayerEvent.PlayerLoggedInEvent event) {
+        spawnY = event.player.posY;
     }
 
     private double fixRots(double start, double end) {
@@ -132,7 +139,7 @@ public class WeaselGrinder extends Module {
 
     private EntityLivingBase getClosestTarget(List<EntityLivingBase> potentialTargets) {
         return potentialTargets.stream()
-                .filter(entity -> entity.posY < mc.thePlayer.posY - 10)
+                .filter(entity -> entity.posY <= 76)
                 .min(Comparator.comparing(entity -> mc.thePlayer.getDistanceToEntity(entity)))
                 .orElse(null);
     }
