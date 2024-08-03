@@ -11,7 +11,6 @@ import lombok.Getter;
 import org.brutality.module.impl.weasel.AutoOOF;
 import org.brutality.module.impl.weasel.RequirementChecker;
 import org.brutality.module.impl.weasel.StaffDetector;
-import org.brutality.module.impl.weasel.WeaselGrinder;
 import org.brutality.settings.Setting;
 import org.brutality.settings.impl.ButtonSetting;
 
@@ -72,12 +71,12 @@ public class ModuleManager extends ArrayList<Module> {
         new HarryGrinder();
         new SharkDamage();
         new AutoClicker();
-        new WeaselGrinder();
         new StaffDetector();
         new AutoOOF();
         new MindAssaultDamage();
         new PrestigeList();
         new DlegSwap();
+        new Grinder();
     }
 
     public void updateSettings(Setting setting) {

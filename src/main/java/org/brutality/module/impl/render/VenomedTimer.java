@@ -2,6 +2,7 @@ package org.brutality.module.impl.render;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
+import net.minecraft.client.gui.GuiChat;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
@@ -11,9 +12,8 @@ import org.brutality.module.Module;
 import org.lwjgl.input.Mouse;
 
 public class VenomedTimer extends Module {
-
-    private int venomedTextX = 10;  // Initial X position
-    private int venomedTextY = 10;  // Initial Y position
+    private int venomedTextX = 10;
+    private int venomedTextY = 10;
     private boolean dragging = false;
     private int dragX = 0;
     private int dragY = 0;
@@ -31,19 +31,21 @@ public class VenomedTimer extends Module {
             int duration = effect.getDuration() / 20;
             String text = "\u00A75Venomed: \u00A7d" + duration + "s";
 
-            if (dragging) {
-                venomedTextX = Mouse.getX() / 2 - dragX;
-                venomedTextY = (mc.displayHeight - Mouse.getY()) / 2 - dragY;
-            }
-
-            if (Mouse.isButtonDown(0)) {
-                if (!dragging && isMouseOverText(Mouse.getX() / 2, (mc.displayHeight - Mouse.getY()) / 2, text, mc)) {
-                    dragging = true;
-                    dragX = Mouse.getX() / 2 - venomedTextX;
-                    dragY = (mc.displayHeight - Mouse.getY()) / 2 - venomedTextY;
+            if (mc.currentScreen instanceof GuiChat) {
+                if (dragging) {
+                    venomedTextX = Mouse.getX() / 2 - dragX;
+                    venomedTextY = (mc.displayHeight - Mouse.getY()) / 2 - dragY;
                 }
-            } else {
-                dragging = false;
+
+                if (Mouse.isButtonDown(0)) {
+                    if (!dragging && isMouseOverText(Mouse.getX() / 2, (mc.displayHeight - Mouse.getY()) / 2, text, mc)) {
+                        dragging = true;
+                        dragX = Mouse.getX() / 2 - venomedTextX;
+                        dragY = (mc.displayHeight - Mouse.getY()) / 2 - venomedTextY;
+                    }
+                } else {
+                    dragging = false;
+                }
             }
 
             mc.fontRendererObj.drawStringWithShadow(text, venomedTextX, venomedTextY, -1);
