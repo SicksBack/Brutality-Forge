@@ -2,44 +2,74 @@ package org.brutality.module.impl.pit;
 
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.util.BlockPos;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
+import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.brutality.module.Category;
 import org.brutality.module.Module;
 import org.brutality.settings.impl.NumberSetting;
 
+import java.util.Random;
 
 public class Grinder extends Module {
+    private EntityPlayer closestPlayer = null;
     private final NumberSetting targetsMinY;
     private final NumberSetting distance;
-    private int ticks = 0;
+    private final NumberSetting aimSpeed;
+    private final Random random = new Random();
 
     public Grinder() {
         super("Auto Grinder", "Automatically grind kills", Category.PIT);
         targetsMinY = new NumberSetting("Targets Min PosY", this, 76.0, 0.0, 256.0, 1);
         distance = new NumberSetting("Distance", this, 3.3, 3.0, 6.0, 1);
-        addSettings(distance, targetsMinY);
+        aimSpeed = new NumberSetting("Aim Speed", this, 4.0, 1.0, 10.0, 1);
+        addSettings(distance, targetsMinY, aimSpeed);
     }
 
     @SubscribeEvent
     public void onTick(TickEvent.ClientTickEvent e) {
         if (mc.thePlayer != null && mc.theWorld != null) {
-            ticks++;
-            EntityPlayer closestPlayer = getClosestPlayer(mc.thePlayer);
-            if (closestPlayer != null) {
-                double[] values = getYawPitch(closestPlayer);
+            if (mc.thePlayer.posY >= targetsMinY.getValue() + 10) {
+                Vec3 vec = new Vec3(0D, targetsMinY.getValue() + 10, 0D);
+                BlockPos blockPos = new BlockPos(vec.xCoord, vec.yCoord, vec.zCoord);
+                double[] values = getYawPitch(blockPos);
                 float targetYaw = (float) values[0];
                 float targetPitch = (float) values[1];
 
                 mc.thePlayer.rotationYaw = smoothAim(mc.thePlayer.rotationYaw, targetYaw);
                 mc.thePlayer.rotationPitch = smoothAim(mc.thePlayer.rotationPitch, targetPitch);
 
-                setControlStates(closestPlayer);
-                targetEntity(closestPlayer);
+                KeyBinding.setKeyBindState(mc.gameSettings.keyBindForward.getKeyCode(), true);
+                KeyBinding.setKeyBindState(mc.gameSettings.keyBindSprint.getKeyCode(), true);
             } else {
-                clearControlStates();
+                if (closestPlayer != null) {
+                    double[] values = getYawPitch(closestPlayer.getPosition());
+                    float targetYaw = (float) values[0];
+                    float targetPitch = (float) values[1];
+
+                    mc.thePlayer.rotationYaw = smoothAim(mc.thePlayer.rotationYaw, targetYaw);
+                    mc.thePlayer.rotationPitch = smoothAim(mc.thePlayer.rotationPitch, targetPitch);
+
+                    setControlStates(closestPlayer);
+                } else {
+                    clearControlStates();
+                }
+                if (mc.thePlayer.ticksExisted % 5 == 0) {
+                    closestPlayer = getClosestPlayer(mc.thePlayer);
+                }
+            }
+        }
+    }
+
+    @SubscribeEvent
+    public void onPlayerUpdate(LivingEvent.LivingUpdateEvent event) {
+        if (event.entity instanceof EntityPlayer) {
+            EntityPlayer player = (EntityPlayer) event.entity;
+            if (mc.thePlayer == player && mc.theWorld != null && closestPlayer != null) {
+                targetEntity(closestPlayer);
             }
         }
     }
@@ -64,14 +94,14 @@ public class Grinder extends Module {
     private void targetEntity(EntityPlayer target) {
         float playerYaw = MathHelper.wrapAngleTo180_float(mc.thePlayer.rotationYaw);
 
-        double[] targetYawPitch = getYawPitch(target);
+        double[] targetYawPitch = getYawPitch(target.getPosition());
         float targetYaw = (float) targetYawPitch[0];
 
         float yawTolerance = 17.50f;
         float yawDifference = MathHelper.wrapAngleTo180_float(playerYaw - targetYaw);
 
         boolean canAttack = Math.abs(yawDifference) < yawTolerance;
-        if (canAttack && ticks % 3 == 0 && mc.thePlayer.getDistanceToEntity(target) <= distance.getValue()) {
+        if (canAttack && mc.thePlayer.ticksExisted % 2 == 0 && mc.thePlayer.getDistanceToEntity(target) <= distance.getValue()) {
             if (mc.objectMouseOver != null && mc.objectMouseOver.entityHit != null) {
                 mc.thePlayer.swingItem();
                 mc.playerController.attackEntity(mc.thePlayer, target);
@@ -120,10 +150,10 @@ public class Grinder extends Module {
         KeyBinding.setKeyBindState(mc.gameSettings.keyBindJump.getKeyCode(), false);
     }
 
-    private double[] getYawPitch(EntityPlayer target) {
-        double dx = target.posX - mc.thePlayer.posX;
-        double dy = (target.posY + target.getEyeHeight()) - (mc.thePlayer.posY + mc.thePlayer.getEyeHeight());
-        double dz = target.posZ - mc.thePlayer.posZ;
+    private double[] getYawPitch(BlockPos pos) {
+        double dx = pos.getX() - mc.thePlayer.posX;
+        double dy = (pos.getY() + 1.62) - (mc.thePlayer.posY + mc.thePlayer.getEyeHeight());
+        double dz = pos.getZ() - mc.thePlayer.posZ;
 
         double distanceXZ = MathHelper.sqrt_double(dx * dx + dz * dz);
         double yawRadians = Math.atan2(dz, dx);
@@ -133,6 +163,8 @@ public class Grinder extends Module {
         double pitchDegrees = -Math.toDegrees(pitchRadians);
 
         yawDegrees = normalizeYaw(yawDegrees);
+        yawDegrees += (random.nextDouble() - 0.5) * 2.0;
+        pitchDegrees += (random.nextDouble() - 0.5) * 2.0;
 
         return new double[]{yawDegrees, pitchDegrees};
     }
@@ -150,6 +182,6 @@ public class Grinder extends Module {
 
     private float smoothAim(float current, float target) {
         float delta = MathHelper.wrapAngleTo180_float(target - current);
-        return current + delta / (float) Math.max(1.0, (10.0 / (float) 4));
+        return current + delta / (float) Math.max(1.0, (10.0 / (float) aimSpeed.getValue()));
     }
 }
