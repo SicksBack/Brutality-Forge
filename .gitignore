@@ -1,2 +1,8 @@
-*
-!src/
+run/
+logs/
+eclipse/
+server/
+temp/
+.gradle/
+.idea/
+build
