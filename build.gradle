@@ -50,7 +50,7 @@ jar {
 
 task copyJar(type: Copy) {
     from("${buildDir}/libs/${archivesBaseName}-${version}.jar")
-    into("C:\\Users\\Admin\\AppData\\Roaming\\.feather\\user-mods\\1.8.9")
+    into("C:\\Users\\Admin\\AppData\\Roaming\\.minecraft\\mods")
 }
 
 build.finalizedBy(copyJar)
