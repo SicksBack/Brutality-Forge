@@ -62,7 +62,7 @@ public class ModuleManager extends ArrayList<Module> {
         new SewerESP();
         new MeteoriteTracker();
         new Sprint();
-        new VenomedNotifications();
+        new DarkNotifications();
         new DarkList();
         new NoHurtCam();
         new BountyList();
@@ -78,6 +78,7 @@ public class ModuleManager extends ArrayList<Module> {
         new MindAssaultDamage();
         new PrestigeList();
         new DlegSwap();
+        new PantSwapper();
     }
 
     public void updateSettings(Setting setting) {

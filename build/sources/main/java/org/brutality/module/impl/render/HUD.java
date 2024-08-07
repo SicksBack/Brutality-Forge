@@ -2,6 +2,7 @@ package org.brutality.module.impl.render;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
+import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -63,7 +64,7 @@ public class HUD extends Module {
         }
 
         // Handle dragging
-        if (mc.currentScreen != null) {
+        if (mc.currentScreen instanceof GuiChat) {
             handleDragging();
         }
     }
@@ -160,20 +161,18 @@ public class HUD extends Module {
     }
 
     private void handleDragging() {
-        if (mc.currentScreen != null) { // Check if the current screen is a GUI
-            if (Mouse.isButtonDown(0)) {
-                if (!dragging && isMouseOver()) {
-                    dragging = true;
-                    dragX = Mouse.getX() / 2 - posX;
-                    dragY = new ScaledResolution(mc).getScaledHeight() - Mouse.getY() / 2 - posY;
-                }
-                if (dragging) {
-                    posX = Mouse.getX() / 2 - dragX;
-                    posY = new ScaledResolution(mc).getScaledHeight() - Mouse.getY() / 2 - dragY;
-                }
-            } else {
-                dragging = false;
+        if (Mouse.isButtonDown(0)) {
+            if (!dragging && isMouseOver()) {
+                dragging = true;
+                dragX = Mouse.getX() / 2 - posX;
+                dragY = new ScaledResolution(mc).getScaledHeight() - Mouse.getY() / 2 - posY;
             }
+            if (dragging) {
+                posX = Mouse.getX() / 2 - dragX;
+                posY = new ScaledResolution(mc).getScaledHeight() - Mouse.getY() / 2 - dragY;
+            }
+        } else {
+            dragging = false;
         }
     }
 
