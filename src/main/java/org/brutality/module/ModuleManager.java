@@ -2,6 +2,7 @@ package org.brutality.module;
 
 import org.brutality.module.impl.World.*;
 import org.brutality.module.impl.combat.*;
+import org.brutality.module.impl.hypixel.WhoGotDogged;
 import org.brutality.module.impl.move.*;
 import org.brutality.module.impl.pit.*;
 import org.brutality.module.impl.player.*;

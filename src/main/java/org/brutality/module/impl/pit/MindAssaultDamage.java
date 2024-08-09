@@ -8,6 +8,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.brutality.module.Category;
 import org.brutality.module.Module;
 import org.brutality.settings.impl.BooleanSetting;
@@ -20,11 +21,21 @@ public class MindAssaultDamage extends Module {
     private boolean dragging = false;
     private int dragX = 0;
     private int dragY = 0;
-    private final BooleanSetting showNegative = new BooleanSetting("Show -60%", this, true);
+    private final BooleanSetting showNegative = new BooleanSetting("Show Reduction", this, true);
+    private double currentDamage = 0.00;
 
     public MindAssaultDamage() {
         super("MindAssaultDamage", "Shows Mind Assault Damage", Category.PIT);
         addSettings(showNegative, xPos, yPos);
+    }
+
+    @SubscribeEvent
+    public void onTick(TickEvent.ClientTickEvent event) {
+        if (mc.thePlayer == null) {
+            return;
+        }
+        currentDamage = calculateDamage(mc.thePlayer);
+        System.out.println("Current Damage: " + currentDamage);
     }
 
     @SubscribeEvent
@@ -51,50 +62,66 @@ public class MindAssaultDamage extends Module {
         }
 
         if (isWearingMindAssault(mc.thePlayer)) {
-            double damage = calculateDamage(mc.thePlayer);
-
             String text = "Minds: ";
             if (showNegative.isEnabled()) {
-                text += "§d-60% ";
+                text += "§5-60% "; // Purple color for -60%
             }
-            text += "§c+" + damage + " §c❤";
+            text += "§c+" + String.format("%.2f", currentDamage) + " §c❤";
 
             mc.fontRendererObj.drawStringWithShadow(text, posX, posY, 0xFFFFFF);
         }
     }
 
     private boolean isWearingMindAssault(EntityPlayerSP player) {
-        ItemStack leggings = player.inventory.armorItemInSlot(3); // 2 corresponds to leggings slot
-        if (leggings != null && leggings.hasTagCompound()) {
-            NBTTagCompound tagCompound = leggings.getTagCompound();
-            if (tagCompound != null) {
-                String lore = tagCompound.toString();
-                return lore.contains("Mind Assault") || tagCompound.toString().contains("mind_assault");
+        for (ItemStack armor : player.inventory.armorInventory) {
+            if (armor != null && armor.hasTagCompound()) {
+                NBTTagCompound tagCompound = armor.getTagCompound();
+                if (tagCompound != null && (tagCompound.toString().contains("Mind Assault") || tagCompound.toString().contains("mind_assault"))) {
+                    return true;
+                }
             }
         }
         return false;
     }
 
     private double calculateDamage(EntityPlayerSP player) {
-        int nearbyPlayers = 0;
+        double damage = 0.00;
         for (Object entity : mc.theWorld.playerEntities) {
             if (entity instanceof EntityPlayer) {
                 EntityPlayer p = (EntityPlayer) entity;
                 if (p != player && p.getDistanceToEntity(player) <= 11 && isWearingLeatherLeggings(p)) {
-                    nearbyPlayers++;
+                    damage += 0.75;
+                    System.out.println("Player found within 11 blocks with leather leggings: " + p.getName());
                 }
             }
         }
-        return Math.min(nearbyPlayers * 0.75, 8.0); // max damage is 8.0
+        return damage;
     }
 
     private boolean isWearingLeatherLeggings(EntityPlayer player) {
-        ItemStack leggings = player.inventory.armorItemInSlot(2); // 2 corresponds to leggings slot
-        return leggings != null && leggings.getUnlocalizedName().contains("leather_leggings");
+        ItemStack leggings = player.inventory.armorInventory[1]; // Leggings slot index is 1
+
+        if (leggings != null) {
+            // Check by display name
+            String itemName = leggings.getDisplayName();
+            if (itemName != null && (itemName.contains("Leather Leggings") || itemName.contains("Leather Pants"))) {
+                return true;
+            }
+
+            // Check by NBT tag
+            if (leggings.hasTagCompound()) {
+                NBTTagCompound tagCompound = leggings.getTagCompound();
+                if (tagCompound != null && (tagCompound.toString().contains("leather_leggings") || tagCompound.toString().contains("leather_pants"))) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     private boolean isMouseOverText(int mouseX, int mouseY, Minecraft mc) {
-        int textWidth = mc.fontRendererObj.getStringWidth("Minds: " + (showNegative.isEnabled() ? "-60% +" : "+") + "0.0 ❤");
+        int textWidth = mc.fontRendererObj.getStringWidth("Minds: " + (showNegative.isEnabled() ? "§5-60% +" : "+") + "0.00 ❤");
         int textHeight = mc.fontRendererObj.FONT_HEIGHT;
         return mouseX >= this.xPos.getValue() && mouseX <= this.xPos.getValue() + textWidth
                 && mouseY >= this.yPos.getValue() && mouseY <= this.yPos.getValue() + textHeight;
