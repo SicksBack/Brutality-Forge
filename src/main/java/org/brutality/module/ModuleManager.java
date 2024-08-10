@@ -80,6 +80,7 @@ public class ModuleManager extends ArrayList<Module> {
         new PrestigeList();
         new DlegSwap();
         new PantSwapper();
+        new VenomList();
     }
 
     public void updateSettings(Setting setting) {
