@@ -1,4 +1,4 @@
-package org.brutality.module.impl.move;
+package org.brutality.module.impl.movement;
 
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;

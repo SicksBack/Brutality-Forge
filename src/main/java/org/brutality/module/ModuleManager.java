@@ -3,7 +3,7 @@ package org.brutality.module;
 import org.brutality.module.impl.World.*;
 import org.brutality.module.impl.combat.*;
 import org.brutality.module.impl.hypixel.WhoGotDogged;
-import org.brutality.module.impl.move.*;
+import org.brutality.module.impl.movement.*;
 import org.brutality.module.impl.pit.*;
 import org.brutality.module.impl.player.*;
 import org.brutality.module.impl.render.*;
@@ -81,6 +81,11 @@ public class ModuleManager extends ArrayList<Module> {
         new DlegSwap();
         new PantSwapper();
         new VenomList();
+        new PotionEffectsHUD();
+        new TargetHUD();
+        new SafeWalk();
+        new AutoHeal();
+        new Reach();
     }
 
     public void updateSettings(Setting setting) {

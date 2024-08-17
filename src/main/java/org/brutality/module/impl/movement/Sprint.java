@@ -1,4 +1,4 @@
-package org.brutality.module.impl.move;
+package org.brutality.module.impl.movement;
 
 import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;

@@ -5,7 +5,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemSword;
 import net.minecraft.network.play.client.C02PacketUseEntity;
 import net.minecraft.network.play.client.C0APacketAnimation;
-import org.brutality.settings.impl.NumberSetting;
+import org.brutality.settings.impl.NumberSetting; // Import statement for NumberSetting
 
 import java.util.Random;
 
@@ -48,5 +48,26 @@ public class Utils {
 
     public static String formatColor(String message) {
         return message.replaceAll("&", "\u00a7");
+    }
+
+    // Utility methods for Speed module
+    public static boolean isMoving() {
+        return mc.thePlayer.movementInput.moveForward != 0 || mc.thePlayer.movementInput.moveStrafe != 0;
+    }
+
+    public static double getHorizontalSpeed() {
+        return Math.sqrt(mc.thePlayer.motionX * mc.thePlayer.motionX + mc.thePlayer.motionZ * mc.thePlayer.motionZ);
+    }
+
+    public static void setSpeed(double speed) {
+        float yaw = mc.thePlayer.rotationYaw;
+        double sin = Math.sin(Math.toRadians(yaw));
+        double cos = Math.cos(Math.toRadians(yaw));
+        mc.thePlayer.motionX = speed * cos;
+        mc.thePlayer.motionZ = speed * sin;
+    }
+
+    public static boolean jumpDown() {
+        return mc.thePlayer.motionY < 0;
     }
 }

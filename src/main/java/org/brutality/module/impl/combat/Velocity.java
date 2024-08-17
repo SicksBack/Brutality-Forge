@@ -16,6 +16,8 @@ public class Velocity extends Module {
     private final BooleanSetting onlyWhileTargeting;
     private final BooleanSetting disableS;
 
+    private static final int KEY_BINDING = Keyboard.KEY_R; // Bind to the 'R' key
+
     public Velocity() {
         super("Velocity", "Modifies knockback velocity", Category.COMBAT);
         horizontal = new NumberSetting("Horizontal", this, 90, 0, 100, 1);
@@ -27,10 +29,16 @@ public class Velocity extends Module {
         addSettings(horizontal, vertical, chance, onlyWhileTargeting, disableS);
     }
 
-    public String getInfo() {
-        return (horizontal.getValue() == 100.0 ? "" : (int) horizontal.getValue() + "h") +
-                (horizontal.getValue() != 100.0 && vertical.getValue() != 100.0 ? " " : "") +
-                (vertical.getValue() == 100.0 ? "" : (int) vertical.getValue() + "v");
+    @Override
+    public void onEnable() {
+        super.onEnable();
+        // Initialize or reset the module state when enabled
+    }
+
+    @Override
+    public void onDisable() {
+        super.onDisable();
+        // Cleanup or reset the module state when disabled
     }
 
     @SubscribeEvent
@@ -39,26 +47,29 @@ public class Velocity extends Module {
             return;
         }
 
-        if (mc.thePlayer.hurtTime > 0 && mc.thePlayer.hurtTime == mc.thePlayer.maxHurtTime) {
-            if (onlyWhileTargeting.isEnabled() && (mc.objectMouseOver == null || mc.objectMouseOver.entityHit == null)) {
-                return;
-            }
+        // Check if the 'R' key is pressed
+        if (Keyboard.isKeyDown(KEY_BINDING)) {
+            if (mc.thePlayer.hurtTime > 0 && mc.thePlayer.hurtTime == mc.thePlayer.maxHurtTime) {
+                if (onlyWhileTargeting.isEnabled() && (mc.objectMouseOver == null || mc.objectMouseOver.entityHit == null)) {
+                    return;
+                }
 
-            if (disableS.isEnabled() && Keyboard.isKeyDown(mc.gameSettings.keyBindBack.getKeyCode())) {
-                return;
-            }
+                if (disableS.isEnabled() && Keyboard.isKeyDown(mc.gameSettings.keyBindBack.getKeyCode())) {
+                    return;
+                }
 
-            if (chance.getValue() != 100.0 && Math.random() * 100 > chance.getValue()) {
-                return;
-            }
+                if (chance.getValue() != 100.0 && Math.random() * 100 > chance.getValue()) {
+                    return;
+                }
 
-            if (horizontal.getValue() != 100.0) {
-                mc.thePlayer.motionX *= horizontal.getValue() / 100.0;
-                mc.thePlayer.motionZ *= horizontal.getValue() / 100.0;
-            }
+                if (horizontal.getValue() != 100.0) {
+                    mc.thePlayer.motionX *= horizontal.getValue() / 100.0;
+                    mc.thePlayer.motionZ *= horizontal.getValue() / 100.0;
+                }
 
-            if (vertical.getValue() != 100.0) {
-                mc.thePlayer.motionY *= vertical.getValue() / 100.0;
+                if (vertical.getValue() != 100.0) {
+                    mc.thePlayer.motionY *= vertical.getValue() / 100.0;
+                }
             }
         }
     }
