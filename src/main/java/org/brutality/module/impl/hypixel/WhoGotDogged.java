@@ -65,7 +65,7 @@ public class WhoGotDogged extends Module {
     }
 
     private void logToChat(String playerName) {
-        String message = EnumChatFormatting.DARK_GRAY + "[" + EnumChatFormatting.DARK_RED + "B" + EnumChatFormatting.DARK_GRAY + "] - "
+        String message = EnumChatFormatting.BLACK + "[" + EnumChatFormatting.DARK_RED + "B" + EnumChatFormatting.BLACK + "] - "
                 + EnumChatFormatting.GOLD + playerName
                 + EnumChatFormatting.DARK_RED + " Got Banned.";
         mc.thePlayer.addChatMessage(new ChatComponentText(message));

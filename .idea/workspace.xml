@@ -4,14 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b08d3aa7-97e8-4ba8-b3a7-9b1cdbc7f2d3" name="Default Changelist" comment="fixed hard coded shit">
+    <list default="true" id="b08d3aa7-97e8-4ba8-b3a7-9b1cdbc7f2d3" name="Default Changelist" comment="done killaura">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/render/targethuds/AstolfoTargetHUD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/render/targethuds/DefaultTargetHUD.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/ui/font/IFont.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/BoxColorUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/ColorUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/CustomTimer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/HoverUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/RenderTimer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/TargetUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/TextUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/Theme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/render/Animation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/render/Easing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/render/Theme.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileContent/annotation-processors.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/fileContent/annotation-processors.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/fileContent/fileContent.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.5/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.5/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.5/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_07_2024_16_12__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_07_2024_16_12__Default_Changelist_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_07_2024_16_12__Default_Changelist_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_07_2024_16_12__Default_Changelist_1.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/commands/Command.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/command/Command.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/commands/CommandManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/command/CommandManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/commands/impl/BindCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/command/impl/BindCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/org/brutality/utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/org/brutality/utils/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/sources/main/java/org/brutality/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/build/sources/main/java/org/brutality/utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/taskLogs/retromapReplacedMain.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/taskLogs/retromapReplacedMain.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/command/impl/BindCommand.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/ModuleManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/ModuleManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/combat/KillAura.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/combat/KillAura.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/hypixel/WhoGotDogged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/hypixel/WhoGotDogged.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/BountyList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/pit/BountyList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/render/NameTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/render/NameTags.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/render/TargetHUD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/module/impl/render/TargetHUD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/settings/impl/NumberSetting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/settings/impl/NumberSetting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/utils/Colors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/Colors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/brutality/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/brutality/utils/Utils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +80,12 @@
                 <item name="Brutality-Client-" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Brutality-Client-" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="forgegradle" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -83,7 +123,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/SicksBack/Brutality-Client-.git&quot;,
-    &quot;accountId&quot;: &quot;940b0b4f-e1d0-466d-8cba-9b378dc40b6c&quot;
+    &quot;accountId&quot;: &quot;83defefd-e6a0-4c53-ae57-8041f1553e6d&quot;
   }
 }</component>
   <component name="ProjectColorInfo">{
@@ -103,15 +143,17 @@
     &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
     &quot;Application.Minecraft Client.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Brutality-Client- [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Brutality-Client- [genIntellijRuns].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Brutality-Client- [jar].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Brutality-Client- [runClient].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Brutality-Client- [setupDecompWorkspace].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Build Brutality-Client-.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
 }</component>
@@ -120,9 +162,9 @@
       <recent name="C:\Users\Admin\IdeaProjects\Brutality-Client-" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Minecraft Client">
+  <component name="RunManager" selected="Gradle.Brutality-Client- [build]">
     <configuration name="Minecraft Client" type="Application" factoryName="Application">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8 (4)" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="GradleStart" />
       <module name="Brutality-Client-.main" />
@@ -132,6 +174,36 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration default="false" factoryName="Application" name="Minecraft Client" type="Application">
+      <extension enabled="false" name="coverage" runner="idea" sample_coverage="true" />
+      <option name="MAIN_CLASS_NAME" value="GradleStart" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Brutality-Client-\run" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Brutality-Client-" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+    </configuration>
+    <configuration default="false" factoryName="Application" name="Minecraft Client" type="Application">
+      <extension enabled="false" name="coverage" runner="idea" sample_coverage="true" />
+      <option name="MAIN_CLASS_NAME" value="GradleStart" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Brutality-Client-\run" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Brutality-Client-" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
     </configuration>
     <configuration name="Minecraft Server" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8 (4)" />
@@ -145,6 +217,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="false" factoryName="Application" name="Minecraft Server" type="Application">
+      <extension enabled="false" name="coverage" runner="idea" sample_coverage="true" />
+      <option name="MAIN_CLASS_NAME" value="GradleStartServer" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Brutality-Client-\run" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Brutality-Client-" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+    </configuration>
+    <configuration default="false" factoryName="Application" name="Minecraft Server" type="Application">
+      <extension enabled="false" name="coverage" runner="idea" sample_coverage="true" />
+      <option name="MAIN_CLASS_NAME" value="GradleStartServer" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../Brutality-Client-\run" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Brutality-Client-" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+    </configuration>
     <configuration name="Brutality-Client- [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -157,6 +259,28 @@
         <option name="taskNames">
           <list>
             <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Brutality-Client- [genIntellijRuns]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="genIntellijRuns" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -211,7 +335,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Brutality-Client- [runServer]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="Brutality-Client- [setupDecompWorkspace]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -222,28 +346,8 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="runServer" />
+            <option value="setupDecompWorkspace" />
           </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="Brutality-Client-" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list />
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
@@ -256,19 +360,19 @@
     <list>
       <item itemvalue="Application.Minecraft Client" />
       <item itemvalue="Application.Minecraft Server" />
+      <item itemvalue="Gradle.Brutality-Client- [genIntellijRuns]" />
+      <item itemvalue="Gradle.Brutality-Client- [setupDecompWorkspace]" />
       <item itemvalue="Gradle.Brutality-Client- [jar]" />
       <item itemvalue="Gradle.Brutality-Client- [build]" />
       <item itemvalue="Gradle.Brutality-Client- [runClient]" />
-      <item itemvalue="Gradle.Brutality-Client- [runServer]" />
-      <item itemvalue="Gradle.Brutality-Client-" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Brutality-Client- [build]" />
-        <item itemvalue="Gradle.Brutality-Client- [jar]" />
         <item itemvalue="Gradle.Brutality-Client- [runClient]" />
-        <item itemvalue="Gradle.Brutality-Client-" />
-        <item itemvalue="Gradle.Brutality-Client- [runServer]" />
+        <item itemvalue="Gradle.Brutality-Client- [genIntellijRuns]" />
+        <item itemvalue="Gradle.Brutality-Client- [setupDecompWorkspace]" />
+        <item itemvalue="Gradle.Brutality-Client- [jar]" />
       </list>
     </recent_temporary>
   </component>
@@ -445,7 +549,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723283052516</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="done killaura">
+      <option name="closed" value="true" />
+      <created>1723890904924</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1723890904925</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -483,7 +595,8 @@
     <MESSAGE value="FIXED ALOTTTTTT" />
     <MESSAGE value="added stuff" />
     <MESSAGE value="fixed hard coded shit" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed hard coded shit" />
+    <MESSAGE value="done killaura" />
+    <option name="LAST_COMMIT_MESSAGE" value="done killaura" />
     <option name="GROUP_MULTIFILE_MERGE_BY_DIRECTORY" value="true" />
   </component>
 </project>

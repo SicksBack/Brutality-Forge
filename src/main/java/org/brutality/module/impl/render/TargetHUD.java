@@ -2,31 +2,32 @@ package org.brutality.module.impl.render;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiChat;
-import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.brutality.module.Category;
 import org.brutality.module.Module;
 import org.brutality.settings.impl.NumberSetting;
-import org.lwjgl.input.Mouse;
+import org.brutality.settings.impl.SimpleModeSetting;
+import org.brutality.module.impl.render.targethuds.DefaultTargetHUD;
+import org.brutality.module.impl.render.targethuds.AstolfoTargetHUD;
 
 public class TargetHUD extends Module {
 
     private final NumberSetting xPos = new NumberSetting("X Pos", this, 50.0, 0.0, 1200.0, 1);
     private final NumberSetting yPos = new NumberSetting("Y Pos", this, 50.0, 0.0, 1200.0, 1);
-    private boolean dragging = false;
-    private int dragX = 0;
-    private int dragY = 0;
+    private final SimpleModeSetting mode = new SimpleModeSetting("Mode", this, "Default", new String[]{"Default", "Astolfo"});
 
     private EntityLivingBase target;
+    private final DefaultTargetHUD defaultHUD = new DefaultTargetHUD();
+    private final AstolfoTargetHUD astolfoHUD = new AstolfoTargetHUD();
 
     public TargetHUD() {
         super("TargetHUD", "Displays information about your target", Category.RENDER);
-        addSettings(xPos, yPos);
+        addSettings(xPos, yPos, mode);
     }
 
     @SubscribeEvent
@@ -35,21 +36,20 @@ public class TargetHUD extends Module {
             return;
         }
 
+        // Find the closest target
         target = null;
-
         double closestDistance = Double.MAX_VALUE;
-        for (EntityLivingBase entity : mc.theWorld.playerEntities) {
-            if (entity instanceof EntityPlayer && entity != mc.thePlayer && !entity.isDead && entity.getHealth() > 0) {
-                double distance = mc.thePlayer.getDistanceToEntity(entity);
-                if (distance < closestDistance) {
-                    closestDistance = distance;
-                    target = entity;
+        for (Entity entity : mc.theWorld.loadedEntityList) {
+            if (entity instanceof EntityLivingBase) {
+                EntityLivingBase livingEntity = (EntityLivingBase) entity;
+                if (livingEntity instanceof EntityPlayer && livingEntity != mc.thePlayer && !livingEntity.isDead && livingEntity.getHealth() > 0) {
+                    double distance = mc.thePlayer.getDistanceToEntity(livingEntity);
+                    if (distance < closestDistance) {
+                        closestDistance = distance;
+                        target = livingEntity;
+                    }
                 }
             }
-        }
-
-        if (mc.currentScreen instanceof GuiChat) {
-            handleDragging();
         }
     }
 
@@ -60,41 +60,15 @@ public class TargetHUD extends Module {
         }
 
         if (event.type == RenderGameOverlayEvent.ElementType.CHAT) {
-            Minecraft mc = Minecraft.getMinecraft();
-            ScaledResolution sr = new ScaledResolution(mc);
-
             int posX = (int) this.xPos.getValue();
             int posY = (int) this.yPos.getValue();
 
-            String targetName = target.getName();
-            float health = target.getHealth();
-            float maxHealth = target.getMaxHealth();
-            String healthInfo = String.format("%.1f/%.1f", health, maxHealth);
-
-            mc.fontRendererObj.drawStringWithShadow(EnumChatFormatting.GOLD + "Target: " + EnumChatFormatting.RESET + targetName, posX, posY, 0xFFFFFF);
-            mc.fontRendererObj.drawStringWithShadow(EnumChatFormatting.RED + "Health: " + EnumChatFormatting.RESET + healthInfo, posX, posY + mc.fontRendererObj.FONT_HEIGHT, 0xFFFFFF);
-        }
-    }
-
-    private void handleDragging() {
-        if (Mouse.isButtonDown(0)) {
-            if (!dragging && isMouseOver()) {
-                dragging = true;
-                dragX = Mouse.getX() / 2 - (int) xPos.getValue();
-                dragY = new ScaledResolution(mc).getScaledHeight() - Mouse.getY() / 2 - (int) yPos.getValue();
+            // Render the HUD based on the selected mode
+            if (mode.getValue().equals("Default")) {
+                defaultHUD.render(posX, posY, target);
+            } else if (mode.getValue().equals("Astolfo")) {
+                astolfoHUD.render(posX, posY, target);
             }
-            if (dragging) {
-                xPos.setValue(Mouse.getX() / 2 - dragX);
-                yPos.setValue(new ScaledResolution(mc).getScaledHeight() - Mouse.getY() / 2 - dragY);
-            }
-        } else {
-            dragging = false;
         }
-    }
-
-    private boolean isMouseOver() {
-        int mouseX = Mouse.getX() / 2;
-        int mouseY = new ScaledResolution(mc).getScaledHeight() - Mouse.getY() / 2;
-        return mouseX >= xPos.getValue() && mouseX <= xPos.getValue() + 200 && mouseY >= yPos.getValue() && mouseY <= yPos.getValue() + 20;
     }
 }

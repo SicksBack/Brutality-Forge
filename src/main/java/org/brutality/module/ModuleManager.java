@@ -9,6 +9,7 @@ import org.brutality.module.impl.player.*;
 import org.brutality.module.impl.render.*;
 import org.brutality.module.impl.harrys.*;
 import lombok.Getter;
+import org.brutality.module.impl.render.SharkDamage;
 import org.brutality.module.impl.weasel.AutoOOF;
 import org.brutality.module.impl.weasel.RequirementChecker;
 import org.brutality.module.impl.weasel.StaffDetector;
@@ -28,8 +29,7 @@ public class ModuleManager extends ArrayList<Module> {
         new HUD();
         new Interface();
         new Criticals();
-        new ClickGuiModule();
-        new KillAura(); // Register the KillAura module
+        new ClickGuiModule();// Register the KillAura module
         new PitSwap();
         new GambleSwapper();
         new KeepSprint();
@@ -46,7 +46,7 @@ public class ModuleManager extends ArrayList<Module> {
         new FakeLag();
         new FastPlace();
         new Chams();
-        new NameTag();
+        new NameTags();
         new KOS();
         new Friends();
         new VenomedTimer();
@@ -72,7 +72,6 @@ public class ModuleManager extends ArrayList<Module> {
         new Gamble();
         new HarryGrinder();
         new SharkDamage();
-        new AutoClicker();
         new WeaselGrinder();
         new StaffDetector();
         new AutoOOF();
@@ -86,6 +85,8 @@ public class ModuleManager extends ArrayList<Module> {
         new SafeWalk();
         new AutoHeal();
         new Reach();
+        new KillAura();
+        new SetList();
     }
 
     public void updateSettings(Setting setting) {

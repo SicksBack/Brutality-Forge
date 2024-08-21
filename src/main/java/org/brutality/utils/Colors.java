@@ -1,11 +1,35 @@
 package org.brutality.utils;
 
-public class Colors {
-    public static final String aqua = "\u00A7b";
-    public static final String gray = "\u00A77";
-    public static final String light_purple = "\u00A7d";
-    public static final String dark_purple = "\u00A75";
-    public static final String dark_pink = "\u00A7d";
+import java.awt.Color;
 
-    // Additional colors can be added here as needed
+public class Colors {
+
+    public static int GREEN = new Color(0, 255, 0).getRGB(); // Example color
+    public static int YELLOW = new Color(255, 255, 0).getRGB(); // Example color
+    public static int RED = new Color(255, 0, 0).getRGB(); // Example color
+
+    public static int blendColors(float duration, float max, float factor, int color1, int color2) {
+        float ratio = factor / max;
+        int r = (int) ((getRed(color1) * ratio) + (getRed(color2) * (1 - ratio)));
+        int g = (int) ((getGreen(color1) * ratio) + (getGreen(color2) * (1 - ratio)));
+        int b = (int) ((getBlue(color1) * ratio) + (getBlue(color2) * (1 - ratio)));
+        return new Color(r, g, b).getRGB();
+    }
+
+    public static int getRed(int color) {
+        return (color >> 16) & 0xFF;
+    }
+
+    public static int getGreen(int color) {
+        return (color >> 8) & 0xFF;
+    }
+
+    public static int getBlue(int color) {
+        return color & 0xFF;
+    }
+
+    public static int getDura() {
+        // Placeholder for duration calculation
+        return 1;
+    }
 }

@@ -20,10 +20,18 @@ public class NumberSetting extends Setting {
     }
 
     public void setValue(double value) {
+        if (value < minValue) {
+            value = minValue;
+        }
+        if (value > maxValue) {
+            value = maxValue;
+        }
         if (decimalPlaces == 0) {
             this.value = Math.round(value); // Ensure no decimals
         } else {
-            this.value = value;
+            // Round to the specified number of decimal places
+            double scale = Math.pow(10, decimalPlaces);
+            this.value = Math.round(value * scale) / scale;
         }
         mm.updateSettings(this);
     }

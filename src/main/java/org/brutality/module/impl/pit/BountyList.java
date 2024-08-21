@@ -28,7 +28,7 @@ public class BountyList extends Module {
     private final Map<String, String> bountyPlayers = new HashMap<>();
 
     public BountyList() {
-        super("BountyList", "Detects and lists players with bounties", Category.RENDER);
+        super("BountyList", "Detects and lists players with bounties", Category.PIT);
         this.addSettings(xPosSetting, yPosSetting);
     }
 

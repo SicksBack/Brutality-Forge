@@ -1,7 +1,6 @@
 package org.brutality.module.impl.combat;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.GlStateManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
@@ -10,9 +9,12 @@ import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.brutality.module.Category;
 import org.brutality.module.Module;
 import org.brutality.settings.impl.BooleanSetting;
-import org.brutality.settings.impl.ColorSetting;
 import org.brutality.settings.impl.NumberSetting;
+import org.brutality.settings.impl.SimpleModeSetting;
+import org.brutality.settings.impl.ColorSetting;
+import org.brutality.utils.CustomTimer;
 import org.lwjgl.input.Keyboard;
+import org.lwjgl.opengl.GL11;
 
 import java.awt.*;
 import java.util.Comparator;
@@ -21,11 +23,14 @@ import java.util.stream.Collectors;
 
 public class KillAura extends Module {
     private Minecraft mc = Minecraft.getMinecraft();
+    private CustomTimer timer = new CustomTimer();
+
     private final NumberSetting angle = new NumberSetting("Angle", this, 360, 1, 360, 1);
     private final NumberSetting cps = new NumberSetting("CPS", this, 10, 1, 20, 1);
     private final NumberSetting reach = new NumberSetting("Reach", this, 4.0, 1.0, 6.0, 1);
-    private final NumberSetting switchDelay = new NumberSetting("Switch Delay", this, 100, 0, 1000, 10);
-    private final NumberSetting targetAmount = new NumberSetting("Target Amount", this, 3, 1, 10, 1);
+    private final SimpleModeSetting filter = new SimpleModeSetting("Filter", this, "Distance", new String[]{"Health", "Distance"}); // Filter mode// Decimal precision for reach
+    private final NumberSetting switchDelay = new NumberSetting("Switch Delay", this, 100, 0, 1000, 1); // Integer precision
+    private final NumberSetting targetAmount = new NumberSetting("Target Amount", this, 3, 1, 10, 1); // Integer precision
     private final BooleanSetting targetPlayers = new BooleanSetting("Target Players", this, true);
     private final BooleanSetting targetMobs = new BooleanSetting("Target Mobs", this, false);
     private final BooleanSetting pitSpawnCheck = new BooleanSetting("Pit Spawn Check", this, true);
@@ -37,13 +42,16 @@ public class KillAura extends Module {
 
     public KillAura() {
         super("KillAura", "Automatically attacks nearby entities.", Category.COMBAT);
-        addSettings(reach, targetPlayers, targetMobs, pitSpawnCheck, cps, targetAmount, targetBoxColor, angle, switchDelay);
+        addSettings(reach, targetPlayers, targetMobs, pitSpawnCheck, cps, targetAmount, targetBoxColor, angle, switchDelay, filter);
         setKey(Keyboard.KEY_H);
     }
 
     @SubscribeEvent
     public void onTick(TickEvent.PlayerTickEvent event) {
         if (mc.thePlayer == null || mc.theWorld == null) return;
+
+        // Update the custom timer
+        timer.update();
 
         if (pitSpawnCheck.isEnabled() && isInPitSpawn()) {
             return; // Don't attack if in the Hypixel Pit spawn area
@@ -56,7 +64,7 @@ public class KillAura extends Module {
                 .filter(entity -> !entity.isDead)
                 .filter(entity -> mc.thePlayer.getDistanceToEntity(entity) <= reach.getValue())
                 .filter(this::isWithinAttackAngle)
-                .sorted(Comparator.comparingDouble(entity -> mc.thePlayer.getDistanceToEntity(entity)))
+                .sorted(getComparator())
                 .limit((int) targetAmount.getValue())
                 .collect(Collectors.toList());
 
@@ -68,13 +76,22 @@ public class KillAura extends Module {
             lastSwitchTime = currentTime;
         }
 
-        // Ensure currentTargetIndex is within bounds
-        if (targets.isEmpty() || currentTargetIndex >= targets.size()) return;
+        if (currentTargetIndex >= targets.size()) return;
 
         Entity target = targets.get(currentTargetIndex);
         if (shouldAttack()) {
             attackEntity(target);
             renderTargetBox(target, targetBoxColor.getColor());
+        }
+    }
+
+    private Comparator<Entity> getComparator() {
+        switch (filter.getValue()) {
+            case "Health":
+                return Comparator.comparingDouble(entity -> ((EntityPlayer) entity).getHealth());
+            case "Distance":
+            default:
+                return Comparator.comparingDouble(entity -> mc.thePlayer.getDistanceToEntity(entity));
         }
     }
 
@@ -131,24 +148,57 @@ public class KillAura extends Module {
     }
 
     private void renderTargetBox(Entity entity, Color color) {
-        // Ensure GL settings are enabled for rendering
-        GlStateManager.pushMatrix();
-        GlStateManager.enableBlend();
-        GlStateManager.disableDepth();
-        GlStateManager.tryBlendFuncSeparate(770, 771, 1, 0);
+        double x = entity.lastTickPosX + (entity.posX - entity.lastTickPosX) * timer.getPartialTicks() - mc.getRenderManager().viewerPosX;
+        double y = entity.lastTickPosY + (entity.posY - entity.lastTickPosY) * timer.getPartialTicks() - mc.getRenderManager().viewerPosY;
+        double z = entity.lastTickPosZ + (entity.posZ - entity.lastTickPosZ) * timer.getPartialTicks() - mc.getRenderManager().viewerPosZ;
+        double width = entity.width;
+        double height = entity.height;
 
-        // Set the color
-        float red = color.getRed() / 255.0F;
-        float green = color.getGreen() / 255.0F;
-        float blue = color.getBlue() / 255.0F;
-        float alpha = 0.5F; // Semi-transparent
-        GlStateManager.color(red, green, blue, alpha);
+        GL11.glPushMatrix();
+        GL11.glDisable(GL11.GL_TEXTURE_2D);
+        GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
+        GL11.glEnable(GL11.GL_BLEND);
+        GL11.glDisable(GL11.GL_DEPTH_TEST);
+        GL11.glShadeModel(GL11.GL_SMOOTH);
+        GL11.glLineWidth(2.0F);
 
-        // Render the box (this is a simplified example, and should be replaced with actual box rendering code)
-        // Box rendering code goes here...
+        GL11.glColor4f(color.getRed() / 255.0F, color.getGreen() / 255.0F, color.getBlue() / 255.0F, 0.5F);
 
-        GlStateManager.enableDepth();
-        GlStateManager.disableBlend();
-        GlStateManager.popMatrix();
+        GL11.glBegin(GL11.GL_LINES);
+        // Draw box edges
+        addBoxEdges(x, y, z, x + width, y + height, z + width);
+        GL11.glEnd();
+
+        GL11.glEnable(GL11.GL_DEPTH_TEST);
+        GL11.glShadeModel(GL11.GL_FLAT);
+        GL11.glDisable(GL11.GL_BLEND);
+        GL11.glEnable(GL11.GL_TEXTURE_2D);
+        GL11.glPopMatrix();
+    }
+
+    private void addBoxEdges(double x, double y, double z, double x1, double y1, double z1) {
+        GL11.glVertex3d(x, y, z);
+        GL11.glVertex3d(x1, y, z);
+
+        GL11.glVertex3d(x1, y, z);
+        GL11.glVertex3d(x1, y1, z);
+
+        GL11.glVertex3d(x1, y1, z);
+        GL11.glVertex3d(x, y1, z);
+
+        GL11.glVertex3d(x, y1, z);
+        GL11.glVertex3d(x, y, z);
+
+        GL11.glVertex3d(x, y, z1);
+        GL11.glVertex3d(x1, y, z1);
+
+        GL11.glVertex3d(x1, y, z1);
+        GL11.glVertex3d(x1, y1, z1);
+
+        GL11.glVertex3d(x1, y1, z1);
+        GL11.glVertex3d(x, y1, z1);
+
+        GL11.glVertex3d(x, y1, z1);
+        GL11.glVertex3d(x, y, z1);
     }
 }

@@ -8,43 +8,27 @@
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/module/Module.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/utils/exceptions/NotImplementedException.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/utils/interfaces/SM.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/ui/font/FontCharacter.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/utils/math/MathUtil.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/settings/impl/ExtendableSetting.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/module/Category.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/settings/impl/InputSetting.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value=".gradle/4.5/fileContent/annotation-processors.bin" />
@@ -53,28 +37,18 @@
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/module/impl/render/ClickGuiModule.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/module/impl/move/SprintModule.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/settings/impl/ColorPicker.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/settings/Setting.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/ui/clickGui/ClickGui.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value=".gradle/4.5/taskHistory/taskHistory.bin" />
@@ -87,19 +61,14 @@
     <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_07_2024_16_12_[Default_Changelist]/fileContent.lock" />
   </binary>
   <binary>
-    <option name="BEFORE_PATH" />
     <option name="AFTER_PATH" value="run/saves/nigga/playerdata/2a17dfd1-129d-330b-9eb4-f363ef062eed.dat" />
     <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_07_2024_16_12_[Default_Changelist]/2a17dfd1-129d-330b-9eb4-f363ef062eed.dat" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/settings/impl/MultiBooleanSetting.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/settings/impl/Mode.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="run/saves/nigga/level.dat_old" />
@@ -108,8 +77,6 @@
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/ui/font/CustomFontRenderer.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value=".gradle/4.5/fileHashes/fileHashes.bin" />
@@ -118,8 +85,6 @@
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/module/impl/combat/KillauraModule.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="run/saves/nigga/region/r.0.-1.mca" />
@@ -128,8 +93,6 @@
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/module/impl/render/ArrayListModule.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="run/saves/nigga/region/r.0.-2.mca" />
@@ -138,8 +101,6 @@
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/utils/render/RenderUtil.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="run/saves/nigga/session.lock" />
@@ -148,13 +109,9 @@
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/settings/impl/BooleanSetting.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/module/impl/render/TestModule.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="run/saves/nigga/level.dat" />
@@ -163,13 +120,9 @@
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/ui/font/FontManager.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/settings/impl/NumberSetting.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value=".gradle/buildOutputCleanup/buildOutputCleanup.lock" />
@@ -183,18 +136,12 @@
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/settings/impl/ModeSetting.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/settings/impl/ColorSetting.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/utils/render/GuiUtil.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value=".gradle/4.5/fileHashes/resourceHashesCache.bin" />
@@ -203,11 +150,8 @@
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/module/impl/render/HUDModule.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
-    <option name="BEFORE_PATH" />
     <option name="AFTER_PATH" value="run/logs/2024-07-07-1.log.gz" />
     <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_07_07_2024_16_12_[Default_Changelist]/2024-07-07-1.log.gz" />
   </binary>
@@ -218,8 +162,6 @@
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/settings/impl/SimpleModeSetting.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value=".gradle/4.5/taskHistory/taskHistory.lock" />
@@ -228,8 +170,6 @@
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="build/classes/java/main/org/brutality/notifications/NotificationManager.class" />
-    <option name="AFTER_PATH" />
-    <option name="SHELVED_PATH" />
   </binary>
   <binary>
     <option name="BEFORE_PATH" value="run/saves/nigga/DIM-1/data/villages_nether.dat" />
