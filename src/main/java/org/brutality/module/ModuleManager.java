@@ -88,6 +88,8 @@ public class ModuleManager extends ArrayList<Module> {
         new KillAura();
         new SetList();
         new StreakingInformation();
+        new Cps();
+        new Fps();
     }
 
     public void updateSettings(Setting setting) {
