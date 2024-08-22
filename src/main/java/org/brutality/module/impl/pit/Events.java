@@ -117,7 +117,17 @@ public class Events extends Module {
 
             // Draw time with light green color and grey brackets
             int timeXPosition = (int) (posX + maxEventNameWidth + 2); // Align time to the end of the longest event name
-            fr.drawStringWithShadow("[" + timeRemaining + "]", timeXPosition, posY, 0x00FF00); // Light green color for the time
+
+            // Draw brackets in grey
+            fr.drawStringWithShadow("[", timeXPosition, posY, 0xAAAAAA); // Grey color for the opening bracket
+            timeXPosition += fr.getStringWidth("["); // Move X position after the opening bracket
+
+            // Draw time in light green
+            fr.drawStringWithShadow(timeRemaining, timeXPosition, posY, 0x00FF00); // Light green color for the time
+            timeXPosition += fr.getStringWidth(timeRemaining); // Move X position after the time
+
+            // Draw closing bracket in grey
+            fr.drawStringWithShadow("]", timeXPosition, posY, 0xAAAAAA); // Grey color for the closing bracket
 
             posY += fr.FONT_HEIGHT + 2;
         }

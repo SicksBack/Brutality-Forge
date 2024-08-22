@@ -1,6 +1,5 @@
 package org.brutality.module;
 
-import org.brutality.notifications.NotificationManager;
 import lombok.Getter;
 import lombok.Setter;
 import net.minecraft.client.settings.KeyBinding;
@@ -61,15 +60,11 @@ public class Module implements MM, MC {
     // Registers the module onto the event bus
     public void onEnable() {
         MinecraftForge.EVENT_BUS.register(this);
-        System.out.println("Enabled: " + this.name);
-        NotificationManager.sendNotification("Enabled " + this.name);
     }
 
     // Unregisters the module from the event bus
     public void onDisable() {
         MinecraftForge.EVENT_BUS.unregister(this);
-        System.out.println("Disabled: " + this.name);
-        NotificationManager.sendNotification("Disabled " + this.name);
     }
 
     public void updateSettings(Setting s) {}

@@ -2,8 +2,8 @@ package org.brutality.module.impl.pit;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import org.brutality.events.Event;
-import org.brutality.events.listeners.EventUpdate;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.brutality.module.Category;
 import org.brutality.module.Module;
 import org.brutality.settings.impl.NumberSetting;
@@ -26,18 +26,22 @@ public class AutoEgg extends Module {
         addSettings(healthSetting, delaySetting);
     }
 
-
+    @Override
     public void onDisable() {
+        super.onDisable();
         this.useFirstAidEgg = false;
     }
 
-
-    public void onEvent(Event e) {
-        if (e instanceof EventUpdate) {
+    @SubscribeEvent
+    public void onClientTick(TickEvent.ClientTickEvent event) {
+        if (event.phase == TickEvent.Phase.START) {
             if (this.mc.currentScreen != null) {
                 return;
             }
+
+            // Check if health is below the threshold
             if ((this.mc.thePlayer.getHealth() / 2.0f) <= this.healthSetting.getValue()) {
+                // Use first-aid egg if not already using it and delay time has elapsed
                 if (!this.useFirstAidEgg && this.timer.hasTimeElapsed((long) this.delaySetting.getValue(), true)) {
                     this.eggSlot = this.findEggSlot();
                     if (this.eggSlot != -1) {
@@ -45,7 +49,9 @@ public class AutoEgg extends Module {
                         this.mc.thePlayer.inventory.currentItem = this.eggSlot;
                         this.useFirstAidEgg = true;
                     }
-                } else if (this.useFirstAidEgg && this.mc.thePlayer.inventory.currentItem == this.eggSlot) {
+                }
+                // Use the egg and reset if currently using it
+                else if (this.useFirstAidEgg && this.mc.thePlayer.inventory.currentItem == this.eggSlot) {
                     ItemStack itemStack = this.mc.thePlayer.inventory.getStackInSlot(this.eggSlot);
                     if (itemStack != null && itemStack.stackSize > 0) {
                         this.mc.playerController.sendUseItem(this.mc.thePlayer, this.mc.theWorld, itemStack);
@@ -54,6 +60,7 @@ public class AutoEgg extends Module {
                     }
                 }
             }
+            // Reset useFirstAidEgg if 5 seconds have passed
             if (this.resettimer.hasTimeElapsed(5000L, true)) {
                 this.useFirstAidEgg = false;
             }
