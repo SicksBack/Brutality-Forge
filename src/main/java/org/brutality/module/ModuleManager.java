@@ -87,6 +87,7 @@ public class ModuleManager extends ArrayList<Module> {
         new Reach();
         new KillAura();
         new SetList();
+        new StreakingInformation();
     }
 
     public void updateSettings(Setting setting) {

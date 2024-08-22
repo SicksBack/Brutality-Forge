@@ -1,7 +1,5 @@
 package org.brutality.module.impl.render;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.gui.GuiChat;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -14,16 +12,18 @@ import org.brutality.settings.impl.NumberSetting;
 import org.brutality.settings.impl.SimpleModeSetting;
 import org.brutality.module.impl.render.targethuds.DefaultTargetHUD;
 import org.brutality.module.impl.render.targethuds.AstolfoTargetHUD;
+import org.brutality.module.impl.render.targethuds.ExhibitionTargetHUD;
 
 public class TargetHUD extends Module {
 
     private final NumberSetting xPos = new NumberSetting("X Pos", this, 50.0, 0.0, 1200.0, 1);
     private final NumberSetting yPos = new NumberSetting("Y Pos", this, 50.0, 0.0, 1200.0, 1);
-    private final SimpleModeSetting mode = new SimpleModeSetting("Mode", this, "Default", new String[]{"Default", "Astolfo"});
+    private final SimpleModeSetting mode = new SimpleModeSetting("Mode", this, "Default", new String[]{"Default", "Astolfo", "Exhibition"});
 
     private EntityLivingBase target;
     private final DefaultTargetHUD defaultHUD = new DefaultTargetHUD();
     private final AstolfoTargetHUD astolfoHUD = new AstolfoTargetHUD();
+    private final ExhibitionTargetHUD exhibitionHUD = new ExhibitionTargetHUD();
 
     public TargetHUD() {
         super("TargetHUD", "Displays information about your target", Category.RENDER);
@@ -68,6 +68,8 @@ public class TargetHUD extends Module {
                 defaultHUD.render(posX, posY, target);
             } else if (mode.getValue().equals("Astolfo")) {
                 astolfoHUD.render(posX, posY, target);
+            } else if (mode.getValue().equals("Exhibition")) {
+                exhibitionHUD.render(posX, posY, target);
             }
         }
     }
