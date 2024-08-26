@@ -1,31 +1,37 @@
 package org.brutality.events;
 
-import net.minecraftforge.fml.common.eventhandler.Cancelable;
-import net.minecraftforge.fml.common.eventhandler.Event;
+public class SlowdownEvent extends Event {
+    private float forward;
+    private float strafe;
+    private boolean allowedSprinting;
 
-@Cancelable
-public class SlowDownEvent extends Event {
-    private float strafeSpeed;
-    private float forwardSpeed;
-
-    public SlowDownEvent(float strafeSpeed, float forwardSpeed) {
-        this.strafeSpeed = strafeSpeed;
-        this.forwardSpeed = forwardSpeed;
+    public SlowdownEvent(float forward, float strafe, boolean allowedSprinting) {
+        this.forward = forward;
+        this.strafe = strafe;
+        this.allowedSprinting = allowedSprinting;
     }
 
-    public float getStrafeSpeed() {
-        return strafeSpeed;
+    public float getForward() {
+        return forward;
     }
 
-    public void setStrafeSpeed(float strafeSpeed) {
-        this.strafeSpeed = strafeSpeed;
+    public void setForward(float forward) {
+        this.forward = forward;
     }
 
-    public float getForwardSpeed() {
-        return forwardSpeed;
+    public float getStrafe() {
+        return strafe;
     }
 
-    public void setForwardSpeed(float forwardSpeed) {
-        this.forwardSpeed = forwardSpeed;
+    public void setStrafe(float strafe) {
+        this.strafe = strafe;
+    }
+
+    public boolean isAllowedSprinting() {
+        return allowedSprinting;
+    }
+
+    public void setAllowedSprinting(boolean allowedSprinting) {
+        this.allowedSprinting = allowedSprinting;
     }
 }

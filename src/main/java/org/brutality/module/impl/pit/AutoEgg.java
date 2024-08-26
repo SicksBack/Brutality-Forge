@@ -1,79 +1,66 @@
 package org.brutality.module.impl.pit;
 
-import net.minecraft.init.Items;
+import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.brutality.module.Category;
 import org.brutality.module.Module;
 import org.brutality.settings.impl.NumberSetting;
-import org.brutality.utils.Timer;
 
 public class AutoEgg extends Module {
 
-    private final NumberSetting healthSetting;
-    private final NumberSetting delaySetting;
-    private Timer timer = new Timer();
-    private Timer resettimer = new Timer();
-    private int currentSlot = 0;
-    private boolean useFirstAidEgg = false;
-    private int eggSlot;
+    // Updated constructor to match the expected parameters
+    private final NumberSetting minHealth = new NumberSetting("Min Health", this, 5.0, 1.0, 12.0, 0);
 
     public AutoEgg() {
-        super("AutoEgg", "Automatically uses first-aid egg based on health", Category.PIT);
-        this.healthSetting = new NumberSetting("Health", this, 10, 1, 10, 0);
-        this.delaySetting = new NumberSetting("Delay", this, 50, 1, 100, 0);
-        addSettings(healthSetting, delaySetting);
-    }
-
-    @Override
-    public void onDisable() {
-        super.onDisable();
-        this.useFirstAidEgg = false;
+        super("AutoEgg", "Automatically uses a First-Aid Egg when your health is low.", Category.PIT);
+        this.addSettings(minHealth);
     }
 
     @SubscribeEvent
     public void onClientTick(TickEvent.ClientTickEvent event) {
-        if (event.phase == TickEvent.Phase.START) {
-            if (this.mc.currentScreen != null) {
-                return;
-            }
+        Minecraft mc = Minecraft.getMinecraft();
+        if (event.phase == TickEvent.Phase.END && mc.thePlayer != null) {
+            double currentHealth = mc.thePlayer.getHealth() / 2.0f;
+            double minHealthSetting = minHealth.getValue();
 
-            // Check if health is below the threshold
-            if ((this.mc.thePlayer.getHealth() / 2.0f) <= this.healthSetting.getValue()) {
-                // Use first-aid egg if not already using it and delay time has elapsed
-                if (!this.useFirstAidEgg && this.timer.hasTimeElapsed((long) this.delaySetting.getValue(), true)) {
-                    this.eggSlot = this.findEggSlot();
-                    if (this.eggSlot != -1) {
-                        this.currentSlot = this.mc.thePlayer.inventory.currentItem;
-                        this.mc.thePlayer.inventory.currentItem = this.eggSlot;
-                        this.useFirstAidEgg = true;
-                    }
-                }
-                // Use the egg and reset if currently using it
-                else if (this.useFirstAidEgg && this.mc.thePlayer.inventory.currentItem == this.eggSlot) {
-                    ItemStack itemStack = this.mc.thePlayer.inventory.getStackInSlot(this.eggSlot);
-                    if (itemStack != null && itemStack.stackSize > 0) {
-                        this.mc.playerController.sendUseItem(this.mc.thePlayer, this.mc.theWorld, itemStack);
-                        this.mc.thePlayer.inventory.currentItem = this.currentSlot;
-                        this.useFirstAidEgg = false;
-                    }
-                }
-            }
-            // Reset useFirstAidEgg if 5 seconds have passed
-            if (this.resettimer.hasTimeElapsed(5000L, true)) {
-                this.useFirstAidEgg = false;
+            if (currentHealth <= minHealthSetting) {
+                useEgg();
             }
         }
     }
 
-    private int findEggSlot() {
-        for (int i = 0; i < 9; i++) {
-            ItemStack itemStack = this.mc.thePlayer.inventory.mainInventory[i];
-            if (itemStack != null && itemStack.getItem() == Items.egg) { // Assuming "First-Aid Egg" uses the same item ID as an egg
-                return i;
+    private void useEgg() {
+        Minecraft mc = Minecraft.getMinecraft();
+
+        if (mc.thePlayer.inventory.hasItem(Item.getItemById(383))) {
+            for (int i = 0; i < mc.thePlayer.inventory.mainInventory.length; i++) {
+                ItemStack itemStack = mc.thePlayer.inventory.mainInventory[i];
+
+                if (itemStack == null || itemStack.getItem() != Item.getItemById(383) || itemStack.getItemDamage() != 96) {
+                    continue;
+                }
+
+                if (i > 8) {
+                    return;  // Ensure the egg is in a hotbar slot
+                }
+
+                int previousSlot = mc.thePlayer.inventory.currentItem;
+                mc.thePlayer.inventory.currentItem = i;
+                mc.playerController.sendUseItem(mc.thePlayer, mc.theWorld, mc.thePlayer.getHeldItem());
+                mc.thePlayer.inventory.currentItem = previousSlot;
+
+                break;
             }
         }
-        return -1;
+    }
+
+    @SubscribeEvent
+    public void onPlayerInteract(PlayerInteractEvent event) {
+        // Optional: Implement any player interaction logic here if needed
     }
 }

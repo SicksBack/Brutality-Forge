@@ -13,7 +13,7 @@ public class EventUtils {
 
         try {
             String line;
-            URL url = new URL("https://events.mcpqndq.dev/");
+            URL url = new URL("https://raw.githubusercontent.com/BrookeAFK/brookeafk-api/main/events.js");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestProperty("accept", "application/json");
             InputStream responseStream = connection.getInputStream();

@@ -90,6 +90,14 @@ public class ModuleManager extends ArrayList<Module> {
         new StreakingInformation();
         new Cps();
         new Fps();
+        new Notifications();
+        new AuraTimer();
+        new EggTimer();
+        new FeastTimer();
+        new PullbowTimer();
+        new AutoClicker();
+        new Blink();
+        new AutoTelebow();
     }
 
     public void updateSettings(Setting setting) {

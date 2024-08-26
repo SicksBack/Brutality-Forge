@@ -1,68 +1,68 @@
 package org.brutality.module.impl.pit;
 
-import net.minecraft.init.Items;
+import net.minecraft.client.Minecraft;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import org.brutality.events.Event;
-import org.brutality.events.listeners.EventUpdate;
+import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.brutality.module.Category;
 import org.brutality.module.Module;
-import org.brutality.settings.impl.NumberSetting;
-import org.brutality.utils.Timer;
+import org.brutality.settings.impl.BooleanSetting;
 
 public class AutoSteak extends Module {
 
-    private final NumberSetting delaySetting;
-    private Timer timer = new Timer();
-    private Timer resettimer = new Timer();
-    private int currentSlot = 0;
-    private boolean useSteak = false;
-    private int steakSlot;
+    private final BooleanSetting useAgainOnceEffectsRunOut = new BooleanSetting("Use Again Once Effects Run Out", this, true);
+
+    private long lastUseTime = 0;
 
     public AutoSteak() {
-        super("AutoSteak", "Automatically uses steak item", Category.PIT);
-        this.delaySetting = new NumberSetting("Delay", this, 50, 1, 100, 0);
-        addSettings(delaySetting);
+        super("AutoSteak", "Automatically uses mutton when the conditions are met.", Category.PIT);
+        this.addSettings(useAgainOnceEffectsRunOut);
     }
 
+    @SubscribeEvent
+    public void onClientTick(TickEvent.ClientTickEvent event) {
+        Minecraft mc = Minecraft.getMinecraft();
+        if (event.phase == TickEvent.Phase.END && mc.thePlayer != null) {
+            long currentTime = System.currentTimeMillis();
 
-    public void onDisable() {
-        this.useSteak = false;
-    }
-
-
-    public void onEvent(Event e) {
-        if (e instanceof EventUpdate) {
-            if (this.mc.currentScreen != null) {
-                return;
-            }
-            if (!this.useSteak && this.timer.hasTimeElapsed((long) this.delaySetting.getValue(), true)) {
-                this.steakSlot = this.findSteakSlot();
-                if (this.steakSlot != -1) {
-                    this.currentSlot = this.mc.thePlayer.inventory.currentItem;
-                    this.mc.thePlayer.inventory.currentItem = this.steakSlot;
-                    this.useSteak = true;
-                }
-            } else if (this.useSteak && this.mc.thePlayer.inventory.currentItem == this.steakSlot) {
-                ItemStack itemStack = this.mc.thePlayer.inventory.getStackInSlot(this.steakSlot);
-                if (itemStack != null && itemStack.stackSize > 0) {
-                    this.mc.playerController.sendUseItem(this.mc.thePlayer, this.mc.theWorld, itemStack);
-                    this.mc.thePlayer.inventory.currentItem = this.currentSlot;
-                    this.useSteak = false;
-                }
-            }
-            if (this.resettimer.hasTimeElapsed(5000L, true)) {
-                this.useSteak = false;
+            // Check if 10 seconds have passed since the last use
+            if (useAgainOnceEffectsRunOut.isEnabled() && currentTime - lastUseTime >= 10000) {
+                useMutton();
+                lastUseTime = currentTime;
             }
         }
     }
 
-    private int findSteakSlot() {
-        for (int i = 0; i < 9; i++) {
-            ItemStack itemStack = this.mc.thePlayer.inventory.mainInventory[i];
-            if (itemStack != null && itemStack.getItem() == Items.cooked_beef) { // Assuming "AAA-Rated Steak" uses the same item ID as cooked beef
-                return i;
+    private void useMutton() {
+        Minecraft mc = Minecraft.getMinecraft();
+
+        // 423 is the ID for mutton (raw)
+        if (mc.thePlayer.inventory.hasItem(Item.getItemById(423))) {
+            for (int i = 0; i < mc.thePlayer.inventory.mainInventory.length; i++) {
+                ItemStack itemStack = mc.thePlayer.inventory.mainInventory[i];
+
+                if (itemStack == null || itemStack.getItem() != Item.getItemById(423)) {
+                    continue;
+                }
+
+                if (i > 8) {
+                    return;  // Ensure the mutton is in a hotbar slot
+                }
+
+                int previousSlot = mc.thePlayer.inventory.currentItem;
+                mc.thePlayer.inventory.currentItem = i;
+                mc.playerController.sendUseItem(mc.thePlayer, mc.theWorld, mc.thePlayer.getHeldItem());
+                mc.thePlayer.inventory.currentItem = previousSlot;
+
+                break;
             }
         }
-        return -1;
+    }
+
+    @SubscribeEvent
+    public void onPlayerInteract(PlayerInteractEvent event) {
+        // Optional: Implement any player interaction logic here if needed
     }
 }

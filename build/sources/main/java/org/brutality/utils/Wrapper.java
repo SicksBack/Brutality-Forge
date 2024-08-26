@@ -43,8 +43,19 @@ public class Wrapper {
     }
 
     public static class Colors {
-        public static final String aqua = EnumChatFormatting.AQUA.toString();
+        public static final String black = EnumChatFormatting.BLACK.toString();
+        public static final String dark_red = EnumChatFormatting.DARK_RED.toString();
+        public static final String red = EnumChatFormatting.RED.toString();
+        public static final String green = EnumChatFormatting.GREEN.toString();
+        public static final String gold = EnumChatFormatting.GOLD.toString();
         public static final String gray = EnumChatFormatting.GRAY.toString();
+        public static final String dark_gray = EnumChatFormatting.DARK_GRAY.toString();
+        public static final String blue = EnumChatFormatting.BLUE.toString();
+        public static final String dark_blue = EnumChatFormatting.DARK_BLUE.toString();
         public static final String light_purple = EnumChatFormatting.LIGHT_PURPLE.toString();
+        public static final String purple = EnumChatFormatting.DARK_PURPLE.toString();
+        public static final String aqua = EnumChatFormatting.AQUA.toString();
+        public static final String yellow = EnumChatFormatting.YELLOW.toString();
+        public static final String white = EnumChatFormatting.WHITE.toString();
     }
 }
