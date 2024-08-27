@@ -25,12 +25,12 @@ public class KillAura extends Module {
     private Minecraft mc = Minecraft.getMinecraft();
     private CustomTimer timer = new CustomTimer();
 
-    private final NumberSetting angle = new NumberSetting("Angle", this, 360, 1, 360, 1);
-    private final NumberSetting cps = new NumberSetting("CPS", this, 10, 1, 20, 1);
+    private final NumberSetting angle = new NumberSetting("Angle", this, 360, 1, 360, 0);
+    private final NumberSetting cps = new NumberSetting("CPS", this, 10, 1, 20, 0);
     private final NumberSetting reach = new NumberSetting("Reach", this, 4.0, 1.0, 6.0, 1);
     private final SimpleModeSetting filter = new SimpleModeSetting("Filter", this, "Distance", new String[]{"Health", "Distance"}); // Filter mode// Decimal precision for reach
-    private final NumberSetting switchDelay = new NumberSetting("Switch Delay", this, 100, 0, 1000, 1); // Integer precision
-    private final NumberSetting targetAmount = new NumberSetting("Target Amount", this, 3, 1, 10, 1); // Integer precision
+    private final NumberSetting switchDelay = new NumberSetting("Switch Delay", this, 100, 0, 1000, 0); // Integer precision
+    private final NumberSetting targetAmount = new NumberSetting("Target Amount", this, 3, 1, 10, 0); // Integer precision
     private final BooleanSetting targetPlayers = new BooleanSetting("Target Players", this, true);
     private final BooleanSetting targetMobs = new BooleanSetting("Target Mobs", this, false);
     private final BooleanSetting pitSpawnCheck = new BooleanSetting("Pit Spawn Check", this, true);

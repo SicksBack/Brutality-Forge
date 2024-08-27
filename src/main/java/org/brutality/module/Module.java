@@ -74,4 +74,8 @@ public class Module implements MM, MC {
     }
 
     public void updateSettings(Setting s) {}
+
+    public boolean isToggled() {
+        return toggled;
+    }
 }

@@ -22,14 +22,22 @@ import java.util.stream.Collectors;
 
 @Getter
 public class ModuleManager extends ArrayList<Module> {
+
+    private static final ModuleManager instance = new ModuleManager();  // Static instance
+
+    public static ModuleManager getInstance() {
+        return instance;  // Method to get the instance
+    }
+
     public static ButtonSetting reach;
 
     public void init() {
+        // Initialize all modules here
         new RequirementChecker();
         new HUD();
         new Interface();
         new Criticals();
-        new ClickGuiModule();// Register the KillAura module
+        new ClickGuiModule();
         new PitSwap();
         new GambleSwapper();
         new KeepSprint();
@@ -87,7 +95,7 @@ public class ModuleManager extends ArrayList<Module> {
         new Reach();
         new KillAura();
         new SetList();
-        new StreakingInformation();
+        new StreakingInfo();
         new Cps();
         new Fps();
         new Notifications();
@@ -96,8 +104,6 @@ public class ModuleManager extends ArrayList<Module> {
         new FeastTimer();
         new PullbowTimer();
         new AutoClicker();
-        new Blink();
-        new AutoTelebow();
     }
 
     public void updateSettings(Setting setting) {

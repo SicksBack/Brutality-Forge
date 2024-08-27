@@ -3,13 +3,12 @@ package org.brutality.module.impl.pit;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.GuiChat;
-import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagList;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.brutality.module.Category;
@@ -36,6 +35,7 @@ public class MindAssaultDamage extends Module {
         Minecraft mc = Minecraft.getMinecraft();
         EntityPlayerSP player = mc.thePlayer;
 
+        // Handle dragging of text on screen if in chat
         if (mc.currentScreen instanceof GuiChat) {
             if (dragging) {
                 this.xPos.setValue(Mouse.getX() / 2 - dragX);
@@ -53,31 +53,42 @@ public class MindAssaultDamage extends Module {
             }
         }
 
+        // Display Mind Assault stats if wearing appropriate armor
         if (isWearingMindAssault(player)) {
             updateMindsText(player);
             int color = 0xFFFFFF; // White color for "Minds:"
-            int reductionColor = showReduction.isEnabled() ? 0xA020F0 : color; // Purple color for reduction
             int heartsColor = 0xFF0000; // Red color for hearts
 
             mc.fontRendererObj.drawStringWithShadow("Minds: ", (int) xPos.getValue(), (int) yPos.getValue(), color);
             mc.fontRendererObj.drawStringWithShadow(mindsText, (int) xPos.getValue() + mc.fontRendererObj.getStringWidth("Minds: "), (int) yPos.getValue(), heartsColor);
+        } else {
+            // Debugging message if not wearing Mind Assault
+            mc.fontRendererObj.drawStringWithShadow("Not wearing Mind Assault", (int) xPos.getValue(), (int) yPos.getValue() + 20, 0xFF0000);
         }
     }
 
     private void updateMindsText(EntityPlayerSP player) {
         int nearbyPlayers = countNearbyPlayersWearingLeggings(player);
         double mindsValue = 0.00 + (0.75 * nearbyPlayers);
-        String reductionText = showReduction.isEnabled() ? "§5-60% " : "";
-        mindsText = reductionText + String.format("+%.2f ❤", mindsValue);
+        String reductionText = showReduction.isEnabled() ? "\u00A75-60% " : ""; // Purple color for -60%
+        mindsText = reductionText + String.format("\u00A74+%.2f \u2764", mindsValue); // Red color for +X.XX ❤
     }
 
+    // Check if the player is wearing Mind Assault armor using NBT tags
     private boolean isWearingMindAssault(EntityPlayerSP player) {
         for (ItemStack armorStack : player.inventory.armorInventory) {
             if (armorStack != null && armorStack.getItem() instanceof ItemArmor) {
-                if (armorStack.hasDisplayName()) {
-                    NBTTagCompound tagCompound = armorStack.getTagCompound();
-                    if (tagCompound != null && tagCompound.hasKey("Mind Assault")) {
-                        return true;
+                NBTTagCompound tagCompound = armorStack.getTagCompound();
+                if (tagCompound != null && tagCompound.hasKey("display")) {
+                    NBTTagCompound displayTag = tagCompound.getCompoundTag("display");
+                    if (displayTag.hasKey("Lore")) {
+                        NBTTagList loreList = displayTag.getTagList("Lore", 8); // 8 is the ID for string type
+                        for (int i = 0; i < loreList.tagCount(); i++) {
+                            String loreEntry = loreList.getStringTagAt(i);
+                            if (loreEntry.contains("Mind Assault")) {
+                                return true;
+                            }
+                        }
                     }
                 }
             }
@@ -85,12 +96,13 @@ public class MindAssaultDamage extends Module {
         return false;
     }
 
+    // Count the number of nearby players wearing leather leggings (name check) within 11 meters
     private int countNearbyPlayersWearingLeggings(EntityPlayerSP player) {
         int count = 0;
         for (EntityPlayer entityPlayer : Minecraft.getMinecraft().theWorld.playerEntities) {
             if (entityPlayer != player && entityPlayer.getDistanceToEntity(player) <= 11) {
                 ItemStack leggings = entityPlayer.getEquipmentInSlot(2); // Slot index 2 is for leggings
-                if (leggings != null && leggings.getItem() == Item.getItemById(7)) { // Item ID 7 is for leather leggings
+                if (leggings != null && leggings.getItem() != null && leggings.getItem().getUnlocalizedName().contains("leather_leggings")) {
                     count++;
                 }
             }
@@ -98,6 +110,7 @@ public class MindAssaultDamage extends Module {
         return count;
     }
 
+    // Check if the mouse is over the text for dragging purposes
     private boolean isMouseOverText(int mouseX, int mouseY, Minecraft mc) {
         int textWidth = mc.fontRendererObj.getStringWidth("Minds: " + mindsText);
         int textHeight = mc.fontRendererObj.FONT_HEIGHT;
