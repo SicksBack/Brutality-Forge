@@ -12,7 +12,6 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import org.brutality.module.Category;
 import org.brutality.module.Module;
-import org.lwjgl.input.Keyboard;
 
 public class MeteoriteTracker extends Module {
     private Minecraft mc = Minecraft.getMinecraft();
@@ -22,7 +21,6 @@ public class MeteoriteTracker extends Module {
 
     public MeteoriteTracker() {
         super("MeteoriteTracker", "Tracks meteorite coordinates and sets a waypoint", Category.HARRYS);
-        setKey(Keyboard.KEY_M);
     }
 
     @SubscribeEvent

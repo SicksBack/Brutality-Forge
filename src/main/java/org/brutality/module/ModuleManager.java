@@ -18,15 +18,16 @@ import org.brutality.settings.Setting;
 import org.brutality.settings.impl.ButtonSetting;
 
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Getter
 public class ModuleManager extends ArrayList<Module> {
 
-    private static final ModuleManager instance = new ModuleManager();  // Static instance
+    private static final ModuleManager instance = new ModuleManager();  // Singleton instance
 
     public static ModuleManager getInstance() {
-        return instance;  // Method to get the instance
+        return instance;  // Method to get the singleton instance
     }
 
     public static ButtonSetting reach;
@@ -41,8 +42,8 @@ public class ModuleManager extends ArrayList<Module> {
         new PitSwap();
         new GambleSwapper();
         new KeepSprint();
-        new Velocity();
-        new NoSlow();
+        new Velocity();  // Ensure this class exists
+        new NoSlow();    // Ensure this class exists
         new TelebowTimer();
         new Freecam();
         new Scaffold();
@@ -104,6 +105,7 @@ public class ModuleManager extends ArrayList<Module> {
         new FeastTimer();
         new PullbowTimer();
         new AutoClicker();
+        new MiddleClickFriends();
     }
 
     public void updateSettings(Setting setting) {
@@ -113,6 +115,11 @@ public class ModuleManager extends ArrayList<Module> {
     public <V extends Module> V getModuleByClass(Class<V> clazz) {
         Module module = stream().filter(m -> m.getClass().equals(clazz)).findFirst().orElse(null);
         return module == null ? null : clazz.cast(module);
+    }
+
+    public Module getModuleByName(String name) {
+        Optional<Module> module = stream().filter(m -> m.getName().equalsIgnoreCase(name)).findFirst();
+        return module.orElse(null);
     }
 
     public ArrayList<Module> getModulesByCategory(Category category) {

@@ -9,6 +9,7 @@ import org.brutality.settings.impl.NumberSetting;
 import org.brutality.settings.impl.SimpleModeSetting;
 import org.brutality.utils.MoveUtil;
 import org.brutality.utils.interfaces.MC;
+import org.lwjgl.input.Keyboard;
 
 public class Fly extends Module implements MC {
     public static NumberSetting horizontalSpeed;
@@ -17,6 +18,8 @@ public class Fly extends Module implements MC {
 
     public Fly() {
         super("Fly", "Allows the player to fly.", Category.MOVEMENT);
+        setKey(Keyboard.KEY_F);
+
 
         mode = new SimpleModeSetting("Mode", this, "Creative", new String[]{"Creative"}); // Only Creative mode for now
         horizontalSpeed = new NumberSetting("Horizontal Speed", this, 2.0, 1.0, 10.0, 1);

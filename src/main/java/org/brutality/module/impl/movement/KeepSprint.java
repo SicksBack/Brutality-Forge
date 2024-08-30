@@ -1,48 +1,44 @@
 package org.brutality.module.impl.movement;
 
+import org.brutality.events.impl.KeepSprintEvent;
+import org.brutality.module.Module;
+import org.brutality.module.Category;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import org.brutality.module.Category;
-import org.brutality.module.Module;
+import net.minecraftforge.common.MinecraftForge;
 import org.lwjgl.input.Keyboard;
-import org.brutality.utils.interfaces.MC;
 
-public class KeepSprint extends Module implements MC {
-
-    private static final int KEY_BINDING = Keyboard.KEY_R; // Bind to the 'R' key
+public class KeepSprint extends Module {
 
     public KeepSprint() {
-        super("KeepSprint", "Prevents you from stopping sprinting when attacking.", Category.MOVEMENT);
-    }
+        super("KeepSprint", "Prevents stopping sprint when moving or attacking.", Category.MOVEMENT);
+        setKey(Keyboard.KEY_B);
+}
 
     @Override
     public void onEnable() {
-        super.onEnable();
-        // Initialize or reset the module state when enabled
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
     @Override
     public void onDisable() {
-        super.onDisable();
-        // Cleanup or reset the module state when disabled
+        MinecraftForge.EVENT_BUS.unregister(this);
     }
 
     @SubscribeEvent
-    public void onUpdate(TickEvent.PlayerTickEvent event) {
-        if (!this.isToggled() || mc.thePlayer == null) {
-            return;
-        }
+    public void onPlayerTick(TickEvent.PlayerTickEvent event) {
+        if (event.player == mc.thePlayer) {
+            // Check if the player is not sprinting but moving forward
+            if (!mc.thePlayer.isSprinting() && mc.thePlayer.moveForward > 0) {
+                // Post the KeepSprintEvent
+                KeepSprintEvent keepSprintEvent = new KeepSprintEvent();
+                MinecraftForge.EVENT_BUS.post(keepSprintEvent);
 
-        // Check if the 'R' key is pressed
-        if (Keyboard.isKeyDown(KEY_BINDING)) {
-            keepSprint();
-        }
-    }
-
-    private void keepSprint() {
-        if (mc.thePlayer.isSprinting()) {
-            // Ensure the player continues to sprint regardless of conditions
-            mc.thePlayer.setSprinting(true);
+                // If the event is not canceled, re-enable sprinting
+                if (!keepSprintEvent.isCanceled()) {
+                    mc.thePlayer.setSprinting(true);
+                }
+            }
         }
     }
 }

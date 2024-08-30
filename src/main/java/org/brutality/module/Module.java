@@ -6,6 +6,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
+import org.brutality.events.Event;
 import org.brutality.module.impl.render.Notifications;
 import org.brutality.settings.Setting;
 import org.brutality.utils.interfaces.MC;
@@ -16,7 +17,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class Module implements MM, MC {
+public abstract class Module implements MM, MC {
     public final String name;
     public final String description;
     private KeyBinding key;
@@ -73,9 +74,9 @@ public class Module implements MM, MC {
         Notifications.sendNotification(this.name + " \u00A7cDisabled\u00A7f."); // Red color code
     }
 
-    public void updateSettings(Setting s) {}
+    public void updateSettings(Setting s) {
+    }
 
-    public boolean isToggled() {
-        return toggled;
+    public void onEvent() {
     }
 }

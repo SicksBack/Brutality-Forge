@@ -1,5 +1,19 @@
 package org.brutality.events;
 
-public class TickEvent {
-    // Tick event doesn't need any specific fields; it's just to signal a tick
+import org.brutality.events.Event;
+
+public class TickEvent extends Event {
+    public enum Phase {
+        START, END
+    }
+
+    private final Phase phase;
+
+    public TickEvent(Phase phase) {
+        this.phase = phase;
+    }
+
+    public Phase getPhase() {
+        return phase;
+    }
 }

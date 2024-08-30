@@ -1,7 +1,8 @@
 package org.brutality.events;
 
-public class VelocityEvent {
+import net.minecraftforge.fml.common.eventhandler.Event;
 
+public class VelocityEvent extends Event {
     private double x, y, z;
 
     public VelocityEvent(double x, double y, double z) {

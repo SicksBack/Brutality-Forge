@@ -1,16 +1,15 @@
 package org.brutality.events;
 
-import net.minecraft.client.Minecraft;
 import net.minecraftforge.fml.common.eventhandler.Event;
 
 public class RenderEvent extends Event {
-    private final Minecraft mc;
+    private final float partialTicks;
 
-    public RenderEvent(Minecraft mc) {
-        this.mc = mc;
+    public RenderEvent(float partialTicks) {
+        this.partialTicks = partialTicks;
     }
 
-    public Minecraft getMinecraft() {
-        return mc;
+    public float getPartialTicks() {
+        return partialTicks;
     }
 }

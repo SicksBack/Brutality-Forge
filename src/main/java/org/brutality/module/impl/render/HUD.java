@@ -9,7 +9,7 @@ import org.brutality.module.Module;
 import org.brutality.settings.impl.SimpleModeSetting;
 import org.brutality.ui.font.CustomFontRenderer;
 import org.brutality.module.impl.render.huds.PrimeCheatsHUD;
-import org.lwjgl.input.Keyboard;
+
 
 import java.awt.Color;
 import java.util.Arrays;
@@ -28,7 +28,6 @@ public class HUD extends Module {
 
     public HUD() {
         super("HUD", "Shows a list of toggled modules", Category.RENDER);
-        setKey(Keyboard.KEY_P);
 
         // Initialize font renderers without using non-existent methods
         smallFontRenderer = new CustomFontRenderer(new java.awt.Font("Arial", java.awt.Font.PLAIN, 18), true, true);
