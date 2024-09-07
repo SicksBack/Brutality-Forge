@@ -1,19 +1,17 @@
 package org.brutality.module.impl.movement;
 
-import org.brutality.events.impl.KeepSprintEvent;
-import org.brutality.module.Module;
-import org.brutality.module.Category;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
-import net.minecraftforge.common.MinecraftForge;
-import org.lwjgl.input.Keyboard;
+import org.brutality.module.Category;
+import org.brutality.module.Module;
+import org.brutality.utils.Wrapper;
 
 public class KeepSprint extends Module {
 
     public KeepSprint() {
-        super("KeepSprint", "Prevents stopping sprint when moving or attacking.", Category.MOVEMENT);
-        setKey(Keyboard.KEY_B);
-}
+        super("KeepSprint", "Keeps you sprinting even when hitting players", Category.MOVEMENT);
+    }
 
     @Override
     public void onEnable() {
@@ -26,19 +24,9 @@ public class KeepSprint extends Module {
     }
 
     @SubscribeEvent
-    public void onPlayerTick(TickEvent.PlayerTickEvent event) {
-        if (event.player == mc.thePlayer) {
-            // Check if the player is not sprinting but moving forward
-            if (!mc.thePlayer.isSprinting() && mc.thePlayer.moveForward > 0) {
-                // Post the KeepSprintEvent
-                KeepSprintEvent keepSprintEvent = new KeepSprintEvent();
-                MinecraftForge.EVENT_BUS.post(keepSprintEvent);
-
-                // If the event is not canceled, re-enable sprinting
-                if (!keepSprintEvent.isCanceled()) {
-                    mc.thePlayer.setSprinting(true);
-                }
-            }
+    public void onTick(TickEvent.PlayerTickEvent event) {
+        if (this.isToggled() && Wrapper.getPlayer() != null) {
+            Wrapper.getPlayer().setSprinting(true);
         }
     }
 }

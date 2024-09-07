@@ -1,8 +1,6 @@
 package org.brutality.events;
 
-import org.brutality.events.Event;
-
-public class ItemRenderEvent extends Event {
+public class ItemRenderEvent extends Event<Event> {
     private boolean renderBlocking;
 
     public ItemRenderEvent(boolean renderBlocking) {

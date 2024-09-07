@@ -35,7 +35,7 @@ public class EggTimer extends Module {
     @SubscribeEvent
     public void onPlayerInteract(PlayerInteractEvent event) {
         // Check if the interaction is a right-click on a block
-        if (event.action == PlayerInteractEvent.Action.RIGHT_CLICK_BLOCK) {
+        if (event.action == PlayerInteractEvent.Action.RIGHT_CLICK_AIR) {
             ItemStack itemStack = Minecraft.getMinecraft().thePlayer.inventory.getCurrentItem();
             if (itemStack != null && itemStack.getItem() == Item.getItemById(383)) { // 383 is the ID for egg
                 if (!timerActive) {

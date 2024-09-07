@@ -1,7 +1,6 @@
 package org.brutality.module.impl.pit;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.gui.GuiChat;
 import net.minecraft.client.gui.ScaledResolution;
@@ -41,17 +40,7 @@ public class VenomList extends Module {
             return;
         }
 
-        venomedPlayers.clear();
-        for (EntityPlayer player : mc.theWorld.playerEntities) {
-            if (player != mc.thePlayer) {
-                PotionEffect effect = player.getActivePotionEffect(Potion.poison);
-                if (effect != null) {
-                    String playerName = player.getGameProfile().getName(); // Real name without custom colors
-                    String entry = playerName + " is Venomed.";
-                    venomedPlayers.add(entry);
-                }
-            }
-        }
+        updateVenomedList();
     }
 
     @SubscribeEvent
@@ -85,15 +74,29 @@ public class VenomList extends Module {
             float posX = venomedListX;
             int indexTing = (int) pos;
             fr.drawStringWithShadow("Venomed List:", posX, indexTing, 0x00FF00);
-            for (String entityData : venomedPlayers) {
-                String[] parts = entityData.split(" is Venomed.");
-                String playerName = parts[0];
-                String restOfText = " is Venomed.";
+            for (String playerName : venomedPlayers) {
+                String venomedText = " Is Currently Venomed.";
 
+                // Draw the player's name in white
                 fr.drawStringWithShadow(playerName, posX, indexTing + fr.FONT_HEIGHT, 0xFFFFFF);
-                fr.drawStringWithShadow(restOfText, posX + fr.getStringWidth(playerName), indexTing + fr.FONT_HEIGHT, 0xAA00FF);
+
+                // Draw the "Is Currently Venomed." text in green
+                fr.drawStringWithShadow(venomedText, posX + fr.getStringWidth(playerName), indexTing + fr.FONT_HEIGHT, 0x00FF00);
 
                 indexTing += fr.FONT_HEIGHT;
+            }
+        }
+    }
+
+    private void updateVenomedList() {
+        venomedPlayers.clear();
+        for (EntityPlayer player : mc.theWorld.playerEntities) {
+            if (player != mc.thePlayer) {
+                PotionEffect effect = player.getActivePotionEffect(Potion.poison);
+                if (effect != null) {
+                    String playerName = player.getName();
+                    venomedPlayers.add(playerName);
+                }
             }
         }
     }

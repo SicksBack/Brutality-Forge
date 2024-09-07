@@ -1,20 +1,27 @@
 package org.brutality.events.listeners;
 
-import net.minecraftforge.client.event.ClientChatReceivedEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import org.brutality.command.CommandManager;
+import net.minecraftforge.fml.common.eventhandler.Event;
 
-public class EventChat {
+public class EventChat extends Event {
+    private boolean cancelled = false;
+private String message;
 
-    private final CommandManager commandManager = new CommandManager();
+    public EventChat(String message) {
+        this.message = message;
+    }
 
-    @SubscribeEvent
-    public void onChatReceived(ClientChatReceivedEvent event) {
-        String message = event.message.getUnformattedText();
+    public String getMessage() {
+        return this.message;
+    }
 
-        if (message.startsWith(".")) {
-            commandManager.handleChat(message); // Process the command
-            event.setCanceled(true); // Prevent the message from appearing in chat
-        }
+    public void setMessage(String message) {
+        this.message = message;
+    }
+    public void setCancelled(boolean cancelled) {
+        this.cancelled = cancelled;
+    }
+
+    public boolean isCancelled() {
+        return cancelled;
     }
 }

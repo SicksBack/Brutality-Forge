@@ -1,8 +1,6 @@
 package org.brutality.events;
 
-import org.brutality.events.Event;
-
-public class TickEvent extends Event {
+public class TickEvent extends Event<Event> {
     public enum Phase {
         START, END
     }

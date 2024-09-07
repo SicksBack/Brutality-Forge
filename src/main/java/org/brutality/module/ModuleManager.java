@@ -2,6 +2,7 @@ package org.brutality.module;
 
 import org.brutality.module.impl.World.*;
 import org.brutality.module.impl.combat.*;
+import org.brutality.module.impl.hypixel.BanTracker;
 import org.brutality.module.impl.hypixel.WhoGotDogged;
 import org.brutality.module.impl.movement.*;
 import org.brutality.module.impl.pit.*;
@@ -73,9 +74,7 @@ public class ModuleManager extends ArrayList<Module> {
         new MeteoriteTracker();
         new Sprint();
         new DarkNotifications();
-        new DarkList();
         new NoHurtCam();
-        new BountyList();
         new Events();
         new Focus();
         new Gamble();
@@ -86,7 +85,6 @@ public class ModuleManager extends ArrayList<Module> {
         new AutoOOF();
         new MindAssaultDamage();
         new PrestigeList();
-        new DlegSwap();
         new PantSwapper();
         new VenomList();
         new PotionEffectsHUD();
@@ -95,7 +93,6 @@ public class ModuleManager extends ArrayList<Module> {
         new AutoHeal();
         new Reach();
         new KillAura();
-        new SetList();
         new StreakingInfo();
         new Cps();
         new Fps();
@@ -106,6 +103,10 @@ public class ModuleManager extends ArrayList<Module> {
         new PullbowTimer();
         new AutoClicker();
         new MiddleClickFriends();
+        new HemorrhageTimer();
+        new AutoMath();
+        new LowLifeWarning();
+        new BanTracker();
     }
 
     public void updateSettings(Setting setting) {

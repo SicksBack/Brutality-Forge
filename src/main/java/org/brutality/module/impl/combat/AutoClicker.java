@@ -19,7 +19,6 @@ public class AutoClicker extends Module {
     public AutoClicker() {
         super("AutoClicker", "Automatically clicks at a set CPS.", Category.COMBAT);
         addSettings(cps);
-        setKey(Keyboard.KEY_O);
     }
 
     @SubscribeEvent

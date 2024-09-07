@@ -18,18 +18,17 @@ import java.util.List;
 @Getter
 @Setter
 public abstract class Module implements MM, MC {
-    public final String name;
-    public final String description;
-    private KeyBinding key;
+    private final String name;
+    private final String description;
+    private KeyBinding keyBinding;
     private final Category category;
-    public boolean toggled;
+    private boolean toggled;
     private final List<Setting> settings = new ArrayList<>();
 
     // Main constructor for the module - holds all the info about the module
     public Module(String name, String description, Category category) {
         this.name = name;
         this.description = description;
-        this.key = null;
         this.category = category;
         this.toggled = false;
         mm.add(this);
@@ -41,36 +40,71 @@ public abstract class Module implements MM, MC {
         }
     }
 
-    // TODO - Implement saving of this keybind on shutdown
-    public void setKey(int newKey) {
-        // Create a new keybinding
-        key = new KeyBinding(this.name, newKey, "Brutality Client");
-        // Register it so it will appear in the Minecraft settings page
-        ClientRegistry.registerKeyBinding(key);
+    public void setKey(int keyCode) {
+        Minecraft mc = Minecraft.getMinecraft();
+
+        if (this.keyBinding != null) {
+            // Unregister existing key binding if it exists
+            KeyBinding[] keyBindings = mc.gameSettings.keyBindings;
+            keyBindings = removeKeyBinding(keyBindings, this.keyBinding);
+        }
+
+        // Create and register new KeyBinding
+        this.keyBinding = new KeyBinding(this.name, keyCode, "Brutality Client");
+        KeyBinding[] keyBindings = mc.gameSettings.keyBindings;
+        mc.gameSettings.keyBindings = addKeyBinding(keyBindings, this.keyBinding);
+
+        // Register the new KeyBinding
+        ClientRegistry.registerKeyBinding(this.keyBinding);
+        mc.gameSettings.saveOptions();
     }
 
-    // Switches the toggle
+    private KeyBinding[] addKeyBinding(KeyBinding[] keyBindings, KeyBinding newKeyBinding) {
+        KeyBinding[] newKeyBindings = new KeyBinding[keyBindings.length + 1];
+        System.arraycopy(keyBindings, 0, newKeyBindings, 0, keyBindings.length);
+        newKeyBindings[keyBindings.length] = newKeyBinding;
+        return newKeyBindings;
+    }
+
+    private KeyBinding[] removeKeyBinding(KeyBinding[] keyBindings, KeyBinding toRemove) {
+        int indexToRemove = -1;
+        for (int i = 0; i < keyBindings.length; i++) {
+            if (keyBindings[i] == toRemove) {
+                indexToRemove = i;
+                break;
+            }
+        }
+
+        if (indexToRemove == -1) {
+            return keyBindings;
+        }
+
+        KeyBinding[] newKeyBindings = new KeyBinding[keyBindings.length - 1];
+        System.arraycopy(keyBindings, 0, newKeyBindings, 0, indexToRemove);
+        System.arraycopy(keyBindings, indexToRemove + 1, newKeyBindings, indexToRemove, keyBindings.length - indexToRemove - 1);
+        return newKeyBindings;
+    }
+
+    public KeyBinding getKey() {
+        return this.keyBinding;
+    }
+
     public void toggle() {
         this.toggled = !this.toggled;
-
         if (this.toggled) {
-            this.onEnable();
+            onEnable();
         } else {
-            this.onDisable();
+            onDisable();
         }
     }
 
-    // Registers the module onto the event bus
     public void onEnable() {
         MinecraftForge.EVENT_BUS.register(this);
-        // Send notification with green color for "Enabled"
         Notifications.sendNotification(this.name + " \u00A7aEnabled\u00A7f."); // Green color code
     }
 
-    // Unregisters the module from the event bus
     public void onDisable() {
         MinecraftForge.EVENT_BUS.unregister(this);
-        // Send notification with red color for "Disabled"
         Notifications.sendNotification(this.name + " \u00A7cDisabled\u00A7f."); // Red color code
     }
 

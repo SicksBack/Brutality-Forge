@@ -46,6 +46,10 @@ public class WhoGotDogged extends Module {
         if (msg.contains("A player has been removed from your game")) {
             this.banCooldown.reset();
             this.autoLeaveCooldown.reset(); // Reset auto-leave cooldown when a ban message is received
+
+            if (autoLeave.isEnabled()) {
+                mc.theWorld.sendQuittingDisconnectingPacket(); // Disconnect from the game
+            }
         }
     }
 
@@ -76,7 +80,7 @@ public class WhoGotDogged extends Module {
     }
 
     private void logToChat(String playerName) {
-        String message = EnumChatFormatting.BLACK + "[" + EnumChatFormatting.DARK_RED + "B" + EnumChatFormatting.BLACK + "] - "
+        String message = EnumChatFormatting.DARK_GRAY + "[" + EnumChatFormatting.DARK_RED + "B" + EnumChatFormatting.DARK_GRAY + "] - "
                 + EnumChatFormatting.GOLD + playerName
                 + EnumChatFormatting.DARK_RED + " Got Banned.";
         mc.thePlayer.addChatMessage(new ChatComponentText(message));
@@ -86,7 +90,7 @@ public class WhoGotDogged extends Module {
         // Logic to leave the game
         if (mc.thePlayer != null) {
             // Use Minecraft's method to disconnect from the server
-            mc.thePlayer.sendQueue.addToSendQueue(new net.minecraft.network.play.client.C01PacketChatMessage("/leave"));
+            mc.theWorld.sendQuittingDisconnectingPacket();
         }
     }
 }

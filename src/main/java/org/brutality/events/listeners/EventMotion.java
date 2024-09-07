@@ -2,7 +2,7 @@ package org.brutality.events.listeners;
 
 import org.brutality.events.Event;
 
-public class EventMotion extends Event {
+public class EventMotion extends Event<Event> {
 
     private float yaw;
     private float pitch;

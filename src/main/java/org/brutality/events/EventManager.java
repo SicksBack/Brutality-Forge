@@ -17,7 +17,7 @@ public class EventManager {
         registeredListeners.remove(listener);
     }
 
-    public static void post(Event event) {
+    public static void post(Event<Event> event) {
         for (Object listener : registeredListeners) {
             // Add logic to post the event to the listener
         }

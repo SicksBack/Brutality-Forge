@@ -4,7 +4,6 @@ import org.brutality.events.Event;
 import org.brutality.events.listeners.EventUpdate;
 import org.brutality.module.Category;
 import org.brutality.module.Module;
-import org.lwjgl.input.Keyboard;
 
 public class AutoSpawn extends Module {
 
@@ -22,7 +21,7 @@ public class AutoSpawn extends Module {
     }
 
 
-    public void onEvent(Event e) {
+    public void onEvent(Event<Event> e) {
         if (e instanceof EventUpdate) {
             if (mc.thePlayer == null || mc.theWorld == null) {
                 return;

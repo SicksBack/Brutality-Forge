@@ -1,4 +1,4 @@
-package org.brutality.command;
+package org.brutality.commands;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,7 +8,7 @@ public abstract class Command {
     public String name;
     public String description;
     public String syntax;
-    public List<String> aliases = new ArrayList<String>();
+    public List<String> aliases = new ArrayList<>();
 
     public Command(String name, String description, String syntax, String ... aliases) {
         this.name = name;

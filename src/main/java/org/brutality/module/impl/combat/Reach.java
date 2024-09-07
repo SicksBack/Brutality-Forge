@@ -11,7 +11,6 @@ public class Reach extends Module {
     public Reach() {
         super("Reach", "Extends your reach distance.", Category.COMBAT);
         addSettings(reach);
-        setKey(Keyboard.KEY_L);
     }
 
     public double getReachDistance() {

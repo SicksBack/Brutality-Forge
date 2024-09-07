@@ -1,6 +1,6 @@
 package org.brutality.events;
 
-public abstract class Event {
+public abstract class Event<E extends Event> {
 
     private boolean cancelled;
 

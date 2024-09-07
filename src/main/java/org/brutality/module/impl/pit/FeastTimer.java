@@ -35,7 +35,7 @@ public class FeastTimer extends Module {
     @SubscribeEvent
     public void onPlayerInteract(PlayerInteractEvent event) {
         // Check if the interaction is a right-click on a block
-        if (event.action == PlayerInteractEvent.Action.RIGHT_CLICK_BLOCK) {
+        if (event.action == PlayerInteractEvent.Action.RIGHT_CLICK_AIR) {
             ItemStack itemStack = Minecraft.getMinecraft().thePlayer.inventory.getCurrentItem();
             if (itemStack != null && itemStack.getItem() == Item.getItemById(423)) { // 423 is the ID for mutton
                 cooldownEndTime = System.currentTimeMillis() + 11 * 1000; // 11 seconds cooldown

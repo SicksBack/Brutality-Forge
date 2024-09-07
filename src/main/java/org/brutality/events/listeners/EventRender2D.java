@@ -2,7 +2,7 @@ package org.brutality.events.listeners;
 
 import org.brutality.events.Event;
 
-public class EventRender2D extends Event {
+public class EventRender2D extends Event<Event> {
     private final float partialTicks;
 
     public EventRender2D(float partialTicks) {

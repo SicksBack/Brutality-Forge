@@ -14,8 +14,9 @@ import org.brutality.settings.impl.SimpleModeSetting;
 import org.brutality.settings.impl.ColorSetting;
 import org.brutality.utils.CustomTimer;
 import org.brutality.utils.FriendManager;
-import org.brutality.utils.KillAuraBoxUtils;
-import org.brutality.module.impl.player.Friends;
+import org.brutality.utils.KOSManager;
+import org.brutality.utils.render.RenderUtil;
+import org.brutality.utils.RotationUtils;
 import org.lwjgl.input.Keyboard;
 
 import java.awt.*;
@@ -25,17 +26,17 @@ import java.util.stream.Collectors;
 
 public class KillAura extends Module {
     private final CustomTimer timer = new CustomTimer();
-
+    private final SimpleModeSetting mode = new SimpleModeSetting("Mode", this, "Single", new String[]{"Single", "Switch"});
+    private final SimpleModeSetting rotations = new SimpleModeSetting("Rotations", this, "VapeV4", new String[]{"VapeV4", "Rotation"});
     private final NumberSetting angle = new NumberSetting("Angle", this, 360, 1, 360, 0);
     private final NumberSetting cps = new NumberSetting("CPS", this, 10, 1, 20, 0);
-    private final NumberSetting switchDelay = new NumberSetting("Switch Delay", this, 100, 0, 1000, 0);
     private final NumberSetting reachDistance = new NumberSetting("Reach", this, 4, 1, 6, 1);
-    private final SimpleModeSetting mode = new SimpleModeSetting("Mode", this, "Single", new String[]{"Single", "Switch"});
     private final SimpleModeSetting filter = new SimpleModeSetting("Filter", this, "Distance", new String[]{"Health", "Distance"});
+    private final NumberSetting switchDelay = new NumberSetting("Switch Delay", this, 100, 0, 1000, 0);
     private final BooleanSetting targetPlayers = new BooleanSetting("Target Players", this, true);
     private final BooleanSetting targetMobs = new BooleanSetting("Target Mobs", this, false);
-    private final ColorSetting targetBoxColor = new ColorSetting("Target Box Color", this, Color.RED);
     private final BooleanSetting showTarget = new BooleanSetting("Show Target", this, true);
+    private final ColorSetting targetBoxColor = new ColorSetting("Target Box Color", this, Color.RED);
 
     private long lastAttackTime = 0;
     private long lastSwitchTime = 0;
@@ -44,7 +45,7 @@ public class KillAura extends Module {
 
     public KillAura() {
         super("KillAura", "Automatically attacks nearby entities.", Category.COMBAT);
-        addSettings(targetPlayers, targetMobs, cps, targetBoxColor, angle, switchDelay, reachDistance, mode, filter, showTarget);
+        addSettings(targetPlayers, targetMobs, cps, targetBoxColor, angle, switchDelay, reachDistance, mode, filter, showTarget, rotations);
         setKey(Keyboard.KEY_R);
     }
 
@@ -61,7 +62,8 @@ public class KillAura extends Module {
                 .filter(entity -> !entity.isDead)
                 .filter(this::isWithinReach)
                 .filter(this::isWithinAttackAngle)
-                .filter(entity -> !Friends.friendsEnabled || !isFriend((EntityPlayer) entity)) // Use Friends module state
+                .filter(entity -> !FriendManager.isFriend((EntityPlayer) entity)) // Filter out friends
+                .filter(entity -> !KOSManager.isKOS((EntityPlayer) entity) || KOSManager.isEnabled()) // Filter out KOS if KOS is disabled
                 .sorted(getComparator())
                 .collect(Collectors.toList());
 
@@ -80,14 +82,30 @@ public class KillAura extends Module {
         target = targets.get(currentTargetIndex);
 
         if (shouldAttack()) {
-            attackEntity(target);
+            if (rotations.getValue().equalsIgnoreCase("Rotation")) {
+                attackEntityWithServerRotation(target);
+            } else {
+                attackEntity(target);
+            }
         }
     }
 
     @SubscribeEvent
     public void onRender(RenderEvent event) {
         if (target != null && showTarget.isEnabled()) {
-            KillAuraBoxUtils.drawTargetBox(target, targetBoxColor.getColor(), event.getPartialTicks());
+            // Draw the target hitbox using RenderUtil
+            double x1 = target.posX - mc.getRenderManager().viewerPosX;
+            double y1 = target.posY - mc.getRenderManager().viewerPosY;
+            double z1 = target.posZ - mc.getRenderManager().viewerPosZ;
+            double x2 = x1 + target.width;
+            double y2 = y1 + target.height;
+            double z2 = z1 + target.width;
+
+            RenderUtil.drawBox(x1, y1, z1, x2, y2, z2,
+                    targetBoxColor.getColor().getRed() / 255.0F,
+                    targetBoxColor.getColor().getGreen() / 255.0F,
+                    targetBoxColor.getColor().getBlue() / 255.0F,
+                    targetBoxColor.getColor().getAlpha() / 255.0F);
         }
     }
 
@@ -120,6 +138,26 @@ public class KillAura extends Module {
         mc.playerController.attackEntity(mc.thePlayer, target);
     }
 
+    private void attackEntityWithServerRotation(Entity target) {
+        float[] rotations = RotationUtils.getRotations(target);
+
+        // Save current client-side rotations
+        float originalYaw = mc.thePlayer.rotationYaw;
+        float originalPitch = mc.thePlayer.rotationPitch;
+
+        // Set server-side rotations only
+        mc.thePlayer.rotationYaw = rotations[0];
+        mc.thePlayer.rotationPitch = rotations[1];
+
+        // Attack the target
+        mc.thePlayer.swingItem();
+        mc.playerController.attackEntity(mc.thePlayer, target);
+
+        // Restore client-side rotations
+        mc.thePlayer.rotationYaw = originalYaw;
+        mc.thePlayer.rotationPitch = originalPitch;
+    }
+
     private boolean isWithinAttackAngle(Entity entity) {
         double angleDifference = getAngleDifference(mc.thePlayer.rotationYaw, getYawToEntity(entity));
         return angleDifference <= angle.getValue() / 2;
@@ -128,10 +166,6 @@ public class KillAura extends Module {
     private boolean isWithinReach(Entity entity) {
         double distance = mc.thePlayer.getDistanceToEntity(entity);
         return distance <= reachDistance.getValue();
-    }
-
-    private boolean isFriend(EntityPlayer player) {
-        return Friends.friendsEnabled && FriendManager.isFriend(player);
     }
 
     private double getAngleDifference(double angle1, double angle2) {

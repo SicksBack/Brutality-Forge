@@ -3,7 +3,7 @@ package org.brutality.events.listeners;
 import org.brutality.events.Event;
 import net.minecraft.network.Packet;
 
-public class EventPacketSend extends Event {
+public class EventPacketSend extends Event<Event> {
     private final Packet<?> packet;
 
     public EventPacketSend(Packet<?> packet) {

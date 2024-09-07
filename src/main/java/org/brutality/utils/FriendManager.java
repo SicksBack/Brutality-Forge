@@ -33,6 +33,11 @@ public class FriendManager {
         return friends.contains(player.getName());
     }
 
+    public static void clearFriends() {
+        friends.clear();
+        saveFriends();
+    }
+
     private static void loadFriends() {
         if (!FRIENDS_FILE.exists()) {
             try {
