@@ -5,6 +5,13 @@ buildscript {
             name = "forge"
             url = "http://files.minecraftforge.net/maven"
         }
+        maven {
+            name = "sponge"
+            url = "https://repo.spongepowered.org/maven"
+        }
+        maven {
+            url = "https://repo.spongepowered.org/maven"
+        }
     }
     dependencies {
         classpath 'net.minecraftforge.gradle:ForgeGradle:2.1-SNAPSHOT'
@@ -26,13 +33,26 @@ minecraft {
 }
 
 repositories {
-    mavenCentral()  // Use Maven Central to download dependencies
+    mavenCentral()
+    maven {
+        name = "sponge"
+        url = "https://repo.spongepowered.org/maven"
+    }
+    maven {
+        url = "https://repo.spongepowered.org/maven"
+    }
 }
 
 dependencies {
     compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.32'
     implementation 'org.jsoup:jsoup:1.14.3'
     implementation 'com.google.code.gson:gson:2.8.8'
+
+    // Add SpongeAPI dependency for 1.8.9
+    compileOnly 'org.spongepowered:spongeapi:4.1.0'
+
+    // Add Mixin dependency
+    implementation 'org.spongepowered:mixin:0.7.11-SNAPSHOT'
 }
 
 // ProGuard configuration

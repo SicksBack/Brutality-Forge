@@ -46,6 +46,11 @@ public class BrutalityClient {
         return INSTANCE;
     }
 
+    // New method to get the CommandManager
+    public CommandManager getCommandManager() {
+        return commandManager;
+    }
+
     @SubscribeEvent
     public void onKeyPress(KeyInputEvent event) {
         if (Keyboard.getEventKeyState()) {
@@ -70,7 +75,7 @@ public class BrutalityClient {
 
         // Process command if the message starts with your command prefix, e.g., "."
         if (message.startsWith(".")) {
-            commandManager.handleChat(eventChat); // Use the new handleChat method
+            commandManager.handleChat(message); // Use the updated handleChat method which accepts a string
             event.setCanceled(true); // Cancel the chat message so it doesn't show in Minecraft chat
         }
     }
