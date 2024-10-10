@@ -61,5 +61,10 @@
       <option name="name" value="deobfDeps" />
       <option name="url" value="file:/$USER_HOME$/.gradle/caches/minecraft/deobfedDeps" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="sonatype" />
+      <option name="name" value="sonatype" />
+      <option name="url" value="https://oss.sonatype.org/content/repositories/snapshots/" />
+    </remote-repository>
   </component>
 </project>

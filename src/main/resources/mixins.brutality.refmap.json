@@ -4,10 +4,10 @@
       "isPotionActive(Lnet/minecraft/potion/Potion;)Z": "Lnet/minecraft/entity/EntityLivingBase;func_70644_a(Lnet/minecraft/potion/Potion;)Z"
     },
     "org/brutality/mixin/impl/entity/MixinEntityPlayer": {
-      // Add relevant mappings here
+
     },
     "org/brutality/mixin/impl/entity/MixinEntityPlayerSP": {
-      // Add relevant mappings here
+
     },
     "org/brutality/mixin/impl/network/MixinNetworkManager": {
       "sendPacket(Lnet/minecraft/network/Packet;)V": "Lnet/minecraft/network/NetworkManager;func_179290_a(Lnet/minecraft/network/Packet;)V",
@@ -28,10 +28,10 @@
         "isPotionActive(Lnet/minecraft/potion/Potion;)Z": "Lpr;a(Lpe;)Z"
       },
       "org/brutality/mixin/impl/entity/MixinEntityPlayer": {
-        // Add relevant mappings here
+
       },
       "org/brutality/mixin/impl/entity/MixinEntityPlayerSP": {
-        // Add relevant mappings here
+
       },
       "org/brutality/mixin/impl/network/MixinNetworkManager": {
         "sendPacket(Lnet/minecraft/network/Packet;)V": "Lek;a(Lff;)V",
@@ -51,10 +51,10 @@
         "isPotionActive(Lnet/minecraft/potion/Potion;)Z": "Lnet/minecraft/entity/EntityLivingBase;func_70644_a(Lnet/minecraft/potion/Potion;)Z"
       },
       "org/brutality/mixin/impl/entity/MixinEntityPlayer": {
-        // Add relevant mappings here
+
       },
       "org/brutality/mixin/impl/entity/MixinEntityPlayerSP": {
-        // Add relevant mappings here
+
       },
       "org/brutality/mixin/impl/network/MixinNetworkManager": {
         "sendPacket(Lnet/minecraft/network/Packet;)V": "Lnet/minecraft/network/NetworkManager;func_179290_a(Lnet/minecraft/network/Packet;)V",

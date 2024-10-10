@@ -15,18 +15,9 @@ public class KeepSprint extends Module {
 
     @Override
     public void onEnable() {
-        MinecraftForge.EVENT_BUS.register(this);
     }
 
     @Override
     public void onDisable() {
-        MinecraftForge.EVENT_BUS.unregister(this);
-    }
-
-    @SubscribeEvent
-    public void onTick(TickEvent.PlayerTickEvent event) {
-        if (this.isToggled() && Wrapper.getPlayer() != null) {
-            Wrapper.getPlayer().setSprinting(true);
         }
     }
-}

@@ -285,11 +285,19 @@ public class ClickGui extends GuiScreen implements MM, SM {
     }
 
     public void drawWindowButtons(float mx, float my) {
+        // Make sure all objects are initialized before using them
+        if (clickGuiModule == null || FontManager.arial18 == null) {
+            return;  // Skip drawing if resources aren't available
+        }
+
         int closeButtonColor = GuiUtil.isHovered(mx, my, this.x + width - 25, this.y, 25, 17.0F) ? new Color(255, 0, 0).getRGB() : new Color(34, 34, 34).getRGB();
         RenderUtil.drawRoundedRect(this.x + width - 25, this.y, 25, 25.0F, 7.0F, closeButtonColor);
         RenderUtil.drawRect(this.x + width - 25, this.y, 15F, 25.0F, closeButtonColor);
-        CustomFontRenderer consolas18 = FontManager.arial18;
-        consolas18.drawString("x", this.x + width - 15, this.y + 2, -1);
+
+        CustomFontRenderer consolas18 = FontManager.arial18;  // Ensure the font is loaded
+        if (consolas18 != null) {
+            consolas18.drawString("x", this.x + width - 15, this.y + 2, -1);  // Draw the 'X' close button
+        }
     }
 
     @Override

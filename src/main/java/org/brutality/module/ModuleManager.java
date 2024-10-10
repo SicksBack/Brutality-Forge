@@ -1,6 +1,6 @@
 package org.brutality.module;
 
-import org.brutality.module.impl.World.*;
+import org.brutality.module.impl.World.AntiBot;
 import org.brutality.module.impl.combat.*;
 import org.brutality.module.impl.hypixel.BanTracker;
 import org.brutality.module.impl.hypixel.WhoGotDogged;

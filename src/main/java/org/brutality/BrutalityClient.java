@@ -5,20 +5,23 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import org.brutality.commands.CommandManager;
 import org.brutality.module.Module;
 import org.brutality.module.ModuleManager;
+import org.brutality.module.impl.render.ClickGuiModule;
 import org.brutality.settings.SettingsManager;
 import org.brutality.ui.clickGui.ClickGui;
 import org.brutality.ui.font.FontManager;
-import org.brutality.utils.Wrapper;
 import org.lwjgl.input.Keyboard;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraft.util.IChatComponent;
 import org.brutality.events.listeners.EventChat;
+import org.spongepowered.asm.launch.MixinBootstrap;
+import org.spongepowered.asm.mixin.Mixins;
 
 @Mod(modid = "brutalityclient", version = "1.0 Beta")
 public class BrutalityClient {
@@ -31,13 +34,20 @@ public class BrutalityClient {
     public CommandManager commandManager;
 
     @EventHandler
+    public void preInit(FMLPreInitializationEvent event) {
+        // Initialize Mixin and load the mixin config
+        MixinBootstrap.init(); // Initialize Mixin
+        Mixins.addConfiguration("mixins.brutality.json"); // Point to your Mixin configuration
+    }
+
+    @EventHandler
     public void init(FMLInitializationEvent event) {
         INSTANCE = this;
         new FontManager().init();
         settingsManager = new SettingsManager();
         moduleManager = new ModuleManager();
         moduleManager.init();
-        commandManager = new CommandManager(); // Initialize CommandManager
+        commandManager = new CommandManager();
         clickGui = new ClickGui();
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -69,14 +79,12 @@ public class BrutalityClient {
         IChatComponent chatComponent = event.message;
         String message = chatComponent.getUnformattedText();
 
-        // Create and fire EventChat
         EventChat eventChat = new EventChat(message);
         MinecraftForge.EVENT_BUS.post(eventChat);
 
-        // Process command if the message starts with your command prefix, e.g., "."
         if (message.startsWith(".")) {
-            commandManager.handleChat(message); // Use the updated handleChat method which accepts a string
-            event.setCanceled(true); // Cancel the chat message so it doesn't show in Minecraft chat
+            commandManager.handleChat(message);
+            event.setCanceled(true);
         }
     }
 }
