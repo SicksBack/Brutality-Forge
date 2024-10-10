@@ -1,16 +1,10 @@
 {
   "required": true,
-  "package": "org.brutality.mixin.impl",
+  "package": "org.brutality.mixins",
   "refmap": "mixins.brutality.refmap.json",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
-    "entity.MixinEntity",
-    "render.MixinFontRenderer",
     "entity.MixinEntityPlayerSP",
-    "render.MixinLayerCape",
-    "render.MixinModelBiped",
-    "entity.MixinEntityLivingBase",
-    "network.MixinNetworkManager",
     "entity.MixinEntityPlayer"
   ]
 }

@@ -42,12 +42,13 @@ repositories {
 }
 
 dependencies {
-    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.32'
+    // Jsoup and Gson dependencies
     implementation 'org.jsoup:jsoup:1.14.3'
     implementation 'com.google.code.gson:gson:2.8.8'
 
     // Mixin dependency
     implementation 'org.spongepowered:mixin:0.7.11-SNAPSHOT'
+    implementation 'org.projectlombok:lombok:1.18.30'
 
     // Optional: SpongeAPI dependency for Minecraft 1.8.9, though this might not be strictly necessary
     compileOnly 'org.spongepowered:spongeapi:4.1.0'
