@@ -124,7 +124,7 @@ public class CustomFontRenderer extends FontRenderer implements MC {
             uploadTexture(charTexture, charImage, width, height);
 
             // Store the completed character back into the provided character array
-            characters[i] = new FontCharacter(charTexture, (float) width, (float) height);
+            characters[i] = new FontCharacter();
         }
     }
 

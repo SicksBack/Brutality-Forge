@@ -31,4 +31,20 @@ public abstract class Mode<T> implements MM, SM, MC {
     public final void unregisterEvents() {
         MinecraftForge.EVENT_BUS.unregister(this);
     }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public ModeSetting getModeSettingParent() {
+        return this.modeSettingParent;
+    }
+
+    public void setModeSettingParent(ModeSetting modeSettingParent) {
+        this.modeSettingParent = modeSettingParent;
+    }
+
+    public T getParent() {
+        return this.parent;
+    }
 }

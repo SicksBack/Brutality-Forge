@@ -6,12 +6,10 @@ import lombok.Setter;
 import net.minecraft.client.renderer.GlStateManager;
 import org.lwjgl.opengl.GL11;
 
-@Getter
-@Setter
-@AllArgsConstructor
+
 public class FontCharacter {
-    private int texture;
-    private float width, height;
+    public int texture;
+    public float width, height;
 
     public void render(final float x, final float y) {
         GlStateManager.bindTexture(texture);
@@ -26,4 +24,30 @@ public class FontCharacter {
         GL11.glVertex2f(x + width, y);
         GL11.glEnd();
     }
+
+    public int getTexture() {
+        return this.texture;
+    }
+
+    public float getWidth() {
+        return this.width;
+    }
+
+    public float getHeight() {
+        return this.height;
+    }
+
+    // Setters (replaces @Setter)
+    public void setTexture(int texture) {
+        this.texture = texture;
+    }
+
+    public void setWidth(float width) {
+        this.width = width;
+    }
+
+    public void setHeight(float height) {
+        this.height = height;
+    }
+
 }

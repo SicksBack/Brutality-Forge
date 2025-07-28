@@ -33,4 +33,12 @@ public class SimpleModeSetting extends Setting {
     public String getValue() {
         return this.selected;
     }
+
+    public String[] getOptions() {
+        return this.options;
+    }
+
+    public String getSelected() {
+        return this.selected;
+    }
 }

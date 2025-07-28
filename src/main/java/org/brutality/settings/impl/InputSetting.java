@@ -21,4 +21,7 @@ public class InputSetting extends Setting {
         this.content = content;
         mm.updateSettings(this);
     }
+    public String getContent() {
+        return this.content;
+    }
 }

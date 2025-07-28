@@ -24,4 +24,13 @@ public class MultiBooleanSetting extends Setting {
             sm.settings.remove(setting);
         }
     }
+
+    public BooleanSetting[] getSettings() {
+        return this.settings;
+    }
+
+    public void setSettings(BooleanSetting[] settings) {
+        this.settings = settings;
+    }
+
 }

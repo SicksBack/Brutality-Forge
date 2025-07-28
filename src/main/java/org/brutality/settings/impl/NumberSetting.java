@@ -44,4 +44,20 @@ public class NumberSetting extends Setting {
             return String.format("%." + decimalPlaces + "f", value); // Format with specified decimal places
         }
     }
+
+    public double getValue() {
+        return this.value;
+    }
+
+    public double getMinValue() {
+        return this.minValue;
+    }
+
+    public double getMaxValue() {
+        return this.maxValue;
+    }
+
+    public int getDecimalPlaces() {
+        return this.decimalPlaces;
+    }
 }

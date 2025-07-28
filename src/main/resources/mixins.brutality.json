@@ -5,6 +5,5 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "entity.MixinEntityPlayerSP",
-    "entity.MixinEntityPlayer"
   ]
 }

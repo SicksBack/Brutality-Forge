@@ -109,4 +109,16 @@ public class ModeSetting extends Setting {
         index = (index + 1) % options.length;
         setSelected(options[index]);
     }
+
+    public Mode<?>[] getOptions() {
+        return this.options;
+    }
+
+    public Mode<?> getSelected() {
+        return this.selected;
+    }
+
+    public HashMap<Mode<?>, ArrayList<Setting>> getSettings() {
+        return this.settings;
+    }
 }

@@ -28,4 +28,12 @@ public class ColorSetting extends Setting {
         mm.updateSettings(this);
     }
 
+    public Color getColor() {
+        return this.color;
+    }
+
+    public ColorPicker getPicker() {
+        return this.picker;
+    }
+
 }

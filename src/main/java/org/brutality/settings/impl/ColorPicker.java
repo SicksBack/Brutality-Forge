@@ -65,11 +65,11 @@ public class ColorPicker implements MC {
     }
 
 
-    private float getNormalized() {
+    public float getNormalized() {
         return (float)((-Math.toDegrees(Math.atan2(this.selectedY, this.selectedX)) + 450.0) % 360.0) / 360.0F;
     }
 
-    private Color getColor() {
+    public Color getColor() {
         Color color1 = Color.getHSBColor(this.getNormalized(), (float)(Math.hypot(this.selectedX, this.selectedY) / this.radius), this.getBrightness());
         return new Color(color1.getRed(), color1.getGreen(), color1.getBlue(), (int)(this.getAlpha() * 255.0F));
     }
@@ -86,5 +86,67 @@ public class ColorPicker implements MC {
 
     public boolean mouseOver(double mouseX, double mouseY, double posX, double posY, double width, double height) {
         return mouseX >= posX && mouseX <= posX + width && mouseY >= posY && mouseY <= posY + height;
+    }
+
+    public int getX() {
+        return this.x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return this.y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    public String getCurrentColorHexInputString() {
+        return this.currentColorHexInputString;
+    }
+
+    public void setCurrentColorHexInputString(String currentColorHexInputString) {
+        this.currentColorHexInputString = currentColorHexInputString;
+    }
+
+    public double getRadius() {
+        return this.radius;
+    }
+
+
+
+    public double getSelectedX() {
+        return this.selectedX;
+    }
+
+    public void setSelectedX(double selectedX) {
+        this.selectedX = selectedX;
+    }
+
+    public double getSelectedY() {
+        return this.selectedY;
+    }
+
+    public void setSelectedY(double selectedY) {
+        this.selectedY = selectedY;
+    }
+
+    public float getBrightness() {
+        return this.brightness;
+    }
+
+    public void setBrightness(float brightness) {
+        this.brightness = brightness;
+    }
+
+    public float getAlpha() {
+        return this.alpha;
+    }
+
+    public void setAlpha(float alpha) {
+        this.alpha = alpha;
     }
 }

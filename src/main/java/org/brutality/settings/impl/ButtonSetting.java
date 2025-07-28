@@ -6,7 +6,7 @@ import org.brutality.settings.Setting;
 
 public class ButtonSetting extends Setting {
     private String name;
-    private boolean isEnabled;
+    public boolean isEnabled;
     public boolean isMethodButton;
     private Runnable method;
 

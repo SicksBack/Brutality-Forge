@@ -1,6 +1,6 @@
 package org.brutality.events;
 
-public class SlowdownEvent extends Event<Event> {
+public class SlowdownEvent extends Event {
     private float forward;
     private float strafe;
     private boolean allowedSprinting;

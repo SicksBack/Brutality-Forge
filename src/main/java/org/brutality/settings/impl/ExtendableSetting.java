@@ -25,4 +25,20 @@ public class ExtendableSetting extends Setting {
             sm.settings.remove(setting);
         }
     }
+
+    public Setting[] getSubSettings() {
+        return this.subSettings;
+    }
+
+    public void setSubSettings(Setting[] subSettings) {
+        this.subSettings = subSettings;
+    }
+
+    public boolean isExpanded() {
+        return this.expanded;
+    }
+
+    public void setExpanded(boolean expanded) {
+        this.expanded = expanded;
+    }
 }
