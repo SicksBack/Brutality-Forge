@@ -18,7 +18,6 @@ public class Fly extends Module implements MC {
 
     public Fly() {
         super("Fly", "Allows the player to fly.", Category.MOVEMENT);
-        setKey(Keyboard.KEY_F);
 
 
         mode = new SimpleModeSetting("Mode", this, "Creative", new String[]{"Creative"}); // Only Creative mode for now

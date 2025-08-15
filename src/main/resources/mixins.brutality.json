@@ -1,9 +1,0 @@
-{
-  "required": true,
-  "package": "org.brutality.mixins",
-  "refmap": "mixins.brutality.refmap.json",
-  "compatibilityLevel": "JAVA_8",
-  "mixins": [
-    "entity.MixinEntityPlayerSP",
-  ]
-}

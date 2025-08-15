@@ -46,7 +46,6 @@ public class KillAura extends Module {
     public KillAura() {
         super("KillAura", "Automatically attacks nearby entities.", Category.COMBAT);
         addSettings(targetPlayers, targetMobs, cps, targetBoxColor, angle, switchDelay, reachDistance, mode, filter, showTarget, rotations);
-        setKey(Keyboard.KEY_R);
     }
 
     @SubscribeEvent

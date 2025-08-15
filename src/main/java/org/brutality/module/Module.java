@@ -1,5 +1,6 @@
 package org.brutality.module;
 
+import lombok.Getter;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,13 +14,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+@Getter
 public abstract class Module implements MM, MC {
     public final String name;
-    private final String description;
-    private KeyBinding keyBinding;
-    private final Category category;
-    private boolean toggled;
-    private final List<Setting> settings = new ArrayList<>();
+    public final String description;
+    public KeyBinding keyBinding;
+    public final Category category;
+    public boolean toggled;
+    public List<Setting> settings = new ArrayList<>();
 
     // Main constructor for the module - holds all the info about the module
     public Module(String name, String description, Category category) {
@@ -110,27 +112,4 @@ public abstract class Module implements MM, MC {
     public void onEvent() {
     }
 
-    public String getName() {
-        return this.name;
-    }
-
-    public String getDescription() {
-        return this.description;
-    }
-
-    public KeyBinding getKeyBinding() {
-        return this.keyBinding;
-    }
-
-    public Category getCategory() {
-        return this.category;
-    }
-
-    public boolean isToggled() {
-        return this.toggled;
-    }
-
-    public List<Setting> getSettings() {
-        return this.settings;
-    }
 }

@@ -20,7 +20,7 @@ public class KeepSprint extends Module {
     @Override
     public void onDisable() {}
 
-    public static void keepSprint(Entity en) {
+    public static void keepSprint(Entity entity) {
         float mult = (100.0f - (float) slow.getValue()) / 100.0f;
         mc.thePlayer.motionX *= mult;
         mc.thePlayer.motionZ *= mult;

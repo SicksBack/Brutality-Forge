@@ -123,9 +123,21 @@ public class CustomFontRenderer extends FontRenderer implements MC {
             final int charTexture = GL11.glGenTextures();
             uploadTexture(charTexture, charImage, width, height);
 
+            // FIX: Actually populate the FontCharacter with the correct data!
+            FontCharacter fontChar = new FontCharacter();
+            fontChar.setTexture(charTexture);
+            fontChar.setWidth(width);
+            fontChar.setHeight(height);
+
             // Store the completed character back into the provided character array
-            characters[i] = new FontCharacter();
+            characters[i] = fontChar;
+
+            // Clean up graphics resources
+            charGraphics.dispose();
         }
+
+        // Clean up the font graphics
+        fontGraphics.dispose();
     }
 
     public void setRenderHints(final Graphics2D graphics) {

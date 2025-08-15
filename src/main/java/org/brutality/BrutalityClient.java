@@ -35,8 +35,7 @@ public class BrutalityClient {
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        MixinBootstrap.init();
-        Mixins.addConfiguration("mixins.brutality.json"); // Point to your Mixin configuration
+
     }
 
     @EventHandler

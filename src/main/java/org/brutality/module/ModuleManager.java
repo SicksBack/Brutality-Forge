@@ -1,20 +1,17 @@
 package org.brutality.module;
 
-import org.brutality.module.impl.World.AntiBot;
+import org.brutality.module.impl.combat.AntiBot;
 import org.brutality.module.impl.combat.*;
-import org.brutality.module.impl.hypixel.BanTracker;
-import org.brutality.module.impl.hypixel.WhoGotDogged;
+import org.brutality.module.impl.misc.*;
 import org.brutality.module.impl.movement.*;
-import org.brutality.module.impl.pit.*;
 import org.brutality.module.impl.player.*;
 import org.brutality.module.impl.render.*;
-import org.brutality.module.impl.harrys.*;
 import lombok.Getter;
 import org.brutality.module.impl.render.SharkDamage;
-import org.brutality.module.impl.weasel.AutoOOF;
-import org.brutality.module.impl.weasel.RequirementChecker;
-import org.brutality.module.impl.weasel.StaffDetector;
-import org.brutality.module.impl.weasel.WeaselGrinder;
+import org.brutality.module.impl.player.AutoOOF;
+import org.brutality.module.impl.player.RequirementChecker;
+import org.brutality.module.impl.player.StaffDetector;
+import org.brutality.module.impl.player.WeaselGrinder;
 import org.brutality.settings.Setting;
 import org.brutality.settings.impl.ButtonSetting;
 
@@ -25,11 +22,9 @@ import java.util.stream.Collectors;
 @Getter
 public class ModuleManager extends ArrayList<Module> {
 
+    // Method to get the singleton instance
+    @Getter
     private static final ModuleManager instance = new ModuleManager();  // Singleton instance
-
-    public static ModuleManager getInstance() {
-        return instance;  // Method to get the singleton instance
-    }
 
     public static ButtonSetting reach;
 
@@ -46,15 +41,11 @@ public class ModuleManager extends ArrayList<Module> {
         new Velocity();  // Ensure this class exists
         new NoSlow();    // Ensure this class exists
         new TelebowTimer();
-        new Freecam();
-        new Scaffold();
         new Speed();
         new LongJump();
         new Fly();
         new AntiBot();
         new Blink();
-        new FakeLag();
-        new FastPlace();
         new Chams();
         new NameTags();
         new KOS();

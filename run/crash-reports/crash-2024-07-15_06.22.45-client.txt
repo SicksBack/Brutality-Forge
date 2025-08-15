@@ -24,8 +24,8 @@ net.minecraftforge.fml.common.LoaderException: java.lang.NoClassDefFoundError: o
 	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
 	at GradleStart.main(GradleStart.java:26)
 Caused by: java.lang.NoClassDefFoundError: org/jsoup/Jsoup
-	at org.brutality.module.impl.pit.Events.fetchEventData(Events.java:32)
-	at org.brutality.module.impl.pit.Events.<init>(Events.java:26)
+	at org.brutality.module.impl.render.Events.fetchEventData(Events.java:32)
+	at org.brutality.module.impl.render.Events.<init>(Events.java:26)
 	at org.brutality.module.ModuleManager.init(ModuleManager.java:62)
 	at org.brutality.BrutalityClient.init(BrutalityClient.java:33)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

@@ -6,10 +6,5 @@ public enum Category {
     RENDER,
     MOVEMENT,
     PLAYER,
-    WORLD,
-    MISC,
-    HYPIXEL,
-    PIT,
-    WEASEL,
-    HARRYS;
+    MISC
 }

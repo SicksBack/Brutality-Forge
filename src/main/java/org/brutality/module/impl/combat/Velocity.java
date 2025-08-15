@@ -27,7 +27,6 @@ public class Velocity extends Module {
         disableS = new BooleanSetting("Disable while holding S", this, false);
 
         addSettings(horizontal, vertical, chance, onlyWhileTargeting, disableS);
-        setKey(Keyboard.KEY_G);
     }
 
     public String getInfo() {
