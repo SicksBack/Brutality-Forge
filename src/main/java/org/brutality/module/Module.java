@@ -7,8 +7,10 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
 import org.brutality.module.impl.render.Notifications;
 import org.brutality.settings.Setting;
+import org.brutality.settings.impl.BindSetting;
 import org.brutality.utils.interfaces.MC;
 import org.brutality.utils.interfaces.MM;
+import org.lwjgl.input.Keyboard;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,6 +24,7 @@ public abstract class Module implements MM, MC {
     public final Category category;
     public boolean toggled;
     public List<Setting> settings = new ArrayList<>();
+    public BindSetting bindSetting;
 
     // Main constructor for the module - holds all the info about the module
     public Module(String name, String description, Category category) {
@@ -29,6 +32,11 @@ public abstract class Module implements MM, MC {
         this.description = description;
         this.category = category;
         this.toggled = false;
+
+        // Create a bind setting for this module
+        this.bindSetting = new BindSetting("Bind", this, Keyboard.KEY_NONE);
+        this.settings.add(bindSetting);
+
         mm.add(this);
     }
 
@@ -47,14 +55,23 @@ public abstract class Module implements MM, MC {
             keyBindings = removeKeyBinding(keyBindings, this.keyBinding);
         }
 
-        // Create and register new KeyBinding
-        this.keyBinding = new KeyBinding(this.name, keyCode, "Brutality Client");
-        KeyBinding[] keyBindings = mc.gameSettings.keyBindings;
-        mc.gameSettings.keyBindings = addKeyBinding(keyBindings, this.keyBinding);
+        // Update the bind setting
+        if (this.bindSetting != null) {
+            this.bindSetting.setKeyCode(keyCode);
+        }
 
-        // Register the new KeyBinding
-        ClientRegistry.registerKeyBinding(this.keyBinding);
-        mc.gameSettings.saveOptions();
+        if (keyCode != Keyboard.KEY_NONE) {
+            // Create and register new KeyBinding
+            this.keyBinding = new KeyBinding(this.name, keyCode, "Brutality Client");
+            KeyBinding[] keyBindings = mc.gameSettings.keyBindings;
+            mc.gameSettings.keyBindings = addKeyBinding(keyBindings, this.keyBinding);
+
+            // Register the new KeyBinding
+            ClientRegistry.registerKeyBinding(this.keyBinding);
+            mc.gameSettings.saveOptions();
+        } else {
+            this.keyBinding = null;
+        }
     }
 
     private KeyBinding[] addKeyBinding(KeyBinding[] keyBindings, KeyBinding newKeyBinding) {

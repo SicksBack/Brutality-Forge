@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
 import org.brutality.commands.CommandManager;
+import org.brutality.handlers.ConfigManager;
 import org.brutality.module.Module;
 import org.brutality.module.ModuleManager;
 import org.brutality.module.impl.render.ClickGuiModule;
@@ -32,6 +33,7 @@ public class BrutalityClient {
     public SettingsManager settingsManager;
     public ClickGui clickGui;
     public CommandManager commandManager;
+    public ConfigManager configManager;
 
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
@@ -47,7 +49,17 @@ public class BrutalityClient {
         moduleManager.init();
         commandManager = new CommandManager();
         clickGui = new ClickGui();
+        configManager = new ConfigManager();
+
+        // Load config after everything is initialized
+        configManager.loadConfig();
+
         MinecraftForge.EVENT_BUS.register(this);
+
+        // Add shutdown hook to save config
+        Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+            configManager.saveConfig();
+        }));
     }
 
     public static BrutalityClient getInstance() {
@@ -57,6 +69,10 @@ public class BrutalityClient {
     // New method to get the CommandManager
     public CommandManager getCommandManager() {
         return commandManager;
+    }
+
+    public ConfigManager getConfigManager() {
+        return configManager;
     }
 
     @SubscribeEvent

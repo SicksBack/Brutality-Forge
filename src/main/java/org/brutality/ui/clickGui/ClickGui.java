@@ -2,6 +2,7 @@ package org.brutality.ui.clickGui;
 
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.util.*;
+import org.brutality.BrutalityClient;
 import org.brutality.module.*;
 import org.brutality.module.impl.render.ClickGuiModule;
 import org.brutality.settings.Setting;
@@ -36,6 +37,7 @@ public class ClickGui extends GuiScreen implements MM, SM {
     public NumberSetting hoveredSetting = null;
     public ClickGuiModule clickGuiModule;
     public InputSetting selectedInputSetting = null;
+    public BindSetting listeningBind = null;
     public static final ArrayList<Character> allowedChars;
 
     static {
@@ -280,8 +282,23 @@ public class ClickGui extends GuiScreen implements MM, SM {
                 picker.y = (int) modY;
                 this.colorPickers.add(picker);
                 modY += 60;
+            } else if (setting instanceof BindSetting) {
+                BindSetting bindSetting = (BindSetting) setting;
+                consolas18.drawString(setting.getName() + ": ", x + 120.0F, modY, new Color(200, 200, 200).getRGB());
+
+                String bindText = bindSetting.isListening() ? "..." : bindSetting.getKeyName();
+                int bindColor = bindSetting.isListening() ? new Color(255, 255, 0).getRGB() : new Color(200, 200, 200).getRGB();
+
+                // Draw background for bind button
+                float bindX = x + 120.0F + (float) consolas18.getStringWidth(setting.getName() + ": ");
+                float bindWidth = Math.max((float) consolas18.getStringWidth(bindText) + 10.0F, 50.0F);
+                RenderUtil.drawBorder(bindX, modY - 2.0F, bindX + bindWidth, modY + 8.0F, 1.0F, new Color(34, 34, 34).getRGB(), true);
+
+                consolas18.drawString(bindText, bindX + 5.0F, modY, bindColor);
+                modY += consolas18.getFontHeight() + 2;
             }
-        } return modY;
+        }
+        return modY;
     }
 
     public void drawWindowButtons(float mx, float my) {
@@ -305,6 +322,7 @@ public class ClickGui extends GuiScreen implements MM, SM {
         this.colorPickers.forEach(colorPicker -> colorPicker.click(mouseX, mouseY, clickedMouseButton));
         super.mouseClickMove(mouseX, mouseY, clickedMouseButton, timeSinceLastClick);
     }
+
     @Override
     protected void mouseReleased(int mouseX, int mouseY, int state) {
         this.moving = false;
@@ -316,6 +334,35 @@ public class ClickGui extends GuiScreen implements MM, SM {
     public void keyTyped(char key, int code) throws IOException {
         if (code == 1) {
             this.mc.displayGuiScreen(null);
+        } else if (listeningBind != null) {
+            // Handle key binding
+            if (code == Keyboard.KEY_ESCAPE) {
+                // Cancel binding
+                listeningBind.setListening(false);
+                listeningBind = null;
+            } else if (code == Keyboard.KEY_DELETE || code == Keyboard.KEY_BACK) {
+                // Clear binding
+                listeningBind.setKeyCode(Keyboard.KEY_NONE);
+                if (selectedMod != null) {
+                    selectedMod.setKey(Keyboard.KEY_NONE);
+                }
+                listeningBind.setListening(false);
+                listeningBind = null;
+
+                // Save config when bind is changed
+                BrutalityClient.getInstance().getConfigManager().saveConfig();
+            } else {
+                // Set new binding
+                listeningBind.setKeyCode(code);
+                if (selectedMod != null) {
+                    selectedMod.setKey(code);
+                }
+                listeningBind.setListening(false);
+                listeningBind = null;
+
+                // Save config when bind is changed
+                BrutalityClient.getInstance().getConfigManager().saveConfig();
+            }
         } else if(selectedInputSetting != null) {
             if (code == Keyboard.KEY_BACK && !selectedInputSetting.getContent().isEmpty()) {
                 selectedInputSetting.setContent(selectedInputSetting.getContent().substring(0, selectedInputSetting.getContent().length() - 1));
@@ -378,6 +425,8 @@ public class ClickGui extends GuiScreen implements MM, SM {
                     switch (mouseButton) {
                         case 0:
                             module.toggle();
+                            // Save config when module is toggled
+                            BrutalityClient.getInstance().getConfigManager().saveConfig();
                             break;
                         case 1:
                             this.selectedMod = module;
@@ -423,6 +472,7 @@ public class ClickGui extends GuiScreen implements MM, SM {
                 BooleanSetting checkBoxValue = (BooleanSetting) value;
                 if (GuiUtil.isHovered(mouseX, mouseY, x + 120.0F, moduleY - 2.0F, (float) consolas18.getStringWidth(checkBoxValue.getName() + ": " + (checkBoxValue.isEnabled() ? "true" : "false")), 10.0F)) {
                     checkBoxValue.setEnabled(!checkBoxValue.isEnabled());
+                    BrutalityClient.getInstance().getConfigManager().saveConfig();
                 }
 
                 moduleY += consolas18.getFontHeight() + 2;
@@ -445,6 +495,7 @@ public class ClickGui extends GuiScreen implements MM, SM {
 
                     if (GuiUtil.isHovered(mouseX, mouseY, modeX, moduleY - 2.0F, (float) consolas18.getStringWidth(string), consolas18.getFontHeight())) {
                         stringBoxValue.setSelected(string);
+                        BrutalityClient.getInstance().getConfigManager().saveConfig();
                     }
 
                     modeX += (float) consolas18.getStringWidth(string);
@@ -467,6 +518,7 @@ public class ClickGui extends GuiScreen implements MM, SM {
 
                     if (GuiUtil.isHovered(mouseX, mouseY, modeX, moduleY - 2.0F, (float) consolas18.getStringWidth(string), consolas18.getFontHeight())) {
                         stringBoxValue.setSelected(stringBoxValue.getByName(string));
+                        BrutalityClient.getInstance().getConfigManager().saveConfig();
                     }
 
                     modeX += (float) consolas18.getStringWidth(string);
@@ -493,6 +545,7 @@ public class ClickGui extends GuiScreen implements MM, SM {
 
                     if (GuiUtil.isHovered(mouseX, mouseY, modeX, moduleY - 2.0F, (float) consolas18.getStringWidth(bset.getName()), consolas18.getFontHeight())) {
                         bset.setEnabled(!bset.isEnabled());
+                        BrutalityClient.getInstance().getConfigManager().saveConfig();
                     }
 
                     modeX += (float) consolas18.getStringWidth(bset.getName());
@@ -509,6 +562,25 @@ public class ClickGui extends GuiScreen implements MM, SM {
                     selectedPicker = (ColorSetting) value;
                 }
                 moduleY += 60;
+            } else if (value instanceof BindSetting) {
+                BindSetting bindSetting = (BindSetting) value;
+                String bindText = bindSetting.isListening() ? "..." : bindSetting.getKeyName();
+                float bindX = x + 120.0F + (float) consolas18.getStringWidth(value.getName() + ": ");
+                float bindWidth = Math.max((float) consolas18.getStringWidth(bindText) + 10.0F, 50.0F);
+
+                if (GuiUtil.isHovered(mouseX, mouseY, bindX, moduleY - 2.0F, bindWidth, 10.0F)) {
+                    if (!bindSetting.isListening()) {
+                        // Start listening for new key
+                        listeningBind = bindSetting;
+                        bindSetting.setListening(true);
+
+                        // Cancel any other listening binds
+                        selectedInputSetting = null;
+                        selectedPicker = null;
+                    }
+                }
+
+                moduleY += consolas18.getFontHeight() + 2;
             }
         }
         return moduleY;
