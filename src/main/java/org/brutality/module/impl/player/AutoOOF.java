@@ -16,7 +16,7 @@ public class AutoOOF extends Module {
     public SimpleModeSetting uberstreakSetting = new SimpleModeSetting("Uberstreak", this, "Uberstreak", new String[]{"Uberstreak"});
 
     public AutoOOF() {
-        super("AutoOOF", "Automatically OOFs when in Uberstreak with 400+ streak", Category.WEASEL);
+        super("AutoOOF", "Automatically OOFs when in Uberstreak with 400+ streak", Category.PLAYER);
         addSettings(uberstreakSetting);
     }
 
