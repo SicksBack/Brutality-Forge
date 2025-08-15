@@ -92,12 +92,13 @@ public class ModuleManager extends ArrayList<Module> {
         new EggTimer();
         new FeastTimer();
         new PullbowTimer();
-        new AutoClicker();
+        //new AutoClicker();
         new MiddleClickFriends();
         new HemorrhageTimer();
         new AutoMath();
         new LowLifeWarning();
         new BanTracker();
+        new VenomSwap();
     }
 
     public void updateSettings(Setting setting) {
