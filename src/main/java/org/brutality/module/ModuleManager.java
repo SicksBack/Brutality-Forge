@@ -99,6 +99,7 @@ public class ModuleManager extends ArrayList<Module> {
         new LowLifeWarning();
         new BanTracker();
         new VenomSwap();
+        new SprintDebug();
     }
 
     public void updateSettings(Setting setting) {
