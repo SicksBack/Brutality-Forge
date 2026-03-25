@@ -32,6 +32,7 @@ public class Cps extends Module {
 
     @SubscribeEvent
     public void onTick(TickEvent.ClientTickEvent event) {
+        if (!this.isToggled()) return;
         if (event.phase == TickEvent.Phase.START) {
             long currentTime = System.currentTimeMillis();
             if (currentTime - lastUpdateTime > 1000) {
@@ -43,7 +44,7 @@ public class Cps extends Module {
 
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent.Post event) {
-        if (mc.thePlayer == null) {
+        if (!this.isToggled() || mc.thePlayer == null) {
             return;
         }
         if (event.type == RenderGameOverlayEvent.ElementType.CHAT) {

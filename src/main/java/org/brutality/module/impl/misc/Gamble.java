@@ -29,6 +29,7 @@ public class Gamble extends Module {
 
     @SubscribeEvent
     public void onChatReceived(ClientChatReceivedEvent event) {
+        if (!this.isToggled()) return;
         String message = event.message.getUnformattedText();
 
         if (message.contains("MAJOR EVENT! GAMBLE starting now")) {
@@ -60,6 +61,7 @@ public class Gamble extends Module {
 
     @SubscribeEvent
     public void onRenderWorldLast(RenderWorldLastEvent event) {
+        if (!this.isToggled() || mc.thePlayer == null || mc.theWorld == null) return;
         if (tracking) {
             renderWaypoints(event.partialTicks);
         }

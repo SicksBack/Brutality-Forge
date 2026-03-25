@@ -129,4 +129,8 @@ public abstract class Module implements MM, MC {
     public void onEvent() {
     }
 
+    public boolean isToggled() {
+        return this.toggled;
+    }
+
 }

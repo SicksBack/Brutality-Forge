@@ -32,6 +32,7 @@ public class EggTimer extends Module {
 
     @SubscribeEvent
     public void onPlayerInteract(PlayerInteractEvent event) {
+        if (!this.isToggled()) return;
         // Check if the interaction is a right-click on a block
         if (event.action == PlayerInteractEvent.Action.RIGHT_CLICK_AIR) {
             ItemStack itemStack = Minecraft.getMinecraft().thePlayer.inventory.getCurrentItem();
@@ -47,6 +48,7 @@ public class EggTimer extends Module {
 
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
+        if (!this.isToggled() || mc.thePlayer == null || mc.theWorld == null) return;
         Minecraft mc = Minecraft.getMinecraft();
         float posX = (float) this.xPos.getValue();
         float posY = (float) this.yPos.getValue();
@@ -82,6 +84,7 @@ public class EggTimer extends Module {
 
     @SubscribeEvent
     public void onChatReceived(ClientChatReceivedEvent event) {
+        if (!this.isToggled()) return;
         String message = event.message.getUnformattedText();
         if (message.contains("DEATH!")) {
             cooldownEndTime = 0;

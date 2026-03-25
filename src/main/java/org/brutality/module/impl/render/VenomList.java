@@ -36,7 +36,7 @@ public class VenomList extends Module {
 
     @SubscribeEvent
     public void onTick(TickEvent.PlayerTickEvent event) {
-        if (mc.thePlayer == null || !showVenomed.isEnabled()) {
+        if (!this.isToggled() || mc.thePlayer == null || !showVenomed.isEnabled()) {
             return;
         }
 
@@ -45,7 +45,7 @@ public class VenomList extends Module {
 
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent.Post event) {
-        if (mc.thePlayer == null || !showVenomed.isEnabled()) {
+        if (!this.isToggled() || mc.thePlayer == null || !showVenomed.isEnabled()) {
             return;
         }
         if (event.type == RenderGameOverlayEvent.ElementType.CHAT) {

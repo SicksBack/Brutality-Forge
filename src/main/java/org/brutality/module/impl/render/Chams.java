@@ -23,6 +23,7 @@ public class Chams extends Module {
 
     @SubscribeEvent
     public void onRenderPlayerPre(RenderPlayerEvent.Pre event) {
+        if (!this.isToggled()) return;
         if (event.entity == Minecraft.getMinecraft().thePlayer) {
             return;
         }
@@ -36,6 +37,7 @@ public class Chams extends Module {
 
     @SubscribeEvent
     public void onRenderPlayerPost(RenderPlayerEvent.Post event) {
+        if (!this.isToggled()) return;
         if (event.entity == Minecraft.getMinecraft().thePlayer) {
             return;
         }

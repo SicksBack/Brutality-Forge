@@ -47,6 +47,7 @@ public class NameTags extends Module {
 
     @SubscribeEvent
     public void onRenderLiving(RenderLivingEvent.Specials.Pre e) {
+        if (!this.isToggled()) return;
         if (e.entity instanceof EntityPlayer && e.entity != mc.thePlayer && e.entity.getHealth() > 0) {
             EntityPlayer entityPlayer = (EntityPlayer) e.entity;
 

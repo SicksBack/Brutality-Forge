@@ -31,6 +31,7 @@ public class AuraTimer extends Module {
 
     @SubscribeEvent
     public void onPlayerInteract(PlayerInteractEvent event) {
+        if (!this.isToggled()) return;
         EntityPlayerSP player = Minecraft.getMinecraft().thePlayer;
         ItemStack itemStack = player.inventory.getCurrentItem();
 
@@ -44,6 +45,7 @@ public class AuraTimer extends Module {
 
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
+        if (!this.isToggled() || mc.thePlayer == null || mc.theWorld == null) return;
         Minecraft mc = Minecraft.getMinecraft();
         float posX = (float) this.xPos.getValue();
         float posY = (float) this.yPos.getValue();
@@ -78,6 +80,7 @@ public class AuraTimer extends Module {
 
     @SubscribeEvent
     public void onChatReceived(ClientChatReceivedEvent event) {
+        if (!this.isToggled()) return;
         if (event.message.getUnformattedText().contains("DEATH!")) {
             cooldownEndTime = 0;
         }

@@ -32,7 +32,7 @@ public class TargetHUD extends Module {
 
     @SubscribeEvent
     public void onTick(TickEvent.PlayerTickEvent event) {
-        if (mc.thePlayer == null || mc.theWorld == null) {
+        if (!this.isToggled() || mc.thePlayer == null || mc.theWorld == null) {
             return;
         }
 
@@ -55,7 +55,7 @@ public class TargetHUD extends Module {
 
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent.Post event) {
-        if (mc.thePlayer == null || target == null) {
+        if (!this.isToggled() || mc.thePlayer == null || target == null) {
             return;
         }
 

@@ -21,6 +21,7 @@ public class MeteoriteTracker extends Module {
 
     @SubscribeEvent
     public void onChatMessage(ClientChatReceivedEvent event) {
+        if (!this.isToggled()) return;
         String message = event.message.getUnformattedText();
 
         if (message.contains("MINOR EVENT! METEORITE!")) {
@@ -43,6 +44,7 @@ public class MeteoriteTracker extends Module {
 
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
+        if (!this.isToggled() || mc.thePlayer == null || mc.theWorld == null) return;
         if (tracking) {
             ScaledResolution sr = new ScaledResolution(mc);
             String text = "Tracking Meteorite at X: " + targetX + " Z: " + targetZ;
@@ -54,6 +56,7 @@ public class MeteoriteTracker extends Module {
 
     @SubscribeEvent
     public void onTick(TickEvent.ClientTickEvent event) {
+        if (!this.isToggled()) return;
         if (tracking) {
             // You can add code here to move the player or display a waypoint marker.
             // For simplicity, this example just displays the coordinates on the screen.
