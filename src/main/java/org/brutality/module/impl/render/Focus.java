@@ -25,6 +25,7 @@ public class Focus extends Module {
 
     @SubscribeEvent
     public void onRenderLivingPre(RenderLivingEvent.Pre<EntityLivingBase> event) {
+        if (!this.isToggled()) return;
         if (event.entity != null && event.entity instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) event.entity;
             if (player != mc.thePlayer &&
@@ -59,6 +60,7 @@ public class Focus extends Module {
 
     @SubscribeEvent
     public void onRenderItem(RenderLivingEvent.Pre<EntityLivingBase> event) {
+        if (!this.isToggled()) return;
         if (event.entity != null && event.entity instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) event.entity;
             if (player == mc.thePlayer && mc.gameSettings.thirdPersonView != 0) {
@@ -69,6 +71,7 @@ public class Focus extends Module {
 
     @SubscribeEvent
     public void onPerspectiveChange(PlayerEvent event) {
+        if (!this.isToggled()) return;
         updateVisibility(mc.gameSettings.thirdPersonView != 0);
     }
 

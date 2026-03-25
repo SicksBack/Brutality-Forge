@@ -27,6 +27,7 @@ public class Notifications extends Module {
 
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent.Post event) {
+        if (!this.isToggled()) return;
         if (event.type != RenderGameOverlayEvent.ElementType.TEXT) {
             return;
         }

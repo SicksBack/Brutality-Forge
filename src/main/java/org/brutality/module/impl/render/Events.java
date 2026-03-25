@@ -43,6 +43,7 @@ public class Events extends Module {
 
     @SubscribeEvent
     public void onPlayerTick(TickEvent.PlayerTickEvent event) {
+        if (!this.isToggled() || mc.thePlayer == null || mc.theWorld == null) return;
         long currentTime = System.currentTimeMillis();
         if (currentTime - lastFetchTime > 1000) { // Fetch every second
             fetchEventData();

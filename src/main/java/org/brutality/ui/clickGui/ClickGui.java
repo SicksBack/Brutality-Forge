@@ -29,7 +29,7 @@ public class ClickGui extends GuiScreen implements MM, SM {
     public float moveX;
     public float moveY;
     public boolean moving = false;
-    public Category currentCategory = Category.COMBAT;
+    public Category currentCategory = Category.MISC;
     public Module selectedMod;
     public boolean changingSize;
     public float scrollAmountSettings = 0.0F;

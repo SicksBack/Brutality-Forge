@@ -25,6 +25,7 @@ public class VenomedTimer extends Module {
 
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
+        if (!this.isToggled() || mc.thePlayer == null || mc.theWorld == null) return;
         Minecraft mc = Minecraft.getMinecraft();
         EntityPlayerSP player = mc.thePlayer;
         if (player.isPotionActive(Potion.poison)) {

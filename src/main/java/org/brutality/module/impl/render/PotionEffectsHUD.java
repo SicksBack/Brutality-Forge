@@ -31,7 +31,7 @@ public class PotionEffectsHUD extends Module {
 
     @SubscribeEvent
     public void onTick(TickEvent.PlayerTickEvent event) {
-        if (mc.thePlayer == null) {
+        if (!this.isToggled() || mc.thePlayer == null) {
             return;
         }
 
@@ -42,7 +42,7 @@ public class PotionEffectsHUD extends Module {
 
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent.Post event) {
-        if (mc.thePlayer == null) {
+        if (!this.isToggled() || mc.thePlayer == null) {
             return;
         }
 

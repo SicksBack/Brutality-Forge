@@ -43,6 +43,7 @@ public class PrestigeList extends Module {
 
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
+        if (!this.isToggled() || mc.thePlayer == null || mc.theWorld == null) return;
         float posX = (float) this.xPos.getValue();
         float posY = (float) this.yPos.getValue();
 

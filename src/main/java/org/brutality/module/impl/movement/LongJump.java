@@ -74,6 +74,7 @@ public class LongJump extends Module {
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public void onPreMotion(TickEvent.PlayerTickEvent event) {
+        if (!this.isToggled()) return;
         if (mc.thePlayer == null || event.phase != TickEvent.Phase.START) {
             return;
         }

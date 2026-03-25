@@ -23,6 +23,6 @@ public class DefaultTargetHUD {
 
         // Draw entity name and health
         mc.fontRendererObj.drawStringWithShadow(target.getName(), x + 6, y + 6, 0xFFFFFF);
-        mc.fontRendererObj.drawStringWithShadow(String.format("%.1f", target.getHealth()) + " ❤", x + 6, y + 18, 0xFFFFFF);
+        mc.fontRendererObj.drawStringWithShadow(String.format("%.1f", target.getHealth()) + " HP", x + 6, y + 18, 0xFFFFFF);
     }
 }

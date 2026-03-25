@@ -53,6 +53,7 @@ public class ChestESP extends Module {
 
     @SubscribeEvent
     public void onRenderWorldLast(RenderWorldLastEvent event) {
+        if (!this.isToggled() || mc.thePlayer == null || mc.theWorld == null) return;
         onRender(new EventRender3D(event.partialTicks));
     }
 }

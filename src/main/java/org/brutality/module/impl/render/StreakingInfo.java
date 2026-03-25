@@ -52,6 +52,7 @@ public class StreakingInfo extends Module {
 
     @SubscribeEvent
     public void onRenderGameOverlay(RenderGameOverlayEvent.Text event) {
+        if (!this.isToggled() || mc.thePlayer == null || mc.theWorld == null) return;
         FontRenderer fontRenderer = mc.fontRendererObj;
         float posX = (float) xPos.getValue();
         float posY = (float) yPos.getValue();
@@ -93,6 +94,7 @@ public class StreakingInfo extends Module {
 
     @SubscribeEvent
     public void onChatReceived(ClientChatReceivedEvent event) {
+        if (!this.isToggled()) return;
         String message = event.message.getUnformattedText();
 
         if (message.contains("DEATH!")) {

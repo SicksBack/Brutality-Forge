@@ -21,6 +21,7 @@ public class Interface extends Module {
 
     @SubscribeEvent
     public void onRender2D(RenderGameOverlayEvent.Text event) {
+        if (!this.isToggled()) return;
         if (modeSetting.getValue().equals("PrimeCheats")) {
             ScaledResolution sr = new ScaledResolution(Minecraft.getMinecraft());
             primeCheatsInterface.render(sr); // Pass ScaledResolution instance to render method

@@ -69,7 +69,7 @@ public class AstolfoTargetHUD {
         Gui.drawRect((int)starting_x, y2 - y_padding, (int)(healthBarSize - x_padding), y2 - y_padding - 7, color12345);
         Gui.drawRect((int)starting_x, y2 - y_padding, (int)(healthBarSize - x_padding), y2 - y_padding - 7, color123);
 
-        String healthText = String.format("%.1f", target.getHealth()) + " ❤";
+        String healthText = String.format("%.1f", target.getHealth()) + " HP";
         mc.fontRendererObj.drawStringWithShadow(healthText, (int)starting_x, y2 - 33, color123);
 
         mc.fontRendererObj.drawStringWithShadow(target.getName(), (int)starting_x, y2 - 45, -1);

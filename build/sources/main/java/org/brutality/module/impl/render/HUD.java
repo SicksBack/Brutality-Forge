@@ -39,6 +39,7 @@ public class HUD extends Module {
 
     @SubscribeEvent
     public void onRender2D(RenderGameOverlayEvent.Text event) {
+        if (!this.isToggled()) return;
         if (modeSetting.getValue().equals("PrimeCheats")) {
             primeCheatsHUD.setPosition(870, 0); // Set fixed position
             primeCheatsHUD.setBoxDimensions(90, 10); // Set fixed dimensions

@@ -34,6 +34,7 @@ public class WhoGotDogged extends Module {
 
     @SubscribeEvent
     public void onTick(TickEvent.PlayerTickEvent event) {
+        if (!this.isToggled()) return;
         if (mc.thePlayer == null || event.phase != TickEvent.Phase.START) {
             return;
         }
@@ -42,6 +43,7 @@ public class WhoGotDogged extends Module {
 
     @SubscribeEvent
     public void onClientChatReceived(ClientChatReceivedEvent event) {
+        if (!this.isToggled()) return;
         String msg = event.message.getUnformattedText();
         if (msg.contains("A player has been removed from your game")) {
             this.banCooldown.reset();

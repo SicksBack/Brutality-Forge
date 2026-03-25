@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir C:UsersyavuzDesktop)",
+      "Bash(powershell -Command \"Get-ChildItem -Path ''C:\\\\Users\\\\yavuz\\\\Desktop'' | Select-Object Name\")",
+      "Bash(powershell -Command:*)",
+      "Bash(cmd.exe /c \"set JAVA_HOME=C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-17.0.18.101-hotspot && set PATH=C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-17.0.18.101-hotspot\\\\bin;%PATH% && gradlew.bat build --stacktrace\")",
+      "Bash(cmd.exe /c \"gradlew.bat build --stacktrace 2>&1\")",
+      "Bash(cmd.exe /c \"set JAVA_HOME=C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-8.0.482.8-hotspot&& set PATH=C:\\\\Program Files\\\\Eclipse Adoptium\\\\jdk-8.0.482.8-hotspot\\\\bin;%PATH%&& cd C:\\\\Users\\\\yavuz\\\\Desktop\\\\Brutality-Forge&& gradlew.bat build --stacktrace\")",
+      "Bash(cmd.exe /c \"type PodSwap.java 2>&1 || echo File not found\")",
+      "Bash(cmd.exe /c \"cd /d C:\\\\Users\\\\yavuz\\\\Desktop\\\\Brutality-Forge && gradlew.bat compileJava 2>&1\")",
+      "Bash(cmd.exe /c \"C:\\\\Users\\\\yavuz\\\\Desktop\\\\Brutality-Forge\\\\build.bat\")",
+      "Bash(cmd.exe /c \"cd /d C:\\\\Users\\\\yavuz\\\\Desktop\\\\Brutality-Forge && gradlew.bat compileJava --no-daemon 2>&1\")"
+    ]
+  }
+}

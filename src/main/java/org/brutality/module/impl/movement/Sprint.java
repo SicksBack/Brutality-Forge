@@ -18,6 +18,7 @@ public class Sprint extends Module {
 
     @SubscribeEvent
     public void onTick(TickEvent.PlayerTickEvent event) {
+        if (!this.isToggled()) return;
         if (Minecraft.getMinecraft().thePlayer != null) {
             if (allDirections.isEnabled()) {
                 if (Minecraft.getMinecraft().thePlayer.movementInput.moveForward != 0 || Minecraft.getMinecraft().thePlayer.movementInput.moveStrafe != 0) {
