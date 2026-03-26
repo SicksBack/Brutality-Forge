@@ -9,6 +9,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.InputEvent.KeyInputEvent;
 import net.minecraftforge.client.event.ClientChatReceivedEvent;
+import net.minecraftforge.client.event.GuiScreenEvent;
 import org.brutality.commands.CommandManager;
 import org.brutality.handlers.ConfigManager;
 import org.brutality.module.Module;
@@ -96,9 +97,15 @@ public class BrutalityClient {
         EventChat eventChat = new EventChat(message);
         MinecraftForge.EVENT_BUS.post(eventChat);
 
-        if (message.startsWith(".")) {
+        if (message.startsWith("/")) {
             commandManager.handleChat(message);
             event.setCanceled(true);
         }
+    }
+
+    // Client-side command handling using InitGuiEvent
+    @SubscribeEvent
+    public void onInitGui(net.minecraftforge.client.event.GuiScreenEvent.InitGuiEvent.Post event) {
+        // This can be used for additional GUI handling if needed
     }
 }

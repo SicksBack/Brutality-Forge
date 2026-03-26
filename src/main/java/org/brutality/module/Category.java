@@ -4,5 +4,6 @@ package org.brutality.module;
 public enum Category {
     RENDER,
     MOVEMENT,
+    PLAYER,
     MISC
 }

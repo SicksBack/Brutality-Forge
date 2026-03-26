@@ -29,7 +29,7 @@ public class ClickGui extends GuiScreen implements MM, SM {
     public float moveX;
     public float moveY;
     public boolean moving = false;
-    public Category currentCategory = Category.MISC;
+    public Category currentCategory = Category.PLAYER;
     public Module selectedMod;
     public boolean changingSize;
     public float scrollAmountSettings = 0.0F;
@@ -332,16 +332,11 @@ public class ClickGui extends GuiScreen implements MM, SM {
 
     @Override
     public void keyTyped(char key, int code) throws IOException {
-        if (code == 1) {
-            this.mc.displayGuiScreen(null);
-        } else if (listeningBind != null) {
-            // Handle key binding
-            if (code == Keyboard.KEY_ESCAPE) {
-                // Cancel binding
-                listeningBind.setListening(false);
-                listeningBind = null;
-            } else if (code == Keyboard.KEY_DELETE || code == Keyboard.KEY_BACK) {
-                // Clear binding
+        // If we're listening for a bind, handle it first
+        if (listeningBind != null) {
+            // ESCAPE (code == 1) - set bind to NONE instead of closing GUI
+            if (code == 1 || code == Keyboard.KEY_ESCAPE) {
+                // Set bind to NONE (KEY_NONE)
                 listeningBind.setKeyCode(Keyboard.KEY_NONE);
                 if (selectedMod != null) {
                     selectedMod.setKey(Keyboard.KEY_NONE);
@@ -351,18 +346,40 @@ public class ClickGui extends GuiScreen implements MM, SM {
 
                 // Save config when bind is changed
                 BrutalityClient.getInstance().getConfigManager().saveConfig();
-            } else {
-                // Set new binding
-                listeningBind.setKeyCode(code);
+                return;
+            }
+
+            // DELETE or BACK - clear binding
+            if (code == Keyboard.KEY_DELETE || code == Keyboard.KEY_BACK) {
+                listeningBind.setKeyCode(Keyboard.KEY_NONE);
                 if (selectedMod != null) {
-                    selectedMod.setKey(code);
+                    selectedMod.setKey(Keyboard.KEY_NONE);
                 }
                 listeningBind.setListening(false);
                 listeningBind = null;
 
                 // Save config when bind is changed
                 BrutalityClient.getInstance().getConfigManager().saveConfig();
+                return;
             }
+
+            // Set new binding
+            listeningBind.setKeyCode(code);
+            if (selectedMod != null) {
+                selectedMod.setKey(code);
+            }
+            listeningBind.setListening(false);
+            listeningBind = null;
+
+            // Save config when bind is changed
+            BrutalityClient.getInstance().getConfigManager().saveConfig();
+            return;
+        }
+
+        // ESCAPE when NOT binding - close GUI
+        if (code == 1) {
+            this.mc.displayGuiScreen(null);
+            return;
         } else if(selectedInputSetting != null) {
             if (code == Keyboard.KEY_BACK && !selectedInputSetting.getContent().isEmpty()) {
                 selectedInputSetting.setContent(selectedInputSetting.getContent().substring(0, selectedInputSetting.getContent().length() - 1));

@@ -31,5 +31,5 @@ See https://gist.github.com/TheCurle/fe7ad3ede188cbdd15c235cc75d52d4a for more i
 :sourceMainJava
 :compileJava
 
-BUILD SUCCESSFUL in 30s
+BUILD SUCCESSFUL in 1m 1s
 7 actionable tasks: 5 executed, 2 up-to-date

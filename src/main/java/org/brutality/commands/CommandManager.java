@@ -2,6 +2,7 @@ package org.brutality.commands;
 
 import org.brutality.commands.impl.FriendCommand;
 import org.brutality.commands.impl.KOSCommand;
+import org.brutality.commands.impl.BindCommand;
 import org.brutality.utils.Wrapper;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.entity.EntityPlayerSP;
@@ -12,7 +13,7 @@ import java.util.List;
 
 public class CommandManager {
     private final List<Command> commands = new ArrayList<>();
-    private final String prefix = ".";
+    private final String prefix = "/";
 
     public CommandManager() {
         setup();
@@ -21,6 +22,7 @@ public class CommandManager {
     private void setup() {
         commands.add(new FriendCommand());
         commands.add(new KOSCommand());
+        commands.add(new BindCommand());
     }
 
     public void handleChat(String message) {
