@@ -30,7 +30,6 @@ public class AstolfoTargetHUD {
 
     @SubscribeEvent
     public void onAttackEntity(AttackEntityEvent event) {
-        if (!this.isToggled()) return;
         if (event.target instanceof EntityLivingBase) {
             lastHitTarget = (EntityLivingBase) event.target;
         }
